@@ -1,0 +1,182 @@
+body {
+  font-family: "TT Norms Pro";
+}
+
+.wrapper {
+  max-width: 997px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.btn {
+  background: #00AC4E;
+  border: none;
+  border-radius: 4.52px;
+}
+
+.header__user-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__cart-icon, .header__user-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.header {
+  padding: 30px 0 24px 0;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.12);
+}
+.header__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__buttons {
+  display: flex;
+  align-items: center;
+}
+.header__tel {
+  margin-right: 65px;
+}
+.header__tel-link {
+  display: flex;
+  text-decoration: none;
+}
+.header__tel-icon {
+  margin-right: 5px;
+}
+.header__user {
+  display: flex;
+}
+.header__user-btn {
+  width: 31px;
+  height: 31px;
+  margin-right: 30.75px;
+  border: none;
+  background: none;
+}
+.header__cart {
+  display: block;
+  width: 31px;
+  height: 30.89px;
+}
+.header__tel-number {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18px;
+  text-transform: none;
+  line-height: 21px;
+  color: #000000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo__text {
+  margin-right: 8.67px;
+}
+
+.navigation__list {
+  display: flex;
+  list-style-type: none;
+}
+.navigation__node:first-child {
+  position: relative;
+}
+.navigation__node:not(:last-child) {
+  margin-right: 45px;
+}
+.navigation__link {
+  text-decoration: none;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18px;
+  text-transform: none;
+  line-height: 21px;
+  color: #333333;
+}
+.navigation__dropdown {
+  display: none;
+  position: absolute;
+  left: -32.6px;
+  padding: 15px 20px 15px 32.6px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.12);
+  background: #FFFFFF;
+  background: goldenrod;
+  list-style-type: none;
+}
+.navigation__dropdown-node:not(:last-child) {
+  margin-bottom: 17.39px;
+}
+.navigation__dropdown-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.navigation__dropdown-img {
+  width: 16px;
+  height: 16px;
+  margin-right: 7.46px;
+}
+.navigation__dropdown-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.navigation__dropdown-text {
+  width: max-content;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 10.66px;
+  text-transform: none;
+  line-height: 13px;
+  color: #333333;
+}
+.navigation__dropdown_active {
+  display: block;
+}
+
+.slider1 {
+  min-height: 253.71px;
+  border-radius: 18.07px;
+}
+.slider1__slide {
+  min-height: 253.71px;
+  background-image: linear-gradient(#F1F1FB, #EBEBF5);
+}
+.slider1__string1 {
+  margin-bottom: 9px;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 31.63px;
+  text-transform: none;
+  line-height: 37.89px;
+  color: #333333;
+}
+.slider1__string2 {
+  margin-bottom: 32px;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 19.88px;
+  text-transform: none;
+  line-height: 23.82px;
+  color: #828282;
+}
+.slider1__btn {
+  padding: 10px 30px;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 25.3px;
+  text-transform: none;
+  line-height: 30.31px;
+  color: #FFFFFF;
+}
+
+/*# sourceMappingURL=style.css.map */
