@@ -1,10 +1,15 @@
-const swiper = new Swiper('.slaider1', {
+// slaider1
+// swiper-container
+const swiper = new Swiper('.swiper-container', {
     // Optional parameters
+    // containerModifierClass: 'slaider1',
     loop: true,
-    slidesPerView: 1,
-    slidesPerGroup: 1,
-    spaceBetween: 10,
-    // autoHeight: true,
+    // loopedSlides: 3,
+    // slidesPerView: 1,
+    // slidesPerGroup: 1,
+    // spaceBetween: 10,
+    // noSwiping: true,
+    autoHeight: true,
     // breakpoints : {
     //   0: {
     //     slidesPerGroup: 1,
@@ -33,3 +38,15 @@ const swiper = new Swiper('.slaider1', {
     //   prevEl: '.swiper-button-prev',
     // },
   });
+  const swiper2 = new Swiper('.slider2__container', {
+    loop: true,
+    // loopedSlides: 3,
+    slidesPerView: 5,
+    slidesPerGroup: 1,
+    spaceBetween: 95,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+  
