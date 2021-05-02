@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/normalize.css">
-    <link href="fonts/fonts.css" rel="stylesheet">
-    <link rel="stylesheet" href="/styles/swiper-bundle.css">
-    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href= "fonts/fonts.css">
+    <link rel="stylesheet" href="styles/swiper-bundle.css">
+    <link rel="stylesheet" href="styles/simplePagination.css">
+    <link rel="stylesheet" href="styles/style.css">
     <title>Document</title>
 </head>
 <body>
@@ -151,7 +152,7 @@
     <section class="slider1">
         <div class="wrapper">
             <!-- Slider main container -->
-            <div class="swiper-container slider1">
+            <div class="swiper-container slider1__conteiner">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <!-- Slides -->
@@ -210,41 +211,471 @@
                 <div class="swiper-wrapper">
                     <!-- Slides -->
                     <div class="swiper-slide slider2__slide">
-                        <a href="#" class="slider__link">Супы</a>
+                        <a href="#" class="slider2__link">Супы</a>
                     </div>
                     <div class="swiper-slide slider2__slide">
-                        <a href="#" class="slider__link">Хачапури</a>
+                        <a href="#" class="slider2__link">Хачапури</a>
                     </div>
                     <div class="swiper-slide slider2__slide">
-                        <a href="#" class="slider__link">Холодные закуски</a>
+                        <a href="#" class="slider2__link">Холодные закуски</a>
                     </div>
                     <div class="swiper-slide slider2__slide">
-                        <a href="#" class="slider__link">Соусы</a>
+                        <a href="#" class="slider2__link">Соусы</a>
                     </div>
                     <div class="swiper-slide slider2__slide">
-                        <a href="#" class="slider__link">Салаты</a>
+                        <a href="#" class="slider2__link">Салаты</a>
                     </div>
                     <div class="swiper-slide slider2__slide">
-                        <a href="#" class="slider__link">Горячие блюда</a>
+                        <a href="#" class="slider2__link">Горячие блюда</a>
                     </div>
                     <div class="swiper-slide slider2__slide">
-                        <a href="#" class="slider__link">Гарнир</a>
+                        <a href="#" class="slider2__link">Гарнир</a>
                     </div>
                     <div class="swiper-slide slider2__slide">
-                        <a href="#" class="slider__link">Десерты</a>
+                        <a href="#" class="slider2__link">Десерты</a>
                     </div>
                     <div class="swiper-slide slider2__slide">
-                        <a href="#" class="slider__link">Напитки</a>
+                        <a href="#" class="slider2__link">Напитки</a>
                     </div>
                 </div>
                 <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
+                <button class="slider2__next">
+                    <img src="img/slider2/arrow.png" alt="arrow">
+                </button>
+                <button class="slider2__prev">
+                    <img src="img/slider2/arrow.png" alt="arrow">
+                </button>
+             </div>
+        </div>
+    </section>
+    <section class="products">
+        <div class="wrapper">
+            <h1 class="products__title">
+                Все товары
+            </h1>
+            <div class="products__row">
+                <div class="products__card card">
+                    <div class="card__img">
+                        <img src="img/card/01.jpeg" alt="product" class="card__img-item">
+                    </div>
+                    <div class="card__content">
+                        <h4 class="card__title">
+                            голень говядины
+                        </h4>
+                        <div class="card__description">
+                            Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.
+                        </div>
+                        <div class="card__rating">
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star"></i>
+                        </div>
+                        <div class="card__price">
+                            <span class="card__price-1">1 050 ₽/кг</span>
+                            <span class="card__price-2">За 500гр.</span>
+                        </div>
+                    </div>
+                    <button class="button card__button btn">В корзину</button>
+                </div>
+                <div class="products__card card">
+                    <div class="card__img">
+                        <img src="img/card/01.jpeg" alt="product" class="card__img-item">
+                    </div>
+                    <div class="card__content">
+                        <h4 class="card__title">
+                            голень говядины
+                        </h4>
+                        <div class="card__description">
+                            Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.
+                        </div>
+                        <div class="card__rating">
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star"></i>
+                        </div>
+                        <div class="card__price">
+                            <span class="card__price-1">1 050 ₽/кг</span>
+                            <span class="card__price-2">За 500гр.</span>
+                        </div>
+                    </div>
+                    <button class="button card__button btn">В корзину</button>
+                </div>
+                <div class="products__card card">
+                    <div class="card__img">
+                        <img src="img/card/01.jpeg" alt="product" class="card__img-item">
+                    </div>
+                    <div class="card__content">
+                        <h4 class="card__title">
+                            голень говядины
+                        </h4>
+                        <div class="card__description">
+                            Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.
+                        </div>
+                        <div class="card__rating">
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star"></i>
+                        </div>
+                        <div class="card__price">
+                            <span class="card__price-1">1 050 ₽/кг</span>
+                            <span class="card__price-2">За 500гр.</span>
+                        </div>
+                    </div>
+                    <button class="button card__button btn">В корзину</button>
+                </div>
+                <div class="products__card card">
+                    <div class="card__img">
+                        <img src="img/card/01.jpeg" alt="product" class="card__img-item">
+                    </div>
+                    <div class="card__content">
+                        <h4 class="card__title">
+                            голень говядины
+                        </h4>
+                        <div class="card__description">
+                            Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.
+                        </div>
+                        <div class="card__rating">
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star"></i>
+                        </div>
+                        <div class="card__price">
+                            <span class="card__price-1">1 050 ₽/кг</span>
+                            <span class="card__price-2">За 500гр.</span>
+                        </div>
+                    </div>
+                    <button class="button card__button btn">В корзину</button>
+                </div>
+                <div class="products__card card">
+                    <div class="card__img">
+                        <img src="img/card/01.jpeg" alt="product" class="card__img-item">
+                    </div>
+                    <div class="card__content">
+                        <h4 class="card__title">
+                            голень говядины
+                        </h4>
+                        <div class="card__description">
+                            Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.
+                        </div>
+                        <div class="card__rating">
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star"></i>
+                        </div>
+                        <div class="card__price">
+                            <span class="card__price-1">1 050 ₽/кг</span>
+                            <span class="card__price-2">За 500гр.</span>
+                        </div>
+                    </div>
+                    <button class="button card__button btn">В корзину</button>
+                </div>
+                <div class="products__card card">
+                    <div class="card__img">
+                        <img src="img/card/01.jpeg" alt="product" class="card__img-item">
+                    </div>
+                    <div class="card__content">
+                        <h4 class="card__title">
+                            голень говядины
+                        </h4>
+                        <div class="card__description">
+                            Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.
+                        </div>
+                        <div class="card__rating">
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star"></i>
+                        </div>
+                        <div class="card__price">
+                            <span class="card__price-1">1 050 ₽/кг</span>
+                            <span class="card__price-2">За 500гр.</span>
+                        </div>
+                    </div>
+                    <button class="button card__button btn">В корзину</button>
+                </div>
+                <div class="products__card card">
+                    <div class="card__img">
+                        <img src="img/card/01.jpeg" alt="product" class="card__img-item">
+                    </div>
+                    <div class="card__content">
+                        <h4 class="card__title">
+                            голень говядины
+                        </h4>
+                        <div class="card__description">
+                            Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.
+                        </div>
+                        <div class="card__rating">
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star"></i>
+                        </div>
+                        <div class="card__price">
+                            <span class="card__price-1">1 050 ₽/кг</span>
+                            <span class="card__price-2">За 500гр.</span>
+                        </div>
+                    </div>
+                    <button class="button card__button btn">В корзину</button>
+                </div>
+                <div class="products__card card">
+                    <div class="card__img">
+                        <img src="img/card/01.jpeg" alt="product" class="card__img-item">
+                    </div>
+                    <div class="card__content">
+                        <h4 class="card__title">
+                            голень говядины
+                        </h4>
+                        <div class="card__description">
+                            Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.
+                        </div>
+                        <div class="card__rating">
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star"></i>
+                        </div>
+                        <div class="card__price">
+                            <span class="card__price-1">1 050 ₽/кг</span>
+                            <span class="card__price-2">За 500гр.</span>
+                        </div>
+                    </div>
+                    <button class="button card__button btn">В корзину</button>
+                </div>
+                <div class="products__card card">
+                    <div class="card__img">
+                        <img src="img/card/01.jpeg" alt="product" class="card__img-item">
+                    </div>
+                    <div class="card__content">
+                        <h4 class="card__title">
+                            голень говядины
+                        </h4>
+                        <div class="card__description">
+                            Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.
+                        </div>
+                        <div class="card__rating">
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star"></i>
+                        </div>
+                        <div class="card__price">
+                            <span class="card__price-1">1 050 ₽/кг</span>
+                            <span class="card__price-2">За 500гр.</span>
+                        </div>
+                    </div>
+                    <button class="button card__button btn">В корзину</button>
+                </div>
+                <div class="products__card card">
+                    <div class="card__img">
+                        <img src="img/card/01.jpeg" alt="product" class="card__img-item">
+                    </div>
+                    <div class="card__content">
+                        <h4 class="card__title">
+                            голень говядины
+                        </h4>
+                        <div class="card__description">
+                            Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.
+                        </div>
+                        <div class="card__rating">
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star"></i>
+                        </div>
+                        <div class="card__price">
+                            <span class="card__price-1">1 050 ₽/кг</span>
+                            <span class="card__price-2">За 500гр.</span>
+                        </div>
+                    </div>
+                    <button class="button card__button btn">В корзину</button>
+                </div>
+                <div class="products__card card">
+                    <div class="card__img">
+                        <img src="img/card/01.jpeg" alt="product" class="card__img-item">
+                    </div>
+                    <div class="card__content">
+                        <h4 class="card__title">
+                            голень говядины
+                        </h4>
+                        <div class="card__description">
+                            Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.
+                        </div>
+                        <div class="card__rating">
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star"></i>
+                        </div>
+                        <div class="card__price">
+                            <span class="card__price-1">1 050 ₽/кг</span>
+                            <span class="card__price-2">За 500гр.</span>
+                        </div>
+                    </div>
+                    <button class="button card__button btn">В корзину</button>
+                </div>
+                <div class="products__card card">
+                    <div class="card__img">
+                        <img src="img/card/01.jpeg" alt="product" class="card__img-item">
+                    </div>
+                    <div class="card__content">
+                        <h4 class="card__title">
+                            голень говядины
+                        </h4>
+                        <div class="card__description">
+                            Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.
+                        </div>
+                        <div class="card__rating">
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star"></i>
+                        </div>
+                        <div class="card__price">
+                            <span class="card__price-1">1 050 ₽/кг</span>
+                            <span class="card__price-2">За 500гр.</span>
+                        </div>
+                    </div>
+                    <button class="button card__button btn">В корзину</button>
+                </div>
+                <div class="products__card card">
+                    <div class="card__img">
+                        <img src="img/card/01.jpeg" alt="product" class="card__img-item">
+                    </div>
+                    <div class="card__content">
+                        <h4 class="card__title">
+                            голень говядины
+                        </h4>
+                        <div class="card__description">
+                            Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.
+                        </div>
+                        <div class="card__rating">
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star"></i>
+                        </div>
+                        <div class="card__price">
+                            <span class="card__price-1">1 050 ₽/кг</span>
+                            <span class="card__price-2">За 500гр.</span>
+                        </div>
+                    </div>
+                    <button class="button card__button btn">В корзину</button>
+                </div>
+                <div class="products__card card">
+                    <div class="card__img">
+                        <img src="img/card/01.jpeg" alt="product" class="card__img-item">
+                    </div>
+                    <div class="card__content">
+                        <h4 class="card__title">
+                            голень говядины
+                        </h4>
+                        <div class="card__description">
+                            Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.
+                        </div>
+                        <div class="card__rating">
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star"></i>
+                        </div>
+                        <div class="card__price">
+                            <span class="card__price-1">1 050 ₽/кг</span>
+                            <span class="card__price-2">За 500гр.</span>
+                        </div>
+                    </div>
+                    <button class="button card__button btn">В корзину</button>
+                </div>
+                <div class="products__card card">
+                    <div class="card__img">
+                        <img src="img/card/01.jpeg" alt="product" class="card__img-item">
+                    </div>
+                    <div class="card__content">
+                        <h4 class="card__title">
+                            голень говядины
+                        </h4>
+                        <div class="card__description">
+                            Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.
+                        </div>
+                        <div class="card__rating">
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star"></i>
+                        </div>
+                        <div class="card__price">
+                            <span class="card__price-1">1 050 ₽/кг</span>
+                            <span class="card__price-2">За 500гр.</span>
+                        </div>
+                    </div>
+                    <button class="button card__button btn">В корзину</button>
+                </div>
+                <div class="products__card card">
+                    <div class="card__img">
+                        <img src="img/card/01.jpeg" alt="product" class="card__img-item">
+                    </div>
+                    <div class="card__content">
+                        <h4 class="card__title">
+                            голень говядины
+                        </h4>
+                        <div class="card__description">
+                            Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить.
+                        </div>
+                        <div class="card__rating">
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star_active"></i>
+                            <i class="fas fa-star card__star card__star"></i>
+                        </div>
+                        <div class="card__price">
+                            <span class="card__price-1">1 050 ₽/кг</span>
+                            <span class="card__price-2">За 500гр.</span>
+                        </div>
+                    </div>
+                    <button class="button card__button btn">В корзину</button>
+                </div>
+            </div>
+            <div class="pagination"> 
+                <!-- <a href="#">&laquo;</a>
+                <a href="#">1</a>
+                <a class="active" href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">&raquo;</a> -->
             </div>
         </div>
     </section>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/sliders.js"></script>
+    <!-- simple jQuery pagination plugin https://flaviusmatis.github.io/simplePagination.js -->
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery.simplePagination.js"></script>
+    <script src="js/paginationInit.js"></script>
+    <!--  // simple jQuery pagination plugin https://flaviusmatis.github.io/simplePagination.js -->
     <script src="js/main.js"></script>
+    <!-- Add font awesome icons-->
+    <script src="https://kit.fontawesome.com/a8ec7c40c4.js" crossorigin="anonymous"></script>
 </body>
 </html>

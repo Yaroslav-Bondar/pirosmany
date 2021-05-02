@@ -1,7 +1,7 @@
 @import 'variable';
-@import 'common';
 @import 'extend';
 @import 'mixins';
+@import 'common';
 .header {
     // padding: 34px 0 34.78px 0;
     padding: 30px 0 24px 0;
@@ -117,9 +117,6 @@
 }
 .slider1 {
     margin-top: 60px;
-}
-.slider1 {
-    border-radius: 18.07px;
     &__slide {
         display: flex;
         flex-wrap: wrap;
@@ -151,6 +148,60 @@
             height: 100%;
             object-fit: cover;
         }
-        
     }
 }
+.slider1__conteiner {
+    border-radius: 18.07px;
+}
+.slider2 {
+    margin-top: 25px;
+    &__link {
+        font-family: 'TT Hoves';
+        @include font(400, 23.3333px, 27px, $slider2-text-color, uppercase);
+        text-decoration: none;
+        white-space: nowrap;
+    }
+    &__slide {
+        width: auto !important;
+    }
+    &__next {
+        right: 0;
+    }
+    &__prev {
+        left: 0;
+    }
+    &__prev img {
+        transform: rotateZ(180deg);
+    }
+    &__next,
+    &__prev {
+        position: absolute;
+        width: 14px;
+        height: 24px;
+        top: 50%;
+        transform: translateY(-50%);
+        border: none;
+        background: transparent;
+        z-index: 2;
+        cursor: pointer;
+    }
+    &__next img,
+    &__prev img {
+        object-fit: cover;
+    }
+}
+.products {
+    margin-top: 30px;
+    &__title {
+        @include font(500, 27.1585px, 19px, $products-title-color);
+        margin-bottom: 39.75px;
+    }
+    &__row {
+        justify-content: space-between;
+        @extend %flex-wrap;
+    }
+    &__card {
+        margin-bottom: 56.13px;
+    }    
+}
+

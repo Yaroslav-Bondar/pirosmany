@@ -41,12 +41,22 @@ const swiper = new Swiper('.swiper-container', {
   const swiper2 = new Swiper('.slider2__container', {
     loop: true,
     // loopedSlides: 3,
+    // slideClass: slider2__slide,
     slidesPerView: 5,
+    // freeMode: true,
+    // slidesPerView: 'auto',
+    // loopFillGroupWithBlank: true,
+    // loopAdditionalSlides: 2,
+    nested: true,
+    // loopedSlides: 3,
     slidesPerGroup: 1,
     spaceBetween: 95,
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      // nextEl: '.swiper-button-next',
+      nextEl: '.slider2__prev',
+      prevEl: '.slider2__next',
+      // hideOnClick: true,
+      // hiddenClass: 'slider2__but-hidden'
     },
   });
   
