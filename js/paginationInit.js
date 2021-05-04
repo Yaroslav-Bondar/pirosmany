@@ -1,10 +1,18 @@
+/**
+* init for simplePagination.js
+* Author: Flavius Matis - http://flaviusmatis.github.com/
+* URL: https://github.com/flaviusmatis/simplePagination.js
+*/
 $(function() {
     $('.pagination').pagination({
-        items: 100,
-        itemsOnPage: 10,
-        cssStyle: 'light-theme',
-        hrefTextPrefix: 'page-',
-        hrefTextSuffix: '.html',
+        items: 8,
+        itemsOnPage: 1,
+        cssStyle: 'mytheme',
+        // hrefTextPrefix: 'page-',
+        // hrefTextSuffix: '.html',
+        edges: 1,
+        displayedPages: 4,
         nextText: ' ',
+        prevText: ' ',
     });
 });
