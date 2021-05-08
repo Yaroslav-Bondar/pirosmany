@@ -269,14 +269,18 @@
 }
 .footer {
     &__conteiner {
+        display: grid;
+        grid-template-columns: 40% auto auto;
         background-color: $footer-bg;
     }
-    &__area-1 {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
+    // &__area-1 {
+    //     display: flex;
+    //     flex-wrap: wrap;
+    //     justify-content: space-between;
+    // }
     &__country {
+        grid-area: 1/1/2/2;
+        // margin-right: 60.49px;
         &-title {
             @include font(400, 12.3407px, 32px, $footer-text-color);
         }
@@ -285,6 +289,8 @@
         }
     }
     &__order {
+        grid-area: 1/1/2/2;
+        justify-self: end;
         &-title {
             @include font(400, 12.3407px, 32px, $footer-text-color);
         }
@@ -293,6 +299,8 @@
         }    
     }
     &__social {
+        grid-area: 1/2/2/3;
+        justify-self: end;
         display: flex;
         flex-flow: column;
         &-1 {
@@ -307,8 +315,11 @@
         }
     }
     &__user {
+        grid-area: 1/3/2/4;
+        justify-self: end;
         display: flex;
         align-items: flex-start;
+        height: min-content;
         &-icon {
             width: 24.68px;
             height: 24.68px;
@@ -318,8 +329,43 @@
         }
     }
     &__btn {
-        height: min-content;
         @include font(500, 15.4259px, 32px, $footer-text-color, capitalize);
+    }
+    // &__are-2 {
+    //     margin-bottom: 10px;
+    // }
+    &__work {
+        grid-area: 2/1/3/2;
+        margin-bottom: 10px;
+        font-family: 'TT Hoves';
+        @include font(400, 15.4259px, 32px, $footer-text-color);
+    }
+    &__email {
+        // display: block;
+        grid-area: 3/1/4/2;
+        margin-bottom: 10.61px;
+        font-family: 'TT Hoves';
+        @include font(400, 18.511px, 32px, $footer-text-color);
+    }
+    &__support {
+        grid-area: 4/1/5/2;
+        @include font(500, 18px, 22px, $footer-text-color);
+    }
+    &__area {
+        grid-area: 5/1/6/4;
+        margin-top: 10px;
+        display: flex;
+        gap: 34px;
+    }
+    &__copyright,
+    &__terms,
+    &__policy {
+        font-family: 'TT Hoves';
+        @include font(400, 12.3407px, 32px, $footer-text-color);
+    }
+    &__terms,
+    &__policy {
+        text-decoration: none;
     }
 }
 
