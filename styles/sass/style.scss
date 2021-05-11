@@ -211,7 +211,7 @@
         position: relative;
         height: 648px;
         width: 100%;
-        background-image: url('../img/video/bg.png');
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.46) 100%), url("../img/video/bg.png");
         background-size: cover;
     }
     &__iframe {
@@ -271,13 +271,17 @@
     &__conteiner {
         display: grid;
         grid-template-columns: 40% 30% 30%;
+        grid-row-gap: 20px;
         background-color: $footer-bg;
         @media screen and (max-width: $footer-breakpoint-1) {
             grid-template-columns: 46% 27% 27%;
         }
         @media screen and (max-width: $footer-breakpoint-2) {
             grid-template-columns: 50% 50%;
-            grid-row-gap: 20px;
+        }
+        @media screen and (max-width: $footer-breakpoint-5) {
+            grid-template-columns: 1fr;
+            justify-items: center;
         }
     }
     &__area-1 {
@@ -322,8 +326,22 @@
             width: 100%;
             justify-content: space-around;
         }
+        @media screen and (max-width: $footer-breakpoint-3) {
+            justify-content: space-between;
+        }
+        @media screen and (max-width: $footer-breakpoint-4) {
+            grid-area: 3/1/4/3;
+        }
+        @media screen and (max-width: $footer-breakpoint-5) {
+            flex-flow: column;
+            align-items: center;
+            grid-area: 3/1/4/2;
+        }        
         &-1 {
             margin-bottom: 25.61px;
+            @media screen and (max-width: $footer-breakpoint-2) {
+                margin: 0;
+            }
         }
         &-1,
         &-2 {
@@ -343,6 +361,12 @@
             grid-area: 3/1/4/2;
             justify-self: start;
         }
+        @media screen and (max-width: $footer-breakpoint-4) {
+            grid-area: 4/1/5/2;
+        }
+        @media screen and (max-width: $footer-breakpoint-5) {
+            justify-self: center;
+        }
         &-icon {
             width: 24.68px;
             height: 24.68px;
@@ -356,21 +380,33 @@
     }
     &__work {
         grid-area: 2/1/3/2;
-        margin-bottom: 10px;
         font-family: 'TT Hoves';
         @include font(400, 15.4259px, 32px, $footer-text-color);
         @media screen and (max-width: $footer-breakpoint-2) {
             grid-area: 1/2/2/3;
         }
+        @media screen and (max-width: $footer-breakpoint-4) {
+            grid-area: 2/1/3/4;
+        }
+        @media screen and (max-width: $footer-breakpoint-5) {
+            grid-area: 5/1/6/2;
+        }
     }
     &__email {
         grid-area: 3/1/4/2;
-        margin-bottom: 10.61px;
         font-family: 'TT Hoves';
         @include font(400, 18.511px, 32px, $footer-text-color);
         @media screen and (max-width: $footer-breakpoint-2) {
             grid-area: 1/2/2/3;
-            margin: auto 0;
+            align-self: center;
+        }
+        @media screen and (max-width: $footer-breakpoint-4) {
+            align-self: start;
+            justify-self: end;
+        }
+        @media screen and (max-width: $footer-breakpoint-5) {
+            grid-area: 2/1/3/2;
+            justify-self: center;
         }
     }
     &__support {
@@ -380,14 +416,33 @@
             grid-area: 1/2/2/3;
             margin-top: auto;
         }
+        @media screen and (max-width: $footer-breakpoint-4) {
+            margin: 0;
+            align-self: center;
+            justify-self: end;
+        }
+        @media screen and (max-width: $footer-breakpoint-5) {
+            grid-area: 6/1/7/2;
+            justify-self: center;
+        }
     }
     &__area-2 {
         grid-area: 5/1/6/4;
-        margin-top: 10px;
         display: flex;
         gap: 34px;
         @media screen and (max-width: $footer-breakpoint-2) {
             grid-area: 4/1/5/3;
+        }
+        @media screen and (max-width: $footer-breakpoint-4) {
+            grid-area: 4/2/5/3;
+            justify-self: end;
+            flex-flow: column;
+            gap: 0;
+        }
+        @media screen and (max-width: $footer-breakpoint-5) {
+            grid-area: 7/1/8/2;
+            justify-self: center;
+            align-items: center;
         }
     }
     &__copyright,
