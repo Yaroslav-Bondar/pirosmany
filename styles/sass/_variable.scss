@@ -2,6 +2,7 @@ $btn-bgcolor: #00AC4E;
 $btn-text-color:#FFFFFF;
 $subtitle-color:#828282;
 $title-color:#333333;
+$header-burger-color: #333333;
 $slider2-text-color: #4F4F4F;
 $products-title-color: #000000;
 $card-title-color: #000000;
@@ -14,7 +15,14 @@ $pagination-text-color: #000000;
 $footer-bg: #00AC4E;
 $footer-text-color: #fff;
 // breakpoints
+$header-breakpoint-1: 590px;
+$header-breakpoint-2: 455px;
+$header-breakpoint-3: 397px;
+$header-breakpoint-4: 360px;  
+
+$navigation-breakpoint-1: 950px;
 $delivery-breakpoint-1: 600px;
+
 $footer-breakpoint-1: 932px;
 $footer-breakpoint-2: 855px;
 $footer-breakpoint-3: 634px;
