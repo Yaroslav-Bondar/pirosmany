@@ -3,7 +3,7 @@ let navigationLinkDropdown = document.querySelector('.navigation__link_dropdown'
 let navigationDropdown = document.querySelector('.navigation__dropdown')
 let widthHideNav = 900
 navigationLinkDropdown.addEventListener('click', ()=> {
-    navigationDropdown.classList.toggle('navigation__dropdown_active')
+    navigationDropdown.classList.toggle('header__dropdown_active')
 })
 $('.video__btn').click(function(){
     $(this).hide()

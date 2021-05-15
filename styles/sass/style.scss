@@ -3,12 +3,56 @@
 @import 'mixins';
 @import 'common';
 @import 'pagination';
+.mobmenu {
+    &__header {
+        // border-radius: 8px;
+        background: aquamarine;
+    }
+    width: 67%;
+    &__nav {
+        background: $mobmenu-bgcolor;
+        
+        padding: 30px 21px 0 30px;
+    }
+    &__node {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+    }
+    &__icon {
+        width: 16px;
+        height: 14px;
+        margin-right: 7px;
+        &-item {
+            @extend %inner-img;
+        }
+    }
+    &__text {
+        font-family: 'TT Hoves';
+        @include font(400, 14px, 16px, $mobmenu-text-color);
+    }
+    &__btn {
+        width: 7px;
+        height: 12px;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        &-icon {
+            display: block;
+            @extend %inner-img;
+        }
+    }
+}
 .header {
     padding: 30px 0 24px 0;
     background: #FFFFFF;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.12);
     &__burger {
-        // display: none;
         position: relative;
         height: 12.52px;
         width: 22.3px;
@@ -34,6 +78,26 @@
         &-line:last-child {
             bottom: 0;
             width: 10.95px;
+        }
+    }
+    &__dropdown {
+        position: absolute;
+        left: -32.6px;
+        padding: 15px 20px 15px 32.6px;
+        border-radius: 12px;
+        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.12);
+        background: #FFFFFF;
+        background: goldenrod;
+        z-index: 2;
+        &-node {
+            margin-bottom: 17.39px;
+        }
+        &-text {
+            width: max-content;
+            @include font(400, 10.66px, 13px, #333333);
+        }
+        &_active {
+            display: block;
         }
     }
     &__wrap {
@@ -140,62 +204,6 @@
                 object-fit: cover;
             }
         }
-    }
-}
-.navigation {
-    &__list {
-        display: flex;
-        list-style-type: none;
-    }
-    &__node:first-child {
-        position: relative;
-    }
-    &__node:not(:last-child) {
-        margin-right: 45px;
-        @media screen and (max-width: $navigation-breakpoint-1) {
-            margin-right: 25px;
-        }
-    }
-    &__link {
-        text-decoration: none;
-        @include font(500, 18px, 21px, #333333) 
-    } 
-    &__dropdown {
-        display: none;
-        position: absolute;
-        left: -32.6px;
-        padding: 15px 20px 15px 32.6px;
-        border-radius: 12px;
-        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.12);
-        background: #FFFFFF;
-        background: goldenrod;
-        z-index: 2;
-        list-style-type: none;
-        &-node:not(:last-child) {
-            margin-bottom: 17.39px;
-        }
-        &-link {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-        }
-        &-img {
-            width: 16px;
-            height: 16px;
-            margin-right: 7.46px;
-        }
-        &-icon {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-        &-text {
-            width: max-content;
-            @include font(400, 10.66px, 13px, #333333);
-        }
-    }
-    &__dropdown_active {
-        display: block;
     }
 }
 .slider1 {

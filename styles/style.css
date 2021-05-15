@@ -4,7 +4,8 @@
   align-items: center;
 }
 
-.footer__user-icon-item, .header__cart-icon, .header__user-icon, .card__img-item {
+.footer__user-icon-item, .header__cart-icon, .header__user-icon, .mobmenu__btn-icon, .mobmenu__icon-item, .card__img-item {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -99,6 +100,50 @@ body {
   text-transform: none;
   line-height: 14px;
   color: #FFFFFF;
+}
+
+.navigation__list {
+  display: flex;
+  list-style-type: none;
+}
+.navigation__node:first-child {
+  position: relative;
+}
+.navigation__node:not(:last-child) {
+  margin-right: 45px;
+}
+@media screen and (max-width: 950px) {
+  .navigation__node:not(:last-child) {
+    margin-right: 25px;
+  }
+}
+.navigation__link {
+  text-decoration: none;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18px;
+  text-transform: none;
+  line-height: 21px;
+  color: #333333;
+}
+.navigation__dropdown {
+  display: none;
+  list-style-type: none;
+}
+.navigation__dropdown-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.navigation__dropdown-img {
+  width: 16px;
+  height: 16px;
+  margin-right: 7.46px;
+}
+.navigation__dropdown-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 /**
@@ -207,6 +252,51 @@ body {
   opacity: 0.5;
 }
 
+.mobmenu {
+  width: 67%;
+}
+.mobmenu__header {
+  background: aquamarine;
+}
+.mobmenu__nav {
+  background: #343E48;
+  padding: 30px 21px 0 30px;
+}
+.mobmenu__node {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mobmenu__link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.mobmenu__icon {
+  width: 16px;
+  height: 14px;
+  margin-right: 7px;
+}
+.mobmenu__text {
+  font-family: "TT Hoves";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  text-transform: none;
+  line-height: 16px;
+  color: #FFFFFF;
+}
+.mobmenu__btn {
+  width: 7px;
+  height: 12px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.mobmenu__btn-icon {
+  display: block;
+}
+
 .header {
   padding: 30px 0 24px 0;
   background: #FFFFFF;
@@ -241,6 +331,31 @@ body {
 .header__burger-line:last-child {
   bottom: 0;
   width: 10.95px;
+}
+.header__dropdown {
+  position: absolute;
+  left: -32.6px;
+  padding: 15px 20px 15px 32.6px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.12);
+  background: #FFFFFF;
+  background: goldenrod;
+  z-index: 2;
+}
+.header__dropdown-node {
+  margin-bottom: 17.39px;
+}
+.header__dropdown-text {
+  width: max-content;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 10.66px;
+  text-transform: none;
+  line-height: 13px;
+  color: #333333;
+}
+.header__dropdown_active {
+  display: block;
 }
 .header__wrap {
   display: flex;
@@ -354,73 +469,6 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.navigation__list {
-  display: flex;
-  list-style-type: none;
-}
-.navigation__node:first-child {
-  position: relative;
-}
-.navigation__node:not(:last-child) {
-  margin-right: 45px;
-}
-@media screen and (max-width: 950px) {
-  .navigation__node:not(:last-child) {
-    margin-right: 25px;
-  }
-}
-.navigation__link {
-  text-decoration: none;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 18px;
-  text-transform: none;
-  line-height: 21px;
-  color: #333333;
-}
-.navigation__dropdown {
-  display: none;
-  position: absolute;
-  left: -32.6px;
-  padding: 15px 20px 15px 32.6px;
-  border-radius: 12px;
-  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.12);
-  background: #FFFFFF;
-  background: goldenrod;
-  z-index: 2;
-  list-style-type: none;
-}
-.navigation__dropdown-node:not(:last-child) {
-  margin-bottom: 17.39px;
-}
-.navigation__dropdown-link {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-}
-.navigation__dropdown-img {
-  width: 16px;
-  height: 16px;
-  margin-right: 7.46px;
-}
-.navigation__dropdown-icon {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-.navigation__dropdown-text {
-  width: max-content;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 10.66px;
-  text-transform: none;
-  line-height: 13px;
-  color: #333333;
-}
-.navigation__dropdown_active {
-  display: block;
 }
 
 .slider1 {
