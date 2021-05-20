@@ -1,4 +1,4 @@
-.table__btn, .header__user-btn {
+.table__btn, .header__user-btn, .mobmenu__dropdown-img {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,6 +18,10 @@
 
 body {
   font-family: "TT Norms Pro";
+}
+
+.body_lock {
+  overflow: hidden;
 }
 
 .wrapper {
@@ -103,11 +107,9 @@ body {
 }
 
 .navigation__list {
+  position: relative;
   display: flex;
   list-style-type: none;
-}
-.navigation__node:first-child {
-  position: relative;
 }
 .navigation__node:not(:last-child) {
   margin-right: 45px;
@@ -127,7 +129,6 @@ body {
   color: #333333;
 }
 .navigation__dropdown {
-  display: none;
   list-style-type: none;
 }
 .navigation__dropdown-link {
@@ -144,6 +145,14 @@ body {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+#menu-dropdown {
+  display: none;
+}
+
+.menu__dropdown_active {
+  display: block !important;
 }
 
 /**
@@ -253,19 +262,83 @@ body {
 }
 
 .mobmenu {
+  position: absolute;
+  top: 0;
+  left: -100%;
   width: 67%;
+  z-index: 10;
+  transition: left 0.2s;
+}
+.mobmenu_active {
+  left: 0;
+}
+.mobmenu__overlay {
+  position: absolute;
+  display: none;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  transition: left 0.2s;
+  z-index: 9;
+}
+.mobmenu__overlay_active {
+  display: block;
 }
 .mobmenu__header {
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
   background: aquamarine;
 }
+.mobmenu__burger {
+  width: 20px;
+  height: 20px;
+  margin-right: 53px;
+  background: #00AC4E;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.mobmenu__dropdown {
+  display: none;
+  padding: 10px 0 15px 40px;
+}
+.mobmenu__dropdown-node:not(:last-child) {
+  margin-bottom: 15px;
+}
+.mobmenu__dropdown-text {
+  font-family: "TT Hoves";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 10px;
+  text-transform: none;
+  line-height: 12px;
+  color: #F2F2F2;
+}
+.mobmenu__dropdown-img > i {
+  display: block;
+  font-size: 14px;
+  color: #FFFFFF;
+}
 .mobmenu__nav {
-  background: #343E48;
+  height: 100vh;
   padding: 30px 21px 0 30px;
+  background: #343E48;
+  overflow-y: auto;
+}
+.mobmenu__list {
+  list-style-type: none;
 }
 .mobmenu__node {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.mobmenu__node:not(:first-child) {
+  margin-top: 25px;
+}
+.mobmenu__node:last-child {
+  margin-top: 50px;
 }
 .mobmenu__link {
   display: flex;
@@ -292,9 +365,13 @@ body {
   border: none;
   background: transparent;
   cursor: pointer;
+  transition: transform 0.2s;
 }
 .mobmenu__btn-icon {
   display: block;
+}
+.mobmenu__btn_active {
+  transform: rotateZ(-90deg);
 }
 
 .header {
@@ -302,11 +379,17 @@ body {
   background: #FFFFFF;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.12);
 }
+@media screen and (max-width: 900px) {
+  .header {
+    padding: 15px 0 15px 0;
+  }
+}
 .header__burger {
   position: relative;
   height: 12.52px;
   width: 22.3px;
   cursor: pointer;
+  transition: width 0.2s;
 }
 @media screen and (max-width: 360px) {
   .header__burger {
@@ -332,9 +415,14 @@ body {
   bottom: 0;
   width: 10.95px;
 }
+.header__burger_active .header__burger-line {
+  width: 22.34px;
+  background: #00AC4E;
+}
 .header__dropdown {
+  display: none;
   position: absolute;
-  left: -32.6px;
+  top: 22px;
   padding: 15px 20px 15px 32.6px;
   border-radius: 12px;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.12);

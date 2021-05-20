@@ -4,20 +4,83 @@
 @import 'common';
 @import 'pagination';
 .mobmenu {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 67%;
+    z-index: 10;
+    transition: left .2s;
+    &_active {
+        left: 0;
+    }
+    &__overlay {
+        position: absolute;
+        display: none;
+        height: 100vh;
+        width: 100%;
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+        // left: -100%;
+        transition: left .2s;
+        z-index: 9;
+        &_active {
+            display: block;
+            // left: 0;
+        }
+    }
     &__header {
+        display: flex;
+        align-items: center;
+        padding-left: 30px;
         // border-radius: 8px;
         background: aquamarine;
     }
-    width: 67%;
+    &__burger {
+        width: 20px;
+        height: 20px;
+        margin-right: 53px;
+        background: $btn-bgcolor;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    &__dropdown {
+        display: none;
+        padding: 10px 0 15px 40px;
+        &-node:not(:last-child) {
+            margin-bottom: 15px;
+        }
+        &-text {
+            font-family: 'TT Hoves';
+            @include font(400, 10px, 12px, $mobmenu-dropdown-text-color);
+        }
+        &-img {
+            @extend %center-xy-flex;
+            & > i {
+            display: block;
+            font-size: 14px;
+            color: $mobmenu-text-color;
+            }
+        }
+    }
     &__nav {
-        background: $mobmenu-bgcolor;
-        
+        height: 100vh;
         padding: 30px 21px 0 30px;
+        background: $mobmenu-bgcolor;
+        overflow-y: auto;
+    }
+    &__list {
+        list-style-type: none;
     }
     &__node {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        &:not(:first-child) {
+            margin-top: 25px;
+        }
+        &:last-child {
+            margin-top: 50px;
+        }
     }
     &__link {
         display: flex;
@@ -42,9 +105,13 @@
         border: none;
         background: transparent;
         cursor: pointer;
+        transition: transform .2s;
         &-icon {
             display: block;
             @extend %inner-img;
+        }
+        &_active {
+            transform: rotateZ(-90deg);
         }
     }
 }
@@ -52,11 +119,16 @@
     padding: 30px 0 24px 0;
     background: #FFFFFF;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.12);
+    // max-width == widthHideNav in main.js
+    @media screen and (max-width: 900px) {
+        padding: 15px 0 15px 0;
+    }
     &__burger {
         position: relative;
         height: 12.52px;
         width: 22.3px;
         cursor: pointer;
+        transition: width .2s;
         @media screen and (max-width: $header-breakpoint-4) {
             margin-right: 20px;
         }
@@ -79,10 +151,15 @@
             bottom: 0;
             width: 10.95px;
         }
+        &_active &-line {
+            width: 22.34px;
+            background: $btn-bgcolor;
+        }
     }
     &__dropdown {
+        display: none;
         position: absolute;
-        left: -32.6px;
+        top: 22px;
         padding: 15px 20px 15px 32.6px;
         border-radius: 12px;
         box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.12);

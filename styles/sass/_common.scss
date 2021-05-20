@@ -1,6 +1,9 @@
 body {
     font-family: 'TT Norms Pro';
 }
+.body_lock {
+    overflow: hidden;
+}
 .wrapper {
     // max-width: 994px;
     max-width: 997px;
@@ -63,11 +66,11 @@ body {
 }
 .navigation {
     &__list {
+        position: relative;
         display: flex;
         list-style-type: none;
     }
     &__node:first-child {
-        position: relative;
     }
     &__node:not(:last-child) {
         margin-right: 45px;
@@ -80,7 +83,7 @@ body {
         @include font(500, 18px, 21px, #333333) 
     } 
     &__dropdown {
-        display: none;
+        // display: none;
         // position: absolute;
         // left: -32.6px;
         // padding: 15px 20px 15px 32.6px;
@@ -113,7 +116,10 @@ body {
         //     @include font(400, 10.66px, 13px, #333333);
         // }
     }
-    // &__dropdown_active {
-    //     display: block;
-    // }
+}
+#menu-dropdown {
+    display: none;
+}
+.menu__dropdown_active {
+    display: block !important;
 }
