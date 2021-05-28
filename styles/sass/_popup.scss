@@ -1,0 +1,284 @@
+.popup {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 11;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    &_active {
+        display: flex;
+    }
+    &__form {
+        position: relative;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        background: $popup-bg;
+        border-radius: 14.7664px;
+        width: 358px;
+        box-shadow: 0px 0px 17.7465px rgba(0, 0, 0, 0.12);
+        border-radius: 17.4636px;
+        padding: 40px 45px 20px 45px;
+    }
+    &__close {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 15px;
+        right: 20px;
+        width: 22.19px;
+        height: 22.19px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        & > i {
+            font-size: 20px;
+            color: $btn-bgcolor; 
+        }
+    }
+    &__icon {
+        @extend %center-xy-flex;
+        width: 34px;
+        height: 34px;
+        margin: 0 0 14px 0;
+        & > i {
+            font-size: 22px;
+            color: $popup-text-color;
+        }
+    }
+    &__title {
+        width: 269.81px;
+        @include font(500, 17px, 22px, #000000);
+        margin-bottom: 28px;
+        text-align: center;
+    }
+    &__body {
+        display: flex;
+        flex-flow: column;
+        align-content: center;
+    }
+    &__wrap:not(:last-child) {
+        margin-bottom: 25px;
+    }
+    &__wrap {
+        position: relative;
+    }
+    &__wrap input {
+        height: 50.64px;
+        padding-left: 40px;
+        background: $popup-input-bg;
+        border: 0.873181px solid $popup-border-color;
+        border-radius: 5.91549px;
+    }
+    &__wrap::before {
+        display: block;
+        font-family: "FontAwesome";
+        position: absolute;
+        top: 30%;
+        padding-left: 15px;
+        color: $popup-text-color;
+    }
+    &__wrap input::placeholder {
+        font-family: 'TT Norms Pro';
+        font-weight: 400;
+    }
+    &__wrap:hover input {
+        box-shadow: 0 0 1.5px 1px $btn-bgcolor;
+        transition: box-shadow .2s;
+    }
+    &__wrap:hover::before {
+        color: $btn-bgcolor;
+        transition: color .2s;
+    }
+    &__wrong-message {
+        margin: 7px 0;
+        text-align: center;
+        @include font(400, 10px, 15px, $popup-wrong-message);
+    }
+    &__radio {
+        display: flex;
+        flex-flow: column;
+        &-label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        &-label:not(:last-child) {
+            margin-bottom: 15px;
+        }
+        &-real {
+            display: none;
+        }
+        &-fake {
+            display: inline-block;
+            position: relative;
+            flex-shrink: 0;
+            width: 14.97px;
+            height: 14.97px;
+            margin-right: 15px;
+            border: 1.87138px solid $popup-border-color;
+            border-radius: 50%;
+            background: transparent;
+        }
+        &-fake::before {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); 
+            content: '';
+            width: 0%;
+            height: 0%;
+            border-radius: 50%;
+            transition-property: width, height;
+            transition: .3s;
+            background: $btn-bgcolor;
+        }
+        &-real:checked + &-fake::before {
+            width: 80%;
+            height: 80%;
+        }
+        &-txt {
+            @include font(400, 10px, 14px, $popup-text-color);
+        }
+        &-real:checked ~ &-txt {
+            font-weight: 500;
+        }
+        &-link {
+            color: $btn-bgcolor;
+        } 
+    }
+}
+// signin pop-up modal window
+.signin {
+    &__form {
+        @media screen and (max-width: $signin-breakpoint-1) {
+            width: 302px;
+        }
+    }
+    &__close {
+        // position: absolute;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        // top: 15px;
+        // right: 20px;
+        // width: 22.19px;
+        // height: 22.19px;
+        // background: transparent;
+        // border: none;
+        // cursor: pointer;
+        // & > i {
+        //     font-size: 20px;
+        //    color: $btn-bgcolor; 
+        // }
+    }
+    &__icon {
+        // @extend %center-xy-flex;
+        // width: 34px;
+        // height: 34px;
+        // margin: 40px 0 14px 0;
+        // & > i {
+        //     font-size: 22px;
+        //     color: $popup-text-color;
+        // }
+    }
+    &__title {
+        @media screen and (max-width: $signin-breakpoint-1) {
+            width: 228px;
+        } 
+    }
+    &__body {
+        // display: flex;
+        // flex-flow: column;
+        // align-content: center;
+    }
+    &__wrap input {
+        @media screen and (max-width: $signin-breakpoint-1) {
+            width: 228px;
+        }
+    }
+    &__wrap:first-child::before {
+        content: '\f879';
+    }
+    &__wrap:last-child::before {
+        content: '\f084';
+    }
+    &__link {
+        text-align: center;
+        @include font(400, 14px, 17px, $btn-bgcolor);
+        margin: 15px 0 12px 0;
+    }
+    &__btn {
+        width: 143.2px;
+        height: 45.41px;
+        margin: 0 auto 24px auto;
+        border-radius: 5.91549px;
+        @include font(500, 14px, 18px, $btn-text-color);
+    }
+    &__register {
+        @include font(400px, 12px, 18px, #000000);
+        & span {
+            margin-right: 5px;
+        }
+        & a {
+            color: $btn-bgcolor;
+        }
+    }
+}
+// // signin pop-up modal window
+
+// subscribe pop-up modal window
+.subscribe {
+    &__icon i {
+        font-size: 25px;
+        color: $btn-bgcolor;
+    }
+    &__form {
+        width: 455px;
+        padding-bottom: 53px;
+        @media screen and (max-width: $subscribe-breakpoint-1) {
+            width: 302px;
+        }
+    }
+    &__title {
+        width: 362px;
+        @include font(500, 22px, 28px, #000000);
+        @media screen and (max-width: $subscribe-breakpoint-1) {
+            width: 228px;
+        }
+    }
+    &__wrap input {
+        @media screen and (max-width: $subscribe-breakpoint-1) {
+            width: 228px;
+        }
+    }
+    &__wrap::before {
+        content: '\f658';
+    }
+    &__btn {
+        width: 181.76px;
+        height: 57.63px;
+        margin-top: 18px;
+        border-radius: 7.50825px;
+        @include font(500, 18px, 23px, $btn-text-color);
+    }
+}
+// // subscribe pop-up modal window
+
+// checkin pop-up modal window
+.checkin {
+    display: flex;
+    &__btn {
+        width: 175.91px;
+        height: 48.66px;
+        margin: 38.36px auto 0 auto;
+        @include font(500, 13px, 20px, $btn-text-color);
+    }
+}
+// // checkin pop-up modal window

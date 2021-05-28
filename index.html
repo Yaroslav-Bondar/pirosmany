@@ -1637,17 +1637,16 @@
                         <a href="tel:+78312826000" class="header__tel-link">
                             <div class="header__tel-icon">
                                 <i class="fas fa-phone-alt header__tel-icon-item"></i>
-                                <!-- <img src="img/header/phone.png" alt="phone" class="header__tel-icon-item"> -->
                             </div>
                             <span class="header__tel-number">+7 (831) 282-60-00</span>
                         </a>
                     </div>
                     <div class="header__user">
-                        <button class="header__user-btn">
-                            <img src="img/header/person.png" alt="user" class="header__user-icon">
+                        <button id="user_sign_in" class="header__user-btn btn">
+                            <i class="far fa-user" aria-hidden="true"></i>
                         </button>
                         <a href="#" class="header__cart">
-                            <img src="img/header/cart.png" alt="cart" class="header__cart-icon">
+                            <i class="fas fa-cart-arrow-down"></i>
                         </a>
                     </div>
                 </div>
@@ -2208,10 +2207,14 @@
                         <a href="#" class="footer__social-2">мы в instagram ></a>
                     </div>
                     <div class="footer__user">
-                        <div class="footer__user-icon">
-                            <img src="img/footer/person.png" alt="person" class="footer__user-icon-item">
-                        </div>
-                        <button class="footer__btn btn">войти / регистрация</button>
+                        <button id="user_sign_in" class="footer__btn-in btn">
+                            <i class="far fa-user"></i>
+                            <span class="footer__btn-in-text">войти</span>
+                        </button>
+                        <span class="footer__separator">/</span>
+                        <button class="footer__btn-checkin btn">
+                            регистрация
+                        </button>
                     </div>
                     <div class="footer__work">
                         График работы по будням с 9:00 до 18:00
@@ -2228,6 +2231,111 @@
             </div>
         </div>
     </footer>
+    <!-- pop-up -->
+    <div class="signin popup">
+        <form action="#" class="signin__form popup__form" method="POST">
+            <button class="signin__close popup__close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="signin__icon popup__icon">
+                <i class="far fa-user"></i>
+            </div>
+            <div class="signin__title popup__title">
+                Войти в личный кабинет
+            </div>
+            <div class="signin__body popup__body">
+                <div class="signin__inputs popup__inputs">
+                    <div class="signin__wrap popup__wrap">
+                        <input type="tel" placeholder="Телефон" name="phone" required>
+                    </div>
+                    <div class="signin__wrap popup__wrap">
+                        <input type="password" placeholder="Пароль" name="password" required>
+                    </div> 
+                </div>
+                <div class="signin__wrong-message popup__wrong-message">
+                    Не правильный логин или пароль
+                </div>
+                <a href="#" class="signin__link">Забыли пароль?</a>
+                <button class="signin__btn btn" type="submit">Войти</button>
+            </div>
+            <div class="signin__register">
+                <span>Впервые у нас?</span><a href="#">Зарегистрироваться</a>
+            </div>
+        </form>
+    </div>
+    <div class="subscribe popup">
+        <form action="#" class="subscribe__form popup__form" method="POST">
+            <button class="popup__close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="subscribe__icon popup__icon">
+                <i class="fab fa-mailchimp"></i>
+            </div>
+            <div class="subscribe__title popup__title">
+                Подпишитесь на нашу рассылку и получите промокод на 500 RUB!
+            </div>
+            <div class="subscribe__body popup__body">
+                <div class="subscribe__inputs popup__inputs">
+                    <div class="subscribe__wrap popup__wrap">
+                        <input type="email" placeholder="E-mail" name="e-mail" required>
+                    </div>
+                </div>
+            </div>
+            <button class="subscribe__btn btn" type="submit">Отправить</button>
+        </form>
+    </div>
+    <div class="checkin popup">
+        <form action="#" class="checkin__form popup__form" method="POST">
+            <button class="checkin__close popup__close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="checkin__icon popup__icon">
+                <i class="far fa-user"></i>
+            </div>
+            <div class="checkin__title popup__title">
+                Зарегистрироваться
+            </div>
+            <div class="checkin__body popup__body">
+                <div class="checkin__inputs popup__inputs">
+                    <div class="checkin__wrap popup__wrap">
+                        <input type="tel" placeholder="Телефон" name="phone" required>
+                    </div>
+                    <div class="checkin__wrap popup__wrap">
+                        <input type="password" placeholder="Пароль" name="password" required>
+                    </div>
+                    <div class="checkin__wrap popup__wrap">
+                        <input type="password" placeholder="Подтвердите пароль" name="password-repeat" required>
+                    </div>  
+                </div>
+                <div class="checkin__wrong-message popup__wrong-message">
+                    Пользователь с таким номером телефона уже зарегистрирован.
+                </div>
+                <div class="checkin__radio popup__radio">
+                    <label class="popup__radio-label">
+                        <input type="radio" class="popup__radio-real" name="offers" checked>
+                        <span class="popup__radio-fake"></span>
+                        <span class="popup__radio-txt">
+                            Хочу получать выгодные предложения от магазина
+                        </span>
+                    </label>
+                    <label class="popup__radio-label">
+                        <input type="radio" class="popup__radio-real" name="offers">
+                        <span class="popup__radio-fake"></span>
+                        <span class="popup__radio-txt">
+                            Принимаю условия 
+                            <a href="#" class="popup__radio-link">
+                                Пользовательского соглашения, Политики конфиденциальности
+                            </a>
+                        </span>
+                    </label>
+                </div>
+                <!-- <a href="#" class="checkin__link">Забыли пароль?</a> -->
+                <button class="checkin__btn btn" type="submit">Зарегистрироваться</button>
+            </div>
+        </form>
+
+    </div>
+    <!-- // pop-up -->
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/sliders.js"></script>
     <!-- simple jQuery pagination plugin https://flaviusmatis.github.io/simplePagination.js -->

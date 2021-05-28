@@ -26,6 +26,12 @@ $pagination-text-color: #000000;
 
 $footer-bg: #00AC4E;
 $footer-text-color: #fff;
+
+$popup-text-color: #C6C6C6;
+$popup-bg: #FFFFFF;
+$popup-border-color:#EBEBEB;
+$popup-input-bg: #FCFCFC;
+$popup-wrong-message: #EB5757; 
 // breakpoints
 $header-breakpoint-1: 590px;
 $header-breakpoint-2: 455px;
@@ -40,4 +46,9 @@ $footer-breakpoint-2: 855px;
 $footer-breakpoint-3: 634px;
 $footer-breakpoint-4: 512px;
 $footer-breakpoint-5: 440px;
+
+    // pop-up windows
+$signin-breakpoint-1: 430px;
+$subscribe-breakpoint-1: 530px;
+    // // pop-up windows
 // // breakpoints

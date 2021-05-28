@@ -114,5 +114,49 @@ mobmenuBurger.addEventListener('click', () => {
 })
 // // logic for burger buttons
 
+// pop-up
+let popup = document.querySelectorAll('.popup')  // window
+let popupClose = document.querySelectorAll('.popup__close')  // button
+    // close for every pop-up window
+for (let i = 0; i < popupClose.length; i++) {
+    popupClose[i].addEventListener('click', ()=> {
+        popup[i].classList.remove('popup_active')
+        body.classList.remove('body_lock')  
+    }) 
+}
+// close after click for window
+for (const el of popup) {                  
+    el.addEventListener('click', (e)=> {
+        if(e.target == el)
+            el.classList.remove('popup_active')
+            body.classList.remove('body_lock')    
+    })
+}
+    // // close for every pop-up window
+
+    // user signin, show the modal window after pressing the button
+let userSignIn = document.querySelectorAll('#user_sign_in') 
+let signin = document.querySelector('.signin')
+for (const el of userSignIn) {
+    el.addEventListener('click', ()=> {
+        signin.classList.add('popup_active')
+        body.classList.add('body_lock')
+    })    
+}
+    // // user signin
+
+    // subscribe, show the modal window after pressing the button
+let slider1Btn = document.querySelectorAll('.slider1__btn')
+let subscribe = document.querySelector('.subscribe')
+for (const el of slider1Btn) {
+    el.addEventListener('click', ()=> {
+        subscribe.classList.add('popup_active')
+        body.classList.add('body_lock')
+    })
+}
+    // // subscribe
+
+// // pop-up
+
 
 
