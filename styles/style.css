@@ -210,7 +210,6 @@ body {
   color: #C6C6C6;
 }
 .popup__title {
-  width: 269.81px;
   font-weight: 500;
   font-style: normal;
   font-size: 17px;
@@ -224,6 +223,7 @@ body {
   display: flex;
   flex-flow: column;
   align-content: center;
+  width: 100%;
 }
 .popup__wrap:not(:last-child) {
   margin-bottom: 25px;
@@ -232,8 +232,10 @@ body {
   position: relative;
 }
 .popup__wrap input {
+  width: 100%;
   height: 50.64px;
   padding-left: 40px;
+  font-family: "TT Norms Pro";
   background: #FCFCFC;
   border: 0.873181px solid #EBEBEB;
   border-radius: 5.91549px;
@@ -249,6 +251,7 @@ body {
 .popup__wrap input::placeholder {
   font-family: "TT Norms Pro";
   font-weight: 400;
+  color: gray;
 }
 .popup__wrap:hover input {
   box-shadow: 0 0 1.5px 1px #00AC4E;
@@ -330,16 +333,7 @@ body {
 @media screen and (max-width: 430px) {
   .signin__form {
     width: 302px;
-  }
-}
-@media screen and (max-width: 430px) {
-  .signin__title {
-    width: 228px;
-  }
-}
-@media screen and (max-width: 430px) {
-  .signin__wrap input {
-    width: 228px;
+    padding: 40px 25px 20px 25px;
   }
 }
 .signin__wrap:first-child::before {
@@ -396,26 +390,16 @@ body {
 @media screen and (max-width: 530px) {
   .subscribe__form {
     width: 302px;
+    padding: 40px 25px 35px 25px;
   }
 }
 .subscribe__title {
-  width: 362px;
   font-weight: 500;
   font-style: normal;
   font-size: 22px;
   text-transform: none;
   line-height: 28px;
   color: #000000;
-}
-@media screen and (max-width: 530px) {
-  .subscribe__title {
-    width: 228px;
-  }
-}
-@media screen and (max-width: 530px) {
-  .subscribe__wrap input {
-    width: 228px;
-  }
 }
 .subscribe__wrap::before {
   content: "";
@@ -433,8 +417,11 @@ body {
   color: #FFFFFF;
 }
 
-.checkin {
-  display: flex;
+@media screen and (max-width: 400px) {
+  .checkin__form {
+    width: 303px;
+    padding: 40px 25px 20px 25px;
+  }
 }
 .checkin__btn {
   width: 175.91px;
@@ -445,6 +432,94 @@ body {
   font-size: 13px;
   text-transform: none;
   line-height: 20px;
+  color: #FFFFFF;
+}
+.checkin__wrap:first-child::before {
+  content: "";
+}
+.checkin__wrap:not(:first-child)::before {
+  content: "";
+}
+
+.reserv__form {
+  width: 654px;
+  margin: 0 15px 0 15px;
+}
+.reserv__title {
+  font-size: 24px;
+  line-height: 18px;
+}
+.reserv__conteiner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 25px 35px;
+  margin-top: 25px;
+}
+@media screen and (max-width: 648px) {
+  .reserv__conteiner {
+    grid-column-gap: 20px;
+  }
+}
+.reserv__wrap input {
+  padding-left: 15px;
+  color: gray;
+}
+.reserv__wrap:not(:last-child) {
+  margin-bottom: 0px;
+}
+.reserv__wrap:nth-child(1) {
+  grid-area: 1/1/2/2;
+}
+@media screen and (max-width: 600px) {
+  .reserv__wrap:nth-child(1) {
+    grid-area: 1/1/2/3;
+  }
+}
+.reserv__wrap:nth-child(2)::before {
+  content: "Время:";
+  font-family: "TT Norms Pro";
+  color: gray;
+}
+.reserv__wrap:nth-child(2) input {
+  padding-left: 80px;
+}
+.reserv__wrap:nth-child(2) {
+  grid-area: 2/1/3/2;
+}
+@media screen and (max-width: 600px) {
+  .reserv__wrap:nth-child(2) {
+    grid-area: 4/1/5/3;
+  }
+}
+.reserv__wrap:nth-child(3) {
+  grid-area: 1/2/2/3;
+}
+@media screen and (max-width: 600px) {
+  .reserv__wrap:nth-child(3) {
+    grid-area: 2/1/3/3;
+  }
+}
+.reserv__wrap:nth-child(4) {
+  grid-area: 2/2/2/3;
+}
+@media screen and (max-width: 600px) {
+  .reserv__wrap:nth-child(4) {
+    grid-area: 3/1/4/3;
+  }
+}
+.reserv__wrap:nth-child(4) input[type=date]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+.reserv__btn {
+  width: 164px;
+  height: 52px;
+  margin: 25px auto 0 auto;
+  border-radius: 6.77465px;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  text-transform: none;
+  line-height: 21px;
   color: #FFFFFF;
 }
 
@@ -552,6 +627,262 @@ body {
 }
 .mytheme .disabled {
   opacity: 0.5;
+}
+
+/*!
+ * Pikaday
+ * Copyright © 2014 David Bushell | BSD & MIT license | https://dbushell.com/
+ */
+.pika-single {
+  z-index: 9999;
+  display: block;
+  position: relative;
+  color: #00AC4E;
+  background: #FFFFFF;
+  border: none;
+  border-radius: 15px;
+  font-family: "TT Hoves";
+}
+
+/*
+clear child float (pika-lendar), using the famous micro clearfix hack
+http://nicolasgallagher.com/micro-clearfix-hack/
+*/
+.pika-single:before,
+.pika-single:after {
+  content: " ";
+  display: table;
+}
+
+.pika-single:after {
+  clear: both;
+}
+
+.pika-single.is-hidden {
+  display: block;
+}
+
+.pika-single.is-bound {
+  position: absolute;
+  box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.5);
+}
+
+.pika-lendar {
+  float: left;
+  width: 240px;
+  margin: 8px;
+}
+
+.pika-title {
+  position: relative;
+  text-align: center;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  text-transform: none;
+  line-height: 17px;
+  color: #00AC4E;
+}
+
+.pika-label {
+  display: inline-block;
+  position: relative;
+  z-index: 9999;
+  overflow: hidden;
+  margin: 0;
+  padding: 5px 3px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: bold;
+  background-color: #fff;
+}
+
+.pika-title select {
+  cursor: pointer;
+  position: absolute;
+  z-index: 9998;
+  margin: 0;
+  left: 0;
+  top: 5px;
+  opacity: 0;
+}
+
+.pika-prev,
+.pika-next {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  border: 0;
+  padding: 0;
+  width: 20px;
+  height: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  background: transparent;
+  opacity: 0.5;
+}
+
+.pika-prev::before,
+.pika-next::before {
+  font-family: "FontAwesome";
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #00AC4E;
+}
+
+.pika-prev::before {
+  content: "";
+}
+
+.pika-next::before {
+  content: "";
+}
+
+.pika-prev:hover,
+.pika-next:hover {
+  opacity: 1;
+}
+
+.pika-prev,
+.is-rtl .pika-next {
+  float: left;
+}
+
+.pika-next,
+.is-rtl .pika-prev {
+  float: right;
+}
+
+.pika-prev.is-disabled,
+.pika-next.is-disabled {
+  cursor: default;
+  opacity: 0.2;
+}
+
+.pika-select {
+  display: inline-block;
+}
+
+.pika-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 0;
+}
+
+.pika-table th,
+.pika-table td {
+  width: 14.2857142857%;
+  padding: 0;
+}
+
+.pika-table th {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  text-transform: none;
+  line-height: 17px;
+  color: #00AC4E;
+  text-align: center;
+}
+
+.pika-button {
+  cursor: pointer;
+  display: block;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  outline: none;
+  border: 0;
+  margin: 0;
+  width: 100%;
+  padding: 5px;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  text-transform: none;
+  line-height: 17px;
+  color: #333333;
+  text-align: center;
+  background: transparent;
+  height: initial;
+}
+
+.pika-week {
+  font-size: 11px;
+  color: #999;
+}
+
+.is-today .pika-button {
+  color: #00AC4E;
+  font-weight: bold;
+}
+
+.is-selected .pika-button,
+.has-event .pika-button {
+  color: #fff;
+  font-weight: bold;
+  background: #00AC4E;
+  box-shadow: inset 0 1px 3px #178fe5;
+  border-radius: 3px;
+}
+
+.has-event .pika-button {
+  background: #005da9;
+  box-shadow: inset 0 1px 3px #0076c9;
+}
+
+.is-disabled .pika-button,
+.is-inrange .pika-button {
+  background: #D5E9F7;
+}
+
+.is-startrange .pika-button {
+  color: #fff;
+  background: #6CB31D;
+  box-shadow: none;
+  border-radius: 3px;
+}
+
+.is-endrange .pika-button {
+  color: #fff;
+  background: #33aaff;
+  box-shadow: none;
+  border-radius: 3px;
+}
+
+.is-disabled .pika-button {
+  pointer-events: none;
+  cursor: default;
+  color: #999;
+  opacity: 0.3;
+}
+
+.is-outside-current-month .pika-button {
+  color: #999;
+  opacity: 0.3;
+}
+
+.is-selection-disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.pika-button:hover,
+.pika-row.pick-whole-week:hover .pika-button {
+  color: #fff;
+  background: #00AC4E;
+  box-shadow: none;
+  border-radius: 3px;
+}
+
+/* styling for abbr */
+.pika-table abbr {
+  border-bottom: none;
+  cursor: help;
 }
 
 .mobmenu {

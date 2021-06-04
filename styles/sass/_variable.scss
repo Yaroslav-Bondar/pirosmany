@@ -27,11 +27,8 @@ $pagination-text-color: #000000;
 $footer-bg: #00AC4E;
 $footer-text-color: #fff;
 
-$popup-text-color: #C6C6C6;
-$popup-bg: #FFFFFF;
-$popup-border-color:#EBEBEB;
-$popup-input-bg: #FCFCFC;
-$popup-wrong-message: #EB5757; 
+
+
 // breakpoints
 $header-breakpoint-1: 590px;
 $header-breakpoint-2: 455px;
@@ -48,7 +45,17 @@ $footer-breakpoint-4: 512px;
 $footer-breakpoint-5: 440px;
 
     // pop-up windows
+$popup-text-color: #C6C6C6;
+$popup-bg: #FFFFFF;
+$popup-border-color:#EBEBEB;
+$popup-input-bg: #FCFCFC;
+$popup-wrong-message: #EB5757;
+$datepicker-text-color: #333333;
+
 $signin-breakpoint-1: 430px;
 $subscribe-breakpoint-1: 530px;
+$checkin-breakpoint-1: 400px;
+$reserv-breakpoint-1: 648px;
+$reserv-breakpoint-2: 600px;
     // // pop-up windows
 // // breakpoints

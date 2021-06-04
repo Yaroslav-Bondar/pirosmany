@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href= "styles/normalize.css">
     <link rel="stylesheet" href= "fonts/fonts.css">
-    <link rel="stylesheet" href="styles/swiper-bundle.css">
-    <link rel="stylesheet" href="styles/style.css">
-    <title>Document</title>
+    <!-- pikaday a refreshing JavaScript datepicker https://github.com/Pikaday/Pikaday#pikaday -->
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css"> -->
+    <!-- <link rel="stylesheet" href="styles/datepicker.css"> -->
+    <!-- swiper slider -->
+    <link rel="stylesheet" href= "styles/swiper-bundle.css">
+    <link rel="stylesheet" href= "styles/style.css">
+    <title>Pirosmana</title>
 </head>
 <body>
     <div class="mobmenu__overlay"></div>
@@ -1628,7 +1632,7 @@
                             <a href="#" class="navigation__link" id="menu-btn">Оплата</a>
                         </li>
                         <li class="navigation__node" id="menu-node">
-                            <a href="#" class="navigation__link" id="menu-btn">Бронь стола</a>
+                            <a href="#" class="navigation__link table__btn_pop-up" id="menu-btn">Бронь стола</a>
                         </li>
                     </ul>
                 </nav>
@@ -1655,7 +1659,7 @@
     </header>
     <section class="table">
         <div class="wrapper">
-            <button class="table__btn">
+            <button class="table__btn table__btn_pop-up">
                 <span class="table__btn-text">Забронировать стол</span>
                 <div class="table__btn-img">
                     <img src="img/table/arrow.png" alt="arrow">
@@ -2212,7 +2216,7 @@
                             <span class="footer__btn-in-text">войти</span>
                         </button>
                         <span class="footer__separator">/</span>
-                        <button class="footer__btn-checkin btn">
+                        <button id="checkin" class="footer__btn-checkin btn">
                             регистрация
                         </button>
                     </div>
@@ -2329,11 +2333,40 @@
                         </span>
                     </label>
                 </div>
-                <!-- <a href="#" class="checkin__link">Забыли пароль?</a> -->
                 <button class="checkin__btn btn" type="submit">Зарегистрироваться</button>
             </div>
         </form>
 
+    </div>
+    <div class="reserv popup">
+        <form action="#" class="reserv__form popup__form" method="POST">
+            <button class="reserv__close popup__close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="reserv__title popup__title">
+                Бронирование стола
+            </div>
+            <div class="reserv__body popup__body">
+                <div class="reserv__wrap popup__wrap">
+                    <input type="text" placeholder="Имя" name="name" required>
+                </div>
+                <div class="reserv__conteiner">
+                    <div class="reserv__wrap popup__wrap">
+                        <input type="tel" placeholder="Телефон" name="phone" required>
+                    </div>
+                    <div class="reserv__wrap popup__wrap">
+                        <input id="myTime" type="time" value="13:30" name="time" required>
+                    </div>
+                    <div class="reserv__wrap popup__wrap">
+                        <input type="number" placeholder="Количество человек" name="amount" required>
+                    </div>
+                    <div class="reserv__wrap popup__wrap">
+                        <input type="date" name="date" id="datepicker" required>
+                    </div>
+                </div>
+                <button class="reserv__btn btn" type="submit">Забронировать</button>
+            </div>
+        </form>
     </div>
     <!-- // pop-up -->
     <script src="js/swiper-bundle.min.js"></script>
@@ -2346,5 +2379,8 @@
     <script src="js/main.js"></script>
     <!-- Add font awesome icons-->
     <script src="https://kit.fontawesome.com/a8ec7c40c4.js" crossorigin="anonymous"></script>
+    <!-- pikaday a refreshing JavaScript datepicker https://github.com/Pikaday/Pikaday#pikaday -->
+    <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+    <script src="js/datepicker.js"></script>
 </body>
 </html>

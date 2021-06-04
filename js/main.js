@@ -52,8 +52,9 @@ function logicsMenu(ev) {
     if(targetElement.closest('#menu-btn') !== null) {
         let menuBtn = targetElement.closest('#menu-btn')
         if(menuBtn.closest('#menu-node')) {
-            let menuDropDown = menuBtn.closest('#menu-node').nextElementSibling 
-            if(menuDropDown.id === 'menu-dropdown') {    
+            let menuDropDown = menuBtn.closest('#menu-node').nextElementSibling
+            if(!menuDropDown) return 
+            if(menuDropDown.id === 'menu-dropdown') {
                 if(!menuDropDown.classList.contains('menu__dropdown_active')) {
                     menuDropDown.classList.add('menu__dropdown_active')
                 }
@@ -61,12 +62,7 @@ function logicsMenu(ev) {
                     menuDropDown.classList.remove('menu__dropdown_active')
                 }
             }
-            // console.log('3')
-            // mobmenuBtn.classList.toggle('mobmenu__btn_active')
-            // document.querySelector('.mobmenu__btn').style.transform = 'rotateZ(-90deg)'
-            // console.log(document.querySelector('.mobmenu__btn'))
             mobmenuBtn.classList.toggle('mobmenu__btn_active')
-            console.log(mobmenuBtn)
         }
     }
 }
@@ -155,6 +151,29 @@ for (const el of slider1Btn) {
     })
 }
     // // subscribe
+    // user checkin, show the modal window after pressing the button
+    let checkinBtn = document.querySelectorAll('#checkin')
+    let checkin = document.querySelector('.checkin')
+    for (const el of checkinBtn) {
+        el.addEventListener('click', ()=> {
+            checkin.classList.add('popup_active')
+            body.classList.add('body_lock')
+        })       
+    }
+    // user checkin
+    // reserv
+    let reserv = document.querySelector('.reserv')
+    let tableBtn = document.querySelectorAll('.table__btn_pop-up')
+    for (const el of tableBtn) {
+        el.addEventListener('click', ()=> {
+            reserv.classList.add('popup_active')
+            body.classList.add('body_lock')
+        })    
+    }
+    // let myTime = document.querySelector('#myTime')
+    // console.log(myTime)
+    // myTime.innerHTML='AAA'
+    // reserv
 
 // // pop-up
 
