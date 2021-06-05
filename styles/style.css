@@ -507,8 +507,18 @@ body {
     grid-area: 3/1/4/3;
   }
 }
-.reserv__wrap:nth-child(4) input[type=date]::-webkit-calendar-picker-indicator {
+.reserv__wrap input[type=date]::-webkit-calendar-picker-indicator, .reserv__wrap input[type=time]::-webkit-calendar-picker-indicator {
   display: none;
+}
+.reserv__wrap input[type=date] {
+  position: relative;
+}
+.reserv__wrap input[type=date]::before {
+  position: absolute;
+  right: 15px;
+  content: "";
+  font-family: "FontAwesome";
+  color: #00AC4E;
 }
 .reserv__btn {
   width: 164px;
