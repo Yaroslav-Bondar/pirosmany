@@ -22,7 +22,7 @@
         width: 358px;
         box-shadow: 0px 0px 17.7465px rgba(0, 0, 0, 0.12);
         border-radius: 17.4636px;
-        padding: 40px 45px 20px 45px;
+        padding: 40px 45px 40px 45px;
     }
     &__close {
         position: absolute;
@@ -73,11 +73,37 @@
         height: 50.64px;
         padding-left: 40px;
         font-family: 'TT Norms Pro';
-        // color: gray;
         background: $popup-input-bg;
         border: 0.873181px solid $popup-border-color;
         border-radius: 5.91549px;
     }
+    &__wrap input {
+        border: 0.873181px solid $popup-border-color;
+        border-radius: 5.91549px;
+    }
+    &__wrap input[type='number']::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+    &__wrap input::placeholder,
+    &__wrap input::-webkit-input-placeholder,
+    &__wrap input::-moz-placeholder,
+    &__wrap input:-ms-input-placeholder {
+        font-family: 'TT Norms Pro';
+        @include font(400, 14px, 17px, $popup-text-color);
+    }
+    &__wrap:hover input,
+    &__wrap:hover textarea {
+        box-shadow: 0 0 1.5px 1px $btn-bgcolor;
+        transition: box-shadow .2s;
+    }
+    &__wrap input:focus,
+    &__wrap textarea:focus {
+        border-color: $btn-bgcolor;
+        outline: none;
+    }
+    &__wrap:focus-within::before {
+        color: $btn-bgcolor;
+    } 
     &__wrap::before {
         display: block;
         font-family: "FontAwesome";
@@ -85,15 +111,6 @@
         top: 30%;
         padding-left: 15px;
         color: $popup-text-color;
-    }
-    &__wrap input::placeholder {
-        font-family: 'TT Norms Pro';
-        font-weight: 400;
-        color: gray;
-    }
-    &__wrap:hover input {
-        box-shadow: 0 0 1.5px 1px $btn-bgcolor;
-        transition: box-shadow .2s;
     }
     &__wrap:hover::before {
         color: $btn-bgcolor;
@@ -254,6 +271,9 @@
     &__form {
         width: 654px;
         margin: 0 15px 0 15px;
+        @media screen and (max-width: $reserv-breakpoint-3) {
+            padding: 50px 20px 35px 20px;
+        } 
     }
     &__title {
         font-size: 24px;
@@ -270,7 +290,6 @@
     }
     &__wrap input {
         padding-left: 15px;
-        color: gray;
     }
     &__wrap:not(:last-child) {
         margin-bottom: 0px;
@@ -309,6 +328,19 @@
             grid-area: 3/1/4/3;
         }
     }
+    &__wrap:nth-child(4)::before {
+        position: absolute;
+        right: 15px;
+        padding: 0;
+        content: '\f073';
+        font-family: "FontAwesome";
+        color: $popup-text-color;
+        z-index: 1;
+        transition: color .2s;
+    }
+    &__wrap:nth-child(4):hover::before {
+        color: $btn-bgcolor;
+    }
     &__wrap input[type='date']::-webkit-calendar-picker-indicator,
     &__wrap input[type='time']::-webkit-calendar-picker-indicator {
         display: none;
@@ -316,11 +348,7 @@
     &__wrap input[type='date'] {
         position: relative;
     }
-    &__wrap input[type='date']::before {
-        position: absolute;
-        right: 15px;
-        content: '\f073';
-        font-family: "FontAwesome";
+    &__wrap:nth-child(4):focus-within::before {
         color: $btn-bgcolor;
     }
     &__btn {
@@ -333,3 +361,73 @@
 }    
 // // reserv pop-up modal window
 
+// review pop-up modal window
+.review {
+    display: flex;
+    &__form {
+        width: 418px;
+        padding: 40px 30px 40px 30px;
+        @media screen and (max-width:$review-breakpoint-1) {
+            width: 361px;
+        }
+        @media screen and (max-width:$review-breakpoint-2) {
+            width: 310px;
+        }
+    }
+    &__wrap:nth-child(3)   {
+        position: relative;
+    }
+    &__wrap:nth-child(3)::before {
+        content: '0 / 500';
+        position: absolute;
+        top: -14px;
+        right: 0;
+        @include font(400, 10px, 9px, $popup-text-color);
+        @media screen and (max-width:$review-breakpoint-1) {
+            top: 13px;
+        }
+    }
+    &__field-name {
+        margin-right: 10px;
+        @include font(400, 15px, 19px, $card-content-color);
+    }
+    &__wrap &__label &__field-name {
+        @media screen and (max-width:$review-breakpoint-1) {
+            margin: 0 0 5px 0;
+        }
+    }
+    &__rating {
+        display: flex;
+        align-items: center;
+    }
+    &__label {
+        display: flex;
+        justify-content: space-between;
+        @media screen and (max-width:$review-breakpoint-1) {
+            flex-flow: column;
+        }
+        & input,
+        & textarea {
+            width: 69%;
+            @media screen and (max-width:$review-breakpoint-1) {
+                width: 100%;
+            }
+        }
+        & textarea {
+            resize: none;
+        }
+        & input {
+            padding-left: 10px;
+        }
+    }
+    &__btn {
+        width: 175.44px;
+        padding: 10px 17px;
+        margin: 0 auto 0 31%;
+        @include font(500, 16px, 21px, $btn-text-color);
+        @media screen and (max-width:$review-breakpoint-1) {
+            margin: 0 auto;
+        }
+    }
+}
+// // review pop-up modal window

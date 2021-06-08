@@ -22,6 +22,6 @@ var picker = new Pikaday({
         return `${year}-${month}-${day}`;      // convert to the format that the browser needs
     },
 });
-picker.show()
+// picker.show()
 
 

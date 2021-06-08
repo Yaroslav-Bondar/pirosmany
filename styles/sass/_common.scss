@@ -123,3 +123,28 @@ body {
 .menu__dropdown_active {
     display: block !important;
 }
+// rating
+.rating {
+    display:flex;
+    flex-direction: row-reverse;
+    font-size:1.2em;
+    justify-content:space-around;
+    margin-left: 9px;
+    text-align:center;
+    & input {
+        display:none;
+    }
+    & label {
+        margin-right: 5px;
+        color:#ccc;
+        cursor:pointer;
+    }
+    & :checked ~ label {
+        color: $btn-bgcolor;
+    }
+    & label:hover,
+    & label:hover ~ label {
+        color: $rating-star-hover-color;
+    }
+}
+// // rating
