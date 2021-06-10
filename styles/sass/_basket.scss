@@ -1,0 +1,10 @@
+.basket {
+    &__btn {
+        width: 48.8px;
+        height: 39.76px;
+        &-icon {
+            font-size: 22px;
+            color: $btn-text-color;
+        }
+    }
+}

@@ -5,6 +5,7 @@
 @import 'popup';
 @import 'pagination';
 @import 'datepicker';
+@import 'basket';
 .mobmenu {
     position: absolute;
     top: 0;
@@ -216,12 +217,12 @@
             }         
         }
     }
-    &__cart {
+    &__basket-btn {
         @extend %center-xy-flex;
         width: 31px;
         height: 31px;
-        text-decoration: none; 
-        & > i {
+        background: transparent;
+        &-icon {
             font-size: 22px;
             color: $btn-bgcolor;
         }

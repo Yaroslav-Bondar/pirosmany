@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.table__btn, .header__cart, .header__user-btn, .mobmenu__dropdown-img, .popup__icon {
+.table__btn, .header__basket-btn, .header__user-btn, .mobmenu__dropdown-img, .popup__icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -588,7 +588,7 @@ body {
 }
 
 .review {
-  display: flex;
+  display: none;
 }
 .review__form {
   width: 418px;
@@ -1044,6 +1044,15 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   cursor: help;
 }
 
+.basket__btn {
+  width: 48.8px;
+  height: 39.76px;
+}
+.basket__btn-icon {
+  font-size: 22px;
+  color: #FFFFFF;
+}
+
 .mobmenu {
   position: absolute;
   top: 0;
@@ -1266,12 +1275,12 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   font-size: 22px;
   color: #00AC4E;
 }
-.header__cart {
+.header__basket-btn {
   width: 31px;
   height: 31px;
-  text-decoration: none;
+  background: transparent;
 }
-.header__cart > i {
+.header__basket-btn-icon {
   font-size: 22px;
   color: #00AC4E;
 }
