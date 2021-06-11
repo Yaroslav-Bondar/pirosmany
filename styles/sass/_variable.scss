@@ -1,3 +1,6 @@
+$page-bg: rgba(0, 0, 0, 0);
+$widget-bg: #FFFFFF;
+$title-1-color:  #000000;
 $btn-bgcolor: #00AC4E;
 $rating-star-hover-color: #00d64e;
 $btn-text-color:#FFFFFF;
@@ -13,9 +16,9 @@ $mobmenu-dropdown-text-color: #F2F2F2;
 
 $slider2-text-color: #4F4F4F;
 
-$products-title-color: #000000;
+// $products-title-color: #000000;
 
-$card-title-color: #000000;
+// $card-title-color: #000000;
 $card-content-color: #000000;
 $card-star-color: #EBEBEB;
 $card-star-active-color: #00AC4E;
@@ -25,7 +28,7 @@ $card-price-2-color: #828282;
 $pagination-text-color: #000000;
 
 $footer-bg: #00AC4E;
-$footer-text-color: #fff;
+$footer-text-color: #FFFFFF;
 
 // breakpoints
 $header-breakpoint-1: 590px;
@@ -41,6 +44,10 @@ $footer-breakpoint-2: 855px;
 $footer-breakpoint-3: 634px;
 $footer-breakpoint-4: 512px;
 $footer-breakpoint-5: 440px;
+
+$buy-text-color: #C6C6C6;
+$buy-text-color-2: #000000;
+$buy-display-bg: #FCFCFC;
 
     // pop-up windows
 $popup-text-color: #C6C6C6;

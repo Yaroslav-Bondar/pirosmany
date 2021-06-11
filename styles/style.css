@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.table__btn, .header__basket-btn, .header__user-btn, .mobmenu__dropdown-img, .popup__icon {
+.table__btn, .header__basket-btn, .header__user-btn, .mobmenu__dropdown-img, .buy__display-item, .popup__icon, .rating label {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1053,6 +1053,204 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   color: #FFFFFF;
 }
 
+.aboutprod {
+  padding: 60px 0 0 0;
+  background: rgba(0, 0, 0, 0);
+}
+.aboutprod__unit1 {
+  display: flex;
+  justify-content: space-between;
+}
+.aboutprod__img {
+  width: 63%;
+  height: 426px;
+}
+.aboutprod__img-item {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.buy {
+  width: 311.75px;
+  padding: 31px 29px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 27.1091px rgba(0, 0, 0, 0.06);
+  border-radius: 15px;
+}
+.buy__title {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18px;
+  text-transform: none;
+  line-height: 23px;
+  color: #000000;
+}
+.buy__rating {
+  margin: 9px 0 0 0;
+  justify-content: flex-end;
+}
+.buy__star {
+  width: 15px;
+  height: 15px;
+}
+.buy__star-icon {
+  font-size: 11px;
+}
+.buy__star:not(:first-child) {
+  margin-right: 3px;
+}
+.buy__reviews {
+  margin-top: 13px;
+}
+.buy__reviews-text, .buy__reviews-amount {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  text-transform: none;
+  line-height: 19px;
+  color: #C6C6C6;
+}
+.buy__price {
+  margin-top: 30px;
+}
+.buy__price-text {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  text-transform: none;
+  line-height: 19px;
+  color: #C6C6C6;
+}
+.buy__price-cost {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18px;
+  text-transform: none;
+  line-height: 23px;
+  color: #000000;
+}
+.buy__joke {
+  margin-top: 25px;
+}
+.buy__joke-text {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  text-transform: none;
+  line-height: 19px;
+  color: #C6C6C6;
+}
+.buy__joke-amount {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18px;
+  text-transform: none;
+  line-height: 23px;
+  color: #000000;
+}
+.buy__amount {
+  margin-top: 22px;
+}
+.buy__amount-text {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  text-transform: none;
+  line-height: 19px;
+  color: #C6C6C6;
+}
+.buy__display {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 116.57px;
+  height: 42.47px;
+  border: 0.903636px solid #EBEBEB;
+  border-radius: 9.03636px;
+  background: #FCFCFC;
+}
+.buy__display-amount, .buy__display-units {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  text-transform: none;
+  line-height: 19px;
+  color: #000000;
+}
+.buy__display::before {
+  position: absolute;
+  right: 0;
+  bottom: -18px;
+  content: "Ед. изм.: упаковка";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 9px;
+  text-transform: none;
+  line-height: 14px;
+  color: #C6C6C6;
+}
+.buy__btn-minus, .buy__btn-plus {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.buy__btn-minus::before, .buy__btn-plus::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "FontAwesome";
+  font-size: 8px;
+}
+.buy__btn-minus::before {
+  content: "";
+}
+.buy__btn-plus::before {
+  content: "";
+}
+.buy__total {
+  margin-top: 30px;
+}
+.buy__total-text {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  text-transform: none;
+  line-height: 22px;
+  color: #000000;
+}
+.buy__total-amount {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18px;
+  text-transform: none;
+  line-height: 23px;
+  color: #00AC4E;
+}
+.buy__amount, .buy__price, .buy__joke, .buy__total, .buy__btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.buy__btns {
+  margin-top: 18px;
+}
+.buy__btn {
+  width: 194.28px;
+  height: 39.76px;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18px;
+  text-transform: none;
+  line-height: 23px;
+  color: #FFFFFF;
+}
+
 .mobmenu {
   position: absolute;
   top: 0;
@@ -1595,7 +1793,7 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   font-size: 12.3407px;
   text-transform: none;
   line-height: 32px;
-  color: #fff;
+  color: #FFFFFF;
 }
 .footer__country-tel {
   font-weight: 500;
@@ -1603,7 +1801,7 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   font-size: 18.511px;
   text-transform: none;
   line-height: 39px;
-  color: #fff;
+  color: #FFFFFF;
 }
 .footer__order {
   grid-area: 1/2/2/3;
@@ -1621,7 +1819,7 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   font-size: 12.3407px;
   text-transform: none;
   line-height: 32px;
-  color: #fff;
+  color: #FFFFFF;
 }
 .footer__order-tel {
   font-weight: 500;
@@ -1629,7 +1827,7 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   font-size: 18.511px;
   text-transform: none;
   line-height: 39px;
-  color: #fff;
+  color: #FFFFFF;
 }
 .footer__social {
   grid-area: 1/2/2/3;
@@ -1676,7 +1874,7 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   font-size: 15.4259px;
   text-transform: none;
   line-height: 32px;
-  color: #fff;
+  color: #FFFFFF;
   letter-spacing: 3.08517px;
   font-variant: small-caps;
   text-decoration: none;
@@ -1713,7 +1911,7 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   width: 24px;
   height: 24px;
   margin-right: 7px;
-  color: #fff;
+  color: #FFFFFF;
 }
 .footer__btn-in .fa-user::before {
   position: absolute;
@@ -1730,7 +1928,7 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   font-size: 15.4259px;
   text-transform: capitalize;
   line-height: 32px;
-  color: #fff;
+  color: #FFFFFF;
 }
 .footer__work {
   grid-area: 2/1/3/2;
@@ -1740,7 +1938,7 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   font-size: 15.4259px;
   text-transform: none;
   line-height: 32px;
-  color: #fff;
+  color: #FFFFFF;
 }
 @media screen and (max-width: 855px) {
   .footer__work {
@@ -1765,7 +1963,7 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   font-size: 18.511px;
   text-transform: none;
   line-height: 32px;
-  color: #fff;
+  color: #FFFFFF;
 }
 @media screen and (max-width: 855px) {
   .footer__email {
@@ -1792,7 +1990,7 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   font-size: 18px;
   text-transform: none;
   line-height: 22px;
-  color: #fff;
+  color: #FFFFFF;
 }
 @media screen and (max-width: 855px) {
   .footer__support {
@@ -1845,7 +2043,7 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   font-size: 12.3407px;
   text-transform: none;
   line-height: 32px;
-  color: #fff;
+  color: #FFFFFF;
 }
 .footer__terms, .footer__policy {
   text-decoration: none;

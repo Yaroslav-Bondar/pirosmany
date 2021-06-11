@@ -31,7 +31,7 @@ body {
         margin-bottom: 13.58px;
     }
     &__title {
-        @include font(500, 14.4845px, 22px, $card-title-color, $text-transform: capitalize);
+        @include font(500, 14.4845px, 22px, $title-1-color, $text-transform: capitalize);
         margin: 0;
         margin-bottom: 5.39px;
     }
@@ -135,6 +135,7 @@ body {
         display:none;
     }
     & label {
+        @extend %center-xy-flex;
         margin-right: 5px;
         color:#ccc;
         cursor:pointer;

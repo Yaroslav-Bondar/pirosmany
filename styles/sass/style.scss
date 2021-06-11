@@ -6,6 +6,8 @@
 @import 'pagination';
 @import 'datepicker';
 @import 'basket';
+@import 'aboutprod';
+@import 'buy';
 .mobmenu {
     position: absolute;
     top: 0;
@@ -366,7 +368,7 @@
 .products {
     margin-top: 30px;
     &__title {
-        @include font(500, 27.1585px, 19px, $products-title-color);
+        @include font(500, 27.1585px, 19px, $title-1-color);
         margin-bottom: 39.75px;
     }
     &__row {

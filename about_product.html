@@ -235,9 +235,9 @@
                         <button id="user_sign_in" class="header__user-btn btn">
                             <i class="far fa-user" aria-hidden="true"></i>
                         </button>
-                        <a href="#" class="header__cart">
-                            <i class="fas fa-cart-arrow-down"></i>
-                        </a>
+                        <button class="header__basket-btn basket__btn btn">
+                            <i class="header__basket-btn-icon basket__btn-icon fas fa-cart-arrow-down" aria-hidden="true"></i>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -245,88 +245,88 @@
     </header>
     <section class="aboutprod">
         <div class="wrapper">
-            <div class="aboutprod__wrap1">
+            <div class="aboutprod__unit1">
                 <div class="aboutprod__img">
-                    <img src="" alt="product" class="aboutprod__img-item">
+                    <img src="img/video/bg.png" alt="product" class="aboutprod__img-item">
                 </div>
                 <div class="aboutprod__buy buy">
-                    <div class="buy__container">
-                        <div class="buy__title">
-                            Говядина 250гр
-                        </div>
-                        <div class="rating">
-                            <input type="radio" id="5-stars" name="rating" value="5" />
-                            <label for="5-stars" class="star">
-                                <!-- &#9733; -->
-                                <i class="fas fa-star"></i>
-                            </label>
-                            <input type="radio" id="4-stars" name="rating" value="4" />
-                            <label for="4-stars" class="star">
-                                <!-- &#9733; -->
-                                <i class="fas fa-star"></i>
-                            </label>
-                            <input type="radio" id="3-stars" name="rating" value="3" />
-                            <label for="3-stars" class="star">
-                                <i class="fas fa-star"></i>
-                                <!-- &#9733; -->
-                            </label>
-                            <input type="radio" id="2-stars" name="rating" value="2" />
-                            <label for="2-stars" class="star">
-                                <!-- &#9733; -->
-                                <i class="fas fa-star"></i>
-                            </label>
-                            <input type="radio" id="1-star" name="rating" value="1" />
-                            <label for="1-star" class="star">
-                                <i class="fas fa-star"></i>
-                                <!-- &#9733; -->
-                            </label>
-                        </div>
-                        <div class="buy__reviews">
-                            <span class="buy__reviews-text">Кол-во отзывов:</span>
-                            <span class="buy__reviews-amount">23</span> 
-                        </div>
-                        <div class="buy__price">
-                            <span class="buy__price-text">Цена за уп.</span>
-                            <span class="buy__price-cost">1 050 ₽</span>
-                        </div>
-                        <div class="buy__joke">
-                            <span class="buy__joke-text">Кол-во шт в упаковке</span>
-                            <span class="buy__joke-amount">4 шт.</span>
-                        </div>
-                        <div class="buy__amount">
-                            <span class="buy__amount-text">Количество</span>
-                            <div class="buy__display">
-                                <button class="buy__btn-minus">
-                                    &#8722;
-                                </button>
-                                <div class="buy__display-item">
-                                    <span class="buy__display-amount">1</span>
-                                    <span class="buy__display-units">шт</span>
-                                </div>
-                                <button class="buy__btn-plus">
-                                    &#43;
-                                </button>
-                            </div>
-                        </div>
-                        <div class="buy__total">
-                            <span class="buy__total-text">
-                                Итого к оплате
-                            </span>
-                            <span class="buy__total-amount">
-                                1 050 ₽
-                            </span>
-                        </div>
-                        <div class="buy__total-btns">
-                            <button class="basket__btn btn">
-                                <i class="basket__btn-icon fas fa-cart-arrow-down"></i>
+                    <div class="buy__title">
+                        Говядина 250гр
+                    </div>
+                    <div class="rating buy__rating">
+                        <input type="radio" id="5-stars" name="rating" value="5" />
+                        <label for="5-stars" class="star buy__star">
+                            <!-- &#9733; -->
+                            <i class="fas fa-star buy__star-icon"></i>
+                        </label>
+                        <input type="radio" id="4-stars" name="rating" value="4" />
+                        <label for="4-stars" class="star buy__star">
+                            <!-- &#9733; -->
+                            <i class="fas fa-star buy__star-icon"></i>
+                        </label>
+                        <input type="radio" id="3-stars" name="rating" value="3" />
+                        <label for="3-stars" class="star buy__star">
+                            <i class="fas fa-star buy__star-icon"></i>
+                            <!-- &#9733; -->
+                        </label>
+                        <input type="radio" id="2-stars" name="rating" value="2" />
+                        <label for="2-stars" class="star buy__star">
+                            <!-- &#9733; -->
+                            <i class="fas fa-star buy__star-icon"></i>
+                        </label>
+                        <input type="radio" id="1-star" name="rating" value="1" />
+                        <label for="1-star" class="star buy__star">
+                            <i class="fas fa-star buy__star-icon"></i>
+                            <!-- &#9733; -->
+                        </label>
+                    </div>
+                    <div class="buy__reviews">
+                        <span class="buy__reviews-text">Кол-во отзывов:</span>
+                        <span class="buy__reviews-amount">23</span> 
+                    </div>
+                    <div class="buy__price">
+                        <span class="buy__price-text">Цена за уп.</span>
+                        <span class="buy__price-cost">1 050 ₽</span>
+                    </div>
+                    <div class="buy__joke">
+                        <span class="buy__joke-text">Кол-во шт в упаковке</span>
+                        <span class="buy__joke-amount">4 шт.</span>
+                    </div>
+                    <div class="buy__amount">
+                        <span class="buy__amount-text">Количество</span>
+                        <div class="buy__display">
+                            <button class="buy__btn-minus">
                             </button>
-                            <button class="buy__btn btn">
-                                Купить
+                            <div class="buy__display-item">
+                                <span class="buy__display-amount">1</span>
+                                <span class="buy__display-units">шт</span>
+                            </div>
+                            <button class="buy__btn-plus">
                             </button>
                         </div>
                     </div>
+                    <div class="buy__total">
+                        <span class="buy__total-text">
+                            Итого к оплате
+                        </span>
+                        <span class="buy__total-amount">
+                            1 050 ₽
+                        </span>
+                    </div>
+                    <div class="buy__btns">
+                        <button class="buy__btn btn">
+                            Купить
+                        </button>
+                        <button class="basket__btn btn">
+                            <i class="basket__btn-icon fas fa-cart-arrow-down"></i>
+                        </button>
+                    </div>
                 </div>
-
+            </div>
+            <div class="aboutprod__unit2">
+                <div class="bonus">
+                    
+                </div>
             </div>
         </div>
     </section>
