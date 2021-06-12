@@ -1,0 +1,89 @@
+.tab {
+    width: 63%;
+    &__btns {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+    &__btn {
+        padding: 10px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        transition: color .2s;
+        @include font(500, 28px, 19px, $tab-btn-text-color);
+    }
+    &__btn_active {
+        color: $btn-bgcolor;
+    }
+    &__btn:not(&__btn_active):hover {
+        color: $tab-btn-hover-color;
+    }
+    &__content {
+        display: none;
+    }
+    &__content_active {
+        display: block;
+    }
+    &__descr {
+        &-title {
+            margin-bottom: 22px;
+            @include font(500, 21px, 19px, $tab-title-color);
+        }
+        &-text {
+            @include font(400, 18px, 19px, $tab-text-color);
+        }
+        &-text p:not(:last-child) {
+            margin-bottom: 25px;
+        }
+    }
+    &__param ul li {
+        list-style: none;
+        @include font(500, 18px, 22px, $tab-text-color);
+    }
+    &__param ul li:not(:last-child) {
+        margin-bottom: 20px;
+    }
+    &__reviews {
+        &-title {
+            margin-bottom: 16px;
+            @include font(500, 21px, 19px, $tab-title-color);
+        }
+    }
+    &__slide {
+        width: 276.19px;
+        border-radius: 11.1818px;
+        background: $tab-slide-bg;
+    }
+    &__ava {
+        display: flex;
+        &-wrap {
+            width: 50px;
+            height: 50px;
+            margin-right: 5px;
+            border-radius: 50%;
+            background-color: forestgreen;
+        }
+        &-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__user {
+        &-wrap {
+            display: flex;
+        }
+        &-name {
+            margin-right: 10px;
+            @include font(500, 14px, 16px, $tab-title-color);
+        }
+        &-icon {
+            // display: block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: forestgreen;
+        }
+    }
+}

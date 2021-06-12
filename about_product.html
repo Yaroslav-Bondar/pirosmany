@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href= "styles/normalize.css">
     <link rel="stylesheet" href= "fonts/fonts.css">
+    <!-- swiper slider -->
+    <link rel="stylesheet" href= "styles/swiper-bundle.css">
     <link rel="stylesheet" href= "styles/style.css">
     <title>About product</title>
 </head>
@@ -324,6 +326,117 @@
                 </div>
             </div>
             <div class="aboutprod__unit2">
+                <div class="aboutprod__tab tab">
+                    <div class="tab__btns">
+                        <button data-number='0' class="tab__btn">О товаре</button>
+                        <button data-number='1' class="tab__btn">Параметры</button>
+                        <button data-number='2' class="tab__btn">Отзывы</button>
+                    </div>
+                    <div class="tab__content tab__descr">
+                        <div class="tab__descr-title">
+                            Описание
+                        </div>
+                        <div class="tab__descr-text">
+                            <p>
+                                Полутвердый пластичный однородный сыр, слегка ломкий на изгибе. 
+                                Пажитник придает легкое ореховое послевкусие. В Италии считается столовым сыром,
+                                который подходит к любому времени суток и к любому блюду и к вину
+                            </p>
+                            <p>
+                                Вес головки 500 г. +/-10%. Цена за 1 кг.
+                            </p>
+                            <p>
+                                Продукция компании Alpenville изготовлена преимущественно из Шарангского молока
+                            </p>
+                        </div>
+                    </div>
+                    <div class="tab__content tab__param">
+                        <ul>
+                            <li>Калории: 420</li>
+                            <li>Жиры: 54</li>
+                            <li>Белки: 27</li>
+                            <li>Углеводы: 18</li>
+                            <li>Масса: 500 грамм</li>
+                        </ul>
+                    </div>
+                    <div class="tab__content tab__reviews">
+                        <div class="tab__reviews-title">
+                            Отзывы
+                        </div>
+                        <!-- Slider main container -->
+                        <div class="swiper-container tab__slider">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide tab__slide">
+                                    <div class="tab__ava">
+                                        <div class="tab__ava-wrap">
+                                            <img src="" alt="avatar" class="tab__ava-img">
+                                        </div>
+                                        <div class="tab__user">
+                                            <div class="tab__user-wrap">
+                                                <span class="tab__user-name">Анатолий Петров</span>
+                                                <span class="tab__user-icon">
+                                                    <!-- <img class src="" alt=""> -->
+                                                </span>
+                                            </div>
+                                            <div class="rating tab__rating">
+                                                <input type="radio" id="5-stars" name="rating" value="5">
+                                                <label for="5-stars" class="star tab__star">
+                                                    <!-- &#9733; -->
+                                                    <i class="fas fa-star tab__star-icon" aria-hidden="true"></i>
+                                                </label>
+                                                <input type="radio" id="4-stars" name="rating" value="4">
+                                                <label for="4-stars" class="star tab__star">
+                                                    <!-- &#9733; -->
+                                                    <i class="fas fa-star tab__star-icon" aria-hidden="true"></i>
+                                                </label>
+                                                <input type="radio" id="3-stars" name="rating" value="3">
+                                                <label for="3-stars" class="star tab__star">
+                                                    <i class="fas fa-star tab__star-icon" aria-hidden="true"></i>
+                                                    <!-- &#9733; -->
+                                                </label>
+                                                <input type="radio" id="2-stars" name="rating" value="2">
+                                                <label for="2-stars" class="star tab__star">
+                                                    <!-- &#9733; -->
+                                                    <i class="fas fa-star tab__star-icon" aria-hidden="true"></i>
+                                                </label>
+                                                <input type="radio" id="1-star" name="rating" value="1">
+                                                <label for="1-star" class="star tab__star">
+                                                    <i class="fas fa-star tab__star-icon" aria-hidden="true"></i>
+                                                    <!-- &#9733; -->
+                                                </label>
+                                            </div>
+                                            <a href="#" class="tab__soc">vk.com/anatoliy</a>
+                                        </div>
+                                    </div>
+                                    <div class="tab__review">
+                                        Заказал 5кг мяса, живу в Московской области. Как и обещал оператор, привезли через 1,5 часа. Свежее, как будто было живое еще по дороге. Действительно натуральные продукты. Я обязательно буду заказывать дальше. А теперь подробнее о плюсах и минусах всего магази...
+                                        <button class="tab__read-more">
+                                            Читать полностью
+                                        </button>    
+                                    </div>
+
+                                </div>
+                                <div class="swiper-slide tab__slide">
+                                    Slide 2
+                                </div>
+                                <div class="swiper-slide tab__slide">
+                                    Slide 3
+                                </div>
+                            </div>
+                            <!-- If we need pagination -->
+                            <!-- <div class="swiper-pagination"></div> -->
+                        
+                            <!-- If we need navigation buttons -->
+                            <div class="tab__btn-prev"></div>
+                            <div class="tab__btn-next"></div>
+                        
+                            <!-- If we need scrollbar -->
+                            <!-- <div class="swiper-scrollbar"></div> -->
+                        </div>
+                    </div>
+                </div>
                 <div class="bonus">
                     
                 </div>
@@ -331,6 +444,10 @@
         </div>
     </section>
     <script src='js/basket.js'></script>
+    <script src='js/tab.js'></script>
+    <!-- swiper slaider -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/sliders.js"></script>
     <!-- Add font awesome icons-->
     <script src="https://kit.fontawesome.com/a8ec7c40c4.js" crossorigin="anonymous"></script>
 </body>
