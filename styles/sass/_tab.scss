@@ -13,6 +13,9 @@
         transition: color .2s;
         @include font(500, 28px, 19px, $tab-btn-text-color);
     }
+    &__btn:first-child {
+        padding-left: 0;
+    }
     &__btn_active {
         color: $btn-bgcolor;
     }
@@ -52,11 +55,13 @@
     }
     &__slide {
         width: 276.19px;
+        padding: 13px 16px;
         border-radius: 11.1818px;
         background: $tab-slide-bg;
     }
     &__ava {
         display: flex;
+        align-items: center;
         &-wrap {
             width: 50px;
             height: 50px;
@@ -84,6 +89,92 @@
             height: 20px;
             border-radius: 50%;
             background: forestgreen;
+        }
+    }
+    &__rating {
+        margin: 5px 0 0 0;
+        justify-content: flex-end;
+    }
+    &__star {
+        width: 15px;
+        height: 15px;
+        &-icon {
+            font-size: 11px;
+        }
+    }
+    &__star:not(:first-child) {
+        margin-right: 3px;
+    }
+    &__soc {
+        margin-top: 3px;
+        @include font(400, 12px, 14px, $tab-soc-text-color);
+    }
+    &__review {
+        margin-top: 6px;
+        & p {
+            @include font(400, 12px, 14px, $tab-title-color);
+
+        }
+    }
+    &__more {
+        display: none;
+    }
+    &__more_active {
+        display: inline;
+    }
+    &__btn-more {
+        border: none;
+        background: transparent;
+        @include font(500, 11px, 13px, $btn-bgcolor);
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    &__slaider-btns {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    &__btn-prev::before,
+    &__btn-next::before {
+        font-family: 'FontAwesome';
+        color: $btn-bgcolor;
+        cursor: pointer;
+    }
+    &__btn-prev::before {
+        content: '\f060';
+        margin-right: 40px;
+    }
+    &__btn-next::before {
+        content: '\f061';
+    }
+}
+.bonus {
+    width: 305px;
+    padding: 27px 29px 38px 29px;
+    background: $widget-bg;
+    box-shadow: 0px 0px 27.2043px rgba(0, 0, 0, 0.06);
+    border-radius: 18.1362px;
+    &__descr {
+        display: flex;
+        align-items: center;
+    }
+    &__descr:not(:last-child) {
+        margin: 25px 0;
+    }
+    &__icon {
+        @extend %center-xy-flex;
+        width: 35px;
+        height: 35px;
+        margin-right: 15px;
+        &-item {
+            font-size: 26px;
+            color: $btn-bgcolor;
+        }
+    }
+    &__title {
+        @include font(400, 16px, 18px, tab-title-color);
+        & span {
+            font-weight: 500;
         }
     }
 }

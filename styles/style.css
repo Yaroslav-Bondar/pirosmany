@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.table__btn, .header__basket-btn, .header__user-btn, .mobmenu__dropdown-img, .buy__display-item, .popup__icon, .rating label {
+.table__btn, .header__basket-btn, .header__user-btn, .mobmenu__dropdown-img, .bonus__icon, .buy__display-item, .popup__icon, .rating label {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1058,6 +1058,9 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   background: rgba(0, 0, 0, 0);
 }
 .aboutprod__unit1 {
+  margin-bottom: 60px;
+}
+.aboutprod__unit1, .aboutprod__unit2 {
   display: flex;
   justify-content: space-between;
 }
@@ -1272,6 +1275,9 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   line-height: 19px;
   color: #828282;
 }
+.tab__btn:first-child {
+  padding-left: 0;
+}
 .tab__btn_active {
   color: #00AC4E;
 }
@@ -1327,11 +1333,13 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 }
 .tab__slide {
   width: 276.19px;
+  padding: 13px 16px;
   border-radius: 11.1818px;
-  background: #F2F2F2;
+  background: #eeeeed;
 }
 .tab__ava {
   display: flex;
+  align-items: center;
 }
 .tab__ava-wrap {
   width: 50px;
@@ -1362,6 +1370,110 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   height: 20px;
   border-radius: 50%;
   background: forestgreen;
+}
+.tab__rating {
+  margin: 5px 0 0 0;
+  justify-content: flex-end;
+}
+.tab__star {
+  width: 15px;
+  height: 15px;
+}
+.tab__star-icon {
+  font-size: 11px;
+}
+.tab__star:not(:first-child) {
+  margin-right: 3px;
+}
+.tab__soc {
+  margin-top: 3px;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  text-transform: none;
+  line-height: 14px;
+  color: #2D9CDB;
+}
+.tab__review {
+  margin-top: 6px;
+}
+.tab__review p {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  text-transform: none;
+  line-height: 14px;
+  color: #000000;
+}
+.tab__more {
+  display: none;
+}
+.tab__more_active {
+  display: inline;
+}
+.tab__btn-more {
+  border: none;
+  background: transparent;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 11px;
+  text-transform: none;
+  line-height: 13px;
+  color: #00AC4E;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.tab__slaider-btns {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.tab__btn-prev::before, .tab__btn-next::before {
+  font-family: "FontAwesome";
+  color: #00AC4E;
+  cursor: pointer;
+}
+.tab__btn-prev::before {
+  content: "";
+  margin-right: 40px;
+}
+.tab__btn-next::before {
+  content: "";
+}
+
+.bonus {
+  width: 305px;
+  padding: 27px 29px 38px 29px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 27.2043px rgba(0, 0, 0, 0.06);
+  border-radius: 18.1362px;
+}
+.bonus__descr {
+  display: flex;
+  align-items: center;
+}
+.bonus__descr:not(:last-child) {
+  margin: 25px 0;
+}
+.bonus__icon {
+  width: 35px;
+  height: 35px;
+  margin-right: 15px;
+}
+.bonus__icon-item {
+  font-size: 26px;
+  color: #00AC4E;
+}
+.bonus__title {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  text-transform: none;
+  line-height: 18px;
+  color: tab-title-color;
+}
+.bonus__title span {
+  font-weight: 500;
 }
 
 .mobmenu {

@@ -59,18 +59,19 @@ const swiper = new Swiper('.swiper-container', {
       // hiddenClass: 'slider2__but-hidden'
     },
   });
-  const tabSlider = new Swiper('.tab__slider', {
-    loop: true,
-    // slidesPerView: 5,
-    // nested: true,
-    slidesPerView: 1,
-    // slidesPerGroup: 1,
-    // spaceBetween: 95,
-    navigation: {
-      // nextEl: '.swiper-button-next',
-      // prevEl: '.swiper-button-prev',
-      nextEl: '.tab__btn-prev',
-      prevEl: '.tab__btn-next',
-    },
-  });
+  // const reviewsSlider = new Swiper('.tab__slider', {
+  //   loop: true,
+  //   autoHeight: true,
+  //   // slidesPerView: 5,
+  //   // nested: true,
+  //   slidesPerView: 2,
+  //   // slidesPerGroup: 1,
+  //   spaceBetween: 30,
+  //   navigation: {
+  //     // nextEl: '.swiper-button-next',
+  //     // prevEl: '.swiper-button-prev',
+  //     nextEl: '.tab__btn-prev',
+  //     prevEl: '.tab__btn-next',
+  //   },
+  // });
   

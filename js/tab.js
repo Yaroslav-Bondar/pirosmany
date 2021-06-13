@@ -1,11 +1,12 @@
 let tabBtns = document.querySelector('.tab__btns')
 let tabContent = document.querySelectorAll('.tab__content')
 
+// choise content block
+tabContent[0].classList.add('tab__content_active')
 tabBtns.addEventListener('click', (e)=> {
     
     if(e.target.className !== 'tab__btn') return
     
-    // console.log(tabBtns.children)
     for (const child of tabBtns.children) {
         if(child.classList.contains('tab__btn_active')) 
             child.classList.remove('tab__btn_active')
@@ -28,6 +29,29 @@ tabBtns.addEventListener('click', (e)=> {
             tabContent[2].classList.add('tab__content_active')
             e.target.classList.add('tab__btn_active')
             break
+    }
+})
+
+// read more (uses delegation events)
+let tabSlider = document.querySelector('.tab__slider')
+
+tabSlider.addEventListener('click', (e)=> {
+    if (e.target.className !== 'tab__btn-more') return
+
+    let parent = e.target.parentElement
+    let tabBtnMore = e.target
+    let tabDots = parent.firstElementChild.firstElementChild
+    let tabMore = parent.firstElementChild.children[1]
+
+    if(!tabMore.classList.contains('tab__more_active')) {
+        tabMore.classList.add('tab__more_active')
+        tabDots.style.display = 'none'
+        tabBtnMore.innerHTML = 'Читать меньше'
+    }
+    else {
+        tabMore.classList.remove('tab__more_active')
+        tabDots.style.display = 'inline'
+        tabBtnMore.innerHTML = 'Читать больше'
     }
 })
 

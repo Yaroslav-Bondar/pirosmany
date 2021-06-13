@@ -2,6 +2,10 @@
     padding: 60px 0 0 0;
     background: $page-bg;
     &__unit1 {
+        margin-bottom: 60px;
+    }
+    &__unit1,
+    &__unit2 {
         display: flex;
         justify-content: space-between;
     }
@@ -14,5 +18,4 @@
             object-fit: cover;
         }
     }
-    
 }
