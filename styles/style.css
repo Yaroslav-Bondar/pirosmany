@@ -1447,6 +1447,9 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   background: #FFFFFF;
   box-shadow: 0px 0px 27.2043px rgba(0, 0, 0, 0.06);
   border-radius: 18.1362px;
+  /* Firefox */
+  /* Chrome & Safari */
+  /* IE */
 }
 .bonus__descr {
   display: flex;
@@ -1474,6 +1477,122 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 }
 .bonus__title span {
   font-weight: 500;
+}
+.bonus__range-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+.bonus__range {
+  width: 100%;
+  -webkit-appearance: none;
+}
+.bonus__range-min {
+  position: absolute;
+  left: -7%;
+}
+.bonus__range-max {
+  position: absolute;
+  right: -11%;
+}
+.bonus__range-min, .bonus__range-max {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  text-transform: none;
+  line-height: 18px;
+  color: tab-title-color;
+}
+.bonus__range-fill {
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  background: #00AC4E;
+}
+.bonus__range-count {
+  position: absolute;
+  top: -30px;
+  left: 0%;
+  padding: 3px 7px;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  text-transform: none;
+  line-height: 18px;
+  color: tab-title-color;
+  background: #FCFCFC;
+  border-radius: 2px;
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+.bonus__range:focus {
+  outline: none;
+}
+.bonus__range::-moz-range-track {
+  background: #dbdbdb;
+  border-radius: 3px;
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+}
+.bonus__range::-moz-range-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  background: #00AC4E;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+.bonus__range::-webkit-slider-runnable-track {
+  background: #dbdbdb;
+  border-radius: 3px;
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+}
+.bonus__range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  background: #00AC4E;
+  border-radius: 50%;
+  border: none;
+  margin-top: -4px;
+  cursor: pointer;
+}
+.bonus__range::-ms-track {
+  background: #dbdbdb;
+  border-radius: 3px;
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+}
+.bonus__range::-ms-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  background: #00AC4E;
+  border-radius: 50%;
+  border: none;
+  margin-top: -7px;
+  cursor: pointer;
+}
+.bonus__label {
+  position: absolute;
+  top: -24px;
+  padding: 3px 7px;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  text-transform: none;
+  line-height: 16px;
+  color: tab-title-color;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 .mobmenu {
