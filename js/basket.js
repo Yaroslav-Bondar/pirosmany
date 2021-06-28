@@ -1,22 +1,26 @@
-let buyDisplay = document.querySelector('.buy__display')
-let buyDisplayAmount = document.querySelector('.buy__display-amount')
-buyDisplay.addEventListener('click', (e)=> {
-    if (e.target.className != 'buy__btn-minus' && e.target.className != 'buy__btn-plus') {
+document.addEventListener('click', (e)=> {
+    let tar = e.target.dataset.display
+    if (tar != 'btn-minus' && tar != 'btn-plus') {
         return
     }
-    let tar = e.target
-    let counter = Number(buyDisplayAmount.innerHTML);
-    if (tar.className === 'buy__btn-minus') {
+    if(e.target.parentElement.children[1].firstElementChild.dataset.display === 'amount') {
+        var amount = e.target.parentElement.children[1].firstElementChild
+    }
+    else {
+        alert('Неожиданная структура - display')
+    }
+    let counter = Number(amount.innerHTML);
+    if (tar === 'btn-minus') {
         counter--
         if(counter <= 0) {
             alert('Количество не может быть меньше 1')
             counter = 1
-            buyDisplayAmount.innerHTML = counter
+            amount.innerHTML = counter
         } 
-        buyDisplayAmount.innerHTML = counter
+        amount.innerHTML = counter
     }
-    if (tar.className === 'buy__btn-plus') {
+    if (tar === 'btn-plus') {
         counter++
-        buyDisplayAmount.innerHTML = counter
+        amount.innerHTML = counter
     }
 })

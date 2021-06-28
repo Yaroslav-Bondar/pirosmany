@@ -1,6 +1,7 @@
 $page-bg: rgba(0, 0, 0, -0.2);
 $widget-bg: #FFFFFF;
 $title-1-color:  #000000;
+$text-color: #000000;
 $btn-bgcolor: #00AC4E;
 $rating-star-hover-color: #00d64e;
 $btn-text-color:#FFFFFF;
@@ -30,6 +31,26 @@ $pagination-text-color: #000000;
 $footer-bg: #00AC4E;
 $footer-text-color: #FFFFFF;
 
+$buy-text-color: #C6C6C6;
+$buy-text-color-2: #000000;
+
+$display-bg: #FCFCFC;
+$display-border-color: #EBEBEB;
+
+$basket-btn-color: #C6C6C6;
+
+$tab-btn-text-color: #828282;
+$tab-btn-hover-color: #00d64e;
+$tab-title-color: #000000;
+$tab-text-color: #828282;
+// $tab-slide-bg: #F2F2F2;
+$tab-slide-bg: #eeeeed;
+$tab-soc-text-color: #2D9CDB;
+
+$bonus-range-bg: #dbdbdb;
+
+$basket-list-border-color:#EBEBEB;
+
 // breakpoints
 $header-breakpoint-1: 590px;
 $header-breakpoint-2: 455px;
@@ -45,20 +66,14 @@ $footer-breakpoint-3: 634px;
 $footer-breakpoint-4: 512px;
 $footer-breakpoint-5: 440px;
 
-$buy-text-color: #C6C6C6;
-$buy-text-color-2: #000000;
-$buy-display-bg: #FCFCFC;
+$aboutprod-breakpoint-1: 930px;
+$aboutprod-buy-breakpoint-1: 350px;
+$aboutprod-tab-breakpoint-1: 464px;
 
-$tab-btn-text-color: #828282;
-$tab-btn-hover-color: #00d64e;
-$tab-title-color: #000000;
-$tab-text-color: #828282;
-// $tab-slide-bg: #F2F2F2;
-$tab-slide-bg: #eeeeed;
-$tab-soc-text-color: #2D9CDB;
-
-$bonus-range-bg: #dbdbdb;
-
+$basket-breakpoint-1: 989px;
+$basket-breakpoint-2: 650px;
+$basket-breakpoint-3: 585px;
+$basket-breakpoint-4: 430px;
 
 
     // pop-up windows

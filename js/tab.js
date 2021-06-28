@@ -5,7 +5,7 @@ let tabContent = document.querySelectorAll('.tab__content')
 tabContent[0].classList.add('tab__content_active')
 tabBtns.addEventListener('click', (e)=> {
     
-    if(e.target.className !== 'tab__btn') return
+    if(e.target.className !== 'tab__btn aboutprod__tab-btn') return
     
     for (const child of tabBtns.children) {
         if(child.classList.contains('tab__btn_active')) 

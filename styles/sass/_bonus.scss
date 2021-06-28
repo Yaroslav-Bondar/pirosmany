@@ -1,5 +1,4 @@
 .bonus {
-    width: 305px;
     padding: 27px 29px 38px 29px;
     background: $widget-bg;
     box-shadow: 0px 0px 27.2043px rgba(0, 0, 0, 0.06);
@@ -22,7 +21,7 @@
         }
     }
     &__title {
-        @include font(400, 16px, 18px, tab-title-color);
+        @include font(400, 16px, 18px, $tab-title-color);
         & span {
             font-weight: 500;
         }
@@ -31,23 +30,42 @@
         position: relative;
         display: flex;
         align-items: center;
-        width: 80%;
-        margin: 0 auto;
+        width: 90%;
+        margin: 50px auto 30px auto;
     }
     &__range {
         width: 100%;
         -webkit-appearance: none;
-        &-min {
+        // &-min {
+        //     position: absolute;
+        //     left: -7%;
+        // }
+        // &-max {
+        //     position: absolute;
+        //     right: -11%;
+        // }
+        // &-min, 
+        // &-max {
+        //     @include font(500, 16px, 18px, tab-title-color);
+        // }
+        &-text1 {
             position: absolute;
-            left: -7%;
+            top: 23px;
+            @include font(400, 12px, 14px, $tab-title-color);
+
         }
-        &-max {
+        &-text2 {
             position: absolute;
-            right: -11%;
+            top: 40px;
+            @include font(400, 10px, 12px, $tab-title-color);
         }
-        &-min, 
-        &-max {
-            @include font(500, 16px, 18px, tab-title-color);
+        &-text1,
+        &-text2 {
+            width: 100%;
+            text-align: center;
+            & span {
+                font-weight: 500;
+            }
         }
         &-fill {
             position: absolute;
@@ -57,10 +75,10 @@
         }
         &-count {
             position: absolute;
-            top: -30px;
+            top: -35px;
             left: 0%;
             padding: 3px 7px;
-            @include font(500, 16px, 18px, tab-title-color);
+            @include font(500, 16px, 18px, $tab-title-color);
             background: $popup-input-bg;
             border-radius: 2px;
             box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.1);
@@ -122,14 +140,14 @@
         margin-top: -7px;
         cursor: pointer;
     }
-    &__label {
-        position: absolute;
-        top: -24px;
-        padding: 3px 7px;
-        @include font(500, 14px, 16px, tab-title-color);
-        text-align: center;
-        background-color: #fff;
-        border-radius: 4px;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    }
+    // &__label {
+    //     position: absolute;
+    //     top: -24px;
+    //     padding: 3px 7px;
+    //     @include font(500, 14px, 16px, tab-title-color);
+    //     text-align: center;
+    //     background-color: #fff;
+    //     border-radius: 4px;
+    //     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    // }
 }

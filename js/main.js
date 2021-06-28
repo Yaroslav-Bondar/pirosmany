@@ -173,8 +173,16 @@ for (const el of slider1Btn) {
     // let myTime = document.querySelector('#myTime')
     // console.log(myTime)
     // myTime.innerHTML='AAA'
-    // reserv
+    // // reserv
 
+    // review
+    let aboutprodReviewBtn = document.querySelector('.aboutprod__review-btn')
+    let review = document.querySelector('.review')
+    aboutprodReviewBtn.addEventListener('click', ()=> {
+        review.classList.add('popup_active')
+        body.classList.add('body_lock')
+    })
+    // // review
 // // pop-up
 
 

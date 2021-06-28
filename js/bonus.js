@@ -17,7 +17,7 @@ bonusRangeCount.innerHTML = bonusRange.value
 bonusRangeFill.style.width = bonusRange.value / bonusRange.max * 100 + '%'
 bonusRangeCount.style.left = bonusRange.value / bonusRange.max * 100 + '%'
 bonusRangeCount.style.transform = 'translateX(-' + bonusRange.value / bonusRange.max * 100 + '%)'
-console.log(bonusRange.min)
+// console.log(bonusRange.min)
 // bonusRangeMin.innerHTML = bonusRange.min
 // bonusRangeMax.innerHTML = bonusRange.value
 bonusRange.addEventListener('input', (e)=> {
