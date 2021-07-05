@@ -1,0 +1,125 @@
+.regis {
+    &__title {
+        margin-bottom: 25px;
+        @include font(500, 28px, 50px, $title-color);
+    }
+    &__subtitle {
+        margin-bottom: 16px;
+        @include font(500, 26px, 20px, $text-color);
+    }
+    &__list {
+        width: min-content;
+        &-node {
+            padding: 15px 0;
+        }
+        &-btn {
+            width: 17px;
+            height: 17px;
+            margin-right: 11px;   
+        }
+        &-icon {
+            width: 78px;
+            height: 56px;
+            margin-right: 25px;
+            border-radius: 3.5px;
+            background: $btn-bgcolor;
+        }
+        &-name {
+            margin-right: 64px;
+            @include font(500, 16px, 15px, $text-color);
+        }
+    }
+    &__display {
+        width: 112px;
+        height: 40px;
+        margin-right: 45px;
+        &::before {
+            position: absolute;
+            right: 0;
+            bottom: -15px;
+            content: "Ед. изм.: упаковка";
+            font-weight: 400;
+            font-style: normal;
+            font-size: 9px;
+            text-transform: none;
+            line-height: 13px;
+            color: #C6C6C6;
+        }
+        &-amount,
+        &-units {
+            @include font(400, 12px, 18px, $text-color);
+        }
+    }
+    &__price {
+        &-item,
+        &-currency {
+            @include font(500, 19px, 17px, $text-color);
+        }
+    }
+    &__btns {
+        margin-bottom: 10px;
+    }
+    &__deliv-btn {
+        margin-right: 20px;
+    }
+    
+    &__deliv-btn,
+    &__pickup-btn {
+        background: transparent;
+        border: none;
+        @include font(500, 14px, 11px, $tab-btn-text-color);
+        cursor: pointer;
+    }
+    &__deliv-btn.tab__btn_active,
+    &__pickup-btn.tab__btn_active {
+        padding: 10px 24px;
+        border-radius: 10px;
+        background: $btn-bgcolor;
+        @include font(500, 14px, 11px, $btn-text-color);
+    }
+    &__scoreboard {
+        display: flex;
+        justify-content: space-between;
+        width: 466px;
+        padding: 34px 30px 40px 30px;
+        background: $popup-bg;
+        box-shadow: 0px 0px 28.7827px rgba(0, 0, 0, 0.06);
+        border-radius: 9.59423px; 
+    }
+    &__union {
+        display: flex;
+        flex-flow: column;
+        width: 54%;
+    }
+    &__deliv,
+    &__pickup {
+        margin-top: 16px;
+    }
+    &__total,
+    &__deliv,
+    &__pickup {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__total-name,
+    &__total-sum,
+    &__deliv-name,
+    &__deliv-total,
+    &__pickup-name,
+    &__pickup-total {
+        @include font(500, 13px, 20px, $text-color);
+    }
+    &__pickup-total {
+        color: $btn-bgcolor;
+    }
+    &__pay {
+        &-name {
+            @include font(500, 15px, 23px, $text-color);
+        }
+        &-total {
+            margin-top: 5px;
+            @include font(500, 19px, 24px, $text-color);
+        }
+    }
+
+}

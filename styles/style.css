@@ -5,7 +5,7 @@
   align-items: center;
 }
 
-.mobmenu__btn-icon, .mobmenu__icon-item, .card__img-item {
+.mobmenu__btn-icon, .mobmenu__icon-item, .list__icon img, .card__img-item {
   display: block;
   width: 100%;
   height: 100%;
@@ -332,6 +332,56 @@ body {
   line-height: 21px;
   color: #FFFFFF;
   padding: 13px 25px;
+}
+
+.list {
+  list-style-type: none;
+}
+.list__node {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #EBEBEB;
+  border-bottom: 1px solid #EBEBEB;
+}
+.list__node:not(:first-child) {
+  border-top: none;
+}
+.list__btn {
+  position: relative;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.list__btn::before {
+  content: "";
+  font-family: "FontAwesome";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateZ(45deg);
+  color: #C6C6C6;
+}
+.list__icon {
+  flex-shrink: 0;
+  border-radius: 5px;
+  background: #00AC4E;
+}
+.list__price {
+  display: flex;
+}
+
+.tab__btns {
+  display: flex;
+}
+.tab__content_active {
+  display: block;
+}
+.tab__more {
+  display: none;
+}
+.tab__more_active {
+  display: inline;
 }
 
 .popup {
@@ -1378,9 +1428,6 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   line-height: 50px;
   color: #333333;
 }
-.basket__list {
-  list-style-type: none;
-}
 @media screen and (max-width: 430px) {
   .basket__list {
     display: flex;
@@ -1391,12 +1438,7 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   }
 }
 .basket__list-node {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding: 20px 0;
-  border-top: 1px solid #EBEBEB;
-  border-bottom: 1px solid #EBEBEB;
 }
 @media screen and (max-width: 430px) {
   .basket__list-node {
@@ -1410,17 +1452,10 @@ http://nicolasgallagher.com/micro-clearfix-hack/
     margin-right: 20px;
   }
 }
-.basket__list-node:not(:first-child) {
-  border-top: none;
-}
 .basket__list-btn {
-  position: relative;
   margin-right: 15px;
   width: 24px;
   height: 24px;
-  border: none;
-  background: transparent;
-  cursor: pointer;
 }
 @media screen and (max-width: 430px) {
   .basket__list-btn {
@@ -1429,17 +1464,7 @@ http://nicolasgallagher.com/micro-clearfix-hack/
     right: -9px;
   }
 }
-.basket__list-btn::before {
-  content: "";
-  font-family: "FontAwesome";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotateZ(45deg);
-  color: #C6C6C6;
-}
 .basket__list-icon {
-  flex-shrink: 0;
   width: 111px;
   height: 82px;
   margin-right: 38px;
@@ -1459,11 +1484,6 @@ http://nicolasgallagher.com/micro-clearfix-hack/
     width: 90px;
     height: 67px;
   }
-}
-.basket__list-icon img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 .basket__list-name {
   margin-right: 50px;
@@ -1516,9 +1536,6 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   text-transform: none;
   line-height: 21px;
   color: #000000;
-}
-.basket__price {
-  display: flex;
 }
 @media screen and (max-width: 430px) {
   .basket__price {
@@ -1787,204 +1804,6 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   color: #FFFFFF;
 }
 
-.tab {
-  width: 63%;
-}
-.tab__btns {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 30px;
-}
-.tab__btn {
-  padding: 10px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  transition: color 0.2s;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 28px;
-  text-transform: none;
-  line-height: 19px;
-  color: #828282;
-}
-.tab__btn:first-child {
-  padding-left: 0;
-}
-.tab__btn_active {
-  color: #00AC4E;
-}
-.tab__btn:not(.tab__btn_active):hover {
-  color: #00d64e;
-}
-.tab__content {
-  display: none;
-}
-.tab__content_active {
-  display: block;
-}
-.tab__descr-title {
-  margin-bottom: 22px;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 21px;
-  text-transform: none;
-  line-height: 19px;
-  color: #000000;
-}
-.tab__descr-text {
-  font-weight: 400;
-  font-style: normal;
-  font-size: 18px;
-  text-transform: none;
-  line-height: 19px;
-  color: #828282;
-}
-.tab__descr-text p:not(:last-child) {
-  margin-bottom: 25px;
-}
-.tab__param ul li {
-  list-style: none;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 18px;
-  text-transform: none;
-  line-height: 22px;
-  color: #828282;
-}
-.tab__param ul li:not(:last-child) {
-  margin-bottom: 20px;
-}
-.tab__reviews-title {
-  margin-bottom: 16px;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 21px;
-  text-transform: none;
-  line-height: 19px;
-  color: #000000;
-}
-.tab__slide {
-  padding: 13px 16px;
-  border-radius: 11.1818px;
-  background: #eeeeed;
-}
-.tab__ava {
-  display: flex;
-  align-items: center;
-}
-.tab__ava-wrap {
-  width: 50px;
-  height: 50px;
-  margin-right: 5px;
-  border-radius: 50%;
-  background-color: forestgreen;
-}
-.tab__ava-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.tab__user-wrap {
-  display: flex;
-}
-.tab__user-name {
-  margin-right: 10px;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 14px;
-  text-transform: none;
-  line-height: 16px;
-  color: #000000;
-}
-.tab__user-icon {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: forestgreen;
-}
-.tab__rating {
-  margin: 5px 0 0 0;
-  justify-content: flex-end;
-}
-.tab__star {
-  width: 15px;
-  height: 15px;
-}
-.tab__star-icon {
-  font-size: 11px;
-}
-.tab__star:not(:first-child) {
-  margin-right: 3px;
-}
-.tab__soc {
-  margin-top: 3px;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 12px;
-  text-transform: none;
-  line-height: 14px;
-  color: #2D9CDB;
-}
-.tab__review {
-  margin-top: 6px;
-}
-.tab__review p {
-  font-weight: 400;
-  font-style: normal;
-  font-size: 12px;
-  text-transform: none;
-  line-height: 14px;
-  color: #000000;
-}
-.tab__more {
-  display: none;
-}
-.tab__more_active {
-  display: inline;
-}
-.tab__btn-more {
-  border: none;
-  background: transparent;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 11px;
-  text-transform: none;
-  line-height: 13px;
-  color: #00AC4E;
-  text-decoration: underline;
-  cursor: pointer;
-}
-.tab__slaider-btns {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 10px;
-}
-.tab__btn-next {
-  display: inline-block;
-  margin-right: 5px;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 12px;
-  text-transform: none;
-  line-height: 14px;
-  color: #00AC4E;
-  cursor: pointer;
-}
-.tab__btn-prev::before, .tab__btn-next::after {
-  font-family: "FontAwesome";
-  color: #00AC4E;
-  cursor: pointer;
-}
-.tab__btn-prev::before {
-  content: "";
-  margin-right: 40px;
-}
-.tab__btn-next::after {
-  content: "";
-  margin-left: 5px;
-}
-
 .aboutprod {
   padding: 60px 0 0 0;
   background: rgba(0, 0, 0, 0);
@@ -2022,17 +1841,201 @@ http://nicolasgallagher.com/micro-clearfix-hack/
     width: 150px;
   }
 }
+.aboutprod__tab {
+  width: 63%;
+}
 @media screen and (max-width: 930px) {
   .aboutprod__tab {
     width: 100%;
     margin-bottom: 40px;
   }
 }
+.aboutprod__tab-btn {
+  padding: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 28px;
+  text-transform: none;
+  line-height: 19px;
+  color: #828282;
+}
 @media screen and (max-width: 464px) {
   .aboutprod__tab-btn {
     padding: 3px;
     font-size: calc(20px + 28 * ((100vw - 320px) / (997 - 320)));
   }
+}
+.aboutprod__tab-btn:first-child {
+  padding-left: 0;
+}
+.aboutprod__tab-btn.tab__btn_active {
+  color: #00AC4E;
+}
+.aboutprod__tab-btn:not(.tab__btn_active):hover {
+  color: #00d64e;
+}
+.aboutprod__btns {
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.aboutprod__descr-title {
+  margin-bottom: 22px;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 21px;
+  text-transform: none;
+  line-height: 19px;
+  color: #000000;
+}
+.aboutprod__descr-text {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  text-transform: none;
+  line-height: 19px;
+  color: #828282;
+}
+.aboutprod__descr-text p:not(:last-child) {
+  margin-bottom: 25px;
+}
+.aboutprod__param ul li {
+  list-style: none;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18px;
+  text-transform: none;
+  line-height: 22px;
+  color: #828282;
+}
+.aboutprod__param ul li:not(:last-child) {
+  margin-bottom: 20px;
+}
+.aboutprod__reviews-title {
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 21px;
+  text-transform: none;
+  line-height: 19px;
+  color: #000000;
+}
+.aboutprod__slide {
+  padding: 13px 16px;
+  border-radius: 11.1818px;
+  background: #eeeeed;
+}
+.aboutprod__ava {
+  display: flex;
+  align-items: center;
+}
+.aboutprod__ava-wrap {
+  width: 50px;
+  height: 50px;
+  margin-right: 5px;
+  border-radius: 50%;
+  background-color: forestgreen;
+}
+.aboutprod__ava-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.aboutprod__user-wrap {
+  display: flex;
+}
+.aboutprod__user-name {
+  margin-right: 10px;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  text-transform: none;
+  line-height: 16px;
+  color: #000000;
+}
+.aboutprod__user-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: forestgreen;
+}
+.aboutprod__rating {
+  margin: 5px 0 0 0;
+  justify-content: flex-end;
+}
+.aboutprod__star {
+  width: 15px;
+  height: 15px;
+}
+.aboutprod__star-icon {
+  font-size: 11px;
+}
+.aboutprod__star:not(:first-child) {
+  margin-right: 3px;
+}
+.aboutprod__soc {
+  margin-top: 3px;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  text-transform: none;
+  line-height: 14px;
+  color: #2D9CDB;
+}
+.aboutprod__review {
+  margin-top: 6px;
+}
+.aboutprod__review p {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  text-transform: none;
+  line-height: 14px;
+  color: #000000;
+}
+.aboutprod__btn-more {
+  border: none;
+  background: transparent;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 11px;
+  text-transform: none;
+  line-height: 13px;
+  color: #00AC4E;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.aboutprod__slaider-btns {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+.aboutprod__btn-next {
+  display: inline-block;
+  margin-right: 5px;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 12px;
+  text-transform: none;
+  line-height: 14px;
+  color: #00AC4E;
+  cursor: pointer;
+}
+.aboutprod__btn-prev::before, .aboutprod__btn-next::after {
+  font-family: "FontAwesome";
+  color: #00AC4E;
+  cursor: pointer;
+}
+.aboutprod__btn-prev::before {
+  content: "";
+  margin-right: 40px;
+}
+.aboutprod__btn-next::after {
+  content: "";
+  margin-left: 5px;
 }
 .aboutprod__bonus {
   width: 311.75px;
@@ -2051,6 +2054,162 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   text-transform: none;
   line-height: 16px;
   color: #FFFFFF;
+}
+
+.regis__title {
+  margin-bottom: 25px;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 28px;
+  text-transform: none;
+  line-height: 50px;
+  color: #333333;
+}
+.regis__subtitle {
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 26px;
+  text-transform: none;
+  line-height: 20px;
+  color: #000000;
+}
+.regis__list {
+  width: min-content;
+}
+.regis__list-node {
+  padding: 15px 0;
+}
+.regis__list-btn {
+  width: 17px;
+  height: 17px;
+  margin-right: 11px;
+}
+.regis__list-icon {
+  width: 78px;
+  height: 56px;
+  margin-right: 25px;
+  border-radius: 3.5px;
+  background: #00AC4E;
+}
+.regis__list-name {
+  margin-right: 64px;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  text-transform: none;
+  line-height: 15px;
+  color: #000000;
+}
+.regis__display {
+  width: 112px;
+  height: 40px;
+  margin-right: 45px;
+}
+.regis__display::before {
+  position: absolute;
+  right: 0;
+  bottom: -15px;
+  content: "Ед. изм.: упаковка";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 9px;
+  text-transform: none;
+  line-height: 13px;
+  color: #C6C6C6;
+}
+.regis__display-amount, .regis__display-units {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  text-transform: none;
+  line-height: 18px;
+  color: #000000;
+}
+.regis__price-item, .regis__price-currency {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 19px;
+  text-transform: none;
+  line-height: 17px;
+  color: #000000;
+}
+.regis__btns {
+  margin-bottom: 10px;
+}
+.regis__deliv-btn {
+  margin-right: 20px;
+}
+.regis__deliv-btn, .regis__pickup-btn {
+  background: transparent;
+  border: none;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  text-transform: none;
+  line-height: 11px;
+  color: #828282;
+  cursor: pointer;
+}
+.regis__deliv-btn.tab__btn_active, .regis__pickup-btn.tab__btn_active {
+  padding: 10px 24px;
+  border-radius: 10px;
+  background: #00AC4E;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  text-transform: none;
+  line-height: 11px;
+  color: #FFFFFF;
+}
+.regis__scoreboard {
+  display: flex;
+  justify-content: space-between;
+  width: 466px;
+  padding: 34px 30px 40px 30px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 28.7827px rgba(0, 0, 0, 0.06);
+  border-radius: 9.59423px;
+}
+.regis__union {
+  display: flex;
+  flex-flow: column;
+  width: 54%;
+}
+.regis__deliv, .regis__pickup {
+  margin-top: 16px;
+}
+.regis__total, .regis__deliv, .regis__pickup {
+  display: flex;
+  justify-content: space-between;
+}
+.regis__total-name, .regis__total-sum, .regis__deliv-name, .regis__deliv-total, .regis__pickup-name, .regis__pickup-total {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 13px;
+  text-transform: none;
+  line-height: 20px;
+  color: #000000;
+}
+.regis__pickup-total {
+  color: #00AC4E;
+}
+.regis__pay-name {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 15px;
+  text-transform: none;
+  line-height: 23px;
+  color: #000000;
+}
+.regis__pay-total {
+  margin-top: 5px;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 19px;
+  text-transform: none;
+  line-height: 24px;
+  color: #000000;
 }
 
 .mobmenu {

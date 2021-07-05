@@ -272,3 +272,61 @@ body {
         padding: 13px 25px;
     }
 }
+.list {
+    list-style-type: none;
+    &__node {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid $basket-list-border-color;
+        border-bottom: 1px solid $basket-list-border-color;
+    }
+    &__node:not(:first-child) {
+        border-top: none;
+    }
+    &__btn {
+        position: relative;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+    }
+    &__btn::before {
+        content: '\f067';
+        font-family: 'FontAwesome';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotateZ(45deg);
+        color: $list-btn-color;
+    }
+    &__icon {
+        flex-shrink: 0;
+        border-radius: 5px;
+        background: $btn-bgcolor;
+    }
+    &__icon img {
+        @extend %inner-img;
+    }
+    &__price {
+        display: flex;
+    }
+}
+.tab {
+    &__btns {
+        display: flex;
+    }
+    // &__content {
+    //     display: none;
+    // }
+    &__content_active {
+        display: block;
+    }
+    &__more {
+        display: none;
+    }
+    &__more_active {
+        display: inline;
+    }
+}
+
+
