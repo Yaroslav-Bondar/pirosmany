@@ -1,4 +1,9 @@
 .regis {
+    &__conteiner {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 47px;
+    }
     &__title {
         margin-bottom: 25px;
         @include font(500, 28px, 50px, $title-color);
@@ -62,7 +67,6 @@
     &__deliv-btn {
         margin-right: 20px;
     }
-    
     &__deliv-btn,
     &__pickup-btn {
         background: transparent;
@@ -121,5 +125,26 @@
             @include font(500, 19px, 24px, $text-color);
         }
     }
-
+    // forms
+    &__delivery {
+        display: flex;
+        flex-flow: column;
+        &-wrap:not(:last-child) {
+            margin-bottom: 15px;
+        }
+        &-label {
+            margin-bottom: 5px;
+            @include font(400, 15px, 24px, $text-color);
+        }
+    }
+    &__select {
+        padding-left: 30px;
+        @include font(400, 16px, 24px, $popup-text-color);
+        &-wrap {
+            height: 64.02px;
+            border-radius: 7.11356px;
+            border: 1.1194px solid $form-border-color;
+        }
+    }
+    // // forms
 }
