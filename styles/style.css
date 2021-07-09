@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.table__btn, .header__basket-btn, .header__user-btn, .mobmenu__dropdown-img, .bonus__icon, .popup__icon, .display__item, .rating label {
+.table__btn, .header__basket-btn, .header__user-btn, .mobmenu__dropdown-img, .regis__select-wrap::before, .bonus__icon, .popup__icon, .display__item, .rating label {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -401,6 +401,9 @@ body {
   width: 100%;
   background: #FCFCFC;
   overflow: hidden;
+}
+.form__input {
+  background: #FCFCFC;
 }
 .form__wrap {
   display: flex;
@@ -2246,6 +2249,9 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 .regis__delivery-wrap:not(:last-child) {
   margin-bottom: 15px;
 }
+.regis__delivery-wrap:last-child {
+  margin-bottom: 25px;
+}
 .regis__delivery-label {
   margin-bottom: 5px;
   font-weight: 400;
@@ -2254,6 +2260,31 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   text-transform: none;
   line-height: 24px;
   color: #000000;
+}
+.regis__delivery-label_hide {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 17px;
+  text-transform: none;
+  line-height: 24px;
+  color: #00AC4E;
+}
+.regis__delivery-label_show-hide {
+  cursor: pointer;
+}
+.regis__delivery-input {
+  height: 64.02px;
+  padding-left: 30px;
+  border: 1.1194px solid #EBEBEB;
+}
+.regis__delivery-input_hide {
+  display: none;
+}
+.regis__delivery-input::placeholder {
+  color: #C6C6C6;
+}
+.regis__delivery-btn {
+  margin-top: 11px;
 }
 .regis__select {
   padding-left: 30px;
@@ -2265,9 +2296,55 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   color: #C6C6C6;
 }
 .regis__select-wrap {
+  position: relative;
   height: 64.02px;
   border-radius: 7.11356px;
   border: 1.1194px solid #EBEBEB;
+}
+.regis__select-wrap::before {
+  position: absolute;
+  content: "";
+  width: 27px;
+  height: 27px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: "FontAwesome";
+  color: #00AC4E;
+}
+.regis__order-btn {
+  width: 183.58px;
+  height: 58.21px;
+  border-radius: 5.59701px;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  text-transform: none;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+.regis__pickup-wrap {
+  margin-bottom: 15px;
+}
+.regis__pickup-label {
+  margin-bottom: 5px;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  text-transform: none;
+  line-height: 24px;
+  color: #000000;
+}
+.regis__pickup-input {
+  padding-left: 30px;
+  height: 64.02px;
+  border-radius: 7.11356px;
+  border: 1.1194px solid #EBEBEB;
+}
+.regis__pickup-input::placeholder {
+  color: #C6C6C6;
+}
+.regis__pickup-select-wrap {
+  margin-bottom: 25px;
 }
 
 .mobmenu {

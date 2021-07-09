@@ -132,18 +132,80 @@
         &-wrap:not(:last-child) {
             margin-bottom: 15px;
         }
+        &-wrap:last-child {
+            margin-bottom: 25px;
+        }
         &-label {
             margin-bottom: 5px;
             @include font(400, 15px, 24px, $text-color);
+            &_hide {
+                @include font(500, 17px, 24px, $btn-bgcolor);
+            }
+            &_show-hide {
+                cursor: pointer;
+            }
+        }
+        &-input {
+            height: 64.02px;
+            padding-left: 30px;
+            border: 1.1194px solid $form-border-color;
+            &_hide {
+                display: none;
+            }
+        }
+        &-input::placeholder {
+            color: $popup-text-color;
+        }
+        &-btn {
+            margin-top: 11px;
         }
     }
     &__select {
         padding-left: 30px;
         @include font(400, 16px, 24px, $popup-text-color);
         &-wrap {
+            position: relative;
             height: 64.02px;
             border-radius: 7.11356px;
             border: 1.1194px solid $form-border-color;
+        }
+        &-wrap::before {
+            position: absolute;
+            @extend %center-xy-flex;
+            content: '\f078';
+            width: 27px;
+            height: 27px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-family: 'FontAwesome';
+            color: $btn-bgcolor;
+        }
+    }
+    &__order-btn {
+        width: 183.58px;
+        height: 58.21px;
+        border-radius: 5.59701px;
+        @include font(500, 16px, 24px, $btn-text-color);
+    }
+    &__pickup {
+        &-wrap {
+            margin-bottom: 15px;
+        }
+        &-label {
+            margin-bottom: 5px;
+            @include font(400, 15px, 24px, $text-color);
+        }
+        &-input {
+            padding-left: 30px;
+            height: 64.02px;
+            border-radius: 7.11356px;
+            border: 1.1194px solid $form-border-color;
+        }
+        &-input::placeholder {
+            color: $popup-text-color;
+        }
+        &-select-wrap {
+            margin-bottom: 25px;
         }
     }
     // // forms
