@@ -161,8 +161,8 @@
                 </div>
                 <div class="regis__unit1-wrap2">
                     <div class="regis__btns tab__btns">
-                        <button class="tab__btn regis__deliv-btn">Доставка</button>
-                        <button class="tab__btn regis__pickup-btn">Самовывоз (- 20%)</button>
+                        <button data-number='0' class="tab__btn regis__deliv-btn">Доставка</button>
+                        <button data-number='1' class="tab__btn regis__pickup-btn">Самовывоз (- 20%)</button>
                     </div>
                     <div class="regis__scoreboard">
                         <!-- <div class="tab__content regis__deliv"> -->
@@ -174,14 +174,16 @@
                                         <span class="regis__total-currency">₽</span>
                                     </div>
                                 </div>
-                                <div class="tab__content regis__deliv">
+                                <!-- tab__content  -->
+                                <div data-tab-content='deliv' class="tab__content regis__deliv">
                                     <span class="regis__deliv-name">Доставка</span>
                                     <div class="regis__deliv-total">
                                         <span class="regis__deliv-price">0</span>
                                         <span class="regis__deliv-currency">₽</span>
                                     </div>
                                 </div>
-                                <div class="tab__content regis__pickup">
+                                <!-- tab__content  -->
+                                <div data-tab-content='pickup' class="tab__content regis__pickup">
                                     <span class="regis__pickup-name">Самовывоз</span>
                                     <div class="regis__pickup-total">
                                         <span class="regis__pickup-price">-140</span>
@@ -200,7 +202,7 @@
                 </div>
             </div>
             <div class="regis__unit2">
-                <form class="form regis__delivery" action='#'  name='delivery' method="GET">
+                <form data-tab-content='deliv' class="tab__content form regis__delivery" action='#'  name='delivery' method="GET">
                     <div class="form__wrap regis__delivery-wrap">
                         <label class="form__label regis__delivery-label" for="deliv-area">Район доставки</label>
                         <div class="form__select-wrap regis__select-wrap">
@@ -226,7 +228,7 @@
                         <input class="form__input regis__delivery-input" type="tel" placeholder="+380" name="delivery-phone" id="deliv-phone">
                     </div>
                     <div class="form__wrap regis__delivery-wrap">
-                        <label class="form__label regis__delivery-label" for="deliv-address"></label>
+                        <label class="form__label regis__delivery-label" for="deliv-address">Адрес доставки</label>
                         <input class="form__input regis__delivery-input" type="text" placeholder="Адрес доставки" name="delivery-address" id="deliv-address">
                     </div>
                     <div class="form__wrap regis__delivery-wrap">
@@ -245,7 +247,7 @@
                     </div>
                     <button class="regis__delivery-btn regis__order-btn btn" type="submit">Оформить заказ</button>
                 </form>
-                <form class="form regis__pickup-form" action='#'  name='delivery' action="#" method="GET">
+                <form data-tab-content='pickup' class="tab__content form regis__pickup-form" action='#'  name='delivery' action="#" method="GET">
                     <div class="form__wrap regis__pickup-wrap">                        
                         <label class="form__label regis__pickup-label" for="pickup-name">ФИО</label>
                         <input class="form__input regis__pickup-input" type="text" placeholder="Введите Ваше полное имя" name="pickup_name" id="pickup-name">
@@ -271,6 +273,7 @@
 </section>    
 <!-- Add font awesome icons-->
 <script src="https://kit.fontawesome.com/a8ec7c40c4.js" crossorigin="anonymous"></script>    
+<script src="js/common.js"></script>
 <script src="js/display.js"></script>
 <script src="js/regis.js"></script>
 </body>

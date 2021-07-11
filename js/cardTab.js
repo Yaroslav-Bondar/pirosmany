@@ -2,6 +2,7 @@ let tabBtns = document.querySelector('.tab__btns')
 let tabContents = document.querySelector('.tab__contents')
 let tabContent = document.querySelectorAll('.tab__content')
 
+tabBtns.firstElementChild.classList.add('tab__btn_active')
 function getMaxHeight() {
     let heights = new Array()
     tabContent.forEach(item => heights.push(item.offsetHeight))
@@ -13,8 +14,8 @@ window.addEventListener('resize', () => {
     tabContents.style.height = getMaxHeight() + 'px'
 })
 tabContent.forEach(item => item.style.display = 'none')
-// tabBtns.firstElementChild.classList.add('tab__btn_active')
 tabContent[0].style.display = 'block'
+// tabBtns.firstElementChild.classList.add('tab__btn_active')
 // tabContent[0].classList.add('tab__content_active')
 
 tabBtns.addEventListener('click', (e)=> {

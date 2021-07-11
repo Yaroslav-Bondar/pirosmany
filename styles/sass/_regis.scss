@@ -3,6 +3,18 @@
         display: flex;
         flex-wrap: wrap;
         column-gap: 47px;
+        @media screen and(max-width: $regis-breakpoint-1) {
+           justify-content: center;
+        //    gap: 40px 0; 
+        }
+    }
+    &__unit1 {
+        @media screen and(max-width: $regis-breakpoint-1) {
+            margin-bottom: 40px;
+        }
+        @media screen and(max-width: $regis-breakpoint-2) {
+            width: 100%;
+        }
     }
     &__title {
         margin-bottom: 25px;
@@ -14,13 +26,40 @@
     }
     &__list {
         width: min-content;
+        @media screen and(max-width: $regis-breakpoint-2) {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            gap: 20px;
+            // column-gap: 20px;
+            justify-content: space-between;
+            // border-top: 1px solid #EBEBEB;
+            // border-bottom: 1px solid #EBEBEB;
+        }  
         &-node {
             padding: 15px 0;
+            @media screen and(max-width: $regis-breakpoint-2) {
+                position: relative;
+                flex-flow: column;
+                border-top: 1px solid #EBEBEB !important;
+                border-bottom: 1px solid #EBEBEB;
+                // border: none;
+            }    
         }
+        // &__node:not(:first-child) {
+            // @media screen and(max-width: $regis-breakpoint-2) {
+                // border-top: 1px solid #EBEBEB;
+            // }
+        // }
         &-btn {
             width: 17px;
             height: 17px;
-            margin-right: 11px;   
+            margin-right: 11px;
+            @media screen and(max-width: $regis-breakpoint-2) {
+                position: absolute;
+                top: 3px;
+                right: -9px;
+            }    
         }
         &-icon {
             width: 78px;
@@ -28,16 +67,27 @@
             margin-right: 25px;
             border-radius: 3.5px;
             background: $btn-bgcolor;
+            @media screen and(max-width: $regis-breakpoint-2) {
+                margin: 20px 0 0 0;
+                width: 90px;
+                height: 67px;
+            } 
         }
         &-name {
             margin-right: 64px;
             @include font(500, 16px, 15px, $text-color);
+            @media screen and(max-width: $regis-breakpoint-2) {
+                margin: 20px 0 0 0;
+            } 
         }
     }
     &__display {
         width: 112px;
         height: 40px;
         margin-right: 45px;
+        @media screen and(max-width: $regis-breakpoint-2) {
+            margin: 20px 0 0 0;
+        }
         &::before {
             position: absolute;
             right: 0;
@@ -56,13 +106,24 @@
         }
     }
     &__price {
+        @media screen and(max-width: $regis-breakpoint-2) {
+            margin: 35px 0 0 0;
+        }
+    }
+    &__price {
         &-item,
         &-currency {
             @include font(500, 19px, 17px, $text-color);
         }
     }
+    &__unit1-wrap2 {
+        margin-top: 60px;
+    }
     &__btns {
         margin-bottom: 10px;
+        @media screen and(max-width: $regis-breakpoint-1) {
+            justify-content: center;
+        }
     }
     &__deliv-btn {
         margin-right: 20px;
@@ -88,12 +149,28 @@
         padding: 34px 30px 40px 30px;
         background: $popup-bg;
         box-shadow: 0px 0px 28.7827px rgba(0, 0, 0, 0.06);
-        border-radius: 9.59423px; 
+        border-radius: 9.59423px;
+        @media screen and(max-width: $regis-breakpoint-1) {
+            margin: 0 auto;
+        }
+        @media screen and(max-width: $regis-breakpoint-2) {
+            width: 100%;
+        }
+        @media screen and(max-width: $regis-breakpoint-3) {
+            flex-flow: column;
+        }  
     }
     &__union {
         display: flex;
         flex-flow: column;
         width: 54%;
+        @media screen and(max-width: $regis-breakpoint-3) {
+            width: 100%;;
+        }
+    }
+    &__unit2 {
+        display: flex;
+        align-items: flex-end;
     }
     &__deliv,
     &__pickup {
@@ -117,6 +194,9 @@
         color: $btn-bgcolor;
     }
     &__pay {
+        @media screen and(max-width: $regis-breakpoint-3) {
+            margin-top: 20px;;
+        } 
         &-name {
             @include font(500, 15px, 23px, $text-color);
         }
@@ -188,6 +268,10 @@
         @include font(500, 16px, 24px, $btn-text-color);
     }
     &__pickup {
+        &-form {
+            display: flex;
+            flex-flow: column;
+        }
         &-wrap {
             margin-bottom: 15px;
         }

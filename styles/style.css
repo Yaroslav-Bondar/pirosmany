@@ -1459,8 +1459,7 @@ http://nicolasgallagher.com/micro-clearfix-hack/
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    border-top: 1px solid #EBEBEB;
-    border-bottom: 1px solid #EBEBEB;
+    gap: 20px;
   }
 }
 .basket__list-node {
@@ -1470,12 +1469,15 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   .basket__list-node {
     position: relative;
     flex-flow: column;
-    border: none;
   }
 }
+.basket__list-node:not(:first-child) {
+  border-top: none;
+}
 @media screen and (max-width: 430px) {
-  .basket__list-node:not(:last-child) {
-    margin-right: 20px;
+  .basket__list-node:not(:first-child) {
+    border-top: 1px solid #EBEBEB;
+    border-bottom: 1px solid #EBEBEB;
   }
 }
 .basket__list-btn {
@@ -2087,6 +2089,21 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   flex-wrap: wrap;
   column-gap: 47px;
 }
+@media screen and (max-width: 819px) {
+  .regis__conteiner {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 819px) {
+  .regis__unit1 {
+    margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 527px) {
+  .regis__unit1 {
+    width: 100%;
+  }
+}
 .regis__title {
   margin-bottom: 25px;
   font-weight: 500;
@@ -2108,13 +2125,37 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 .regis__list {
   width: min-content;
 }
+@media screen and (max-width: 527px) {
+  .regis__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+    justify-content: space-between;
+  }
+}
 .regis__list-node {
   padding: 15px 0;
+}
+@media screen and (max-width: 527px) {
+  .regis__list-node {
+    position: relative;
+    flex-flow: column;
+    border-top: 1px solid #EBEBEB !important;
+    border-bottom: 1px solid #EBEBEB;
+  }
 }
 .regis__list-btn {
   width: 17px;
   height: 17px;
   margin-right: 11px;
+}
+@media screen and (max-width: 527px) {
+  .regis__list-btn {
+    position: absolute;
+    top: 3px;
+    right: -9px;
+  }
 }
 .regis__list-icon {
   width: 78px;
@@ -2122,6 +2163,13 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   margin-right: 25px;
   border-radius: 3.5px;
   background: #00AC4E;
+}
+@media screen and (max-width: 527px) {
+  .regis__list-icon {
+    margin: 20px 0 0 0;
+    width: 90px;
+    height: 67px;
+  }
 }
 .regis__list-name {
   margin-right: 64px;
@@ -2132,10 +2180,20 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   line-height: 15px;
   color: #000000;
 }
+@media screen and (max-width: 527px) {
+  .regis__list-name {
+    margin: 20px 0 0 0;
+  }
+}
 .regis__display {
   width: 112px;
   height: 40px;
   margin-right: 45px;
+}
+@media screen and (max-width: 527px) {
+  .regis__display {
+    margin: 20px 0 0 0;
+  }
 }
 .regis__display::before {
   position: absolute;
@@ -2157,6 +2215,11 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   line-height: 18px;
   color: #000000;
 }
+@media screen and (max-width: 527px) {
+  .regis__price {
+    margin: 35px 0 0 0;
+  }
+}
 .regis__price-item, .regis__price-currency {
   font-weight: 500;
   font-style: normal;
@@ -2165,8 +2228,16 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   line-height: 17px;
   color: #000000;
 }
+.regis__unit1-wrap2 {
+  margin-top: 60px;
+}
 .regis__btns {
   margin-bottom: 10px;
+}
+@media screen and (max-width: 819px) {
+  .regis__btns {
+    justify-content: center;
+  }
 }
 .regis__deliv-btn {
   margin-right: 20px;
@@ -2202,10 +2273,34 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   box-shadow: 0px 0px 28.7827px rgba(0, 0, 0, 0.06);
   border-radius: 9.59423px;
 }
+@media screen and (max-width: 819px) {
+  .regis__scoreboard {
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 527px) {
+  .regis__scoreboard {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 379px) {
+  .regis__scoreboard {
+    flex-flow: column;
+  }
+}
 .regis__union {
   display: flex;
   flex-flow: column;
   width: 54%;
+}
+@media screen and (max-width: 379px) {
+  .regis__union {
+    width: 100%;
+  }
+}
+.regis__unit2 {
+  display: flex;
+  align-items: flex-end;
 }
 .regis__deliv, .regis__pickup {
   margin-top: 16px;
@@ -2224,6 +2319,11 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 }
 .regis__pickup-total {
   color: #00AC4E;
+}
+@media screen and (max-width: 379px) {
+  .regis__pay {
+    margin-top: 20px;
+  }
 }
 .regis__pay-name {
   font-weight: 500;
@@ -2321,6 +2421,10 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   text-transform: none;
   line-height: 24px;
   color: #FFFFFF;
+}
+.regis__pickup-form {
+  display: flex;
+  flex-flow: column;
 }
 .regis__pickup-wrap {
   margin-bottom: 15px;
