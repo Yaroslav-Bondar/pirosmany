@@ -5,7 +5,6 @@
         column-gap: 47px;
         @media screen and(max-width: $regis-breakpoint-1) {
            justify-content: center;
-        //    gap: 40px 0; 
         }
     }
     &__unit1 {
@@ -31,10 +30,7 @@
             flex-wrap: wrap;
             width: 100%;
             gap: 20px;
-            // column-gap: 20px;
             justify-content: space-between;
-            // border-top: 1px solid #EBEBEB;
-            // border-bottom: 1px solid #EBEBEB;
         }  
         &-node {
             padding: 15px 0;
@@ -43,14 +39,8 @@
                 flex-flow: column;
                 border-top: 1px solid #EBEBEB !important;
                 border-bottom: 1px solid #EBEBEB;
-                // border: none;
             }    
         }
-        // &__node:not(:first-child) {
-            // @media screen and(max-width: $regis-breakpoint-2) {
-                // border-top: 1px solid #EBEBEB;
-            // }
-        // }
         &-btn {
             width: 17px;
             height: 17px;

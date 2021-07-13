@@ -1,0 +1,187 @@
+.cab {
+    // buttons
+    &__btns {
+        margin-bottom: 45px;
+        @media screen and(max-width: $cab-breakpoint-1) {
+            justify-content: center;
+        }
+    }
+    &__btn {
+        border-radius: 16px;
+        padding: 15px;
+        background: transparent;
+        &-icon {
+            @extend %center-xy-flex;
+            width: 40px;
+            height: 40px;
+            margin: 0 auto 20px auto;
+            & i {
+                font-size: 29px;
+                color: $btn-bgcolor;
+            }
+        }
+        & span {
+            @include font(500, 14px, 21px, $btn-bgcolor);
+        }
+    }
+    &__btn:not(:last-child) {
+        margin-right: 100px;
+        @media screen and(max-width: $cab-breakpoint-2) {
+            margin-right: 15px;
+        }
+    }
+    &__btn .tab__btn_active {
+        background: $btn-bgcolor;
+    }
+    &__btn .tab__btn_active & span {
+        color: $btn-text-color;
+    }
+    // // buttons
+    
+    // form
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 0 30px;
+        @media screen and(max-width: $cab-breakpoint-1) {
+            gap: 50px 30px;
+            justify-content: center;
+        }
+    }
+    &__person {
+        &-label {
+            @include font(400, 19px, 34px, $text-color);
+        }
+        &-input {
+            height: 51.61px;
+            padding-left: 24px;
+            margin-top: 11px;
+            border: 1.61275px solid $form-border-color;
+            border-radius: 8.06373px;
+        }
+        &-input::placeholder {
+            vertical-align: middle;
+            @include font(400, 16px, 45px, $placeholder-txt-color);
+        }
+        &-input::-moz-placeholder {
+            vertical-align: middle;
+            @include font(400, 16px, 45px, $placeholder-txt-color);
+        }
+        &-input::-webkit-input-placeholder {
+            vertical-align: middle;
+            @include font(400, 16px, 45px, $placeholder-txt-color);
+        }
+        
+        
+    }
+    &__title {
+        @include font(500, 28px, 25px, $text-color);
+        @media screen and(max-width: $cab-breakpoint-1) {
+            text-align: center;
+        }
+        &-person {
+            margin-bottom: 30px;
+        }
+    }
+    &__name {
+        margin-bottom: 19px;
+        &-conteiner {
+            display: flex;
+            margin-bottom: 19px;
+            @media screen and(max-width: $cab-breakpoint-2) {
+                flex-flow: column;
+            }
+        }
+        &-input {
+            width: 179px;
+            margin-right: 48px;
+            @media screen and(max-width: $cab-breakpoint-2) {
+                width: auto;
+                margin-right: 0;
+                margin-bottom: 19px;
+            }
+        }
+    }
+    &__surname {
+        &-input {
+            width: 230px;
+            @media screen and(max-width: $cab-breakpoint-2) {
+                width: auto;
+            }
+        }
+    }
+    &__patron { 
+        &-input {
+            width: 260px;
+            @media screen and(max-width: $cab-breakpoint-2) {
+                width: auto;
+            }
+        }
+    }
+    &__other {
+        &-label {
+            @include font(400, 17px, 30px, $text-color);
+            margin-bottom: 10px;
+        }
+        &-input {
+            height: 46px;
+            padding-left: 21px;
+            border: 1.43333px solid $form-border-color;
+            border-radius: 7.16667px;
+        }
+        &-input::placeholder {
+            @include font(400, 14px, 42px, $placeholder-txt-color);
+        }
+        &-input::-moz-placeholder {
+            @include font(400, 14px, 42px, $placeholder-txt-color);
+        }
+        &-input::-webkit-input-placeholder {
+            @include font(400, 14px, 42px, $placeholder-txt-color);
+        }
+    }
+    &__contact {
+        margin-bottom: 45px;
+        &-title {
+            margin-bottom: 30px;
+        }
+        &-subtitle {
+            @include font(500, 18px, 20px, $text-color);
+        }
+    }
+    &__phone {
+        display: flex;
+        @media screen and(max-width: $cab-breakpoint-2) {
+            flex-flow: column;
+        }
+        &-input {
+            width: 215px;
+            margin-right: 29px;
+            @media screen and(max-width: $cab-breakpoint-2) {
+                width: auto;
+                margin-right: 0;
+                margin-bottom: 19px;
+            }
+        }
+        &-add-input {
+            width: 215px;
+            @media screen and(max-width: $cab-breakpoint-2) {
+                width: auto;
+            }
+        }
+    }
+    &__pasw {
+        &-title {
+            margin-bottom: 30px;
+        }
+        &-wrap:not(:last-child) {
+            margin-bottom: 17px;
+        }
+    }
+    &__save {
+        padding: 13px 30px;
+        margin-top: 36px;
+        @include font(500, 12px, 18px, $btn-text-color);
+    }
+    // // form
+}

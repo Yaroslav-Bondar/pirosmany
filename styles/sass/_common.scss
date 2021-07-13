@@ -353,9 +353,15 @@ body {
     }
     &__input {
         background: $form-bg-color;
-        // border-color: $form-border-color;
-        // outline:0;
-        // background: transparent;
+        transition-property: box-shadow border-color;
+        transition: 0.2s;
+    }
+    &__input:hover {
+        box-shadow: 0 0 1.5px 1px $btn-bgcolor;
+        border-color: $btn-bgcolor;
+    }
+    &__input:focus {
+        border-color: $btn-bgcolor;
     }
     &__wrap {
         display: flex;

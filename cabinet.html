@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabinet</title>
+    <link rel="stylesheet" href= "styles/normalize.css">
+    <link rel="stylesheet" href= "fonts/fonts.css">
+    <link rel="stylesheet" href= "styles/style.css">
+</head>
+<body>
+<section class="cab">
+    <div class="wrapper">
+        <div class="cab__btns tab__btns">
+            <button data-number='0' class="tab__btn btn cab__btn">
+                <div class="cab__btn-icon">
+                    <i class="fas fa-database"></i>
+                </div>
+                <span>Личные данные</span>
+            </button>
+            <button data-number='1' class="tab__btn btn cab__btn">
+                <div class="cab__btn-icon">
+                    <i class="fas fa-history"></i>
+                </div>
+                <span>История заказов</span>
+            </button>
+        </div>
+        <form class="cab__info">
+            <div class="cab__person">
+                <div class="cab__title cab__title-person">
+                    Персональная информация
+                </div>
+                <div class="cab__upload">
+
+                </div>
+                <div class="cab__name">
+                    <div class="cab__name-conteiner">
+                        <div class="form__wrap cab__name-wrap">                        
+                            <label class="form__label cab__person-label cab__name-label" for="cab-name">Ваше имя</label>
+                            <input class="form__input cab__person-input cab__name-input" type="text" placeholder="Имя" name="cab_name" id="cab-name">
+                        </div>
+                        <div class="form__wrap cab__surname-wrap">                        
+                            <label class="form__label cab__person-label cab__surname-label" for="cab-surname">Ваша фамилия</label>
+                            <input class="form__input cab__person-input cab__surname-input" type="text" placeholder="Фамилия" name="cab_surname" id="cab-surname">
+                        </div>
+                    </div>
+                    <div class="form__wrap cab__patron-wrap">                        
+                        <label class="form__label cab__person-label cab__patron-label" for="cab-patron">Ваше отчество</label>
+                        <input class="form__input cab__person-input cab__patron-input" type="text" placeholder="Ваше отчество" name="cab_patron" id="cab-patron">
+                    </div>
+                </div>
+                <div class="form__wrap cab__email-wrap">                        
+                    <label class="form__label cab__person-label cab__email-label" for="cab-email">Адрес электронной почты</label>
+                    <input class="form__input cab__person-input cab__email-input" type="email" placeholder="Адрес электронной почты" name="cab_email" id="cab-email">
+                </div>
+            </div>
+            <div class="cab__other">
+                <div class="cab__contact">
+                    <div class="cab__title cab__contact-title">
+                        Контактная информация
+                        <div class="cab__contact-subtitle">
+                            (подтверждение заказов)
+                        </div> 
+                    </div>
+                    <div class="cab__phone">
+                        <div class="form__wrap cab__phone-wrap">                        
+                            <label class="form__label cab__other-label cab__phone-label" for="cab-phone">Основной телефон</label>
+                            <input class="form__input cab__other-input cab__phone-input" type="tel" placeholder="+380" name="cab_phone" id="cab-phone">
+                        </div>
+                        <div class="form__wrap cab__phone-add-wrap">                        
+                            <label class="form__label cab__other-label cab__phone-add-label" for="cab-phone-add">Дополнительный</label>
+                            <input class="form__input cab__other-input cab__phone-add-input" type="tel" placeholder="+380" name="cab_phone-add" id="cab-phone-add">
+                        </div>
+                    </div>
+                </div>
+                <div class="cab__pasw">
+                    <div class="cab__title cab__pasw-title">Изменение пароля</div>
+                    <div class="form__wrap cab__pasw-wrap cab__pasw-old-wrap">                        
+                        <label class="form__label cab__other-label cab__pasw-old-label" for="cab-pasw-old">Ваш старый пароль</label>
+                        <input class="form__input cab__other-input cab__pasw-old-input" type="password" placeholder="Старый пароль" name="cab_pasw-old" id="cab-pasw-old">
+                    </div>
+                    <div class="form__wrap cab__pasw-wrap cab__pasw-new-wrap">                        
+                        <label class="form__label cab__other-label cab__pasw-new-label" for="cab-pasw-new">Ваш новый пароль</label>
+                        <input class="form__input cab__other-input cab__pasw-new-input" type="password" placeholder="Новый пароль" name="cab_pasw-new" id="cab-pasw-new">
+                    </div>
+                    <div class="form__wrap cab__pasw-wrap cab__pasw-confirm-wrap">                        
+                        <label class="form__label cab__other-label cab__pasw-confirm-label" for="cab-pasw-confirm">Подтверждение</label>
+                        <input class="form__input cab__other-input cab__pasw-confirm-input" type="password" placeholder="Подтверждение" name="cab_pasw-confirm" id="cab-pasw-confirm">
+                    </div>
+                </div>
+                <button class="cab__save btn">
+                    Сохранить изменения
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
+<!-- Add font awesome icons-->
+<script src="https://kit.fontawesome.com/a8ec7c40c4.js" crossorigin="anonymous"></script>    
+</body>
+</html>

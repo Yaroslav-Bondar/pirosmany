@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.table__btn, .header__basket-btn, .header__user-btn, .mobmenu__dropdown-img, .regis__select-wrap::before, .bonus__icon, .popup__icon, .display__item, .rating label {
+.table__btn, .header__basket-btn, .header__user-btn, .mobmenu__dropdown-img, .cab__btn-icon, .regis__select-wrap::before, .bonus__icon, .popup__icon, .display__item, .rating label {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -404,6 +404,15 @@ body {
 }
 .form__input {
   background: #FCFCFC;
+  transition-property: box-shadow border-color;
+  transition: 0.2s;
+}
+.form__input:hover {
+  box-shadow: 0 0 1.5px 1px #00AC4E;
+  border-color: #00AC4E;
+}
+.form__input:focus {
+  border-color: #00AC4E;
 }
 .form__wrap {
   display: flex;
@@ -2449,6 +2458,256 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 }
 .regis__pickup-select-wrap {
   margin-bottom: 25px;
+}
+
+.cab__btns {
+  margin-bottom: 45px;
+}
+@media screen and (max-width: 975px) {
+  .cab__btns {
+    justify-content: center;
+  }
+}
+.cab__btn {
+  border-radius: 16px;
+  padding: 15px;
+  background: transparent;
+}
+.cab__btn-icon {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 20px auto;
+}
+.cab__btn-icon i {
+  font-size: 29px;
+  color: #00AC4E;
+}
+.cab__btn span {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  text-transform: none;
+  line-height: 21px;
+  color: #00AC4E;
+}
+.cab__btn:not(:last-child) {
+  margin-right: 100px;
+}
+@media screen and (max-width: 500px) {
+  .cab__btn:not(:last-child) {
+    margin-right: 15px;
+  }
+}
+.cab__btn .tab__btn_active {
+  background: #00AC4E;
+}
+.cab__btn .tab__btn_active .cab span {
+  color: #FFFFFF;
+}
+.cab__info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0 30px;
+}
+@media screen and (max-width: 975px) {
+  .cab__info {
+    gap: 50px 30px;
+    justify-content: center;
+  }
+}
+.cab__person-label {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 19px;
+  text-transform: none;
+  line-height: 34px;
+  color: #000000;
+}
+.cab__person-input {
+  height: 51.61px;
+  padding-left: 24px;
+  margin-top: 11px;
+  border: 1.61275px solid #EBEBEB;
+  border-radius: 8.06373px;
+}
+.cab__person-input::placeholder {
+  vertical-align: middle;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  text-transform: none;
+  line-height: 45px;
+  color: #C6C6C6;
+}
+.cab__person-input::-moz-placeholder {
+  vertical-align: middle;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  text-transform: none;
+  line-height: 45px;
+  color: #C6C6C6;
+}
+.cab__person-input::-webkit-input-placeholder {
+  vertical-align: middle;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  text-transform: none;
+  line-height: 45px;
+  color: #C6C6C6;
+}
+.cab__title {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 28px;
+  text-transform: none;
+  line-height: 25px;
+  color: #000000;
+}
+@media screen and (max-width: 975px) {
+  .cab__title {
+    text-align: center;
+  }
+}
+.cab__title-person {
+  margin-bottom: 30px;
+}
+.cab__name {
+  margin-bottom: 19px;
+}
+.cab__name-conteiner {
+  display: flex;
+  margin-bottom: 19px;
+}
+@media screen and (max-width: 500px) {
+  .cab__name-conteiner {
+    flex-flow: column;
+  }
+}
+.cab__name-input {
+  width: 179px;
+  margin-right: 48px;
+}
+@media screen and (max-width: 500px) {
+  .cab__name-input {
+    width: auto;
+    margin-right: 0;
+    margin-bottom: 19px;
+  }
+}
+.cab__surname-input {
+  width: 230px;
+}
+@media screen and (max-width: 500px) {
+  .cab__surname-input {
+    width: auto;
+  }
+}
+.cab__patron-input {
+  width: 260px;
+}
+@media screen and (max-width: 500px) {
+  .cab__patron-input {
+    width: auto;
+  }
+}
+.cab__other-label {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 17px;
+  text-transform: none;
+  line-height: 30px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+.cab__other-input {
+  height: 46px;
+  padding-left: 21px;
+  border: 1.43333px solid #EBEBEB;
+  border-radius: 7.16667px;
+}
+.cab__other-input::placeholder {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  text-transform: none;
+  line-height: 42px;
+  color: #C6C6C6;
+}
+.cab__other-input::-moz-placeholder {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  text-transform: none;
+  line-height: 42px;
+  color: #C6C6C6;
+}
+.cab__other-input::-webkit-input-placeholder {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  text-transform: none;
+  line-height: 42px;
+  color: #C6C6C6;
+}
+.cab__contact {
+  margin-bottom: 45px;
+}
+.cab__contact-title {
+  margin-bottom: 30px;
+}
+.cab__contact-subtitle {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18px;
+  text-transform: none;
+  line-height: 20px;
+  color: #000000;
+}
+.cab__phone {
+  display: flex;
+}
+@media screen and (max-width: 500px) {
+  .cab__phone {
+    flex-flow: column;
+  }
+}
+.cab__phone-input {
+  width: 215px;
+  margin-right: 29px;
+}
+@media screen and (max-width: 500px) {
+  .cab__phone-input {
+    width: auto;
+    margin-right: 0;
+    margin-bottom: 19px;
+  }
+}
+.cab__phone-add-input {
+  width: 215px;
+}
+@media screen and (max-width: 500px) {
+  .cab__phone-add-input {
+    width: auto;
+  }
+}
+.cab__pasw-title {
+  margin-bottom: 30px;
+}
+.cab__pasw-wrap:not(:last-child) {
+  margin-bottom: 17px;
+}
+.cab__save {
+  padding: 13px 30px;
+  margin-top: 36px;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 12px;
+  text-transform: none;
+  line-height: 18px;
+  color: #FFFFFF;
 }
 
 .mobmenu {
