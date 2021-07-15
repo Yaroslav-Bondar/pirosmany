@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.table__btn, .header__basket-btn, .header__user-btn, .mobmenu__dropdown-img, .cab__btn-icon, .regis__select-wrap::before, .bonus__icon, .popup__icon, .display__item, .rating label {
+.table__btn, .header__basket-btn, .header__user-btn, .mobmenu__dropdown-img, .regis__select-wrap::before, .bonus__icon, .popup__icon, .display__item, .rating label {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2472,23 +2472,24 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   border-radius: 16px;
   padding: 15px;
   background: transparent;
+  transition: background 0.2s;
 }
 .cab__btn-icon {
-  width: 40px;
-  height: 40px;
+  display: block !important;
   margin: 0 auto 20px auto;
-}
-.cab__btn-icon i {
   font-size: 29px;
   color: #00AC4E;
 }
-.cab__btn span {
+.cab__btn-text {
   font-weight: 500;
   font-style: normal;
   font-size: 14px;
   text-transform: none;
   line-height: 21px;
   color: #00AC4E;
+}
+.cab__btn-icon, .cab__btn-text {
+  transition: color 0.2s;
 }
 .cab__btn:not(:last-child) {
   margin-right: 100px;
@@ -2498,10 +2499,10 @@ http://nicolasgallagher.com/micro-clearfix-hack/
     margin-right: 15px;
   }
 }
-.cab__btn .tab__btn_active {
+.cab__btn.tab__btn_active {
   background: #00AC4E;
 }
-.cab__btn .tab__btn_active .cab span {
+.cab__btn.tab__btn_active .cab__btn-icon, .cab__btn.tab__btn_active .cab__btn-text {
   color: #FFFFFF;
 }
 .cab__info {
@@ -2708,6 +2709,97 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   text-transform: none;
   line-height: 18px;
   color: #FFFFFF;
+}
+.cab__history {
+  padding: 24px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 16.2899px rgba(0, 0, 0, 0.07);
+  border-radius: 13.0319px;
+}
+.cab__history-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0 35px;
+}
+.cab__history-field:not(:last-child) {
+  margin-bottom: 17px;
+}
+.cab__history-name {
+  margin-right: 8px;
+}
+.cab__history-name, .cab__history-item {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 19px;
+  text-transform: none;
+  line-height: 29px;
+  color: #000000;
+}
+.cab__history-item {
+  font-weight: 400;
+}
+.cab__history_color {
+  color: #00AC4E;
+}
+.cab__list-node {
+  padding: 15px 0;
+}
+.cab__list-icon {
+  width: 79px;
+  height: 58px;
+  margin-right: 25px;
+}
+.cab__list-name {
+  margin-right: 65px;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  text-transform: none;
+  line-height: 15px;
+  color: #000000;
+}
+.cab__display {
+  width: 113.78px;
+  height: 41.46px;
+  margin-right: 45px;
+  background: #FCFCFC;
+  border: 0.882021px solid #EBEBEB;
+  border-radius: 8.82021px;
+}
+.cab__display-item {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  text-transform: none;
+  line-height: 19px;
+  color: #000000;
+}
+.cab__price {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+  text-transform: none;
+  line-height: 17px;
+  color: #000000;
+}
+.cab__repeat {
+  display: block;
+  margin: 10px 0 0 0;
+  text-align: end;
+  text-decoration: none;
+}
+.cab__repeat-text {
+  margin-right: 8px;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  text-transform: none;
+  line-height: 29px;
+  color: #00AC4E;
+}
+.cab__repeat-icon {
+  color: #00AC4E;
 }
 
 .mobmenu {

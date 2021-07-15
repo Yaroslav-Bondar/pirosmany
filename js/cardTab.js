@@ -26,10 +26,6 @@ tabBtns.addEventListener('click', (e)=> {
         if(child.classList.contains('tab__btn_active')) 
             child.classList.remove('tab__btn_active')
     }
-    // for (const el of tabContent) {
-    //     if(el.classList.contains('tab__content_active'))
-    //         el.classList.remove('tab__content_active')
-    // }
     tabContent.forEach(item => item.style.display = 'none')
 
     let number = e.target.dataset.number
