@@ -196,6 +196,9 @@
             justify-content: space-between;
             flex-wrap: wrap;
             gap: 0 35px;
+            @media screen and(max-width: $cab-history-breakpoint-1) {
+                gap: 35px 35px;
+            }
         }
         &-info {
 
@@ -205,6 +208,9 @@
         }
         &-name {
             margin-right: 8px;
+            @media screen and(max-width: $cab-history-breakpoint-3) {
+                display: block;
+            }
         }
         &-name,
         &-item {
@@ -216,18 +222,61 @@
         &_color {
             color: $btn-bgcolor;
         }
+        // &_cancel {
+        //     color: $popup-wrong-message;
+        // }
     }
+    &__history:not(:last-child) {
+        margin-bottom: 40px;
+    }
+    // adding order status canseled. Just add the class .cab__history_cancel to cab__history 
+    &__history.cab__history_cancel &__history-row 
+    &__history-info &__history-field:last-child 
+    &__history-item{
+        color: $popup-wrong-message;
+    }
+    &__history.cab__history_cancel &__history-row &__list-wrap &__repeat {
+        display: none;
+    }
+    // adding order status canseled. Just add the class .cab__history_cancel to cab__history 
     &__list {
+        @media screen and(max-width: $cab-history-breakpoint-2) {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            gap: 20px;
+            justify-content: space-between;
+        }
+        @media screen and(max-width: $cab-history-breakpoint-4) {
+            justify-content: center;
+        }
+        &-wrap {
+            @media screen and(max-width: $cab-history-breakpoint-1) {
+                flex-basis: 100%;
+            }
+        }
         // padding: 0 10px 0 20px;
         &-node {
+            @media screen and(max-width: $cab-history-breakpoint-2) {
+                flex-flow: column;
+                align-items: center;
+                border-top: 1px solid #EBEBEB !important;
+                border-bottom: 1px solid #EBEBEB;
+            }
             padding: 15px 0;
         }
         &-icon {
             width: 79px;
             height: 58px;
             margin-right: 25px;
+            @media screen and(max-width: $cab-history-breakpoint-2) {
+                margin: 0;
+            }
         }
         &-name {
+            @media screen and(max-width: $cab-history-breakpoint-2) {
+                margin: 20px 0 20px 0;
+            }
             margin-right: 65px;
             @include font(500, 16px, 15px, $text-color);
         }
@@ -239,6 +288,9 @@
         background: $display-bg;
         border: 0.882021px solid $display-border-color;
         border-radius: 8.82021px;
+        @media screen and(max-width: $cab-history-breakpoint-2) {
+            margin: 0 0 20px 0;
+        }
         &-item {
             @include font(400, 12px, 19px, $text-color);
         }

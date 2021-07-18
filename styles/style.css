@@ -2722,11 +2722,21 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   flex-wrap: wrap;
   gap: 0 35px;
 }
+@media screen and (max-width: 879px) {
+  .cab__history-row {
+    gap: 35px 35px;
+  }
+}
 .cab__history-field:not(:last-child) {
   margin-bottom: 17px;
 }
 .cab__history-name {
   margin-right: 8px;
+}
+@media screen and (max-width: 400px) {
+  .cab__history-name {
+    display: block;
+  }
 }
 .cab__history-name, .cab__history-item {
   font-weight: 500;
@@ -2742,13 +2752,54 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 .cab__history_color {
   color: #00AC4E;
 }
+.cab__history:not(:last-child) {
+  margin-bottom: 40px;
+}
+.cab__history.cab__history_cancel .cab__history-row .cab__history-info .cab__history-field:last-child .cab__history-item {
+  color: #EB5757;
+}
+.cab__history.cab__history_cancel .cab__history-row .cab__list-wrap .cab__repeat {
+  display: none;
+}
+@media screen and (max-width: 550px) {
+  .cab__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 325px) {
+  .cab__list {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 879px) {
+  .cab__list-wrap {
+    flex-basis: 100%;
+  }
+}
 .cab__list-node {
   padding: 15px 0;
+}
+@media screen and (max-width: 550px) {
+  .cab__list-node {
+    flex-flow: column;
+    align-items: center;
+    border-top: 1px solid #EBEBEB !important;
+    border-bottom: 1px solid #EBEBEB;
+  }
 }
 .cab__list-icon {
   width: 79px;
   height: 58px;
   margin-right: 25px;
+}
+@media screen and (max-width: 550px) {
+  .cab__list-icon {
+    margin: 0;
+  }
 }
 .cab__list-name {
   margin-right: 65px;
@@ -2759,6 +2810,11 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   line-height: 15px;
   color: #000000;
 }
+@media screen and (max-width: 550px) {
+  .cab__list-name {
+    margin: 20px 0 20px 0;
+  }
+}
 .cab__display {
   width: 113.78px;
   height: 41.46px;
@@ -2766,6 +2822,11 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   background: #FCFCFC;
   border: 0.882021px solid #EBEBEB;
   border-radius: 8.82021px;
+}
+@media screen and (max-width: 550px) {
+  .cab__display {
+    margin: 0 0 20px 0;
+  }
 }
 .cab__display-item {
   font-weight: 400;

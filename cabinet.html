@@ -22,7 +22,7 @@
                 <span class="cab__btn-text">История заказов</span>
             </button>
         </div>
-        <form class="cab__info">
+        <form class="tab__content cab__info">
             <div class="cab__person">
                 <div class="cab__title cab__title-person">
                     Персональная информация
@@ -90,147 +90,406 @@
                 </button>
             </div>
         </form>
-        <div class="cab__history">
-            <div class="cab__history-row">
-                <div class="cab__history-info">
-                    <div class="cab__history-field">
-                        <span class="cab__history-name">Номер заказа:</span>
-                        <span class="cab__history-item cab__history_color">Заказ №2334678954</span>
+        <div class="tab__content cab__history-wrap">
+            <div class="cab__history">
+                <div class="cab__history-row">
+                    <div class="cab__history-info">
+                        <div class="cab__history-field">
+                            <span class="cab__history-name">Номер заказа:</span>
+                            <span class="cab__history-item cab__history_color">Заказ №2334678954</span>
+                        </div>
+                        <div class="cab__history-field">
+                            <span class="cab__history-name">Способ оплаты:</span>
+                            <span class="cab__history-item">Банковская карта</span>
+                        </div>
+                        <div class="cab__history-field">
+                            <span class="cab__history-name">Дата заказа:</span>
+                            <span class="cab__history-item">19.05.2020</span>
+                        </div>
+                        <div class="cab__history-field">
+                            <span class="cab__history-name">Дата доставки:</span>
+                            <span class="cab__history-item">23.05.2020</span>
+                        </div>
+                        <div class="cab__history-field">
+                            <span class="cab__history-name">Статус заказа:</span>
+                            <span class="cab__history-item cab__history_color">Доставлен</span>
+                        </div>
                     </div>
-                    <div class="cab__history-field">
-                        <span class="cab__history-name">Способ оплаты:</span>
-                        <span class="cab__history-item">Банковская карта</span>
-                    </div>
-                    <div class="cab__history-field">
-                        <span class="cab__history-name">Дата заказа:</span>
-                        <span class="cab__history-item">19.05.2020</span>
-                    </div>
-                    <div class="cab__history-field">
-                        <span class="cab__history-name">Дата доставки:</span>
-                        <span class="cab__history-item">23.05.2020</span>
-                    </div>
-                    <div class="cab__history-field">
-                        <span class="cab__history-name">Статус заказа:</span>
-                        <span class="cab__history-item cab__history_color">Доставлен</span>
+                    <div class="cab__list-wrap">
+                        <ul class="list cab__list">
+                            <li class="list__node cab__list-node">
+                                <div class="list__icon cab__list-icon">
+                                    <img src="" alt="product">
+                                </div>
+                                <div class="list__name cab__list-name">
+                                    Хачапури
+                                </div>
+                                <div class="display cab__display">
+                                    <div class="display__item cab__display-item">
+                                        <span data-display="amount" class="display__amount cab__display-amount">1</span>
+                                        <span class="display__units cab__display-units">шт</span>
+                                    </div>
+                                </div>
+                                <div class="list__price cab__price">
+                                    <span class="list__price-item cab__price-item">
+                                        350
+                                    </span>
+                                    <span class="list__price-currency cab__price-currency">
+                                        ₽
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="list__node cab__list-node">
+                                <div class="list__icon cab__list-icon">
+                                    <img src="" alt="product">
+                                </div>
+                                <div class="list__name cab__list-name">
+                                    Хачапури
+                                </div>
+                                <div class="display cab__display">
+                                    <div class="display__item cab__display-item">
+                                        <span data-display="amount" class="display__amount cab__display-amount">1</span>
+                                        <span class="display__units cab__display-units">шт</span>
+                                    </div>
+                                 </div>
+                                <div class="list__price cab__price">
+                                    <span class="list__price-item cab__price-item">
+                                        350
+                                    </span>
+                                    <span class="list__price-currency cab__price-currency">
+                                        ₽
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="list__node cab__list-node">
+                                <div class="list__icon cab__list-icon">
+                                    <img src="" alt="product">
+                                </div>
+                                <div class="list__name cab__list-name">
+                                    Хачапури
+                                </div>
+                                <div class="display cab__display">
+                                    <div class="display__item cab__display-item">
+                                        <span data-display="amount" class="display__amount cab__display-amount">1</span>
+                                        <span class="display__units cab__display-units">шт</span>
+                                    </div>
+                                </div>
+                                <div class="list__price cab__price">
+                                    <span class="list__price-item cab__price-item">
+                                        350
+                                    </span>
+                                    <span class="list__price-currency cab__price-currency">
+                                        ₽
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="list__node cab__list-node">
+                                <div class="list__icon cab__list-icon">
+                                    <img src="" alt="product">
+                                </div>
+                                <div class="list__name cab__list-name">
+                                    Хачапури
+                                </div>
+                                <div class="display cab__display">
+                                    <div class="display__item cab__display-item">
+                                        <span data-display="amount" class="display__amount cab__display-amount">1</span>
+                                        <span class="display__units cab__display-units">шт</span>
+                                    </div>
+                                </div>
+                                <div class="list__price cab__price">
+                                    <span class="list__price-item cab__price-item">
+                                        350
+                                    </span>
+                                    <span class="list__price-currency cab__price-currency">
+                                        ₽
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="list__node cab__list-node">
+                                <div class="list__icon cab__list-icon">
+                                    <img src="" alt="product">
+                                </div>
+                                <div class="list__name cab__list-name">
+                                    Хачапури
+                                </div>
+                                <div class="display cab__display">
+                                    <div class="display__item cab__display-item">
+                                        <span data-display="amount" class="display__amount cab__display-amount">1</span>
+                                        <span class="display__units cab__display-units">шт</span>
+                                    </div>
+                                </div>
+                                <div class="list__price cab__price">
+                                    <span class="list__price-item cab__price-item">
+                                        350
+                                    </span>
+                                    <span class="list__price-currency cab__price-currency">
+                                        ₽
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- <ul class="list cab__list">
+                            <li class="list__node cab__list-node">
+                                <div class="list__icon cab__list-icon">
+                                    <img src="" alt="product">
+                                </div>
+                                <div class="list__name cab__list-name">
+                                    Хачапури
+                                </div>
+                                <div class="display cab__display">
+                                    <div class="display__item cab__display-item">
+                                        <span data-display="amount" class="display__amount cab__display-amount">1</span>
+                                        <span class="display__units cab__display-units">шт</span>
+                                    </div>
+                                </div>
+                                <div class="list__price cab__price">
+                                    <span class="list__price-item cab__price-item">
+                                        350
+                                    </span>
+                                    <span class="list__price-currency cab__price-currency">
+                                        ₽
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="list__node cab__list-node">
+                                <div class="list__icon cab__list-icon">
+                                    <img src="" alt="product">
+                                </div>
+                                <div class="list__name cab__list-name">
+                                    Хачапури
+                                </div>
+                                <div class="display cab__display">
+                                    <div class="display__item cab__display-item">
+                                        <span data-display="amount" class="display__amount cab__display-amount">1</span>
+                                        <span class="display__units cab__display-units">шт</span>
+                                    </div>
+                                 </div>
+                                <div class="list__price cab__price">
+                                    <span class="list__price-item cab__price-item">
+                                        350
+                                    </span>
+                                    <span class="list__price-currency cab__price-currency">
+                                        ₽
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="list__node cab__list-node">
+                                <div class="list__icon cab__list-icon">
+                                    <img src="" alt="product">
+                                </div>
+                                <div class="list__name cab__list-name">
+                                    Хачапури
+                                </div>
+                                <div class="display cab__display">
+                                    <div class="display__item cab__display-item">
+                                        <span data-display="amount" class="display__amount cab__display-amount">1</span>
+                                        <span class="display__units cab__display-units">шт</span>
+                                    </div>
+                                </div>
+                                <div class="list__price cab__price">
+                                    <span class="list__price-item cab__price-item">
+                                        350
+                                    </span>
+                                    <span class="list__price-currency cab__price-currency">
+                                        ₽
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="list__node cab__list-node">
+                                <div class="list__icon cab__list-icon">
+                                    <img src="" alt="product">
+                                </div>
+                                <div class="list__name cab__list-name">
+                                    Хачапури
+                                </div>
+                                <div class="display cab__display">
+                                    <div class="display__item cab__display-item">
+                                        <span data-display="amount" class="display__amount cab__display-amount">1</span>
+                                        <span class="display__units cab__display-units">шт</span>
+                                    </div>
+                                </div>
+                                <div class="list__price cab__price">
+                                    <span class="list__price-item cab__price-item">
+                                        350
+                                    </span>
+                                    <span class="list__price-currency cab__price-currency">
+                                        ₽
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="list__node cab__list-node">
+                                <div class="list__icon cab__list-icon">
+                                    <img src="" alt="product">
+                                </div>
+                                <div class="list__name cab__list-name">
+                                    Хачапури
+                                </div>
+                                <div class="display cab__display">
+                                    <div class="display__item cab__display-item">
+                                        <span data-display="amount" class="display__amount cab__display-amount">1</span>
+                                        <span class="display__units cab__display-units">шт</span>
+                                    </div>
+                                </div>
+                                <div class="list__price cab__price">
+                                    <span class="list__price-item cab__price-item">
+                                        350
+                                    </span>
+                                    <span class="list__price-currency cab__price-currency">
+                                        ₽
+                                    </span>
+                                </div>
+                            </li>
+                        </ul> -->
+                        <a href="" class="cab__repeat">
+                            <span class="cab__repeat-text">Повторить заказ</span>
+                            <i class="cab__repeat-icon fas fa-redo"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="cab__list-wrap">
-                    <ul class="list cab__list">
-                        <li class="list__node cab__list-node">
-                            <div class="list__icon cab__list-icon">
-                                <img src="" alt="product">
-                            </div>
-                            <div class="list__name cab__list-name">
-                                Хачапури
-                            </div>
-                            <div class="display cab__display">
-                                <div class="display__item cab__display-item">
-                                    <span data-display="amount" class="display__amount cab__display-amount">1</span>
-                                    <span class="display__units cab__display-units">шт</span>
+            </div>
+            <!-- adding order status canseled. Just add the class .cab__history_cancel to cab__history -->
+            <div class="cab__history cab__history_cancel">
+                <div class="cab__history-row">
+                    <div class="cab__history-info">
+                        <div class="cab__history-field">
+                            <span class="cab__history-name">Номер заказа:</span>
+                            <span class="cab__history-item cab__history_color">Заказ №2334678954</span>
+                        </div>
+                        <div class="cab__history-field">
+                            <span class="cab__history-name">Способ оплаты:</span>
+                            <span class="cab__history-item">Банковская карта</span>
+                        </div>
+                        <div class="cab__history-field">
+                            <span class="cab__history-name">Дата заказа:</span>
+                            <span class="cab__history-item">19.05.2020</span>
+                        </div>
+                        <div class="cab__history-field">
+                            <span class="cab__history-name">Дата доставки:</span>
+                            <span class="cab__history-item">23.05.2020</span>
+                        </div>
+                        <div class="cab__history-field">
+                            <span class="cab__history-name">Статус заказа:</span>
+                            <span class="cab__history-item">Отменен</span>
+                        </div>
+                    </div>
+                    <div class="cab__list-wrap">
+                        <ul class="list cab__list">
+                            <li class="list__node cab__list-node">
+                                <div class="list__icon cab__list-icon">
+                                    <img src="" alt="product">
                                 </div>
-                            </div>
-                            <div class="list__price cab__price">
-                                <span class="list__price-item cab__price-item">
-                                    350
-                                </span>
-                                <span class="list__price-currency cab__price-currency">
-                                    ₽
-                                </span>
-                            </div>
-                        </li>
-                        <li class="list__node cab__list-node">
-                            <div class="list__icon cab__list-icon">
-                                <img src="" alt="product">
-                            </div>
-                            <div class="list__name cab__list-name">
-                                Хачапури
-                            </div>
-                            <div class="display cab__display">
-                                <div class="display__item cab__display-item">
-                                    <span data-display="amount" class="display__amount cab__display-amount">1</span>
-                                    <span class="display__units cab__display-units">шт</span>
+                                <div class="list__name cab__list-name">
+                                    Хачапури
                                 </div>
-                             </div>
-                            <div class="list__price cab__price">
-                                <span class="list__price-item cab__price-item">
-                                    350
-                                </span>
-                                <span class="list__price-currency cab__price-currency">
-                                    ₽
-                                </span>
-                            </div>
-                        </li>
-                        <li class="list__node cab__list-node">
-                            <div class="list__icon cab__list-icon">
-                                <img src="" alt="product">
-                            </div>
-                            <div class="list__name cab__list-name">
-                                Хачапури
-                            </div>
-                            <div class="display cab__display">
-                                <div class="display__item cab__display-item">
-                                    <span data-display="amount" class="display__amount cab__display-amount">1</span>
-                                    <span class="display__units cab__display-units">шт</span>
+                                <div class="display cab__display">
+                                    <div class="display__item cab__display-item">
+                                        <span data-display="amount" class="display__amount cab__display-amount">1</span>
+                                        <span class="display__units cab__display-units">шт</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="list__price cab__price">
-                                <span class="list__price-item cab__price-item">
-                                    350
-                                </span>
-                                <span class="list__price-currency cab__price-currency">
-                                    ₽
-                                </span>
-                            </div>
-                        </li>
-                        <li class="list__node cab__list-node">
-                            <div class="list__icon cab__list-icon">
-                                <img src="" alt="product">
-                            </div>
-                            <div class="list__name cab__list-name">
-                                Хачапури
-                            </div>
-                            <div class="display cab__display">
-                                <div class="display__item cab__display-item">
-                                    <span data-display="amount" class="display__amount cab__display-amount">1</span>
-                                    <span class="display__units cab__display-units">шт</span>
+                                <div class="list__price cab__price">
+                                    <span class="list__price-item cab__price-item">
+                                        350
+                                    </span>
+                                    <span class="list__price-currency cab__price-currency">
+                                        ₽
+                                    </span>
                                 </div>
-                            </div>
-                            <div class="list__price cab__price">
-                                <span class="list__price-item cab__price-item">
-                                    350
-                                </span>
-                                <span class="list__price-currency cab__price-currency">
-                                    ₽
-                                </span>
-                            </div>
-                        </li>
-                        <li class="list__node cab__list-node">
-                            <div class="list__icon cab__list-icon">
-                                <img src="" alt="product">
-                            </div>
-                            <div class="list__name cab__list-name">
-                                Хачапури
-                            </div>
-                            <div class="display cab__display">
-                                <div class="display__item cab__display-item">
-                                    <span data-display="amount" class="display__amount cab__display-amount">1</span>
-                                    <span class="display__units cab__display-units">шт</span>
+                            </li>
+                            <li class="list__node cab__list-node">
+                                <div class="list__icon cab__list-icon">
+                                    <img src="" alt="product">
                                 </div>
-                            </div>
-                            <div class="list__price cab__price">
-                                <span class="list__price-item cab__price-item">
-                                    350
-                                </span>
-                                <span class="list__price-currency cab__price-currency">
-                                    ₽
-                                </span>
-                            </div>
-                        </li>
-                    </ul>
-                    <a href="" class="cab__repeat">
-                        <span class="cab__repeat-text">Повторить заказ</span>
-                        <i class="cab__repeat-icon fas fa-redo"></i>
-                    </a>
+                                <div class="list__name cab__list-name">
+                                    Хачапури
+                                </div>
+                                <div class="display cab__display">
+                                    <div class="display__item cab__display-item">
+                                        <span data-display="amount" class="display__amount cab__display-amount">1</span>
+                                        <span class="display__units cab__display-units">шт</span>
+                                    </div>
+                                 </div>
+                                <div class="list__price cab__price">
+                                    <span class="list__price-item cab__price-item">
+                                        350
+                                    </span>
+                                    <span class="list__price-currency cab__price-currency">
+                                        ₽
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="list__node cab__list-node">
+                                <div class="list__icon cab__list-icon">
+                                    <img src="" alt="product">
+                                </div>
+                                <div class="list__name cab__list-name">
+                                    Хачапури
+                                </div>
+                                <div class="display cab__display">
+                                    <div class="display__item cab__display-item">
+                                        <span data-display="amount" class="display__amount cab__display-amount">1</span>
+                                        <span class="display__units cab__display-units">шт</span>
+                                    </div>
+                                </div>
+                                <div class="list__price cab__price">
+                                    <span class="list__price-item cab__price-item">
+                                        350
+                                    </span>
+                                    <span class="list__price-currency cab__price-currency">
+                                        ₽
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="list__node cab__list-node">
+                                <div class="list__icon cab__list-icon">
+                                    <img src="" alt="product">
+                                </div>
+                                <div class="list__name cab__list-name">
+                                    Хачапури
+                                </div>
+                                <div class="display cab__display">
+                                    <div class="display__item cab__display-item">
+                                        <span data-display="amount" class="display__amount cab__display-amount">1</span>
+                                        <span class="display__units cab__display-units">шт</span>
+                                    </div>
+                                </div>
+                                <div class="list__price cab__price">
+                                    <span class="list__price-item cab__price-item">
+                                        350
+                                    </span>
+                                    <span class="list__price-currency cab__price-currency">
+                                        ₽
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="list__node cab__list-node">
+                                <div class="list__icon cab__list-icon">
+                                    <img src="" alt="product">
+                                </div>
+                                <div class="list__name cab__list-name">
+                                    Хачапури
+                                </div>
+                                <div class="display cab__display">
+                                    <div class="display__item cab__display-item">
+                                        <span data-display="amount" class="display__amount cab__display-amount">1</span>
+                                        <span class="display__units cab__display-units">шт</span>
+                                    </div>
+                                </div>
+                                <div class="list__price cab__price">
+                                    <span class="list__price-item cab__price-item">
+                                        350
+                                    </span>
+                                    <span class="list__price-currency cab__price-currency">
+                                        ₽
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                         <a href="" class="cab__repeat">
+                            <span class="cab__repeat-text">Повторить заказ</span>
+                            <i class="cab__repeat-icon fas fa-redo"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
