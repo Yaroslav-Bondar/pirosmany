@@ -28,19 +28,19 @@
         </div>
         <nav class="mobmenu__nav">
             <ul class="mobmenu__list">
-                <li class="mobmenu__node" id="menu-node">
-                    <a href="#" class="mobmenu__link" id="menu-btn">
+                <li data-dropdown='node' class="mobmenu__node" id="menu-node">
+                    <a data-dropdown='link' href="#" class="mobmenu__link" id="menu-btn">
                         <div class="mobmenu__icon">
                             <!-- <i class="fas fa-utensils mobmenu__icon-item"></i> -->
                             <img src="img/mobmenu/01.png" alt="dish" class="mobmenu__icon-item">
                         </div>
                         <div class="mobmenu__text">Меню</div>
                     </a>
-                    <button class="mobmenu__btn" id="menu-btn">
+                    <button data-dropdown='btn' class="mobmenu__btn" id="menu-btn">
                         <img src="img/mobmenu/arrow.png" alt="arrow" class="mobmenu__btn-icon">
                     </button>
                 </li>
-                <ul class="navigation__dropdown mobmenu__dropdown" id="menu-dropdown">
+                <ul data-dropdown='menu' class="navigation__dropdown mobmenu__dropdown" id="menu-dropdown">
                     <li class="navigation__dropdown-node mobmenu__dropdown-node">
                         <a href="#" class="navigation__dropdown-link">
                             <div class="navigation__dropdown-img mobmenu__dropdown-img">
@@ -1439,100 +1439,10 @@
                 </div>
                 <nav class="navigation">
                     <ul class="navigation__list">
-                        <li class="navigation__node" id="menu-node">
-                            <a href="#" class="navigation__link navigation__link_dropdown" id="menu-btn">Меню</a>
-                            <!-- <ul class="navigation__dropdown header__dropdown"  id="menu-dropdown">
-                                <li class="navigation__dropdown-node header__dropdown-node">
-                                    <a href="#" class="navigation__dropdown-link">
-                                        <div class="navigation__dropdown-img">
-                                            <img src="img/header/drop-down-menu/01.png" alt="menu_icon" class="navigation__dropdown-icon">
-                                        </div>
-                                        <div class="navigation__dropdown-text header__dropdown-text">Cупы</div>
-                                    </a>
-                                </li>
-                                <li class="navigation__dropdown-node header__dropdown-node">
-                                    <a href="#" class="navigation__dropdown-link">
-                                        <div class="navigation__dropdown-img">
-                                            <img src="img/header/drop-down-menu/02.png" alt="menu_icon" class="navigation__dropdown-icon">
-                                        </div>
-                                        <div class="navigation__dropdown-text header__dropdown-text">Хачапури</div>
-                                    </a>
-                                </li>
-                                <li class="navigation__dropdown-node header__dropdown-node">
-                                    <a href="#" class="navigation__dropdown-link">
-                                        <div class="navigation__dropdown-img">
-                                            <img src="img/header/drop-down-menu/03.png" alt="menu_icon" class="navigation__dropdown-icon">
-                                        </div>
-                                        <div class="navigation__dropdown-text header__dropdown-text">Холодные закуски</div>
-                                    </a>
-                                </li>
-                                <li class="navigation__dropdown-node header__dropdown-node">
-                                    <a href="#" class="navigation__dropdown-link">
-                                        <div class="navigation__dropdown-img">
-                                            <img src="img/header/drop-down-menu/04.png" alt="menu_icon" class="navigation__dropdown-icon">
-                                        </div>
-                                        <div class="navigation__dropdown-text header__dropdown-text">Хинкали</div>
-                                    </a>
-                                </li>
-                                <li class="navigation__dropdown-node header__dropdown-node">
-                                    <a href="#" class="navigation__dropdown-link">
-                                        <div class="navigation__dropdown-img">
-                                            <img src="img/header/drop-down-menu/05.png" alt="menu_icon" class="navigation__dropdown-icon">
-                                        </div>
-                                        <div class="navigation__dropdown-text header__dropdown-text">Шашлык</div>
-                                    </a>
-                                </li>
-                                <li class="navigation__dropdown-node header__dropdown-node">
-                                    <a href="#" class="navigation__dropdown-link">
-                                        <div class="navigation__dropdown-img">
-                                            <img src="img/header/drop-down-menu/06.png" alt="menu_icon" class="navigation__dropdown-icon">
-                                        </div>
-                                        <div class="navigation__dropdown-text header__dropdown-text">Соусы</div>
-                                    </a>
-                                </li>
-                                <li class="navigation__dropdown-node header__dropdown-node">
-                                    <a href="#" class="navigation__dropdown-link">
-                                        <div class="navigation__dropdown-img">
-                                            <img src="img/header/drop-down-menu/07.png" alt="menu_icon" class="navigation__dropdown-icon">
-                                        </div>
-                                        <div class="navigation__dropdown-text header__dropdown-text">Салаты</div>
-                                    </a>
-                                </li>
-                                <li class="navigation__dropdown-node header__dropdown-node">
-                                    <a href="#" class="navigation__dropdown-link">
-                                        <div class="navigation__dropdown-img">
-                                            <img src="img/header/drop-down-menu/08.png" alt="menu_icon" class="navigation__dropdown-icon">
-                                        </div>
-                                        <div class="navigation__dropdown-text header__dropdown-text">Горячие блюда</div>
-                                    </a>
-                                </li>
-                                <li class="navigation__dropdown-node header__dropdown-node">
-                                    <a href="#" class="navigation__dropdown-link">
-                                        <div class="navigation__dropdown-img">
-                                            <img src="img/header/drop-down-menu/09.png" alt="menu_icon" class="navigation__dropdown-icon">
-                                        </div>
-                                        <div class="navigation__dropdown-text header__dropdown-text">Гарнир</div>
-                                    </a>
-                                </li>
-                                <li class="navigation__dropdown-node header__dropdown-node">
-                                    <a href="#" class="navigation__dropdown-link">
-                                        <div class="navigation__dropdown-img">
-                                            <img src="img/header/drop-down-menu/10.png" alt="menu_icon" class="navigation__dropdown-icon">
-                                        </div>
-                                        <div class="navigation__dropdown-text header__dropdown-text">Десерты</div>
-                                    </a>
-                                </li>
-                                <li class="navigation__dropdown-node header__dropdown-node">
-                                    <a href="#" class="navigation__dropdown-link">
-                                        <div class="navigation__dropdown-img">
-                                            <img src="img/header/drop-down-menu/11.png" alt="menu_icon" class="navigation__dropdown-icon">
-                                        </div>
-                                        <div class="navigation__dropdown-text header__dropdown-text">Напитки</div>
-                                    </a>
-                                </li>
-                            </ul> -->
+                        <li data-dropdown='node' class="navigation__node" id="menu-node">
+                            <a data-dropdown='link' href="#" class="navigation__link navigation__link_dropdown" id="menu-btn">Меню</a>
                         </li>
-                        <ul class="navigation__dropdown header__dropdown"  id="menu-dropdown">
+                        <ul data-dropdown='menu' class="navigation__dropdown header__dropdown"  id="menu-dropdown">
                             <li class="navigation__dropdown-node header__dropdown-node">
                                 <a href="#" class="navigation__dropdown-link">
                                     <div class="navigation__dropdown-img">
@@ -2221,7 +2131,7 @@
                         График работы по будням с 9:00 до 18:00
                     </div>
                     <a href="mailto:info@.ru" class="footer__email">Email: info@.ru</a>
-                    <a href="" class="footer__support">Поддержка</a>
+                    <a href="support.html" class="footer__support">Поддержка</a>
                 <div class="footer__area-2">
                     <div class="footer__copyright">
                         ©2020. Пиросмани
@@ -2375,6 +2285,7 @@
     <script src="js/paginationInit.js"></script>
     <!--  // simple jQuery pagination plugin https://flaviusmatis.github.io/simplePagination.js -->
     <script src="js/main.js"></script>
+    <script src="js/common.js"></script>
     <!-- Add font awesome icons-->
     <script src="https://kit.fontawesome.com/a8ec7c40c4.js" crossorigin="anonymous"></script>
     <!-- pikaday a refreshing JavaScript datepicker https://github.com/Pikaday/Pikaday#pikaday -->

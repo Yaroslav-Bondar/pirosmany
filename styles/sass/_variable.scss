@@ -1,10 +1,12 @@
 $page-bg: rgba(0, 0, 0, -0.2);
 $widget-bg: #FFFFFF;
+$block-bg: #F9F9F9;
+$gray-4: #BDBDBD;
 $title-1-color:  #000000;
 $text-color: #000000;
 $btn-bgcolor: #00AC4E;
-$rating-star-hover-color: #00d64e;
 $btn-text-color:#FFFFFF;
+$rating-star-hover-color: #00d64e;
 $placeholder-txt-color: #C6C6C6;
 
 $subtitle-color:#828282;
@@ -73,7 +75,7 @@ $aboutprod-breakpoint-1: 930px;
 $aboutprod-buy-breakpoint-1: 350px;
 $aboutprod-tab-breakpoint-1: 464px;
 
-$basket-breakpoint-1: 989px;
+$basket-breakpoint-1: 955px;
 $basket-breakpoint-2: 650px;
 $basket-breakpoint-3: 585px;
 $basket-breakpoint-4: 430px;
@@ -88,6 +90,8 @@ $cab-history-breakpoint-1: 879px;
 $cab-history-breakpoint-2: 550px;
 $cab-history-breakpoint-3: 400px;
 $cab-history-breakpoint-4: 325px;
+
+$support-breakpoint-1: 710px;
 
     // pop-up windows
 $popup-text-color: #C6C6C6;

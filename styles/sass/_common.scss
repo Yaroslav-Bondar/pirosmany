@@ -117,12 +117,17 @@ body {
         // }
     }
 }
-#menu-dropdown {
+// menu-dropdown 
+// #menu-dropdown {
+//     display: none;
+// }
+[data-dropdown='menu'] {
     display: none;
 }
 .menu__dropdown_active {
     display: block !important;
 }
+// // menu-dropdown
 // rating
 .rating {
     display:flex;
@@ -366,6 +371,58 @@ body {
     &__wrap {
         display: flex;
         flex-flow: column;
+    }
+}
+.pwa {
+    padding: 5px 27px;
+    background: $btn-bgcolor;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.12);
+    border-radius: 52px;
+    &__row {
+        display: flex;
+        justify-content: space-between
+    }
+    &__column {
+        @extend %center-xy-flex;
+        width: 37px;
+        height: 37px;
+        background-color: transparent;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        transition: background .2s;
+        &_basket {
+            position: relative;
+        }
+        &_basket &-prod {
+            position: absolute;
+            top: 5px;
+            right: 0;
+            @extend %center-xy-flex;
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background: $popup-wrong-message;
+            @include font(500, 7px, 8px, $btn-text-color);
+            font-family: 'TT Hoves';
+        }
+        &-icon {
+            font-size: 22px;
+            color: $btn-text-color;
+            transition: color .2s;
+        }
+    }
+    &__column:hover {
+        background: $btn-text-color;
+    }
+    &__column:hover &__column-icon {
+        color: $btn-bgcolor;
+    }
+    &__column.pwa__column_active {
+        background-color: $btn-text-color;
+    }
+    &__column.pwa__column_active &__column-icon {
+        color: $btn-bgcolor;
     }
 }
 

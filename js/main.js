@@ -1,5 +1,5 @@
 let navigation = $('.navigation')
-let body = document.querySelector('body')
+// let body = document.querySelector('body')
 let header = document.querySelector('.header')
 let headerBurger = document.querySelector('.header__burger')
 let mobmenu = document.querySelector('.mobmenu')
@@ -44,31 +44,31 @@ $(window).resize( () => {
 // for work need 3 elments with next id: 
 // 1 - #menu-btn, 2 - #menu-node, 3 - #menu-dropdown
 // they need to be placed in the appropriate places
-var mobmenuBtn = document.querySelector('.mobmenu__btn')
-// let mobmenuList = document.querySelector('.mobmenu__list')
-let navigationList = document.querySelector('.navigation__list')   
-function logicsMenu(ev) {
-    let targetElement = ev.target
-    if(targetElement.closest('#menu-btn') !== null) {
-        let menuBtn = targetElement.closest('#menu-btn')
-        if(menuBtn.closest('#menu-node')) {
-            let menuDropDown = menuBtn.closest('#menu-node').nextElementSibling
-            if(!menuDropDown) return 
-            if(menuDropDown.id === 'menu-dropdown') {
-                if(!menuDropDown.classList.contains('menu__dropdown_active')) {
-                    menuDropDown.classList.add('menu__dropdown_active')
-                }
-                else {
-                    menuDropDown.classList.remove('menu__dropdown_active')
-                }
-            }
-            mobmenuBtn.classList.toggle('mobmenu__btn_active')
-        }
-    }
-}
-// mobmenuList
-mobmenuNav.addEventListener('click', logicsMenu)
-navigationList.addEventListener('click', logicsMenu)
+// var mobmenuBtn = document.querySelector('.mobmenu__btn')
+// // let mobmenuList = document.querySelector('.mobmenu__list')
+// let navigationList = document.querySelector('.navigation__list')   
+// function logicsMenu(ev) {
+//     let targetElement = ev.target
+//     if(targetElement.closest('#menu-btn') !== null) {
+//         let menuBtn = targetElement.closest('#menu-btn')
+//         if(menuBtn.closest('#menu-node')) {
+//             let menuDropDown = menuBtn.closest('#menu-node').nextElementSibling
+//             if(!menuDropDown) return 
+//             if(menuDropDown.id === 'menu-dropdown') {
+//                 if(!menuDropDown.classList.contains('menu__dropdown_active')) {
+//                     menuDropDown.classList.add('menu__dropdown_active')
+//                 }
+//                 else {
+//                     menuDropDown.classList.remove('menu__dropdown_active')
+//                 }
+//             }
+//             mobmenuBtn.classList.toggle('mobmenu__btn_active')
+//         }
+//     }
+// }
+// // mobmenuList
+// mobmenuNav.addEventListener('click', logicsMenu)
+// navigationList.addEventListener('click', logicsMenu)
 // // logics for menu enable/disable dropdown menu 
 
 // logic for mobile menu
@@ -176,12 +176,12 @@ for (const el of slider1Btn) {
     // // reserv
 
     // review
-    let aboutprodReviewBtn = document.querySelector('.aboutprod__review-btn')
-    let review = document.querySelector('.review')
-    aboutprodReviewBtn.addEventListener('click', ()=> {
-        review.classList.add('popup_active')
-        body.classList.add('body_lock')
-    })
+    // let aboutprodReviewBtn = document.querySelector('.aboutprod__review-btn')
+    // let review = document.querySelector('.review')
+    // aboutprodReviewBtn.addEventListener('click', ()=> {
+    //     review.classList.add('popup_active')
+    //     body.classList.add('body_lock')
+    // })
     // // review
 // // pop-up
 
