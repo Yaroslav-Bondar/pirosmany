@@ -1,5 +1,5 @@
-let tabBtns = document.querySelector('.tab__btns')
-let tabContent = document.querySelectorAll('.tab__content')
+// let tabBtns = document.querySelector('.tab__btns')
+// let tabContent = document.querySelectorAll('.tab__content')
 
 tabBtns.firstElementChild.classList.add('tab__btn_active')
 

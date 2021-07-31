@@ -38,38 +38,6 @@ $(window).resize( () => {
         $('.header__burger').hide()
     }    
 })
-// // logic for main header navigation
-
-// logics for menu enable/disable dropdown menu 
-// for work need 3 elments with next id: 
-// 1 - #menu-btn, 2 - #menu-node, 3 - #menu-dropdown
-// they need to be placed in the appropriate places
-// var mobmenuBtn = document.querySelector('.mobmenu__btn')
-// // let mobmenuList = document.querySelector('.mobmenu__list')
-// let navigationList = document.querySelector('.navigation__list')   
-// function logicsMenu(ev) {
-//     let targetElement = ev.target
-//     if(targetElement.closest('#menu-btn') !== null) {
-//         let menuBtn = targetElement.closest('#menu-btn')
-//         if(menuBtn.closest('#menu-node')) {
-//             let menuDropDown = menuBtn.closest('#menu-node').nextElementSibling
-//             if(!menuDropDown) return 
-//             if(menuDropDown.id === 'menu-dropdown') {
-//                 if(!menuDropDown.classList.contains('menu__dropdown_active')) {
-//                     menuDropDown.classList.add('menu__dropdown_active')
-//                 }
-//                 else {
-//                     menuDropDown.classList.remove('menu__dropdown_active')
-//                 }
-//             }
-//             mobmenuBtn.classList.toggle('mobmenu__btn_active')
-//         }
-//     }
-// }
-// // mobmenuList
-// mobmenuNav.addEventListener('click', logicsMenu)
-// navigationList.addEventListener('click', logicsMenu)
-// // logics for menu enable/disable dropdown menu 
 
 // logic for mobile menu
 let mobmenuHeader = document.querySelector('.mobmenu__header')
@@ -111,65 +79,65 @@ mobmenuBurger.addEventListener('click', () => {
 // // logic for burger buttons
 
 // pop-up
-let popup = document.querySelectorAll('.popup')  // window
-let popupClose = document.querySelectorAll('.popup__close')  // button
-    // close for every pop-up window
-for (let i = 0; i < popupClose.length; i++) {
-    popupClose[i].addEventListener('click', ()=> {
-        popup[i].classList.remove('popup_active')
-        body.classList.remove('body_lock')  
-    }) 
-}
-// close after click for window
-for (const el of popup) {                  
-    el.addEventListener('click', (e)=> {
-        if(e.target == el)
-            el.classList.remove('popup_active')
-            body.classList.remove('body_lock')    
-    })
-}
-    // // close for every pop-up window
+// let popup = document.querySelectorAll('.popup')  // window
+// let popupClose = document.querySelectorAll('.popup__close')  // button
+//     // close for every pop-up window
+// for (let i = 0; i < popupClose.length; i++) {
+//     popupClose[i].addEventListener('click', ()=> {
+//         popup[i].classList.remove('popup_active')
+//         body.classList.remove('body_lock')  
+//     }) 
+// }
+// // close after click for window
+// for (const el of popup) {                  
+//     el.addEventListener('click', (e)=> {
+//         if(e.target == el)
+//             el.classList.remove('popup_active')
+//             body.classList.remove('body_lock')    
+//     })
+// }
+//     // // close for every pop-up window
 
-    // user signin, show the modal window after pressing the button
-let userSignIn = document.querySelectorAll('#user_sign_in') 
-let signin = document.querySelector('.signin')
-for (const el of userSignIn) {
-    el.addEventListener('click', ()=> {
-        signin.classList.add('popup_active')
-        body.classList.add('body_lock')
-    })    
-}
-    // // user signin
+//     // user signin, show the modal window after pressing the button
+// let userSignIn = document.querySelectorAll('#user_sign_in') 
+// let signin = document.querySelector('.signin')
+// for (const el of userSignIn) {
+//     el.addEventListener('click', ()=> {
+//         signin.classList.add('popup_active')
+//         body.classList.add('body_lock')
+//     })    
+// }
+//     // // user signin
 
     // subscribe, show the modal window after pressing the button
-let slider1Btn = document.querySelectorAll('.slider1__btn')
-let subscribe = document.querySelector('.subscribe')
-for (const el of slider1Btn) {
-    el.addEventListener('click', ()=> {
-        subscribe.classList.add('popup_active')
-        body.classList.add('body_lock')
-    })
-}
+// let slider1Btn = document.querySelectorAll('.slider1__btn')
+// let subscribe = document.querySelector('.subscribe')
+// for (const el of slider1Btn) {
+//     el.addEventListener('click', ()=> {
+//         subscribe.classList.add('popup_active')
+//         body.classList.add('body_lock')
+//     })
+// }
     // // subscribe
     // user checkin, show the modal window after pressing the button
-    let checkinBtn = document.querySelectorAll('#checkin')
-    let checkin = document.querySelector('.checkin')
-    for (const el of checkinBtn) {
-        el.addEventListener('click', ()=> {
-            checkin.classList.add('popup_active')
-            body.classList.add('body_lock')
-        })       
-    }
+    // let checkinBtn = document.querySelectorAll('#checkin')
+    // let checkin = document.querySelector('.checkin')
+    // for (const el of checkinBtn) {
+    //     el.addEventListener('click', ()=> {
+    //         checkin.classList.add('popup_active')
+    //         body.classList.add('body_lock')
+    //     })       
+    // }
     // user checkin
     // reserv
-    let reserv = document.querySelector('.reserv')
-    let tableBtn = document.querySelectorAll('.table__btn_pop-up')
-    for (const el of tableBtn) {
-        el.addEventListener('click', ()=> {
-            reserv.classList.add('popup_active')
-            body.classList.add('body_lock')
-        })    
-    }
+    // let reserv = document.querySelector('.reserv')
+    // let tableBtn = document.querySelectorAll('.table__btn_pop-up')
+    // for (const el of tableBtn) {
+    //     el.addEventListener('click', ()=> {
+    //         reserv.classList.add('popup_active')
+    //         body.classList.add('body_lock')
+    //     })    
+    // }
     // let myTime = document.querySelector('#myTime')
     // console.log(myTime)
     // myTime.innerHTML='AAA'

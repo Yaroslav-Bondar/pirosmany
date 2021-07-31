@@ -15,8 +15,8 @@ regisDelivery.addEventListener('click', (e)=> {
 // // hidden element
 
 // tabs
-let tabBtns = document.querySelector('.tab__btns')
-let tabContent = document.querySelectorAll('.tab__content')
+// let tabBtns = document.querySelector('.tab__btns')
+// let tabContent = document.querySelectorAll('.tab__content')
 // price
 let regisTotalPrice = document.querySelector('.regis__total-price')
 let regisPayPrice = document.querySelector('.regis__pay-price')
