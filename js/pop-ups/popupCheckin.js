@@ -48,5 +48,9 @@ let popupCheckinHtml = `
     </form>
 `
 let checkinBtn = document.querySelectorAll('#checkin')
-let checkinPopup = new Popup(checkinBtn, 'checkin popup', popupCheckinHtml) // object prototype from popupCommon.js
-checkinPopup.render() 
+for (const el of checkinBtn) {
+    el.addEventListener('click', ()=> {
+        let checkinPopup = new Popup('checkin popup', popupCheckinHtml, 'checkin-pop-up') // object prototype from popupCommon.js        
+        checkinPopup.render()
+    })
+} 

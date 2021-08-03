@@ -7,8 +7,8 @@ let tabContent = document.querySelectorAll('.tab__content')
 // // tabs
 
 // pop-up
-let popup = document.querySelectorAll('.popup')  // window
-let popupClose = document.querySelectorAll('.popup__close')  // button
+// let popup = document.querySelectorAll('.popup')  // window
+// let popupClose = document.querySelectorAll('.popup__close')  // button
 
 //  // pop-up
 // list.addEventListener('click', (e) => {

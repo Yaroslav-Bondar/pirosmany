@@ -148,7 +148,7 @@ body {
   object-fit: contain;
 }
 
-#menu-dropdown {
+[data-dropdown=menu] {
   display: none;
 }
 
@@ -486,9 +486,6 @@ body {
   height: 100vh;
   z-index: 11;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
-}
-.popup_active {
-  display: flex;
 }
 .popup__form {
   position: relative;

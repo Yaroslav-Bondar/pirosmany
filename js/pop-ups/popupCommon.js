@@ -1,36 +1,32 @@
-// close for every pop-up window
-for (let i = 0; i < popupClose.length; i++) {
-    popupClose[i].addEventListener('click', ()=> {
-        popup[i].classList.remove('popup_active')
-        body.classList.remove('body_lock')  
-    }) 
-}
-// close after click for window
-for (const el of popup) {                  
-    el.addEventListener('click', (e)=> {
-        if(e.target == el)
-            el.classList.remove('popup_active')
-            body.classList.remove('body_lock')    
-    })
-}
-// // close for every pop-up window
-
 // object for render popup
-function Popup (btn, nameClass, popupHtml) {
-    this.btn = btn
-    this.nameClass = nameClass
-    this.popupHtml = popupHtml
-}
-Popup.prototype.render = function() {
-    for (const el of this.btn) {
-        el.addEventListener('click', ()=> {
-            let popupSigninElement = document.createElement('div')
-            popupSigninElement.className = this.nameClass 
-            popupSigninElement.innerHTML = this.popupHtml
-            body.appendChild(popupSigninElement)
-            popupSigninElement.classList.add('popup_active')
+class Popup {
+    constructor(nameClass, popupHtml, popupId) {
+        this.nameClass = nameClass
+        this.popupHtml = popupHtml
+        this.popupId = popupId    
+    }
+    render() {
+        let popupElement = document.querySelector(`#${this.popupId}`) 
+        // if the popup does not exist
+        if(!popupElement) {
+            popupElement = document.createElement('div')
+            popupElement.className = this.nameClass 
+            popupElement.innerHTML = this.popupHtml
+            body.appendChild(popupElement)
+            popupElement.id = this.popupId
+            popupElement.style.display = 'flex'
             body.classList.add('body_lock')
-        })    
+        }
+        // if the popup exists
+        else {
+            popupElement.style.display = 'flex'
+        }
+        // to close the popup
+        body.addEventListener('click', (e)=> {
+            if(!e.target.closest('.popup__close') && !e.target.classList.contains('popup')) return
+            popupElement.style.display = 'none'
+            body.classList.remove('body_lock')
+        })
     }
 }
 // // object for render popup

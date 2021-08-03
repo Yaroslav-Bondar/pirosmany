@@ -20,6 +20,9 @@ let popupSubscribeHtml = `
     </form>
 `
 let slider1Btn = document.querySelectorAll('.slider1__btn')
-let subscribePopup = new Popup(slider1Btn, 'subscribe popup', popupSubscribeHtml) // object prototype from popupCommon.js
-subscribePopup.render() 
-
+for (const el of slider1Btn) {
+    el.addEventListener('click', ()=> {
+        let subscribePopup = new Popup('subscribe popup', popupSubscribeHtml, 'subscribe-pop-up') // object prototype from popupCommon.js
+        subscribePopup.render() 
+    })
+}

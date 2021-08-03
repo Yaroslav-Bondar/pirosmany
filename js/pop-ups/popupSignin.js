@@ -31,7 +31,10 @@ let popupSigninHtml = `
     </form>
 `
 let userSignIn = document.querySelectorAll('#user_sign_in')
-let signinPopup = new Popup(userSignIn, 'signin popup', popupSigninHtml) // object prototype from popupCommon.js
-signinPopup.render() 
-// // user signin
+for (const el of userSignIn) {
+    el.addEventListener('click', ()=> {
+        let signinPopup = new Popup('signin popup', popupSigninHtml, 'signin-pop-up') // object prototype from popupCommon.js        
+        signinPopup.render()
+    })
+}
 

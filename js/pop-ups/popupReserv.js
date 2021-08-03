@@ -29,6 +29,9 @@ let popupReservHtml = `
     </form>
 `
 let tableBtn = document.querySelectorAll('.table__btn_pop-up')
-let reservPopup = new Popup(tableBtn, 'reserv popup', popupReservHtml) // object prototype from popupCommon.js
-reservPopup.render() 
-// {/* <div class="reserv popup"> */}
+for (const el of tableBtn) {
+    el.addEventListener('click', ()=> {
+        let reservPopup = new Popup('reserv popup', popupReservHtml, 'reserv-pop-up') // object prototype from popupCommon.js
+        reservPopup.render()
+    })
+} 
