@@ -107,3 +107,57 @@ body.addEventListener('click', (e)=> {
 })
 
 // // drop-down menu
+
+// show/hide element using for order tab, pwa
+function createElem(elem, id, classes, html) {
+    let element = document.createElement(elem)
+    if(id !== undefined)
+        element.setAttribute('id', id)
+    if(classes !== undefined)
+        element.setAttribute('class', classes)
+    element.innerHTML = html
+    return element
+}
+
+function showElem(elem) {
+    let element
+    // for check if exists element in DOM
+    element = document.getElementById(elem.getAttribute('id'))
+    // if(window.innerWidth <= width) {
+        // check if exists element in DOM
+        console.log('not exist')
+
+        if(!element) {
+            console.log('not exist')
+            // createElem (elem, id, classes, html)
+            header.after(elem) 
+        }
+        else {
+            elem.style.display = 'block'
+        }
+    // }
+}
+// function hideElem(elem) {
+//     // if(element) {
+//         elem.style.display = 'none'
+//     // }
+// } 
+// function showElem(elem, width) {
+    // let element
+    // // for check if exists element in DOM
+    // element = document.getElementById(elem.getAttribute('id'))
+    // if(window.innerWidth <= width) {
+    //     // check if exists element in DOM
+    //     if(!element) {
+    //         // createElem (elem, id, classes, html)
+    //         header.after(elem) 
+    //     }
+    //     else {
+    //         elem.style.display = 'block'
+    //     }
+    // }
+    // else if(element) {
+    //     elem.style.display = 'none'
+    // }
+// }
+// show/hide element using for order tab, pwa

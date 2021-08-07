@@ -1,4 +1,4 @@
-let tabContents = document.querySelector('.tab__contents')// let tabContent = document.querySelectorAll('.tab__content')
+let tabContents = document.querySelector('.tab__contents')
 
 tabBtns.firstElementChild.classList.add('tab__btn_active')
 function getMaxHeight() {
