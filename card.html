@@ -1973,7 +1973,7 @@
                                 <!-- If we need scrollbar -->
                                 <!-- <div class="swiper-scrollbar"></div> -->
                             </div>
-                            <button class="aboutprod__review-btn btn">Добавить отзыв</button>
+                            <button class="aboutprod__review-btn aboutprod__review-btn_pop-up btn">Добавить отзыв</button>
                         </div>
                     </div>
                 </div>
@@ -2015,103 +2015,23 @@
             </div>
         </div>    
     </section>
-    <!-- pop-up -->
-    <div class="review popup">
-        <form action="#" class="review__form popup__form" method="POST">
-            <button class="review__close popup__close">
-                <i class="fas fa-times"></i>
-            </button>
-            <div class="review__title popup__title">
-                Добавить отзыв
-            </div>
-            <div class="review__body popup__body">
-                <div class="review__wrap popup__wrap">
-                    <div class="review__rating">
-                        <!-- <div class="review__text"> -->
-                        <span class="review__field-name">Ваша оценка:</span> 
-                        <!-- </div> -->
-                        <div class="rating">
-                            <input type="radio" id="5-stars" name="rating" value="5" />
-                            <label for="5-stars" class="star">
-                                <!-- &#9733; -->
-                                <i class="fas fa-star"></i>
-                            </label>
-                            <input type="radio" id="4-stars" name="rating" value="4" />
-                            <label for="4-stars" class="star">
-                                <!-- &#9733; -->
-                                <i class="fas fa-star"></i>
-                            </label>
-                            <input type="radio" id="3-stars" name="rating" value="3" />
-                            <label for="3-stars" class="star">
-                                <i class="fas fa-star"></i>
-                                <!-- &#9733; -->
-                            </label>
-                            <input type="radio" id="2-stars" name="rating" value="2" />
-                            <label for="2-stars" class="star">
-                                <!-- &#9733; -->
-                                <i class="fas fa-star"></i>
-                            </label>
-                            <input type="radio" id="1-star" name="rating" value="1" />
-                            <label for="1-star" class="star">
-                                <i class="fas fa-star"></i>
-                                <!-- &#9733; -->
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <div class="review__wrap popup__wrap">
-                    <label class="review__label">
-                        <span class="review__field-name">Ваше имя:</span>
-                        <input type="text" placeholder="Введите Ваше имя" name="name" required>
-                    </label>
-                </div>
-                <div class="review__wrap popup__wrap">
-                    <label class="review__label">
-                        <span class="review__field-name">Ваш отзыв:</span>
-                        <textarea maxlength="500" name="review-text" form="review__form" rows="8" cols="30"></textarea>
-                    </label>
-                </div>
-                <button class="review__btn btn" type="submit">Добавить отзыв</button>
-            </div>
-        </form>
-    </div>
-    <!-- // pop-up -->
-    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="js/libs/jquery/jquery-3.6.0.min.js"></script>
     <script src='js/common.js'></script>
-    <script src='js/main.js'></script>
-    <script src='js/display.js'></script>
-    <script src='js/cardTab.js'></script>
-    <script src='js/bonus.js'></script>
+    <script src='js/page/card/cardTab.js'></script>
+    <script src='js/page/display.js'></script>
+    <script src='js/page/bonus.js'></script>
     <!-- swiper slaider -->
-    <script src="js/swiper-bundle.min.js"></script>
-    <!-- <script src="js/sliders.js"></script> -->
+    <script src="js/plugins/swiper_slider/swiper-bundle.min.js"></script>
+    <script src="js/page/card/slider.js"></script>
+    <!-- swiper slaider -->
+    <!-- // popup -->
+    <script src="js/pop-ups/popupCommon.js"></script>
+    <script src="js/pop-ups/popupSignin.js"></script>
+    <script src="js/pop-ups/popupReserv.js"></script>
+    <script src="js/pop-ups/popupCheckin.js"></script>
+    <script src="js/pop-ups/popupAboutProdReview.js"></script>
+    <!-- // // popup -->
     <!-- Add font awesome icons-->
     <script src="https://kit.fontawesome.com/a8ec7c40c4.js" crossorigin="anonymous"></script>
-    <script>
-        const reviewsSlider = new Swiper('.aboutprod__slider', {
-            loop: true,
-            loopedSlides: 1,
-
-            autoHeight: true,
-            // slidesPerView: 5,
-            // nested: true,
-            // slidesPerView: 2,
-            slidesPerView: 1,
-            // slidesPerGroup: 1,
-            // spaceBetween: 15,
-            navigation: {
-            // nextEl: '.swiper-button-next',
-            // prevEl: '.swiper-button-prev',
-            nextEl: '.aboutprod__btn-next',
-            prevEl: '.aboutprod__btn-prev',
-            },
-            breakpoints: {
-                530: {
-                    slidesPerView: 2,
-                    spaceBetween: 15,
-                }
-            }
-        });
-    </script>
 </body>
 </html>

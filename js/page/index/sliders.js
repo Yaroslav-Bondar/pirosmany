@@ -1,14 +1,5 @@
-// slaider1
-// swiper-container
 const swiper = new Swiper('.swiper-container', {
-    // Optional parameters
-    // containerModifierClass: 'slaider1',
     loop: true,
-    // loopedSlides: 3,
-    // slidesPerView: 1,
-    // slidesPerGroup: 1,
-    // spaceBetween: 10,
-    // noSwiping: true,
     autoHeight: true,
     // breakpoints : {
     //   0: {

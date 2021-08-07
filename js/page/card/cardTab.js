@@ -1,6 +1,4 @@
-// let tabBtns = document.querySelector('.tab__btns')
-let tabContents = document.querySelector('.tab__contents')
-// let tabContent = document.querySelectorAll('.tab__content')
+let tabContents = document.querySelector('.tab__contents')// let tabContent = document.querySelectorAll('.tab__content')
 
 tabBtns.firstElementChild.classList.add('tab__btn_active')
 function getMaxHeight() {
@@ -15,8 +13,6 @@ window.addEventListener('resize', () => {
 })
 tabContent.forEach(item => item.style.display = 'none')
 tabContent[0].style.display = 'block'
-// tabBtns.firstElementChild.classList.add('tab__btn_active')
-// tabContent[0].classList.add('tab__content_active')
 
 tabBtns.addEventListener('click', (e)=> {
     
@@ -31,17 +27,14 @@ tabBtns.addEventListener('click', (e)=> {
     let number = e.target.dataset.number
     switch(number) {
         case '0': 
-            // tabContent[0].classList.add('tab__content_active')
             tabContent[0].style.display = 'block'
             e.target.classList.add('tab__btn_active')
             break
         case '1': 
-            // tabContent[1].classList.add('tab__content_active')
             tabContent[1].style.display = 'block'
             e.target.classList.add('tab__btn_active')
             break
         case '2': 
-            // tabContent[2].classList.add('tab__content_active')
             tabContent[2].style.display = 'block'
             e.target.classList.add('tab__btn_active')
             break

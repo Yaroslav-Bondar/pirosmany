@@ -20,6 +20,7 @@ class Popup {
         // if the popup exists
         else {
             popupElement.style.display = 'flex'
+            body.classList.add('body_lock')
         }
         // to close the popup
         body.addEventListener('click', (e)=> {
