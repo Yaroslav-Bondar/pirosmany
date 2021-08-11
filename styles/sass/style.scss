@@ -29,20 +29,17 @@
         height: 100vh;
         width: 100%;
         background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
-        // left: -100%;
         transition: left .2s;
         z-index: 9;
         &_active {
             display: block;
-            // left: 0;
         }
     }
     &__header {
         display: flex;
         align-items: center;
         padding-left: 30px;
-        // border-radius: 8px;
-        background: aquamarine;
+        background: $widget-bg;
     }
     &__burger {
         width: 20px;
@@ -173,8 +170,7 @@
         padding: 15px 20px 15px 32.6px;
         border-radius: 12px;
         box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.12);
-        background: #FFFFFF;
-        background: goldenrod;
+        background: $widget-bg;
         z-index: 2;
         &-node {
             margin-bottom: 17.39px;

@@ -41,8 +41,8 @@
                     </button>
                 </li>
                 <ul data-dropdown='menu' class="navigation__dropdown mobmenu__dropdown" id="menu-dropdown">
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
+                    <li data-dropdown="node" class="navigation__dropdown-node mobmenu__dropdown-node">
+                        <a data-dropdown='link' href="#" class="navigation__dropdown-link">
                             <div class="navigation__dropdown-img mobmenu__dropdown-img">
                                 <i class="fas fa-utensils"></i>
                                 <!-- mobmenu__icon-item -->
@@ -51,7 +51,7 @@
                             <div class="navigation__dropdown-text mobmenu__dropdown-text">Cупы</div>
                         </a>
                     </li>
-                    <ul class="navigation__dropdown mobmenu__dropdown" id="menu-dropdown">
+                    <ul data-dropdown='menu' class="navigation__dropdown mobmenu__dropdown" id="menu-dropdown">
                         <li class="navigation__dropdown-node mobmenu__dropdown-node">
                             <a href="#" class="navigation__dropdown-link">
                                 <div class="navigation__dropdown-img mobmenu__dropdown-img">
@@ -1661,8 +1661,8 @@
             <h1 class="products__title">
                 Все товары
             </h1>
-            <div class="products__row">
-                <div class="products__card card">
+            <div id="products" class="products__row">
+                <!-- <div class="products__card card">
                     <div class="card__img">
                         <img src="img/card/01.jpeg" alt="product" class="card__img-item">
                     </div>
@@ -2061,7 +2061,7 @@
                         </div>
                     </div>
                     <button class="button card__button btn">В корзину</button>
-                </div>
+                </div> -->
             </div>
             <div class="pagination"> 
             </div>
@@ -2136,13 +2136,18 @@
     <script src="js/plugins/swiper_slider/swiper-bundle.min.js"></script>
     <script src="js/libs/jquery/jquery-3.6.0.min.js"></script>
     <script src="js/common.js"></script>
+
+    <script src="js/constants/catalog.js"></script>
+    <script src="js/constants/root.js"></script>
+    <script src="js/components/Products/products.js"></script>
+    
+    <script src="js/drop-down-menu/dropDownMenu.js"></script>
     <script src="js/page/index/sliders.js"></script>
     <script src="js/page/index/video.js"></script>
     <script src="js/table/tableHtml.js"></script>
     <script src="js/table/tableForIndex.js"></script>
     <!-- simple jQuery pagination plugin https://flaviusmatis.github.io/simplePagination.js -->
-    <script type="text/javascript" src="js/libs/jquery/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="js/plugins/pagination/jquery.simplePagination.js"></script>
+    <script src="js/plugins/pagination/jquery.simplePagination.js"></script>
     <script src="js/plugins/pagination/paginationInit.js"></script>
     <!--  // simple jQuery pagination plugin https://flaviusmatis.github.io/simplePagination.js -->
     <!-- // popup -->
@@ -2151,7 +2156,6 @@
     <script src="js/pop-ups/popupReserv.js"></script>
     <script src="js/pop-ups/popupSubscribe.js"></script>
     <script src="js/pop-ups/popupCheckin.js"></script>
-    <!-- <script src="js/pop-ups/popupCommon.js"></script> -->
     <!-- // // popup -->
     <!-- Add font awesome icons-->
     <script src="https://kit.fontawesome.com/a8ec7c40c4.js" crossorigin="anonymous"></script>

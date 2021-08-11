@@ -16,5 +16,3 @@ let pwaHtml = `
         </button>
     </div>
 `
-
-// </div>

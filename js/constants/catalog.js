@@ -1,0 +1,67 @@
+const CATALOG = [
+    {
+        id: 'el1',
+        name: 'голень говядины',
+        img: 'img/card/01.jpeg',
+        description: 'Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить. ',
+        price: 1050,
+        currency: '₽',
+        price_separator: '/',
+        price_units: 'кг',
+        per_text: 'За',
+        per_item: '500',
+        per_units: 'гр.'
+    },
+    {
+        id: 'el1',
+        name: 'голень говядины',
+        img: 'img/card/01.jpeg',
+        description: 'Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить. ',
+        price: 1050,
+        currency: '₽',
+        price_separator: '/',
+        price_units: 'кг',
+        per_text: 'За',
+        per_item: '500',
+        per_units: 'гр.'
+    },
+    {
+        id: 'el1',
+        name: 'голень говядины',
+        img: 'img/card/01.jpeg',
+        description: 'Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить. ',
+        price: 1050,
+        currency: '₽',
+        price_separator: '/',
+        price_units: 'кг',
+        per_text: 'За',
+        per_item: '500',
+        per_units: 'гр.'
+    },
+    {
+        id: 'el1',
+        name: 'голень говядины',
+        img: 'img/card/01.jpeg',
+        description: 'Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить. ',
+        price: 1050,
+        currency: '₽',
+        price_separator: '/',
+        price_units: 'кг',
+        per_text: 'За',
+        per_item: '500',
+        per_units: 'гр.'
+    },
+    {
+        id: 'el1',
+        name: 'голень говядины',
+        img: 'img/card/01.jpeg',
+        description: 'Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить. ',
+        price: 1050,
+        currency: '₽',
+        price_separator: '/',
+        price_units: 'кг',
+        per_text: 'За',
+        per_item: '500',
+        per_units: 'гр.'
+    },
+]
