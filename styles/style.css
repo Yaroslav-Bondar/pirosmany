@@ -48,6 +48,9 @@ body {
   overflow: hidden;
 }
 .card__content {
+  margin-bottom: 12.58px;
+}
+.card__content-2 {
   margin-bottom: 13.58px;
 }
 .card__title {
@@ -3388,6 +3391,10 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 }
 .products__card {
   margin-bottom: 56.13px;
+}
+.products__link {
+  display: block;
+  text-decoration: none;
 }
 
 .video {

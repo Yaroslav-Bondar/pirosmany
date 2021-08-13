@@ -7,7 +7,7 @@ document.addEventListener('click', (e)=> {
         var amount = e.target.parentElement.children[1].firstElementChild
     }
     else {
-        alert('Неожиданная структура - display')
+        alert('Неожиданная структура - элемента display')
     }
     let counter = Number(amount.innerHTML);
     if (tar === 'btn-minus') {
@@ -24,3 +24,18 @@ document.addEventListener('click', (e)=> {
         amount.innerHTML = counter
     }
 })
+
+handleSetLocationStorage(el, id) {
+    // console.log(el, id)
+    const {pushProduct, products} = localStorageUtil.putProducts(id)
+    console.log(pushProduct, products)
+    if(pushProduct) {
+        el.classList.add(this.classNameActive)
+        el.innerHTML = this.labelRemove
+    }
+    else {
+        el.classList.remove(this.classNameActive)
+        el.innerHTML = this.labelAdd
+    }
+    headerPage.putCount(products.length)
+}

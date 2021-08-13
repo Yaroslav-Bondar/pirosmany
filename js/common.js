@@ -1,4 +1,5 @@
 let body = document.querySelector('body')
+var  currentProductId
 // let navigation = $('.navigation')
 let navigation = document.querySelector('.navigation')
 let header = document.querySelector('.header')
@@ -12,6 +13,15 @@ let widthHideNav = 900
 let tabBtns = document.querySelector('.tab__btns')
 let tabContent = document.querySelectorAll('.tab__content')
 // // tabs
+
+// setting the selected product Id
+
+body.addEventListener('click', (e)=> {
+    if(!e.target.closest(`.${POINTER_PRODUCT_ID}`)) return
+    currentProductId = e.target.closest(`.${CONTAIN_PRODUCT_ID}`).getAttribute('data-product-id')
+})
+
+// // setting the selected product Id 
 
 // show/hide navigation headerBurger
 if(window.innerWidth <= widthHideNav) {
