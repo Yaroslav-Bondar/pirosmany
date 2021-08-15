@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.table__btn, .header__basket-btn, .header__user-btn, .mobmenu__dropdown-img, .regis__select-wrap::before, .bonus__icon, .popup__icon, .pwa__column_basket .pwa__column-prod, .pwa__column, .display__item, .rating label {
+.table__btn, .header__basket-btn, .header__user-btn, .mobmenu__dropdown-img, .regis__select-wrap::before, .bonus__icon, .popup__icon, .pwa__column_basket .pwa__column-prod, .pwa__column, .display__item, .rating label, .card__basket {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -119,6 +119,22 @@ body {
   text-transform: none;
   line-height: 14px;
   color: #FFFFFF;
+}
+.card__add {
+  display: none;
+  justify-content: space-between;
+}
+.card__display {
+  width: 130.32px;
+  height: 38.02px;
+}
+.card__basket {
+  display: flex;
+  height: 38px;
+  width: 45px;
+  border-radius: 9.03636px;
+  background-color: #00AC4E;
+  text-decoration: none;
 }
 
 .navigation__list {
@@ -1517,8 +1533,7 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   }
 }
 .basket__btn {
-  width: 48.8px;
-  height: 39.76px;
+  background-color: #00AC4E;
 }
 .basket__btn-icon {
   font-size: 22px;
@@ -3391,6 +3406,12 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 }
 .products__card {
   margin-bottom: 56.13px;
+}
+.products__card-add_active {
+  display: flex;
+}
+.products__card-btn_inactive {
+  display: none;
 }
 .products__link {
   display: block;

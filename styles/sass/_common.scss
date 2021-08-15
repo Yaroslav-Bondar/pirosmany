@@ -75,6 +75,23 @@ body {
         height: 38.02px;
         @include font(500, 18.1056px, 14px, $btn-text-color);
     }
+    &__add {
+        display: none;
+        justify-content: space-between;
+    }
+    &__display {
+        width: 130.32px;
+        height: 38.02px;
+    }
+    &__basket {
+        display: flex;
+        @extend %center-xy-flex;
+        height: 38px;
+        width: 45px;
+        border-radius: 9.03636px;
+        background-color: $btn-bgcolor;
+        text-decoration: none;
+    }
 }
 .navigation {
     &__list {
@@ -82,8 +99,8 @@ body {
         display: flex;
         list-style-type: none;
     }
-    &__node:first-child {
-    }
+    // &__node:first-child {
+    // }
     &__node:not(:last-child) {
         margin-right: 45px;
         @media screen and (max-width: $navigation-breakpoint-1) {

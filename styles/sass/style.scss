@@ -378,6 +378,12 @@
     }
     &__card {
         margin-bottom: 56.13px;
+        &-add_active {
+            display: flex;
+        }
+        &-btn_inactive {
+            display: none;
+        }
     }
     &__link {
         display: block;

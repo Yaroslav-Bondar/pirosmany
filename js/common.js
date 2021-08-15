@@ -1,5 +1,5 @@
 let body = document.querySelector('body')
-var  currentProductId
+let  currentProduct = {id:'', amount: 0}
 // let navigation = $('.navigation')
 let navigation = document.querySelector('.navigation')
 let header = document.querySelector('.header')
