@@ -21,9 +21,13 @@ document.addEventListener('click', (e)=> {
         }
         // display the current quantity of elements in card
         displayAmount.innerHTML = amountElement
+        // display the quantiti of items in card
+        BASKET_AMOUNT.innerHTML = localStorageUtil.getProductsAmountAll()
     }
     if (tar === 'btn-plus') {
         // display the current quantity of elements in card 
         displayAmount.innerHTML = localStorageUtil.putProducts(id)
+        // display the quantiti of items in card
+        BASKET_AMOUNT.innerHTML = localStorageUtil.getProductsAmountAll()
     }
 })

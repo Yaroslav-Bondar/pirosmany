@@ -8,8 +8,12 @@ class Product {
         let nextElement = event.target.nextElementSibling
         nextElement.style.display = 'flex'
         nextElement.querySelector('.display__amount').innerHTML = localStorageUtil.putProducts(id)
+        // display the quantiti of items in card
+        BASKET_AMOUNT.innerHTML = localStorageUtil.getProductsAmountAll()
     }
     render() {
+        // display the quantiti of items in card
+        BASKET_AMOUNT.innerHTML = localStorageUtil.getProductsAmountAll()
         let html = ''
         CATALOG.forEach(({id, name, img, currency ,price, price_separator,
                             price_units, per_text, per_item, per_units}) => {
@@ -20,7 +24,6 @@ class Product {
             if(localStorageUtil.getProducts().length !== 0) { // ***
                 const {exist, amount} = localStorageUtil.getProductsAmount(id)
                 if(exist) {
-                    console.log('from products.js', id)
                     activeClass = this.classNameActive
                     inactiveClass = this.classNameInactive
                     elementAmount = amount
