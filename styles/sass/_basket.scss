@@ -18,19 +18,9 @@
             grid-gap: 30px 0;
         }
     }
-    // &__main {
-    //     flex: 0 1 59%;
-    //     margin-right: 30px;
-    //     @media screen and(max-width: $basket-breakpoint-1) {
-    //         flex-grow: 1;
-    //         flex-basis: 100%;
-    //         margin-right: 0; 
-    //     }
-    // }
     &__btn {
+        position: relative;
         background-color: $btn-bgcolor;
-        // width: 48.8px;
-        // height: 39.76px;
         &-icon {
             font-size: 22px;
             color: $btn-text-color;
@@ -141,11 +131,6 @@
             }
         }
     }
-    // &__aside {
-    //     @media screen and(max-width: $basket-breakpoint-1) {
-    //         flex-grow: 1; 
-    //     }
-    // }
     &__order {
         grid-area: order;
         @media screen and(max-width: $basket-breakpoint-1) {
@@ -211,5 +196,22 @@
                 margin: 5px 0 0 0;
             }
         }
+    }
+    &__amount {
+        position: absolute;
+        @extend %center-xy-flex;
+        top: 5px;
+        right: 0;
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        background: #EB5757;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 10px;
+        text-transform: none;
+        line-height: 8px;
+        color: #FFFFFF;
+        font-family: "TT Hoves";
     }
 }

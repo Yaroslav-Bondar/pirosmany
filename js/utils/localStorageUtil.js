@@ -2,6 +2,8 @@ class LocalStorageUtil {
     constructor() {
         this.keyName = 'basket'
     }
+    amountAllProduct = 0
+    // get all the items from the cart
     getProducts() {
         const productsLocalStorage = localStorage.getItem(this.keyName)
         if(productsLocalStorage !== null) {
@@ -9,9 +11,10 @@ class LocalStorageUtil {
         }
         return []
     }
+    // number of items in the cart by id
     getProductsAmount(id) {
         let products = this.getProducts()
-        let amount
+        let amount = 0
         let exist = false
         if(products.length !== 0) {
             for (let i = 0; i < products.length; i++) {
@@ -22,64 +25,53 @@ class LocalStorageUtil {
                 }
             }
         }
-        return {exist, amount}
+        return {exist, amount, products}
     }
-    putProducts(idElement) {
-        let products = this.getProducts()
+    // put an item in the basket
+    putProducts(id) {
+        const {exist, amount, products} = this.getProductsAmount(id)
         let pushProduct = false
-        let amount = 0
-        if(products.length === 0) {
-            products.push({id: idElement, amount: 1})
-            amount++
+        let amountElement = 0
+        if(!exist) {
+            products.push({id: id, amount: 1})
+            amountElement++
+            pushProduct = true
         } 
         else {
-            products.forEach((el) => {
-                if(idElement === el.id) {
-                    el.amount++
-                    amount = el.amount
+            for (let i = 0; i < products.length; i++) {
+                if(products[i].id === id) {
+                    products[i].amount++
+                    amountElement = products[i].amount
                     pushProduct = true
+                    break
                 }
-            })
-        }
-        if(!pushProduct) {
-            products.push({id: idElement, amount: 1})
-            amount++
-        }
-        // const index = products.indexOf(id)
-        // if(index === -1) {
-        //     // products.push(id)
-        //     products.push({id: id, amount: amount})
-        //     pushProduct = true
-        // }
-        // else {
-        //     // matches the delete button
-        //     products.splice(index, 1)
-        // }
-        localStorage.setItem(this.keyName, JSON.stringify(products))
-        // return { pushProduct, products }
-        // currentProduct.id = 
-        console.log(products)
-        return amount
-    }
-    takeProducts(id) {
-        let products = this.getProducts()
-        // let amountElement
-        const {exist, amount} = this.getProductsAmount(id)
-        let amountElement = 0
-        console.log(exist,amount)
-        if(exist) {
-            if(amount !== 0) {
-                products.forEach((el) => {
-                    if(id === el.id) {
-                        el.amount--
-                        amountElement = el.amount
-                        // pushProduct = true
-                    }
-                })
             }
         }
+        // write changes to the basket (LocalStorage)
         localStorage.setItem(this.keyName, JSON.stringify(products))
-        console.log(amountElement)
+        return amountElement
+    }
+    // remove an item from the cart
+    takeProducts(id) {
+        const {exist, amount, products} = this.getProductsAmount(id)
+        let amountElement = 0
+        if(exist) {
+            for (let i = 0; i < products.length; i++) {
+                if(products[i].id === id) {
+                    if(amount !== 0) {
+                        products[i].amount = products[i].amount - 1
+                        amountElement = products[i].amount
+                        // if the quantity is 0 - remove from the cart
+                        if(amountElement === 0) {
+                            products.splice(i, 1)
+                        }
+                        break
+                    }
+                }
+            }
+        }
+        // write changes to the basket (LocalStorage)
+        localStorage.setItem(this.keyName, JSON.stringify(products))
         return amountElement
     }
 }

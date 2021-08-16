@@ -423,18 +423,6 @@ body {
         &_basket {
             position: relative;
         }
-        &_basket &-prod {
-            position: absolute;
-            top: 5px;
-            right: 0;
-            @extend %center-xy-flex;
-            width: 13px;
-            height: 13px;
-            border-radius: 50%;
-            background: $popup-wrong-message;
-            @include font(500, 7px, 8px, $btn-text-color);
-            font-family: 'TT Hoves';
-        }
         &-icon {
             font-size: 22px;
             color: $btn-text-color;
@@ -454,5 +442,6 @@ body {
         color: $btn-bgcolor;
     }
 }
+
 
 

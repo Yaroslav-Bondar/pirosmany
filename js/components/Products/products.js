@@ -17,10 +17,10 @@ class Product {
             let inactiveClass = ''
             let elementAmount = 0
             //display products and their quantity in the basket (in LocalStorage)
-            if(localStorageUtil.getProducts().length !== 0) {
+            if(localStorageUtil.getProducts().length !== 0) { // ***
                 const {exist, amount} = localStorageUtil.getProductsAmount(id)
                 if(exist) {
-                    console.log(id)
+                    console.log('from products.js', id)
                     activeClass = this.classNameActive
                     inactiveClass = this.classNameInactive
                     elementAmount = amount

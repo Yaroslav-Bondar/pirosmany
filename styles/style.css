@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.table__btn, .header__basket-btn, .header__user-btn, .mobmenu__dropdown-img, .regis__select-wrap::before, .bonus__icon, .popup__icon, .pwa__column_basket .pwa__column-prod, .pwa__column, .display__item, .rating label, .card__basket {
+.table__btn, .header__basket-btn, .header__user-btn, .mobmenu__dropdown-img, .regis__select-wrap::before, .basket__amount, .bonus__icon, .popup__icon, .pwa__column, .display__item, .rating label, .card__basket {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -470,22 +470,6 @@ body {
 }
 .pwa__column_basket {
   position: relative;
-}
-.pwa__column_basket .pwa__column-prod {
-  position: absolute;
-  top: 5px;
-  right: 0;
-  width: 13px;
-  height: 13px;
-  border-radius: 50%;
-  background: #EB5757;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 7px;
-  text-transform: none;
-  line-height: 8px;
-  color: #FFFFFF;
-  font-family: "TT Hoves";
 }
 .pwa__column-icon {
   font-size: 22px;
@@ -1533,6 +1517,7 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   }
 }
 .basket__btn {
+  position: relative;
   background-color: #00AC4E;
 }
 .basket__btn-icon {
@@ -1769,6 +1754,22 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   .basket__promo-btn {
     margin: 5px 0 0 0;
   }
+}
+.basket__amount {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #EB5757;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 10px;
+  text-transform: none;
+  line-height: 8px;
+  color: #FFFFFF;
+  font-family: "TT Hoves";
 }
 
 .buy {
@@ -3249,6 +3250,10 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   .header__tel-number {
     display: none;
   }
+}
+.header__basket-amount {
+  top: 1px;
+  right: -3px;
 }
 
 .logo {
