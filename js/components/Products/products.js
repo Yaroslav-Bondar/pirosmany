@@ -12,8 +12,8 @@ class Product {
         BASKET_AMOUNT.innerHTML = localStorageUtil.getProductsAmountAll()
     }
     render() {
-        // display the quantiti of items in card
-        BASKET_AMOUNT.innerHTML = localStorageUtil.getProductsAmountAll()
+        // // display the quantiti of items in card
+        // BASKET_AMOUNT.innerHTML = localStorageUtil.getProductsAmountAll()
         let html = ''
         CATALOG.forEach(({id, name, img, currency ,price, price_separator,
                             price_units, per_text, per_item, per_units}) => {

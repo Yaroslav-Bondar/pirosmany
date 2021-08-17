@@ -9,7 +9,8 @@ if(window.innerWidth <= widthHideNav) {
             reservPopup.render()
         })
     }
-    showElem(tableElem, header)
+    // header
+    showElem(tableElem, HEADER)
 }
 else {
     if(tableElem)
@@ -25,7 +26,8 @@ window.addEventListener ('resize', () => {
                 reservPopup.render()
             })
         }
-        showElem(tableElem, header)
+        // header
+        showElem(tableElem, HEADER)
     }
     else {
         if(tableElem)

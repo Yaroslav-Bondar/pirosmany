@@ -1,10 +1,10 @@
 const CATALOG = [
     {
         id: 'el1',
-        name: 'голень говядины',
+        name: 'голень  говядины',
         img: 'img/card/01.jpeg',
         description: 'Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить. ',
-        price: 1050,
+        price: 950,
         currency: '₽',
         price_separator: '/',
         price_units: 'кг',

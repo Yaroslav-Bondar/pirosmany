@@ -1,12 +1,12 @@
 let body = document.querySelector('body')
-let  currentProduct = {id:'', amount: 0}
+// let  currentProduct = {id:'', amount: 0}
 // let navigation = $('.navigation')
-let navigation = document.querySelector('.navigation')
-let header = document.querySelector('.header')
-let headerBurger = document.querySelector('.header__burger')
-let mobmenu = document.querySelector('.mobmenu')
-let mobmenuBurger = document.querySelector('.mobmenu__burger')
-let mobmenuOverlay = document.querySelector('.mobmenu__overlay')
+// let navigation = document.querySelector('.navigation')
+// let header = document.querySelector('.header')
+// let headerBurger = document.querySelector('.header__burger')
+// let mobmenu = document.querySelector('.mobmenu')
+// let mobmenuBurger = document.querySelector('.mobmenu__burger')
+// let mobmenuOverlay = document.querySelector('.mobmenu__overlay')
 // let mobmenuNav = document.querySelector('.mobmenu__nav')
 let widthHideNav = 900
 // tabs
@@ -16,72 +16,72 @@ let tabContent = document.querySelectorAll('.tab__content')
 
 // setting the selected product Id
 
-body.addEventListener('click', (e)=> {
-    if(!e.target.closest(`.${POINTER_PRODUCT_ID}`)) return
-    currentProductId = e.target.closest(`.${CONTAIN_PRODUCT_ID}`).getAttribute('data-product-id')
-})
+// body.addEventListener('click', (e)=> {
+//     if(!e.target.closest(`.${POINTER_PRODUCT_ID}`)) return
+//     currentProductId = e.target.closest(`.${CONTAIN_PRODUCT_ID}`).getAttribute('data-product-id')
+// })
 
 // // setting the selected product Id 
 
-// show/hide navigation headerBurger
-if(window.innerWidth <= widthHideNav) {
-    navigation.style.display = 'none'
-    headerBurger.style.display = 'block'
-}
-else {
-    navigation.style.display = 'block'
-    headerBurger.style.display = 'none'
-}
-window.addEventListener ('resize', () => {
-    if(window.innerWidth <= widthHideNav) {
-        navigation.style.display = 'none'
-        headerBurger.style.display = 'block'
-    }
-    else {
-        navigation.style.display = 'block'
-        headerBurger.style.display = 'none'
-    }    
-})
 // // show/hide navigation headerBurger
+// if(window.innerWidth <= widthHideNav) {
+//     navigation.style.display = 'none'
+//     headerBurger.style.display = 'block'
+// }
+// else {
+//     navigation.style.display = 'block'
+//     headerBurger.style.display = 'none'
+// }
+// window.addEventListener ('resize', () => {
+//     if(window.innerWidth <= widthHideNav) {
+//         navigation.style.display = 'none'
+//         headerBurger.style.display = 'block'
+//     }
+//     else {
+//         navigation.style.display = 'block'
+//         headerBurger.style.display = 'none'
+//     }    
+// })
+// // // show/hide navigation headerBurger
 
-// logic for mobile menu
-let mobmenuHeader = document.querySelector('.mobmenu__header')
-mobmenuHeader.style.height = header.offsetHeight + 'px'
-window.addEventListener('resize', () => {
-    mobmenuHeader.style.height = header.offsetHeight + 'px'
-    // menu burger
-    if(window.innerWidth > widthHideNav) {
-        if(headerBurger.classList.contains('header__burger_active')) {
-            mobmenu.classList.remove('mobmenu_active')
-            mobmenuOverlay.classList.remove('mobmenu__overlay_active')
-            body.classList.remove('body_lock')        
-        }
-    }
-    else {
-        if(headerBurger.classList.contains('header__burger_active')) {
-            mobmenu.classList.add('mobmenu_active')
-            mobmenuOverlay.classList.add('mobmenu__overlay_active')
-            body.classList.add('body_lock')        
-        }
-    }
-    // // menu burger 
-})
 // // logic for mobile menu
+// let mobmenuHeader = document.querySelector('.mobmenu__header')
+// mobmenuHeader.style.height = HEADER.offsetHeight + 'px'
+// window.addEventListener('resize', () => {
+//     mobmenuHeader.style.height = HEADER.offsetHeight + 'px'
+//     // menu burger
+//     if(window.innerWidth > widthHideNav) {
+//         if(headerBurger.classList.contains('header__burger_active')) {
+//             mobmenu.classList.remove('mobmenu_active')
+//             mobmenuOverlay.classList.remove('mobmenu__overlay_active')
+//             body.classList.remove('body_lock')        
+//         }
+//     }
+//     else {
+//         if(headerBurger.classList.contains('header__burger_active')) {
+//             mobmenu.classList.add('mobmenu_active')
+//             mobmenuOverlay.classList.add('mobmenu__overlay_active')
+//             body.classList.add('body_lock')        
+//         }
+//     }
+//     // // menu burger 
+// })
+// // // logic for mobile menu
 
-// logic for burger buttons
-headerBurger.addEventListener('click', () => {
-    headerBurger.classList.add('header__burger_active')
-    mobmenu.classList.add('mobmenu_active')
-    mobmenuOverlay.classList.add('mobmenu__overlay_active')
-    body.classList.add('body_lock')
-})
-mobmenuBurger.addEventListener('click', () => {
-    mobmenu.classList.remove('mobmenu_active')
-    mobmenuOverlay.classList.remove('mobmenu__overlay_active')
-    body.classList.remove('body_lock')
-    headerBurger.classList.remove('header__burger_active')
-})
 // // logic for burger buttons
+// headerBurger.addEventListener('click', () => {
+//     headerBurger.classList.add('header__burger_active')
+//     mobmenu.classList.add('mobmenu_active')
+//     mobmenuOverlay.classList.add('mobmenu__overlay_active')
+//     body.classList.add('body_lock')
+// })
+// mobmenuBurger.addEventListener('click', () => {
+//     mobmenu.classList.remove('mobmenu_active')
+//     mobmenuOverlay.classList.remove('mobmenu__overlay_active')
+//     body.classList.remove('body_lock')
+//     headerBurger.classList.remove('header__burger_active')
+// })
+// // // logic for burger buttons
 
 // show/hide element using for order tab, pwa
 function createElem(elem, classes, html, id) {
