@@ -1,12 +1,7 @@
 class LocalStorageUtil {
     constructor() {
         this.keyName = 'basket'
-        // this.keyAmountAllProduct = 'amountAllProduct'
     }
-    // setAmountAllProduct() {
-
-    // }
-    // amountAllProduct = 0
     // get all the items from the cart
     getProducts() {
         const productsLocalStorage = localStorage.getItem(this.keyName)
@@ -14,6 +9,24 @@ class LocalStorageUtil {
             return JSON.parse(productsLocalStorage)
         }
         return []
+    }
+    // get the price of products by ID
+    getProductPriceById(id) {
+        let price
+        // get products from basket (LocalStorage) 
+        let products = this.getProducts()
+        return products.reduce((sum, item)=> {
+            if(item.id === id) {
+                sum = item.amount * item.price
+            }
+            return sum 
+        },0)  
+    }
+    getTotalProductsPrice() {
+        let products = this.getProducts()
+        return products.reduce((sum, item)=> {
+            return sum += this.getProductPriceById(item.id)
+        },0)
     }
     getProductsAmountAll() {
         let products = this.getProducts()
@@ -45,15 +58,18 @@ class LocalStorageUtil {
     // put an item in the basket
     putProducts(id) {
         const {exist, amount, products} = this.getProductsAmount(id)
-        // const amountAll = this.getProducts(this.keyAmountAllProduct)
-        // console.log('amountAll', amountAll)
-        let pushProduct = false
         let amountElement = 0
         if(!exist) {
-            products.push({id: id, amount: 1})
+            // find the price of product in CATALOG  
+            let price
+            for (let i = 0; i < CATALOG.length; i++) {
+                if(CATALOG[i].id === id) {
+                    price = CATALOG[i].price
+                    break
+                }
+            }
+            products.push({id: id, amount: 1, price: price})
             amountElement++
-            // amountAll[0] = 1
-            pushProduct = true
             
         } 
         else {
@@ -61,16 +77,12 @@ class LocalStorageUtil {
                 if(products[i].id === id) {
                     products[i].amount++
                     amountElement = products[i].amount
-                    // amountAll[0] = (Number(amountAll[0]) + 1)
-                    // this.amountAllProduct++
-                    pushProduct = true
                     break
                 }
             }
         }
         // write changes to the basket (LocalStorage)
         localStorage.setItem(this.keyName, JSON.stringify(products))
-        // localStorage.setItem(this.keyAmountAllProduct, JSON.stringify(amountAll))
         return amountElement
     }
     // remove an item from the cart
@@ -83,7 +95,6 @@ class LocalStorageUtil {
                     if(amount !== 0) {
                         // products[i].amount = products[i].amount - 1
                         products[i].amount--
-                        // this.amountAllProduct--
                         amountElement = products[i].amount
                         // if the quantity is 0 - remove from the cart
                         if(amountElement === 0) {
@@ -99,5 +110,4 @@ class LocalStorageUtil {
         return amountElement
     }
 }
-// console.log(localStorageUtil.getProducts())
 const localStorageUtil = new LocalStorageUtil()

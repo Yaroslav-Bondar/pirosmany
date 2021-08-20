@@ -1567,7 +1567,7 @@
                 <h3 class="basket__title">
                     Корзина
                 </h3>
-                <ul class="list basket__list" id="basket-products">
+                <ul class="list basket__list" id="basket-products-list">
                     <!-- <li class="list__node basket__list-node">
                         <button class="list__btn basket__list-btn"></button>
                         <div class="list__icon basket__list-icon">
@@ -1742,21 +1742,24 @@
                     <div class="order__prod">
                         <span class="order__prod-name">Товаров в корзине</span>
                         <div class="order__wrap">
-                            <span class="order__prod-price">700</span>
+                            <span class="order__prod-price" id="total-price-basket">0</span>
                             <span class="order__prod-currency">₽</span>
                         </div>
                     </div>
                     <div class="order__promo">
                         <span class="order__promo-name">Промокод</span>
                         <div class="order__wrap">
-                            <span class="order__promo-price">- 100</span>
+                            <span class="order__promo-price">
+                                <span class="order__promo-price-sign">-</span> 
+                                <span class="order__promo-price-item">100</span>
+                            </span>
                             <span class="order__promo-currency">₽</span>
                         </div>
                     </div>
                     <div class="order__total">
                         <span class="order__total-name">Итого к оплате</span>
                         <div class="order__wrap">
-                            <span class="order__total-price">600</span>
+                            <span class="order__total-price" id="total-pay">600</span>
                             <span class="order__total-currency">₽</span>
                         </div>
                     </div>
@@ -1837,7 +1840,7 @@
     <!-- Constants & Utils  -->
     <script src="js/constants/catalog.js"></script>
     <script src="js/constants/root.js"></script>
-    <script src="js/page/basket/constants/basketRoot.js"></script>
+    <!-- <script src="js/page/basket/constants/basketRoot.js"></script> -->
     <script src="js/utils/localStorageUtil.js"></script>
     
     <script src="js/common.js"></script>
@@ -1847,7 +1850,11 @@
     <script src="js/page/header/headerRender.js"></script>
     <script src="js/mob-menu/mobMenu.js"></script>
     <script src="js/page/header/header.js"></script>
+    
+    <script src="js/order/orderConstantsRender.js"></script>
     <script src="js/page/basket/basket.js"></script>
+    <script src="js/order/orderConstantsCalc.js"></script>
+    
     <script src="js/page/display.js"></script>
 
     <script src="js/page/bonus.js"></script>
@@ -1859,9 +1866,9 @@
     <script src="js/pop-ups/popupCheckin.js"></script>
     <!-- // // popup -->
     <!-- pwa -->
-    <script src="js/pwa/pwaHtml.js"></script>
+    <!-- <script src="js/pwa/pwaHtml.js"></script>
     <script src="js/pwa/pwaForBasket.js"></script>
-    <script src="js/pwa/pwa.js"></script>
+    <script src="js/pwa/pwa.js"></script> -->
 
     <!-- // pwa -->
     <!-- Add font awesome icons -->

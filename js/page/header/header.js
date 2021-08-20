@@ -2,11 +2,24 @@
 // let headerBurger = document.querySelector('.header__burger')
 let navigation = document.querySelector('.navigation')
 let headerBurger = document.querySelector('.header__burger')
-// quantity products in card
+
+// contains quantity products in card
 const BASKET_AMOUNT = document.querySelector('.basket__amount') // *
+BASKET_AMOUNT.style.display = 'none'
 
 // display the quantiti of items in card
-BASKET_AMOUNT.innerHTML = localStorageUtil.getProductsAmountAll()
+function showHideBasketAmountPruducts() {
+    let basketAmountAll = localStorageUtil.getProductsAmountAll()
+    if(0 < basketAmountAll) {
+        BASKET_AMOUNT.style.display = 'flex'
+        BASKET_AMOUNT.innerHTML = basketAmountAll    
+    }
+    else {
+        BASKET_AMOUNT.style.display = 'none'
+    }    
+}
+
+showHideBasketAmountPruducts()
 
 // show/hide navigation headerBurger
 if(window.innerWidth <= widthHideNav) {

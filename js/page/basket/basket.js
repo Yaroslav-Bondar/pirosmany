@@ -1,12 +1,18 @@
+// for input/output the promo (discount)
+const orderPromoPriceItem = document.querySelector('.order__promo-price-item')
+orderPromoPriceItem.innerHTML = 200
+
 class Basket {
     render() {
         const productsStore = localStorageUtil.getProducts()
         let html = ''
+        let price
         CATALOG.forEach((prod)=> {
             for (let i = 0; i < productsStore.length; i++) {
                 if(productsStore[i].id === prod.id) {
+                    price = productsStore[i].amount * productsStore[i].price
                     html += `
-                        <li class="list__node basket__list-node ${CONTAIN_PRODUCT_ID}" data-product-id='${prod.id}'>
+                        <li class="list__node basket__list-node ${CONTAIN_PRODUCT_ID} ${ORDER_CLASS_ID}" data-product-id='${prod.id}'>
                             <button class="list__btn basket__list-btn"></button>
                             <div class="list__icon basket__list-icon">
                                 <img src="" alt="product">
@@ -25,7 +31,8 @@ class Basket {
                             </div>
                             <div class="list__price basket__price">
                                 <span class="list__price-item basket__price-item">
-                                    ${prod.price}
+                                    <!-- ${prod.price} -->
+                                    ${price}
                                 </span>
                                 <span class="list__price-currency basket__price-currency">
                                     ${prod.currency}
@@ -37,7 +44,7 @@ class Basket {
                 }
             }
         })
-        BASKET_PRODUCTS.innerHTML = html
+        BASKET_PRODUCTS_LIST.innerHTML = html
     }
 }
 const basket = new Basket()

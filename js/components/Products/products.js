@@ -9,7 +9,8 @@ class Product {
         nextElement.style.display = 'flex'
         nextElement.querySelector('.display__amount').innerHTML = localStorageUtil.putProducts(id)
         // display the quantiti of items in card
-        BASKET_AMOUNT.innerHTML = localStorageUtil.getProductsAmountAll()
+        showHideBasketAmountPruducts() // from js/page/header/header.js
+        // BASKET_AMOUNT.innerHTML = localStorageUtil.getProductsAmountAll()
     }
     render() {
         // // display the quantiti of items in card
