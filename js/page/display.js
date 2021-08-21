@@ -41,7 +41,7 @@ document.addEventListener('click', (e)=> {
             // the sum of all products including discount 
             // in basket.html (totalPriceBasket from basket.js) 
             if(TOTAL_PAY) {
-                TOTAL_PAY.innerHTML = Number(TOTAL_PRICE_BASKET.innerHTML) - Number(orderPromoPriceItem.innerHTML)
+                TOTAL_PAY.innerHTML = Number(TOTAL_PRICE_BASKET.innerHTML) - Number(promoItem)
             }
         }
         // display the quantiti of items in card
@@ -60,7 +60,7 @@ document.addEventListener('click', (e)=> {
             // the sum of all products including discount 
             // in basket.html (totalPriceBasket from basket.js) 
             if(TOTAL_PAY) {
-                TOTAL_PAY.innerHTML = Number(TOTAL_PRICE_BASKET.innerHTML) - Number(orderPromoPriceItem.innerHTML)
+                TOTAL_PAY.innerHTML = Number(TOTAL_PRICE_BASKET.innerHTML) - Number(promoItem)
             }
         }
         // display the quantiti of items in card

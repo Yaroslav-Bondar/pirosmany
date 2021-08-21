@@ -1,6 +1,12 @@
 // for input/output the promo (discount)
 const orderPromoPriceItem = document.querySelector('.order__promo-price-item')
-orderPromoPriceItem.innerHTML = 200
+
+const basketPromoInput = document.querySelector('.basket__promo-input')
+
+const basketPromoBtn = document.querySelector('.basket__promo-btn')
+
+// contains the item of promo
+let promoItem
 
 class Basket {
     render() {
@@ -49,3 +55,25 @@ class Basket {
 }
 const basket = new Basket()
 basket.render()
+
+// input for order
+if(basketPromoInput.value.length > 0) {
+    promoItem = basketPromoInput.value
+}
+else {
+    promoItem = 0
+} 
+
+orderPromoPriceItem.innerHTML = promoItem
+
+// set the value of promo in order display  
+basketPromoBtn.addEventListener('click', ()=> {
+    if (basketPromoInput.value < 0) {
+        alert('promo cannot be less than 0')
+    }
+    else {
+        promoItem = basketPromoInput.value
+        orderPromoPriceItem.innerHTML = promoItem
+        TOTAL_PAY.innerHTML = Number(TOTAL_PRICE_BASKET.innerHTML) - Number(promoItem)
+    }
+})
