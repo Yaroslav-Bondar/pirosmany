@@ -5,8 +5,8 @@ const basketPromoInput = document.querySelector('.basket__promo-input')
 
 const basketPromoBtn = document.querySelector('.basket__promo-btn')
 
-// contains the item of promo
-let promoItem
+// // contains the item of promo
+// let promoItem
 
 class Basket {
     render() {
@@ -64,9 +64,9 @@ else {
     promoItem = 0
 } 
 
-orderPromoPriceItem.innerHTML = promoItem
 
 // set the value of promo in order display  
+orderPromoPriceItem.innerHTML = promoItem
 basketPromoBtn.addEventListener('click', ()=> {
     if (basketPromoInput.value < 0) {
         alert('promo cannot be less than 0')

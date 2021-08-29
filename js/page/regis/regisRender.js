@@ -8,7 +8,7 @@ class Regis {
                 if(productsStore[i].id === prod.id) {
                     price = productsStore[i].amount * productsStore[i].price
                     html += `
-                        <li class="list__node regis__list-node ${CONTAIN_PRODUCT_ID} ${ORDER_CLASS_ID}" data-product-id='${prod.id}>
+                        <li class="list__node regis__list-node ${CONTAIN_PRODUCT_ID} ${ORDER_CLASS_ID}" data-product-id='${prod.id}'>
                             <button class="list__btn regis__list-btn"></button>
                             <div class="list__icon regis__list-icon">
                                 <img src="" alt="product">

@@ -20,12 +20,19 @@ let regisTotalPrice = document.querySelector('.regis__total-price')
 let regisPayPrice = document.querySelector('.regis__pay-price')
 let regisPickupPrice = document.querySelector('.regis__pickup-price')
 let regisDelivPrice = document.querySelector('.regis__deliv-price')
-// depending on which tab button is active
-regisPayPrice.innerHTML = +regisTotalPrice.innerHTML + +regisDelivPrice.innerHTML
-// regisPayPrice.innerHTML = +regisTotalPrice.innerHTML + +regisPickupPrice.innerHTML 
+
+let pickupDiscount = 100 // cost of delivery
+let delivCost = 20 // percent, discount for pickup
 // // price
 // setting initial display
 tabBtns.firstElementChild.classList.add('tab__btn_active')
+
+// promoItem is constant from js/order/orderConstantsRender.js, contains the 
+// discount value, depending on which tab button is active
+promoItem = pickupDiscount
+// display shipping cost value, 
+regisDelivPrice.innerHTML = promoItem
+
 tabContent.forEach(item => item.style.display = 'none')
 tabContent.forEach((item) => {
     if(item.dataset.tabContent == 'deliv') {
@@ -48,7 +55,14 @@ tabBtns.addEventListener('click', (e)=> {
     switch(number) {
         case '0':
             e.target.classList.add('tab__btn_active')
-            regisPayPrice.innerHTML = +regisTotalPrice.innerHTML + +regisDelivPrice.innerHTML
+            // change the promoItem value depending on the active tab
+            promoItem = pickupDiscount
+            // display promoItem value
+            regisDelivPrice.innerHTML = promoItem
+            // recalculate the payment amount taking into account the promoItem value
+            if(TOTAL_PAY) {
+                TOTAL_PAY.innerHTML = Number(TOTAL_PRICE_BASKET.innerHTML) - Number(promoItem)
+            }            
             tabContent.forEach((item) => {
                 if(item.dataset.tabContent == 'deliv') {
                     item.style.display = 'flex'
@@ -60,7 +74,14 @@ tabBtns.addEventListener('click', (e)=> {
             break
         case '1':
             e.target.classList.add('tab__btn_active')
-            regisPayPrice.innerHTML = +regisTotalPrice.innerHTML + +regisPickupPrice.innerHTML
+            // change the promoItem value depending on the active tab
+            promoItem = localStorageUtil.getTotalProductsPrice() * (delivCost/100)
+            // display promoItem value 
+            regisPickupPrice.innerHTML = promoItem
+            // recalculate the payment amount taking into account the promoItem value
+            if(TOTAL_PAY) {
+                TOTAL_PAY.innerHTML = Number(TOTAL_PRICE_BASKET.innerHTML) - Number(promoItem)
+            }            
             tabContent.forEach((item) => {
                 if(item.dataset.tabContent == 'pickup') {
                     item.style.display = 'flex'

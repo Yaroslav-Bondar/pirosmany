@@ -16,13 +16,8 @@ document.addEventListener('click', (e)=> {
     let productsCardBtn = parent.querySelector('.products__card-btn')
     let productsCardAdd = parent.querySelector('.products__card-add')
     // sum price of product, the contant SUM_PRODUCT_PRICE from order orderConstantsCalc.js 
-    let sumProductPrice = parent.querySelector(`.${SUM_PRODUCT_PRICE}`) 
-    // console.log(sumProductPrice)
-    // if(sumProductPrice) {
-    //     // console.log(sumProductPrice)
-    //     TOTAL_PRICE_BASKET.innerHTML = localStorageUtil.getProductsPrice()
-    // }
-
+    let sumProductPrice 
+    // click on the display button
     if (tar === 'btn-minus') {
         let amountElement = localStorageUtil.takeProducts(id) 
         if(!amountElement && productsCardBtn !== null && productsCardAdd !== null) {
@@ -31,11 +26,13 @@ document.addEventListener('click', (e)=> {
         }
         // display the current quantity of elements in card
         displayAmount.innerHTML = amountElement
-
-         
+        
         if(parent.closest(`.${ORDER_CLASS_ID}`)) {
             // the sum of the price per item quantity
-            sumProductPrice.innerHTML = localStorageUtil.getProductPriceById(id)
+            sumProductPrice = parent.querySelector(`.${SUM_PRODUCT_PRICE}`)
+            if (sumProductPrice) {
+                sumProductPrice.innerHTML = localStorageUtil.getProductPriceById(id)
+            }
             // the sum all products of basket
             TOTAL_PRICE_BASKET.innerHTML = localStorageUtil.getTotalProductsPrice()
             // the sum of all products including discount 
@@ -47,14 +44,17 @@ document.addEventListener('click', (e)=> {
         // display the quantiti of items in card
         showHideBasketAmountPruducts() // from js/page/header/header.js
     }
+    // click on the display button
     if (tar === 'btn-plus') {
-
         // display the current quantity of elements in card 
         displayAmount.innerHTML = localStorageUtil.putProducts(id)
-         
+        
         if(parent.closest(`.${ORDER_CLASS_ID}`)) {
             // the sum of the price per item quantity
-            sumProductPrice.innerHTML = localStorageUtil.getProductPriceById(id)
+            sumProductPrice = parent.querySelector(`.${SUM_PRODUCT_PRICE}`)
+            if (sumProductPrice) {
+                sumProductPrice.innerHTML = localStorageUtil.getProductPriceById(id)
+            }
             // the sum all products of basket
             TOTAL_PRICE_BASKET.innerHTML = localStorageUtil.getTotalProductsPrice()
             // the sum of all products including discount 
