@@ -1,6 +1,17 @@
 class LocalStorageUtil {
     constructor() {
         this.keyName = 'basket'
+        this.tmpId = 'tmp_id'
+    }
+    // when you click on a product card, to store the product id and 
+    // generate a product card on the product card page (card.html)
+    setId(id) {
+        localStorage[this.tmpId] = id
+    }
+    // when you click on a product card, to store the product id and 
+    // generate a product card on the product card page (card.html)
+    getId() {
+        return localStorage[this.tmpId]
     }
     // get all the items from the cart
     getProducts() {

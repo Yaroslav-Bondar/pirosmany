@@ -1,12 +1,11 @@
 let mobmenu = document.querySelector('.mobmenu')
 let mobmenuBurger = document.querySelector('.mobmenu__burger')
 let mobmenuOverlay = document.querySelector('.mobmenu__overlay')
-// let header = document.querySelector('.header')
 
 // logic for mobile menu
 let mobmenuHeader = document.querySelector('.mobmenu__header')
-// console.log(HEADER.offsetHeight)
 mobmenuHeader.style.height = HEADER.offsetHeight + 'px'
+// mobmenuHeader.style.width = HEADER.offsetWidth + 'px'
 window.addEventListener('resize', () => {
     mobmenuHeader.style.height = HEADER.offsetHeight + 'px'
     // menu burger

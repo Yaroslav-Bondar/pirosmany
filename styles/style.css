@@ -1823,7 +1823,7 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   line-height: 19px;
   color: #C6C6C6;
 }
-.buy__price-cost {
+.buy__price-cost, .buy__price-currency {
   font-weight: 500;
   font-style: normal;
   font-size: 18px;
@@ -1896,7 +1896,7 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   line-height: 22px;
   color: #000000;
 }
-.buy__total-amount {
+.buy__total-amount, .buy__total-currency {
   font-weight: 500;
   font-style: normal;
   font-size: 18px;

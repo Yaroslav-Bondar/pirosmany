@@ -27,7 +27,7 @@ class Regis {
                                 </button>
                             </div>
                             <div class="list__price regis__price">
-                                <span class="list__price-item regis__price-item">
+                                <span class="list__price-item regis__price-item sum_product_price">
                                     ${price}
                                 </span>
                                 <span class="list__price-currency regis__price-currency">

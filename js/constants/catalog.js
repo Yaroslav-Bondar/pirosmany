@@ -1,7 +1,7 @@
 const CATALOG = [
     {
         id: 'el1',
-        name: 'голень  говядины',
+        name: 'Голень  говядины',
         img: 'img/card/01.jpeg',
         description: 'Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить. ',
         price: 950,
@@ -10,11 +10,12 @@ const CATALOG = [
         price_units: 'кг',
         per_text: 'За',
         per_item: '500',
-        per_units: 'гр.'
+        per_units: 'гр.',
+        rating: 5,
     },
     {
         id: 'el2',
-        name: 'голень говядины',
+        name: 'Мясо по французки',
         img: 'img/card/01.jpeg',
         description: 'Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить. ',
         price: 300,
@@ -23,11 +24,12 @@ const CATALOG = [
         price_units: 'кг',
         per_text: 'За',
         per_item: '500',
-        per_units: 'гр.'
+        per_units: 'гр.',
+        rating: 4,
     },
     {
         id: 'el3',
-        name: 'голень говядины',
+        name: 'Мясо классическое',
         img: 'img/card/01.jpeg',
         description: 'Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить. ',
         price: 1050,
@@ -36,32 +38,35 @@ const CATALOG = [
         price_units: 'кг',
         per_text: 'За',
         per_item: '500',
-        per_units: 'гр.'
+        per_units: 'гр.',
+        rating: 5,
     },
     {
         id: 'el4',
-        name: 'голень говядины',
+        name: 'Бургерное мясо',
         img: 'img/card/01.jpeg',
         description: 'Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить. ',
-        price: 1050,
+        price: 300,
         currency: '₽',
         price_separator: '/',
         price_units: 'кг',
         per_text: 'За',
         per_item: '500',
-        per_units: 'гр.'
+        per_units: 'гр.',
+        rating: 3,
     },
     {
         id: 'el5',
-        name: 'голень говядины',
+        name: 'Мясо для бутербродов',
         img: 'img/card/01.jpeg',
         description: 'Описание мраморной говядины, состоящее из нескольких преложений. Можно наполнить. ',
-        price: 1050,
+        price: 200,
         currency: '₽',
         price_separator: '/',
         price_units: 'кг',
         per_text: 'За',
         per_item: '500',
-        per_units: 'гр.'
+        per_units: 'гр.',
+        rating: 4,
     },
 ]

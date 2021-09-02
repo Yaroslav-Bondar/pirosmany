@@ -34,11 +34,12 @@ document.addEventListener('click', (e)=> {
                 sumProductPrice.innerHTML = localStorageUtil.getProductPriceById(id)
             }
             // the sum all products of basket
-            TOTAL_PRICE_BASKET.innerHTML = localStorageUtil.getTotalProductsPrice()
-            // the sum of all products including discount 
+            if(TOTAL_PRICE_BASKET) {
+                TOTAL_PRICE_BASKET.innerHTML = localStorageUtil.getTotalProductsPrice()
+            }            // the sum of all products including discount 
             // in basket.html (totalPriceBasket from basket.js) 
             if(TOTAL_PAY) {
-                TOTAL_PAY.innerHTML = Number(TOTAL_PRICE_BASKET.innerHTML) - Number(promoItem)
+                TOTAL_PAY.innerHTML = Number(TOTAL_PRICE_BASKET.innerHTML) - Number(PROMO_ITEM)
             }
         }
         // display the quantiti of items in card
@@ -56,11 +57,13 @@ document.addEventListener('click', (e)=> {
                 sumProductPrice.innerHTML = localStorageUtil.getProductPriceById(id)
             }
             // the sum all products of basket
-            TOTAL_PRICE_BASKET.innerHTML = localStorageUtil.getTotalProductsPrice()
+            if(TOTAL_PRICE_BASKET) {
+                TOTAL_PRICE_BASKET.innerHTML = localStorageUtil.getTotalProductsPrice()
+            }
             // the sum of all products including discount 
             // in basket.html (totalPriceBasket from basket.js) 
             if(TOTAL_PAY) {
-                TOTAL_PAY.innerHTML = Number(TOTAL_PRICE_BASKET.innerHTML) - Number(promoItem)
+                TOTAL_PAY.innerHTML = Number(TOTAL_PRICE_BASKET.innerHTML) - Number(PROMO_ITEM)
             }
         }
         // display the quantiti of items in card

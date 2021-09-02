@@ -1,6 +1,6 @@
 let tabContents = document.querySelector('.tab__contents')
-
 tabBtns.firstElementChild.classList.add('tab__btn_active')
+
 function getMaxHeight() {
     let heights = new Array()
     tabContent.forEach(item => heights.push(item.offsetHeight))

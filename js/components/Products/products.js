@@ -22,7 +22,7 @@ class Product {
             let inactiveClass = ''
             let elementAmount = 0
             //display products and their quantity in the basket (in LocalStorage)
-            if(localStorageUtil.getProducts().length !== 0) { // ***
+            if(localStorageUtil.getProducts().length !== 0) {
                 const {exist, amount} = localStorageUtil.getProductsAmount(id)
                 if(exist) {
                     activeClass = this.classNameActive
@@ -30,6 +30,7 @@ class Product {
                     elementAmount = amount
                 }
             }
+            // CONTAIN_PRODUCT_ID and data-product-id for display.js 
             html += 
             `
                 <div class="products__card card ${CONTAIN_PRODUCT_ID}" data-product-id='${id}'>

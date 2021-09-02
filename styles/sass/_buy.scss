@@ -34,7 +34,8 @@
         &-text {
             @include font(400, 12px, 19px, $buy-text-color);
         }
-        &-cost {
+        &-cost,
+        &-currency {
             @include font(500, 18px, 23px, $buy-text-color-2)
         }
     }
@@ -54,18 +55,10 @@
         }
     }
     &__display {
-        // position: relative;
-        // display: flex;
-        // justify-content: space-around;
-        // align-items: center;
         width: 116.57px;
         height: 42.47px;
-        // border: 0.903636px solid #EBEBEB;
-        // border-radius: 9.03636px;
-        // background: $buy-display-bg;
-        &-item {
-            // @extend %center-xy-flex;
-        }
+        // &-item {
+        // }
         &-amount,
         &-units {
             @include font(400, 12px, 19px, $buy-text-color-2);
@@ -107,7 +100,8 @@
         &-text {
             @include font(500, 14px, 22px, $buy-text-color-2);
         }
-        &-amount {
+        &-amount,
+        &-currency {
             @include font(500, 18px, 23px, $btn-bgcolor);
         }
     }

@@ -1,3 +1,5 @@
+// Constants before rendering the list of products in the basket (basket-products-list element)
+
 // contains list of products from basket 
 const BASKET_PRODUCTS_LIST = document.getElementById('basket-products-list')
 
@@ -5,11 +7,7 @@ const BASKET_PRODUCTS_LIST = document.getElementById('basket-products-list')
 const ORDER_CLASS_ID = 'order-class-id'
 
 // contains the discount value
-let promoItem
-
-// contains the sum of the price per item quantity
-// const SUM_PRODUCT_PRICE = 'list__price-item'
-// let sumProductPrice = document.querySelector(`.${SUM_PRODUCT_PRICE}`)
+let PROMO_ITEM
 
 
 

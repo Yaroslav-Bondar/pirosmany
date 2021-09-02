@@ -12,6 +12,7 @@
     <title>Card product</title>
 </head>
 <body>
+    <div class="header" id="header"></div>
     <div class="mobmenu__overlay"></div>
     <section class="mobmenu">
         <div class="mobmenu__header">
@@ -1422,239 +1423,6 @@
             </ul>
         </nav>
     </section>
-    <header class="header">
-        <div class="wrapper">
-            <div class="header__wrap">
-                <div class="header__burger">
-                    <div class="header__burger-line"></div>
-                    <div class="header__burger-line"></div>
-                    <div class="header__burger-line"></div>
-                </div>
-                <div class="logo">
-                    <div class="logo__text">
-                        <img src="img/logo/logo_text.png" alt="logo_text" class="logo__text-item">
-                    </div>
-                    <div class="logo__img">
-                        <img src="img/logo/logo_img.png" alt="logo_img" class="logo__img-item">
-                    </div>
-                </div>
-                <nav class="navigation">
-                    <ul class="navigation__list">
-                        <li class="navigation__node" id="menu-node">
-                            <a href="#" class="navigation__link navigation__link_dropdown" id="menu-btn">Меню</a>
-                            <!-- <ul class="navigation__dropdown header__dropdown"  id="menu-dropdown">
-                                <li class="navigation__dropdown-node header__dropdown-node">
-                                    <a href="#" class="navigation__dropdown-link">
-                                        <div class="navigation__dropdown-img">
-                                            <img src="img/header/drop-down-menu/01.png" alt="menu_icon" class="navigation__dropdown-icon">
-                                        </div>
-                                        <div class="navigation__dropdown-text header__dropdown-text">Cупы</div>
-                                    </a>
-                                </li>
-                                <li class="navigation__dropdown-node header__dropdown-node">
-                                    <a href="#" class="navigation__dropdown-link">
-                                        <div class="navigation__dropdown-img">
-                                            <img src="img/header/drop-down-menu/02.png" alt="menu_icon" class="navigation__dropdown-icon">
-                                        </div>
-                                        <div class="navigation__dropdown-text header__dropdown-text">Хачапури</div>
-                                    </a>
-                                </li>
-                                <li class="navigation__dropdown-node header__dropdown-node">
-                                    <a href="#" class="navigation__dropdown-link">
-                                        <div class="navigation__dropdown-img">
-                                            <img src="img/header/drop-down-menu/03.png" alt="menu_icon" class="navigation__dropdown-icon">
-                                        </div>
-                                        <div class="navigation__dropdown-text header__dropdown-text">Холодные закуски</div>
-                                    </a>
-                                </li>
-                                <li class="navigation__dropdown-node header__dropdown-node">
-                                    <a href="#" class="navigation__dropdown-link">
-                                        <div class="navigation__dropdown-img">
-                                            <img src="img/header/drop-down-menu/04.png" alt="menu_icon" class="navigation__dropdown-icon">
-                                        </div>
-                                        <div class="navigation__dropdown-text header__dropdown-text">Хинкали</div>
-                                    </a>
-                                </li>
-                                <li class="navigation__dropdown-node header__dropdown-node">
-                                    <a href="#" class="navigation__dropdown-link">
-                                        <div class="navigation__dropdown-img">
-                                            <img src="img/header/drop-down-menu/05.png" alt="menu_icon" class="navigation__dropdown-icon">
-                                        </div>
-                                        <div class="navigation__dropdown-text header__dropdown-text">Шашлык</div>
-                                    </a>
-                                </li>
-                                <li class="navigation__dropdown-node header__dropdown-node">
-                                    <a href="#" class="navigation__dropdown-link">
-                                        <div class="navigation__dropdown-img">
-                                            <img src="img/header/drop-down-menu/06.png" alt="menu_icon" class="navigation__dropdown-icon">
-                                        </div>
-                                        <div class="navigation__dropdown-text header__dropdown-text">Соусы</div>
-                                    </a>
-                                </li>
-                                <li class="navigation__dropdown-node header__dropdown-node">
-                                    <a href="#" class="navigation__dropdown-link">
-                                        <div class="navigation__dropdown-img">
-                                            <img src="img/header/drop-down-menu/07.png" alt="menu_icon" class="navigation__dropdown-icon">
-                                        </div>
-                                        <div class="navigation__dropdown-text header__dropdown-text">Салаты</div>
-                                    </a>
-                                </li>
-                                <li class="navigation__dropdown-node header__dropdown-node">
-                                    <a href="#" class="navigation__dropdown-link">
-                                        <div class="navigation__dropdown-img">
-                                            <img src="img/header/drop-down-menu/08.png" alt="menu_icon" class="navigation__dropdown-icon">
-                                        </div>
-                                        <div class="navigation__dropdown-text header__dropdown-text">Горячие блюда</div>
-                                    </a>
-                                </li>
-                                <li class="navigation__dropdown-node header__dropdown-node">
-                                    <a href="#" class="navigation__dropdown-link">
-                                        <div class="navigation__dropdown-img">
-                                            <img src="img/header/drop-down-menu/09.png" alt="menu_icon" class="navigation__dropdown-icon">
-                                        </div>
-                                        <div class="navigation__dropdown-text header__dropdown-text">Гарнир</div>
-                                    </a>
-                                </li>
-                                <li class="navigation__dropdown-node header__dropdown-node">
-                                    <a href="#" class="navigation__dropdown-link">
-                                        <div class="navigation__dropdown-img">
-                                            <img src="img/header/drop-down-menu/10.png" alt="menu_icon" class="navigation__dropdown-icon">
-                                        </div>
-                                        <div class="navigation__dropdown-text header__dropdown-text">Десерты</div>
-                                    </a>
-                                </li>
-                                <li class="navigation__dropdown-node header__dropdown-node">
-                                    <a href="#" class="navigation__dropdown-link">
-                                        <div class="navigation__dropdown-img">
-                                            <img src="img/header/drop-down-menu/11.png" alt="menu_icon" class="navigation__dropdown-icon">
-                                        </div>
-                                        <div class="navigation__dropdown-text header__dropdown-text">Напитки</div>
-                                    </a>
-                                </li>
-                            </ul> -->
-                        </li>
-                        <ul class="navigation__dropdown header__dropdown"  id="menu-dropdown">
-                            <li class="navigation__dropdown-node header__dropdown-node">
-                                <a href="#" class="navigation__dropdown-link">
-                                    <div class="navigation__dropdown-img">
-                                        <img src="img/header/drop-down-menu/01.png" alt="menu_icon" class="navigation__dropdown-icon">
-                                    </div>
-                                    <div class="navigation__dropdown-text header__dropdown-text">Cупы</div>
-                                </a>
-                            </li>
-                            <li class="navigation__dropdown-node header__dropdown-node">
-                                <a href="#" class="navigation__dropdown-link">
-                                    <div class="navigation__dropdown-img">
-                                        <img src="img/header/drop-down-menu/02.png" alt="menu_icon" class="navigation__dropdown-icon">
-                                    </div>
-                                    <div class="navigation__dropdown-text header__dropdown-text">Хачапури</div>
-                                </a>
-                            </li>
-                            <li class="navigation__dropdown-node header__dropdown-node">
-                                <a href="#" class="navigation__dropdown-link">
-                                    <div class="navigation__dropdown-img">
-                                        <img src="img/header/drop-down-menu/03.png" alt="menu_icon" class="navigation__dropdown-icon">
-                                    </div>
-                                    <div class="navigation__dropdown-text header__dropdown-text">Холодные закуски</div>
-                                </a>
-                            </li>
-                            <li class="navigation__dropdown-node header__dropdown-node">
-                                <a href="#" class="navigation__dropdown-link">
-                                    <div class="navigation__dropdown-img">
-                                        <img src="img/header/drop-down-menu/04.png" alt="menu_icon" class="navigation__dropdown-icon">
-                                    </div>
-                                    <div class="navigation__dropdown-text header__dropdown-text">Хинкали</div>
-                                </a>
-                            </li>
-                            <li class="navigation__dropdown-node header__dropdown-node">
-                                <a href="#" class="navigation__dropdown-link">
-                                    <div class="navigation__dropdown-img">
-                                        <img src="img/header/drop-down-menu/05.png" alt="menu_icon" class="navigation__dropdown-icon">
-                                    </div>
-                                    <div class="navigation__dropdown-text header__dropdown-text">Шашлык</div>
-                                </a>
-                            </li>
-                            <li class="navigation__dropdown-node header__dropdown-node">
-                                <a href="#" class="navigation__dropdown-link">
-                                    <div class="navigation__dropdown-img">
-                                        <img src="img/header/drop-down-menu/06.png" alt="menu_icon" class="navigation__dropdown-icon">
-                                    </div>
-                                    <div class="navigation__dropdown-text header__dropdown-text">Соусы</div>
-                                </a>
-                            </li>
-                            <li class="navigation__dropdown-node header__dropdown-node">
-                                <a href="#" class="navigation__dropdown-link">
-                                    <div class="navigation__dropdown-img">
-                                        <img src="img/header/drop-down-menu/07.png" alt="menu_icon" class="navigation__dropdown-icon">
-                                    </div>
-                                    <div class="navigation__dropdown-text header__dropdown-text">Салаты</div>
-                                </a>
-                            </li>
-                            <li class="navigation__dropdown-node header__dropdown-node">
-                                <a href="#" class="navigation__dropdown-link">
-                                    <div class="navigation__dropdown-img">
-                                        <img src="img/header/drop-down-menu/08.png" alt="menu_icon" class="navigation__dropdown-icon">
-                                    </div>
-                                    <div class="navigation__dropdown-text header__dropdown-text">Горячие блюда</div>
-                                </a>
-                            </li>
-                            <li class="navigation__dropdown-node header__dropdown-node">
-                                <a href="#" class="navigation__dropdown-link">
-                                    <div class="navigation__dropdown-img">
-                                        <img src="img/header/drop-down-menu/09.png" alt="menu_icon" class="navigation__dropdown-icon">
-                                    </div>
-                                    <div class="navigation__dropdown-text header__dropdown-text">Гарнир</div>
-                                </a>
-                            </li>
-                            <li class="navigation__dropdown-node header__dropdown-node">
-                                <a href="#" class="navigation__dropdown-link">
-                                    <div class="navigation__dropdown-img">
-                                        <img src="img/header/drop-down-menu/10.png" alt="menu_icon" class="navigation__dropdown-icon">
-                                    </div>
-                                    <div class="navigation__dropdown-text header__dropdown-text">Десерты</div>
-                                </a>
-                            </li>
-                            <li class="navigation__dropdown-node header__dropdown-node">
-                                <a href="#" class="navigation__dropdown-link">
-                                    <div class="navigation__dropdown-img">
-                                        <img src="img/header/drop-down-menu/11.png" alt="menu_icon" class="navigation__dropdown-icon">
-                                    </div>
-                                    <div class="navigation__dropdown-text header__dropdown-text">Напитки</div>
-                                </a>
-                            </li>
-                        </ul>
-                        <li class="navigation__node" id="menu-node">
-                            <a href="#" class="navigation__link" id="menu-btn">Доставка</a>
-                        </li>
-                        <li class="navigation__node" id="menu-node">
-                            <a href="#" class="navigation__link" id="menu-btn">Оплата</a>
-                        </li>
-                        <li class="navigation__node" id="menu-node">
-                            <a href="#" class="navigation__link table__btn_pop-up" id="menu-btn">Бронь стола</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="header__buttons">
-                    <div class="header__tel">
-                        <a href="tel:+78312826000" class="header__tel-link">
-                            <div class="header__tel-icon">
-                                <i class="fas fa-phone-alt header__tel-icon-item"></i>
-                            </div>
-                            <span class="header__tel-number">+7 (831) 282-60-00</span>
-                        </a>
-                    </div>
-                    <div class="header__user">
-                        <button id="user_sign_in" class="header__user-btn btn">
-                            <i class="far fa-user" aria-hidden="true"></i>
-                        </button>
-                        <button class="header__basket-btn basket__btn btn">
-                            <i class="header__basket-btn-icon basket__btn-icon fas fa-cart-arrow-down" aria-hidden="true"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
     <section class="aboutprod">
         <div class="wrapper">
             <div class="aboutprod__unit1">
@@ -1662,34 +1430,29 @@
                     <img src="img/video/bg.png" alt="product" class="aboutprod__img-item">
                 </div>
                 <div class="aboutprod__buy buy">
-                    <div class="buy__title">
+                    <!-- <div class="buy__title">
                         Говядина 250гр
                     </div>
                     <div class="rating buy__rating">
                         <input type="radio" id="5-stars" name="rating" value="5" />
                         <label for="5-stars" class="star buy__star">
-                            <!-- &#9733; -->
                             <i class="fas fa-star buy__star-icon"></i>
                         </label>
                         <input type="radio" id="4-stars" name="rating" value="4" />
                         <label for="4-stars" class="star buy__star">
-                            <!-- &#9733; -->
                             <i class="fas fa-star buy__star-icon"></i>
                         </label>
                         <input type="radio" id="3-stars" name="rating" value="3" />
                         <label for="3-stars" class="star buy__star">
                             <i class="fas fa-star buy__star-icon"></i>
-                            <!-- &#9733; -->
                         </label>
                         <input type="radio" id="2-stars" name="rating" value="2" />
                         <label for="2-stars" class="star buy__star">
-                            <!-- &#9733; -->
                             <i class="fas fa-star buy__star-icon"></i>
                         </label>
                         <input type="radio" id="1-star" name="rating" value="1" />
                         <label for="1-star" class="star buy__star">
                             <i class="fas fa-star buy__star-icon"></i>
-                            <!-- &#9733; -->
                         </label>
                     </div>
                     <div class="buy__reviews">
@@ -1732,7 +1495,7 @@
                         <button class="basket__btn btn">
                             <i class="basket__btn-icon fas fa-cart-arrow-down"></i>
                         </button>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="aboutprod__unit2">
@@ -2016,9 +1779,25 @@
         </div>    
     </section>
     <script type="text/javascript" src="js/libs/jquery/jquery-3.6.0.min.js"></script>
+    <!-- Constants & Utils  -->
+    <script src="js/constants/catalog.js"></script>
+    <script src="js/constants/root.js"></script>
+    <script src="js/utils/localStorageUtil.js"></script>
+
+    
     <script src='js/common.js'></script>
+
+    <!-- Components -->
+    <!-- header and mobile menu -->
+    <script src="js/page/header/headerRender.js"></script>
+    <script src="js/mob-menu/mobMenu.js"></script>
+    <script src="js/page/header/header.js"></script>
+    <script src="js/order/orderConstantsRender.js"></script>
+    <script src="js/page/card/cardRender.js"></script>
     <script src='js/page/card/cardTab.js'></script>
+    <script src="js/order/orderConstantsCalc.js"></script>
     <script src='js/page/display.js'></script>
+
     <script src='js/page/bonus.js'></script>
     <!-- swiper slaider -->
     <script src="js/plugins/swiper_slider/swiper-bundle.min.js"></script>

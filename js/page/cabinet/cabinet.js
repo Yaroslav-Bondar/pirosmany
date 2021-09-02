@@ -27,7 +27,6 @@ tabBtns.addEventListener('click', (e)=> {
 })
 // adding order status canseled. Just add the class .cab__history_cancel to cab__history
 let cabHistoryCansel = document.querySelectorAll('.cab__history_cancel')
-console.log(cabHistoryCansel[0])
 for (const el of cabHistoryCansel) {
     el.firstElementChild.children[0].children[4].children[1].innerHTML = 'Отменен'
 }

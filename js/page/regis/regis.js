@@ -27,11 +27,11 @@ let delivCost = 20 // percent, discount for pickup
 // setting initial display
 tabBtns.firstElementChild.classList.add('tab__btn_active')
 
-// promoItem is constant from js/order/orderConstantsRender.js, contains the 
+// PROMO_ITEM is constant from js/order/orderConstantsRender.js, contains the 
 // discount value, depending on which tab button is active
-promoItem = pickupDiscount
+PROMO_ITEM = pickupDiscount
 // display shipping cost value, 
-regisDelivPrice.innerHTML = promoItem
+regisDelivPrice.innerHTML = PROMO_ITEM
 
 tabContent.forEach(item => item.style.display = 'none')
 tabContent.forEach((item) => {
@@ -55,13 +55,13 @@ tabBtns.addEventListener('click', (e)=> {
     switch(number) {
         case '0':
             e.target.classList.add('tab__btn_active')
-            // change the promoItem value depending on the active tab
-            promoItem = pickupDiscount
-            // display promoItem value
-            regisDelivPrice.innerHTML = promoItem
-            // recalculate the payment amount taking into account the promoItem value
+            // change the PROMO_ITEM value depending on the active tab
+            PROMO_ITEM = pickupDiscount
+            // display PROMO_ITEM value
+            regisDelivPrice.innerHTML = PROMO_ITEM
+            // recalculate the payment amount taking into account the PROMO_ITEM value
             if(TOTAL_PAY) {
-                TOTAL_PAY.innerHTML = Number(TOTAL_PRICE_BASKET.innerHTML) - Number(promoItem)
+                TOTAL_PAY.innerHTML = Number(TOTAL_PRICE_BASKET.innerHTML) - Number(PROMO_ITEM)
             }            
             tabContent.forEach((item) => {
                 if(item.dataset.tabContent == 'deliv') {
@@ -74,13 +74,13 @@ tabBtns.addEventListener('click', (e)=> {
             break
         case '1':
             e.target.classList.add('tab__btn_active')
-            // change the promoItem value depending on the active tab
-            promoItem = localStorageUtil.getTotalProductsPrice() * (delivCost/100)
-            // display promoItem value 
-            regisPickupPrice.innerHTML = promoItem
-            // recalculate the payment amount taking into account the promoItem value
+            // change the PROMO_ITEM value depending on the active tab
+            PROMO_ITEM = localStorageUtil.getTotalProductsPrice() * (delivCost/100)
+            // display PROMO_ITEM value 
+            regisPickupPrice.innerHTML = PROMO_ITEM
+            // recalculate the payment amount taking into account the PROMO_ITEM value
             if(TOTAL_PAY) {
-                TOTAL_PAY.innerHTML = Number(TOTAL_PRICE_BASKET.innerHTML) - Number(promoItem)
+                TOTAL_PAY.innerHTML = Number(TOTAL_PRICE_BASKET.innerHTML) - Number(PROMO_ITEM)
             }            
             tabContent.forEach((item) => {
                 if(item.dataset.tabContent == 'pickup') {
