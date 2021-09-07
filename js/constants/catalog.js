@@ -25,7 +25,7 @@ const CATALOG = [
         per_text: 'За',
         per_item: '500',
         per_units: 'гр.',
-        rating: 4,
+        rating: 2,
     },
     {
         id: 'el3',

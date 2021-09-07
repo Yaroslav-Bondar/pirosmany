@@ -5,3 +5,4 @@ const HEADER = document.getElementById('header')
 const CONTAIN_PRODUCT_ID = 'contain-product-id' // *
 // let header = document.querySelector('.header')
 // var idElement = 5
+const SET_RATING = 'rating__set'

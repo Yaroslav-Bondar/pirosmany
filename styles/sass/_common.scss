@@ -159,14 +159,14 @@ body {
 // // menu-dropdown
 // rating
 .rating {
-    display:flex;
-    flex-direction: row-reverse;
-    font-size:1.2em;
-    justify-content:space-around;
+    display: flex;
+    // flex-direction: row-reverse;
+    font-size: 1.2em;
+    justify-content: space-around;
     margin-left: 9px;
-    text-align:center;
+    text-align: center;
     & input {
-        display:none;
+        display: none;
     }
     & label {
         @extend %center-xy-flex;
@@ -174,12 +174,15 @@ body {
         color:#ccc;
         cursor:pointer;
     }
-    & :checked ~ label {
+    .rating input :checked ~ label {
         color: $btn-bgcolor;
     }
     & label:hover,
     & label:hover ~ label {
         color: $rating-star-hover-color;
+    }
+    &__star_active {
+        color: $btn-bgcolor !important;
     }
 }
 // // rating

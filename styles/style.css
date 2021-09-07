@@ -188,7 +188,6 @@ body {
 
 .rating {
   display: flex;
-  flex-direction: row-reverse;
   font-size: 1.2em;
   justify-content: space-around;
   margin-left: 9px;
@@ -202,11 +201,14 @@ body {
   color: #ccc;
   cursor: pointer;
 }
-.rating :checked ~ label {
+.rating .rating input :checked ~ label {
   color: #00AC4E;
 }
 .rating label:hover, .rating label:hover ~ label {
   color: #00d64e;
+}
+.rating__star_active {
+  color: #00AC4E !important;
 }
 
 .display {
@@ -948,6 +950,7 @@ body {
 .review__rating {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .review__label {
   display: flex;
@@ -1789,17 +1792,15 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 }
 .buy__rating {
   margin: 9px 0 0 0;
-  justify-content: flex-end;
-}
-.buy__star {
-  width: 15px;
-  height: 15px;
+  flex-direction: initial;
+  justify-content: flex-start;
 }
 .buy__star-icon {
   font-size: 11px;
+  color: #ccc;
 }
-.buy__star:not(:first-child) {
-  margin-right: 3px;
+.buy__star-icon:not(:last-child) {
+  margin-right: 5px;
 }
 .buy__reviews {
   margin-top: 13px;
@@ -2083,16 +2084,14 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 }
 .aboutprod__rating {
   margin: 5px 0 0 0;
-  justify-content: flex-end;
-}
-.aboutprod__star {
-  width: 15px;
-  height: 15px;
+  justify-content: flex-start;
+  flex-direction: initial;
 }
 .aboutprod__star-icon {
   font-size: 11px;
+  color: #ccc;
 }
-.aboutprod__star:not(:first-child) {
+.aboutprod__star-icon:not(:last-child) {
   margin-right: 3px;
 }
 .aboutprod__soc {

@@ -131,16 +131,14 @@
     }
     &__rating {
         margin: 5px 0 0 0;
-        justify-content: flex-end;
+        justify-content: flex-start;
+        flex-direction: initial;
     }
-    &__star {
-        width: 15px;
-        height: 15px;
-        &-icon {
-            font-size: 11px;
-        }
+    &__star-icon {
+        font-size: 11px;
+        color: #ccc;
     }
-    &__star:not(:first-child) {
+    &__star-icon:not(:last-child) {
         margin-right: 3px;
     }
     &__soc {

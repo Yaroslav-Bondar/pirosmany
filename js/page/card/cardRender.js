@@ -1,9 +1,7 @@
 let aboutprodBuy = document.querySelector('.aboutprod__buy')
-// let rating = document.querySelector('.rating')
-
 
 class Card {
-    // aboutprod__buy
+    rating // product rating
     render () {
         const productsStore = localStorageUtil.getProducts()
         let price, amount
@@ -12,6 +10,7 @@ class Card {
             if(item.id === localStorageUtil.getId()) {
                 amount = localStorageUtil.getProductsAmount(item.id).amount
                 price = amount * item.price
+                this.rating = item.rating
                 // for calculate in display.js
                 aboutprodBuy.classList.add('contain-product-id', 'order-class-id')
                 // for calculate in display.js
@@ -82,12 +81,19 @@ class Card {
         });
         aboutprodBuy.innerHTML = htmlAboutprodBuy
     }
-}
-let rating = document.querySelector('.rating')
-
-for (let i = 0; i < 3; i++) {
-    console.log(rating.children[i])
+    // product rating display 
+    displayRating(obj) {
+        for (let i = 0; i < this.rating; i++) {
+            obj.children[i].classList.add('rating__star_active')
+        }        
+    }
 }
 
 const card = new Card()
 card.render()
+
+let buyRating = document.querySelector('.buy__rating')
+card.displayRating(buyRating)
+
+let aboutprodRating = document.querySelector('.aboutprod__rating')
+card.displayRating(aboutprodRating)
