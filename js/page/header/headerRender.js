@@ -135,10 +135,10 @@ class Header {
                             <button id="user_sign_in" class="header__user-btn btn">
                                 <i class="far fa-user" aria-hidden="true"></i>
                             </button>
-                            <button class="header__basket-btn basket__btn btn">
-                                <i class="header__basket-btn-icon basket__btn-icon fas fa-cart-arrow-down"></i>
+                            <a class="header__basket-btn basket__btn" href="basket.html">
+                                <i class="header__basket-btn-icon fas fa-cart-arrow-down"></i>
                                 <span class="header__basket-amount basket__amount">5</span>
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>

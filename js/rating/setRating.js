@@ -1,9 +1,7 @@
-// const ratingSet = document.querySelector(`.${SET_RATING}`)
 
+// colors stars on click and hover
 function setRating() {
-    console.log('function setRating is started')
-    // const ratingSet = document.querySelector(`.${SET_RATING}`)
-    console.log(ratingSet)
+    const ratingSet = document.querySelector(`.${SET_RATING}`)
     let index
     let clickIndex
     let doubleClickIndex
@@ -11,15 +9,15 @@ function setRating() {
         for (let i = 0; i < ratingSet.children.length; i++) {
             // click
             ratingSet.children[i].addEventListener('click', ()=> {
-                if(i !== clickIndex) {
+                if(i !== clickIndex){
                     clickIndex = i
                     if(clickIndex === (doubleClickIndex - 1) 
-                        && ratingSet.children[clickIndex].nextElementSibling.style.color !== 'rgb(0, 172, 78)') {
-                            if(ratingSet.children[clickIndex].style.color === 'rgb(204, 204, 204)') {
-                                ratingSet.children[clickIndex].style.color = 'rgb(0, 172, 78)'
+                        && ratingSet.children[clickIndex].nextElementSibling.style.color !== STAR_ACTIVE_COLOR) {
+                            if(ratingSet.children[clickIndex].style.color === STAR_NO_ACTIVE_COLOR) {
+                                ratingSet.children[clickIndex].style.color = STAR_ACTIVE_COLOR
                             }
-                            else if(ratingSet.children[clickIndex].style.color === 'rgb(0, 172, 78)') {
-                                ratingSet.children[clickIndex].style.color = 'rgb(204, 204, 204)'
+                            else if(ratingSet.children[clickIndex].style.color === STAR_ACTIVE_COLOR) {
+                                ratingSet.children[clickIndex].style.color = STAR_NO_ACTIVE_COLOR
                             }
                             doubleClickIndex--                        
                     }
@@ -27,40 +25,41 @@ function setRating() {
                         // paint the stars from the beginning to the one you clicked
                         // if(!countClick) {
                         for (let i = 0; i <= clickIndex; i++) {
-                            ratingSet.children[i].style.color = 'rgb(0, 172, 78)'
+                            ratingSet.children[i].style.color = STAR_ACTIVE_COLOR
                         }
                         // paint everything else after the clicked star
                         for (let i = clickIndex + 1; i < ratingSet.children.length; i++) {
-                            ratingSet.children[i].style.color = '#ccc'
+                            ratingSet.children[i].style.color = STAR_NO_ACTIVE_COLOR
                         }
                     }
-                    console.log(clickIndex)
                 }
                 else {
                     doubleClickIndex = i
-                    console.log('doubleClickIndex', doubleClickIndex)
-                    // '#ccc'
-                    if(ratingSet.children[doubleClickIndex].style.color === 'rgb(204, 204, 204)') {
-                        ratingSet.children[doubleClickIndex].style.color = 'rgb(0, 172, 78)'
+                    if(ratingSet.children[doubleClickIndex].style.color === STAR_NO_ACTIVE_COLOR) {
+                        ratingSet.children[doubleClickIndex].style.color = STAR_ACTIVE_COLOR
                     }
-                    else if(ratingSet.children[doubleClickIndex].style.color === 'rgb(0, 172, 78)') {
-                        ratingSet.children[doubleClickIndex].style.color = 'rgb(204, 204, 204)'
+                    else if(ratingSet.children[doubleClickIndex].style.color === STAR_ACTIVE_COLOR) {
+                        ratingSet.children[doubleClickIndex].style.color = STAR_NO_ACTIVE_COLOR
                     }
-                    
+                    // when hover
+                    else {
+                        ratingSet.children[doubleClickIndex].style.color = STAR_ACTIVE_COLOR
+                    }
                 }
             })
+            // hover
             ratingSet.children[i].addEventListener('mouseover', ()=> {
                 index = i
                 // paint the stars from the beginning to the one you clicked
                 for (let i = 0; i <= index; i++) {
-                    if(ratingSet.children[i].style.color !== 'rgb(0, 172, 78)') {
-                        ratingSet.children[i].style.color = '#00d64e'
+                    if(ratingSet.children[i].style.color !== STAR_ACTIVE_COLOR) {
+                        ratingSet.children[i].style.color = STAR_HOVER_COLOR
                     }
                 }
                 // paint everything else after the clicked star
                 for (let i = index + 1; i < ratingSet.children.length; i++) {
-                    if(ratingSet.children[i].style.color !== 'rgb(0, 172, 78)')
-                        ratingSet.children[i].style.color = '#ccc'
+                    if(ratingSet.children[i].style.color !== STAR_ACTIVE_COLOR)
+                        ratingSet.children[i].style.color = STAR_NO_ACTIVE_COLOR
                 }
             })
             // // hover
@@ -68,8 +67,8 @@ function setRating() {
             // mouseout
             ratingSet.children[i].addEventListener('mouseout', ()=> {
                 for (let i = 0; i < ratingSet.children.length; i++) {
-                    if(ratingSet.children[i].style.color !== 'rgb(0, 172, 78)') {
-                        ratingSet.children[i].style.color = '#ccc'
+                    if(ratingSet.children[i].style.color !== STAR_ACTIVE_COLOR) {
+                        ratingSet.children[i].style.color = STAR_NO_ACTIVE_COLOR
                     }
                 }
             })

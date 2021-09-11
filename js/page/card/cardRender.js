@@ -1,5 +1,7 @@
 let aboutprodBuy = document.querySelector('.aboutprod__buy')
-
+// function hello() {
+//     console.log('hello')
+// } 
 class Card {
     rating // product rating
     render () {
@@ -15,16 +17,17 @@ class Card {
                 aboutprodBuy.classList.add('contain-product-id', 'order-class-id')
                 // for calculate in display.js
                 aboutprodBuy.dataset.productId = item.id
+                // hello()
                 htmlAboutprodBuy += `
                     <div class="buy__title">
                         ${item.name}
                     </div>
-                    <div class="rating buy__rating">
-                            <i class="fas fa-star buy__star-icon"></i>
-                            <i class="fas fa-star buy__star-icon"></i>
-                            <i class="fas fa-star buy__star-icon"></i>
-                            <i class="fas fa-star buy__star-icon"></i>
-                            <i class="fas fa-star buy__star-icon"></i>
+                    <div class="rating buy__rating ${RATING_STAR_ACTIVE}${this.rating}">
+                        <i class="fas fa-star buy__star-icon"></i>
+                        <i class="fas fa-star buy__star-icon"></i>
+                        <i class="fas fa-star buy__star-icon"></i>
+                        <i class="fas fa-star buy__star-icon"></i>
+                        <i class="fas fa-star buy__star-icon"></i>
                     </div>
                     <div class="buy__reviews">
                         <span class="buy__reviews-text">Кол-во отзывов:</span>
@@ -72,9 +75,9 @@ class Card {
                         <button class="buy__btn aboutprod__buy-btn btn">
                             Купить
                         </button>
-                        <button class="basket__btn btn">
-                            <i class="basket__btn-icon fas fa-cart-arrow-down"></i>
-                        </button>
+                        <a class="basket__btn card__basket aboutprod__basket-btn" href="basket.html">
+                            <i class="card__basket-icon basket__btn-icon fas fa-cart-arrow-down"></i>
+                        </a>
                     </div>
                 `
             }
@@ -82,11 +85,11 @@ class Card {
         aboutprodBuy.innerHTML = htmlAboutprodBuy
     }
     // product rating display 
-    displayRating(obj) {
-        for (let i = 0; i < this.rating; i++) {
-            obj.children[i].classList.add('rating__star_active')
-        }        
-    }
+    // displayRating(obj) {
+    //     for (let i = 0; i < this.rating; i++) {
+    //         obj.children[i].classList.add('rating__star_active')
+    //     }        
+    // }
 }
 
 const card = new Card()
@@ -95,5 +98,5 @@ card.render()
 let buyRating = document.querySelector('.buy__rating')
 card.displayRating(buyRating)
 
-let aboutprodRating = document.querySelector('.aboutprod__rating')
-card.displayRating(aboutprodRating)
+// let aboutprodRating = document.querySelector('.aboutprod__rating')
+// card.displayRating(aboutprodRating)

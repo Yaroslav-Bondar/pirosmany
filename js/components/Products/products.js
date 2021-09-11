@@ -17,7 +17,7 @@ class Product {
         // BASKET_AMOUNT.innerHTML = localStorageUtil.getProductsAmountAll()
         let html = ''
         CATALOG.forEach(({id, name, img, currency ,price, price_separator,
-                            price_units, per_text, per_item, per_units}) => {
+                            price_units, per_text, per_item, per_units, rating}) => {
             let activeClass = ''
             let inactiveClass = ''
             let elementAmount = 0
@@ -48,12 +48,12 @@ class Product {
                         </div>
                     </a>    
                     <div class="card__content-2">
-                        <div class="card__rating">
-                            <i class="fas fa-star card__star card__star_active"></i>
-                            <i class="fas fa-star card__star card__star_active"></i>
-                            <i class="fas fa-star card__star card__star_active"></i>
-                            <i class="fas fa-star card__star card__star_active"></i>
-                            <i class="fas fa-star card__star card__star"></i>
+                        <div class="card__rating ${RATING_STAR_ACTIVE}${rating}">
+                            <i class="fas fa-star card__star"></i>
+                            <i class="fas fa-star card__star"></i>
+                            <i class="fas fa-star card__star"></i>
+                            <i class="fas fa-star card__star"></i>
+                            <i class="fas fa-star card__star"></i>
                         </div>
                         <div class="card__price">
                             <span class="card__price-1">
@@ -82,8 +82,8 @@ class Product {
                                 <button data-display="btn-plus" class="display__btn-plus card__btn-plus">
                                 </button>
                             </div>
-                            <a href="basket.html" class="card__basket basket__btn">
-                                <i class="card__basket-icon basket__btn-icon fas fa-cart-arrow-down" aria-hidden="true"></i>
+                            <a href="basket.html" class="products__card-basket card__basket basket__btn">
+                                <i class="card__basket-icon fas fa-cart-arrow-down" aria-hidden="true"></i>
                             </a>        
                         </div>
                     </div>

@@ -5,7 +5,6 @@ body {
     overflow: hidden;
 }
 .wrapper {
-    // max-width: 994px;
     max-width: 997px;
     margin: 0 auto;
     padding: 0 15px;
@@ -49,9 +48,6 @@ body {
     &__star:not(:last-child) {
         margin: 0 4px 9.65px 0;
     }
-    &__star_active {
-        color: $card-star-active-color;
-    }
     &__price {
         display: flex;
         &-1 {
@@ -84,13 +80,12 @@ body {
         height: 38.02px;
     }
     &__basket {
-        display: flex;
-        @extend %center-xy-flex;
-        height: 38px;
-        width: 45px;
         border-radius: 9.03636px;
         background-color: $btn-bgcolor;
-        text-decoration: none;
+        &-icon {
+            color: $btn-text-color;
+            font-size: 22px;
+        }
     }
 }
 .navigation {
@@ -122,9 +117,7 @@ body {
         // background: goldenrod;
         // z-index: 2;
         list-style-type: none;
-        // &-node:not(:last-child) {
-        //     margin-bottom: 17.39px;
-        // }
+
         &-link {
             display: flex;
             align-items: center;
@@ -140,16 +133,8 @@ body {
             height: 100%;
             object-fit: contain;
         }
-        // &-text {
-        //     width: max-content;
-        //     @include font(400, 10.66px, 13px, #333333);
-        // }
     }
 }
-// menu-dropdown 
-// #menu-dropdown {
-//     display: none;
-// }
 [data-dropdown='menu'] {
     display: none;
 }
@@ -181,8 +166,36 @@ body {
     & label:hover ~ label {
         color: $rating-star-hover-color;
     }
-    &__star_active {
+    // &__star_active {
+    //     color: $btn-bgcolor !important;
+    // }
+    // to display the rating of a product
+    &__star_active-0 :nth-child(-n+0) {
         color: $btn-bgcolor !important;
+    }
+    &__star_active-1 :nth-child(-n+1) {
+        color: $btn-bgcolor !important;
+    }
+    &__star_active-2 :nth-child(-n+2) {
+        color: $btn-bgcolor !important;
+    }
+    &__star_active-3 :nth-child(-n+3) {
+        color: $btn-bgcolor !important;
+    }
+    &__star_active-4 :nth-child(-n+4) {
+        color: $btn-bgcolor !important;
+    }
+    &__star_active-5 :nth-child(-n+5) {
+        color: $btn-bgcolor !important;
+    }
+    // // to display the rating of a product
+    &__set > i {
+        color: #ccc;
+        font-style: 18px;
+        transition: color .2s;
+    }
+    &__set > i:not(:last-child) {
+        margin-right: 5px;
     }
 }
 // // rating
@@ -443,6 +456,12 @@ body {
     }
     &__column.pwa__column_active &__column-icon {
         color: $btn-bgcolor;
+    }
+}
+.basket {
+    &__btn {
+        @extend %center-xy-flex;
+        text-decoration: none;
     }
 }
 

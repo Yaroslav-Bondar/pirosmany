@@ -18,14 +18,14 @@
             grid-gap: 30px 0;
         }
     }
-    &__btn {
-        position: relative;
-        background-color: $btn-bgcolor;
-        &-icon {
-            font-size: 22px;
-            color: $btn-text-color;
-        }
-    }
+    // &__btn {
+    //     position: relative;
+    //     background-color: $btn-bgcolor;
+    //     &-icon {
+    //         font-size: 22px;
+    //         color: $btn-text-color;
+    //     }
+    // }
     &__title {
         grid-area: title;
         margin-bottom: 13px;

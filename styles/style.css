@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.table__btn, .header__basket-btn, .header__user-btn, .mobmenu__dropdown-img, .regis__select-wrap::before, .basket__amount, .bonus__icon, .popup__icon, .pwa__column, .display__item, .rating label, .card__basket {
+.table__btn, .header__basket-btn, .header__user-btn, .mobmenu__dropdown-img, .regis__select-wrap::before, .basket__amount, .bonus__icon, .popup__icon, .basket__btn, .pwa__column, .display__item, .rating label {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,9 +79,6 @@ body {
 .card__star:not(:last-child) {
   margin: 0 4px 9.65px 0;
 }
-.card__star_active {
-  color: #00AC4E;
-}
 .card__price {
   display: flex;
 }
@@ -129,12 +126,12 @@ body {
   height: 38.02px;
 }
 .card__basket {
-  display: flex;
-  height: 38px;
-  width: 45px;
   border-radius: 9.03636px;
   background-color: #00AC4E;
-  text-decoration: none;
+}
+.card__basket-icon {
+  color: #FFFFFF;
+  font-size: 22px;
 }
 
 .navigation__list {
@@ -207,8 +204,31 @@ body {
 .rating label:hover, .rating label:hover ~ label {
   color: #00d64e;
 }
-.rating__star_active {
+.rating__star_active-0 :nth-child(-n+0) {
   color: #00AC4E !important;
+}
+.rating__star_active-1 :nth-child(-n+1) {
+  color: #00AC4E !important;
+}
+.rating__star_active-2 :nth-child(-n+2) {
+  color: #00AC4E !important;
+}
+.rating__star_active-3 :nth-child(-n+3) {
+  color: #00AC4E !important;
+}
+.rating__star_active-4 :nth-child(-n+4) {
+  color: #00AC4E !important;
+}
+.rating__star_active-5 :nth-child(-n+5) {
+  color: #00AC4E !important;
+}
+.rating__set > i {
+  color: #ccc;
+  font-style: 18px;
+  transition: color 0.2s;
+}
+.rating__set > i:not(:last-child) {
+  margin-right: 5px;
 }
 
 .display {
@@ -489,6 +509,10 @@ body {
 }
 .pwa__column.pwa__column_active .pwa__column-icon {
   color: #00AC4E;
+}
+
+.basket__btn {
+  text-decoration: none;
 }
 
 .popup {
@@ -1519,14 +1543,6 @@ http://nicolasgallagher.com/micro-clearfix-hack/
     grid-gap: 30px 0;
   }
 }
-.basket__btn {
-  position: relative;
-  background-color: #00AC4E;
-}
-.basket__btn-icon {
-  font-size: 22px;
-  color: #FFFFFF;
-}
 .basket__title {
   grid-area: title;
   margin-bottom: 13px;
@@ -2172,6 +2188,10 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   text-transform: none;
   line-height: 16px;
   color: #FFFFFF;
+}
+.aboutprod__basket-btn {
+  height: 39.76px;
+  width: 42px;
 }
 
 .regis__conteiner {
@@ -3211,6 +3231,7 @@ http://nicolasgallagher.com/micro-clearfix-hack/
   color: #00AC4E;
 }
 .header__basket-btn {
+  position: relative;
   width: 31px;
   height: 31px;
   background: transparent;
@@ -3420,6 +3441,10 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 .products__link {
   display: block;
   text-decoration: none;
+}
+.products__card-basket {
+  height: 38px;
+  width: 45px;
 }
 
 .video {

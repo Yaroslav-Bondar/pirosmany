@@ -221,6 +221,7 @@
         }
     }
     &__basket-btn {
+        position: relative;
         @extend %center-xy-flex;
         width: 31px;
         height: 31px;
@@ -392,6 +393,10 @@
     &__link {
         display: block;
         text-decoration: none;
+    }
+    &__card-basket {
+        height: 38px;
+        width: 45px;
     }    
 }
 .video {
