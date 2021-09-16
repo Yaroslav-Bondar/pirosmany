@@ -1,7 +1,6 @@
 // Constants after rendering the list of products in the basket (basket-products-list element)
 
 // // contains the sum of the price per item quantity
-// const SUM_PRODUCT_PRICE = 'list__price-item'
 const SUM_PRODUCT_PRICE = 'sum_product_price'
 
 // for output total product price of basket
