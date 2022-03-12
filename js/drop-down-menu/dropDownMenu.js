@@ -1,8 +1,10 @@
 // drop-down menu
 // logics for menu enable/disable dropdown menu 
 // for work need 4 elements with next data attributes: 
-// 1 - data-dropdomn='node', 2 - data-dropdomn='link', 
-// 3 - data-dropdomn='btn'(if exists) 4 - data-dropdomn='menu'
+// 1 - data-dropdomn='node' - the menu under which the drop-down menu drops out
+// 2 - data-dropdomn='link', - link (tag <a>) when clicked on which the drop-down menu is shown or hidden
+// 3 - data-dropdomn='btn'(if exists) - button (tag <button>) when clicked on which the drop-down menu is shown or hidden
+// 4 - data-dropdomn='menu' - drop-down menu
 // they need to be placed in the appropriate places in the html
 body.addEventListener('click', (e)=> {
     let tar = e.target;
@@ -15,6 +17,7 @@ body.addEventListener('click', (e)=> {
     else if(tar.closest('a')) {
         tar = tar.closest('a')
     }
+    // show / hide drop-down menu
     if(tar.dataset.dropdown == 'link' || tar.dataset.dropdown == 'btn') {
         if(tar.parentElement.dataset.dropdown == 'node') {
             let node = tar.parentElement

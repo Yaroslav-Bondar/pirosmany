@@ -1,7 +1,5 @@
 let aboutprodBuy = document.querySelector('.aboutprod__buy')
-// function hello() {
-//     console.log('hello')
-// } 
+
 class Card {
     rating // product rating
     render () {
@@ -84,19 +82,7 @@ class Card {
         });
         aboutprodBuy.innerHTML = htmlAboutprodBuy
     }
-    // product rating display 
-    // displayRating(obj) {
-    //     for (let i = 0; i < this.rating; i++) {
-    //         obj.children[i].classList.add('rating__star_active')
-    //     }        
-    // }
 }
 
 const card = new Card()
 card.render()
-
-let buyRating = document.querySelector('.buy__rating')
-card.displayRating(buyRating)
-
-// let aboutprodRating = document.querySelector('.aboutprod__rating')
-// card.displayRating(aboutprodRating)

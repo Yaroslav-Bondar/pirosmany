@@ -1,4 +1,4 @@
-const swiper = new Swiper('.swiper-container', {
+const swiper = new Swiper('.slider1__conteiner', {
     loop: true,
     autoHeight: true,
     // breakpoints : {
@@ -23,11 +23,19 @@ const swiper = new Swiper('.swiper-container', {
     //   bulletActiveClass: 'customer__pagination-bullet_active',
     //   clickable : true,
     // },
+    pagination: {
+      // 
+      // swiper-pagination
+      el: '.slider1__pagination',
+      clickable: true,
+      type: 'bullets',
+      bulletActiveClass: 'slider1__pagination-bullet-active',
+    },
     // // Navigation arrows
-    // navigation: {
-    //   nextEl: '.swiper-button-next',
-    //   prevEl: '.swiper-button-prev',
-    // },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
   });
   const swiper2 = new Swiper('.slider2__container', {
     loop: true,
