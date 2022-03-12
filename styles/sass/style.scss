@@ -344,10 +344,31 @@
 .slider2 {
     margin-top: 25px;
     &__link {
+        position: relative;
+        display: inline-block;
         font-family: 'TT Hoves';
-        @include font(400, 23.3333px, 27px, $slider2-text-color, uppercase);
+        @include font(400, 23.3333px, 36px, $slider2-text-color, uppercase);
         text-decoration: none;
         white-space: nowrap;
+        &::before {
+            opacity: 0;
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 0 16px;
+            border-radius: 9.03636px;
+            background-color: $btn-bgcolor;
+            transition: opacity .2s;
+            z-index: -1;
+        }
+        &:hover::before,
+        &:focus::before {
+            opacity: .9;
+        }
     }
     &__slide {
         width: auto !important;
