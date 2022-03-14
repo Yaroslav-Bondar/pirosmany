@@ -38,7 +38,9 @@ const swiper = new Swiper('.slider1__conteiner', {
     },
   });
   const swiper2 = new Swiper('.slider2__container', {
-    loop: true,
+    // loop: true,
+    setWrapperSize: true,
+    // allowSlidePrev: false,
     // loopedSlides: 3,
     // slideClass: slider2__slide,
     slidesPerView: 5,
@@ -54,6 +56,7 @@ const swiper = new Swiper('.slider1__conteiner', {
       // nextEl: '.swiper-button-next',
       nextEl: '.slider2__prev',
       prevEl: '.slider2__next',
+      disabledClass: 'slider2__button-disabled',
       // hideOnClick: true,
       // hiddenClass: 'slider2__but-hidden'
     },

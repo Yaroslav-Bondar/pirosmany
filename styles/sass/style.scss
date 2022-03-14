@@ -349,9 +349,9 @@
         font-family: 'TT Hoves';
         @include font(400, 23.3333px, 36px, $slider2-text-color, uppercase);
         text-decoration: none;
+        transition: color .2s;
         white-space: nowrap;
         &::before {
-            opacity: 0;
             content: '';
             width: 100%;
             height: 100%;
@@ -362,8 +362,12 @@
             padding: 0 16px;
             border-radius: 9.03636px;
             background-color: $btn-bgcolor;
+            opacity: 0;
             transition: opacity .2s;
             z-index: -1;
+        }
+        &:hover {
+            color: $white;
         }
         &:hover::before,
         &:focus::before {
@@ -373,30 +377,45 @@
     &__slide {
         width: auto !important;
     }
+    &__next,
+    &__prev {
+        position: absolute;
+        width: 30px;
+        height: 38px;
+        top: 50%;
+        transform: translateY(-50%);
+        border: none;
+        background: $white;
+        z-index: 2;
+        cursor: pointer;
+    }
     &__next {
         right: 0;
     }
     &__prev {
         left: 0;
     }
-    &__prev img {
-        transform: rotateZ(180deg);
+    &__next.slider2__button-disabled,
+    &__prev.slider2__button-disabled {
+        cursor: auto;
     }
-    &__next,
-    &__prev {
+    &__next.slider2__button-disabled .slider2__next-img,
+    &__prev.slider2__button-disabled .slider2__prev-img {
+        opacity: .35;
+    }
+    &__next-img,
+    &__prev-img {
         position: absolute;
-        width: 14px;
-        height: 24px;
         top: 50%;
         transform: translateY(-50%);
-        border: none;
-        background: transparent;
-        z-index: 2;
-        cursor: pointer;
-    }
-    &__next img,
-    &__prev img {
         object-fit: cover;
+    }
+    &__next-img {
+        right: 0;
+    }
+    &__prev-img {
+        left: 0;
+        transform: translateY(-50%) rotateZ(180deg);
     }
 }
 .products {
