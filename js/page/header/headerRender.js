@@ -10,13 +10,13 @@ class Header {
                     </div>
                     <div class="logo">
                         <div class="logo__text">
-                            <img src="img/logo/logo_text.png" alt="logo_text" class="logo__text-item">
+                            <img src="img/logo/logo_text.svg" alt="logo_text" class="img logo__text-item">
                         </div>
                         <div class="logo__img">
-                            <img src="img/logo/logo_img.png" alt="logo_img" class="logo__img-item">
+                            <img src="img/logo/logo_img.svg" alt="logo_img" class="img logo__img-item">
                         </div>
                     </div>
-                    <nav class="navigation">
+                    <nav class="navigation header__navigation">
                         <ul class="navigation__list">
                             <li data-dropdown='node' class="navigation__node" id="menu-node">
                                 <a data-dropdown='link' href="#" class="navigation__link navigation__link_dropdown" id="menu-btn">Меню</a>
@@ -126,17 +126,17 @@ class Header {
                         <div class="header__tel">
                             <a href="tel:+78312826000" class="header__tel-link">
                                 <div class="header__tel-icon">
-                                    <i class="fas fa-phone-alt header__tel-icon-item"></i>
+                                    <img class="img" src="img/header/phone.svg" alt="phone">
                                 </div>
                                 <span class="header__tel-number">+7 (831) 282-60-00</span>
                             </a>
                         </div>
                         <div class="header__user">
                             <button id="user_sign_in" class="header__user-btn btn">
-                                <i class="far fa-user" aria-hidden="true"></i>
+                                <img class="img" src="img/header/person.svg" alt="person">
                             </button>
                             <a class="header__basket-btn basket__btn" href="basket.html">
-                                <i class="header__basket-btn-icon fas fa-cart-arrow-down"></i>
+                                <img class="img" src="img/header/basket.svg" alt="basket">
                                 <span class="header__basket-amount basket__amount">5</span>
                             </a>
                         </div>

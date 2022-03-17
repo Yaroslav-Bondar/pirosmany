@@ -1,4 +1,5 @@
 .support {
+    padding: 47px 0 249px 0;
     &__title {
         margin-bottom: 45px;
         @include font(500, 28px, 33px, $text-color);
@@ -9,6 +10,7 @@
         resize: none;
         width: 672px;
         height: 174px;
+        padding: 19px 20px;
         background: $block-bg;
         border: none;
         border-radius: 5px;

@@ -5,7 +5,8 @@ body {
     overflow: hidden;
 }
 .wrapper {
-    max-width: 997px;
+    // original width: 994px;
+    max-width: 1024px; // with paddings (2 * 15px)
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -361,6 +362,9 @@ body {
         display: flex;
     }
 }
+.img {
+    @extend %inner-img;
+}
 .tab {
     &__btns {
         display: flex;
@@ -458,12 +462,33 @@ body {
         color: $btn-bgcolor;
     }
 }
+
 .basket {
     &__btn {
         @extend %center-xy-flex;
         text-decoration: none;
     }
 }
-
-
-
+// enter
+.enter {
+    display: flex;
+    align-items: center;
+    height: min-content;
+    &__btn-in {
+        display: flex;
+        align-items: center;
+    }
+    &__img-wrap {
+        width: 24px;
+        height: 24px;
+        margin-right: 7px;
+    }
+    &__separator {
+        margin: 0 3px;
+    }
+    &__btn-checkin-text,
+    &__btn-in-text,
+    &__separator {
+        @include font(500, 15.4259px, 32px, $footer-text-color, capitalize);
+    }
+}
