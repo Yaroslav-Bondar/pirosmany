@@ -1,0 +1,49 @@
+@use '../../utils';
+
+.navigation {
+    &__list {
+        position: relative;
+        display: flex;
+        list-style-type: none;
+    }
+    // &__node:first-child {
+    // }
+    &__node:not(:last-child) {
+        margin-right: 45px;
+        @media screen and (max-width: utils.$var-navigation-breakpoint-1) {
+            margin-right: 25px;
+        }
+    }
+    &__link {
+        text-decoration: none;
+        @include utils.mix-font(500, 18px, 21px, #333333) 
+    } 
+    &__dropdown {
+        // display: none;
+        // position: absolute;
+        // left: -32.6px;
+        // padding: 15px 20px 15px 32.6px;
+        // border-radius: 12px;
+        // box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.12);
+        // background: #FFFFFF;
+        // background: goldenrod;
+        // z-index: 2;
+        list-style-type: none;
+
+        &-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        &-img {
+            width: 16px;
+            height: 16px;
+            margin-right: 7.46px;
+        }
+        &-icon {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}

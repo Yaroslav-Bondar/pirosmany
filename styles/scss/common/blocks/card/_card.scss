@@ -1,0 +1,75 @@
+@use '../../utils';
+
+.card {
+    width: 205.5px;
+    &__img {
+        height: 125.83px;
+        border-radius: 4.52641px;
+        margin-bottom: 9px;
+        overflow: hidden;
+        &-item {
+            @extend %inner-img;
+        }
+    }
+    &__content {
+        margin-bottom: 12.58px;
+    }
+    &__content-2 {
+        margin-bottom: 13.58px;
+    }
+    &__title {
+        @include utils.mix-font(500, 14.4845px, 22px, utils.$var-title-1-color, $text-transform: capitalize);
+        margin: 0;
+        margin-bottom: 5.39px;
+    }
+    &__description {
+        @include utils.mix-font(400, 12.674px, 19px, utils.$var-card-content-color);
+        margin-bottom: 12.69px;
+    }
+    &__star {
+        font-size: 14px;
+        color: utils.$var-card-star-color;
+    }
+    &__star:not(:last-child) {
+        margin: 0 4px 9.65px 0;
+    }
+    &__price {
+        display: flex;
+        &-1 {
+            display: flex;
+            margin-right: 18.11px;
+            @include utils.mix-font(500, 18.1056px, 23px, utils.$var-card-price-1-color);
+            &-item {
+                margin-right: 5px;
+            }
+        }
+        &-2 {
+            display: flex;
+            @include utils.mix-font(400, 12.674px, 23px, utils.$var-card-price-2-color);
+            &-text {
+                margin-right: 3px;
+            }
+        }
+    }
+    &__button {
+        width: 140.32px;
+        height: 38.02px;
+        @include utils.mix-font(500, 18.1056px, 14px, utils.$var-btn-text-color);
+    }
+    &__add {
+        display: none;
+        justify-content: space-between;
+    }
+    &__display {
+        width: 130.32px;
+        height: 38.02px;
+    }
+    &__basket {
+        border-radius: 9.03636px;
+        background-color: utils.$var-btn-bgcolor;
+        &-icon {
+            color: utils.$var-btn-text-color;
+            font-size: 22px;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+@use '../../../../common/utils';
+
+.delivery {
+    padding: 60px 0 60px 0;
+    &__conteiner {
+        padding: 31.71px 0 58.9px 40.77px;
+        background-color: #F2F2F2;
+        background-image: url('/img/delivery/01.png');
+        background-repeat: no-repeat;
+        background-position: right top;
+        box-shadow: 0px 0px 18.0727px rgba(0, 0, 0, 0.03);
+        border-radius: 18.0727px;
+        @media screen and (max-width: utils.$var-delivery-breakpoint-1) {
+            padding-left: 0;
+            text-align: center;
+        }
+    }
+    &__text {
+        width: 53%;
+        margin: 0;
+        margin-bottom: 34.43px;
+        @include utils.mix-font(400, 31.6273px, 38px, utils.$var-title-color);
+        @media screen and (max-width: utils.$var-delivery-breakpoint-1) {
+            width: 100%;
+        }
+    }
+    &__btn {
+        width: 171.25px;
+        height: 52.55px;
+        @include utils.mix-font(500, 25.3018px, 30px, utils.$var-btn-text-color, capitalize);
+    }
+}

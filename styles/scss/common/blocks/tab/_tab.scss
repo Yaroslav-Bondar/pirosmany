@@ -1,0 +1,19 @@
+@use '../../utils';
+
+.tab {
+    &__btns {
+        display: flex;
+    }
+    // &__content {
+    //     display: none;
+    // }
+    &__content_active {
+        display: block;
+    }
+    &__more {
+        display: none;
+    }
+    &__more_active {
+        display: inline;
+    }
+}

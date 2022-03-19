@@ -1,0 +1,16 @@
+// common styles
+@use '../../common/blocks';
+@use '../../common/sections/header';
+
+// internal styles
+@use 'section/delivery';
+@use 'section/products';
+@use 'section/slider1';
+@use 'section/slider2';
+@use 'section/table';
+@use 'section/video';
+
+// common styles
+@use '../../common/sections/footer';
+
+

@@ -1,0 +1,50 @@
+@use '../../utils';
+
+body {
+    font-family: 'TT Norms Pro';
+}
+.body_lock {
+    overflow: hidden;
+}
+.wrapper {
+    // original width: 994px;
+    max-width: 1024px; // with paddings (2 * 15px)
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.btn {
+    background: utils.$var-btn-bgcolor;
+    border: none;
+    border-radius: 4.52px;
+    cursor: pointer;
+}
+[data-dropdown='menu'] {
+    display: none;
+}
+.menu__dropdown_active {
+    display: block !important;
+}
+.img {
+    @extend %inner-img;
+}
+.basket {
+    @extend %center-xy-flex;
+    text-decoration: none;
+    background: transparent;
+    &__amount {
+        @extend %center-xy-flex;
+        border-radius: 50%;
+        background: #EB5757;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 10px;
+        text-transform: none;
+        line-height: 8px;
+        color: #FFFFFF;
+        font-family: "TT Hoves";
+    }
+}
+.shopping-cart {
+    border-radius: 9.03636px;
+    background-color: #00AC4E;
+}

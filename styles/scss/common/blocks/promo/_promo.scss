@@ -1,0 +1,27 @@
+@use '../../utils';
+
+.promo {
+    &__title {
+        margin-bottom: 20px;
+        @include utils.mix-font(500, 20px, 24px, utils.$var-text-color);
+    }
+    &__input {
+        width: 187px;
+        height: 47px;
+        padding-left: 17px;
+        background: utils.$var-display-bg;
+        border: 1px solid utils.$var-display-border-color;
+        border-radius: 5px;
+    }
+    &__input:hover {
+        box-shadow: 0 0 1.5px 1px #00AC4E;
+    }
+    &__input:focus {
+        border-color: utils.$var-btn-bgcolor;
+    }
+    &__btn {
+        margin-left: 18px;
+        @include utils.mix-font(500, 14px, 21px, utils.$var-btn-text-color);
+        padding: 13px 25px;
+    }
+}

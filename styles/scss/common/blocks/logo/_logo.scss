@@ -1,0 +1,14 @@
+@use '../../utils';
+
+.logo {
+    display: flex;
+    align-items: center;
+    &__text{
+        margin-right: 8.67px;
+    }
+    &__img {
+        @media screen and (max-width: utils.$var-header-breakpoint-4) {
+            display: none;
+        }
+    } 
+}

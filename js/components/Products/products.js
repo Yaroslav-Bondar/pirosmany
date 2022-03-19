@@ -82,8 +82,8 @@ class Product {
                                 <button data-display="btn-plus" class="display__btn-plus card__btn-plus">
                                 </button>
                             </div>
-                            <a href="basket.html" class="products__card-basket card__basket basket__btn">
-                                <i class="card__basket-icon fas fa-cart-arrow-down" aria-hidden="true"></i>
+                            <a href="basket.html" class="shopping-cart products__card-basket">
+                                <img class="products__card-basket-img" src="../../img/shopping_cart/shopping_cart_white.svg" alt="shopping-cart">
                             </a>        
                         </div>
                     </div>

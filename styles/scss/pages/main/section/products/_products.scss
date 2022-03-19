@@ -1,0 +1,35 @@
+@use '../../../../common/utils';
+@use '../../../../common/plugins/simple-pagination';
+
+.products {
+    margin-top: 30px;
+    &__title {
+        @include utils.mix-font(500, 27.1585px, 19px, utils.$var-title-1-color);
+        margin-bottom: 39.75px;
+    }
+    &__row {
+        justify-content: space-between;
+        @extend %flex-wrap;
+    }
+    &__card {
+        margin-bottom: 56.13px;
+        &-add_active {
+            display: flex;
+        }
+        &-btn_inactive {
+            display: none;
+        }
+    }
+    &__link {
+        display: block;
+        text-decoration: none;
+    }
+    &__card-basket {
+        @extend %center-xy-flex;
+        height: 38px;
+        width: 45px;
+        &-img {
+            height: 70%;
+        }
+    }    
+}

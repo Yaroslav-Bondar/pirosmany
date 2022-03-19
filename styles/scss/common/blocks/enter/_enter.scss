@@ -1,0 +1,24 @@
+@use '../../utils';
+
+.enter {
+    display: flex;
+    align-items: center;
+    height: min-content;
+    &__btn-in {
+        display: flex;
+        align-items: center;
+    }
+    &__img-wrap {
+        width: 24px;
+        height: 24px;
+        margin-right: 7px;
+    }
+    &__separator {
+        margin: 0 3px;
+    }
+    &__btn-checkin-text,
+    &__btn-in-text,
+    &__separator {
+        @include utils.mix-font(500, 15.4259px, 32px, utils.$var-footer-text-color, capitalize);
+    }
+}

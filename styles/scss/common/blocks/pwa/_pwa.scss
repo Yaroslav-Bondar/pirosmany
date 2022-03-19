@@ -1,0 +1,42 @@
+@use '../../utils';
+
+.pwa {
+    padding: 5px 27px;
+    background: utils.$var-btn-bgcolor;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.12);
+    border-radius: 52px;
+    &__row {
+        display: flex;
+        justify-content: space-between
+    }
+    &__column {
+        @extend %center-xy-flex;
+        width: 37px;
+        height: 37px;
+        background-color: transparent;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        transition: background .2s;
+        &_basket {
+            position: relative;
+        }
+        &-icon {
+            font-size: 22px;
+            color: utils.$var-btn-text-color;
+            transition: color .2s;
+        }
+    }
+    &__column:hover {
+        background: utils.$var-btn-text-color;
+    }
+    &__column:hover &__column-icon {
+        color: utils.$var-btn-bgcolor;
+    }
+    &__column.pwa__column_active {
+        background-color: utils.$var-btn-text-color;
+    }
+    &__column.pwa__column_active &__column-icon {
+        color: utils.$var-btn-bgcolor;
+    }
+}

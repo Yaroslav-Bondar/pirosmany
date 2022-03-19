@@ -1,0 +1,28 @@
+@use '../../../../common/utils';
+
+.table {
+    &__btn {
+        height: 17px;
+        width: 100%;
+        @extend %center-xy-flex;
+        margin-top: 4px;
+        border: none;
+        border-radius: 5px;
+        background: utils.$var-btn-bgcolor;
+        cursor: pointer;
+        &-text {
+            @include utils.mix-font(500, 8.55856px, 10px, utils.$var-btn-text-color);
+            margin-right: 5px;
+        }
+        &-img {
+            width: 10px;
+            height: 8px;
+            & > img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+@use '../../utils';
+
+.display {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 0.903636px solid utils.$var-display-border-color;
+    border-radius: 9.03636px;
+    background: utils.$var-display-bg;
+    &__item {
+        @extend %center-xy-flex;
+    }
+    &__btn-minus,
+    &__btn-plus {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 15px;
+        height: 15px;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+    }
+    &__btn-minus {
+        left: 10px;
+    }
+    &__btn-plus {
+        right: 10px;
+    }
+    &__btn-minus::before,
+    &__btn-plus::before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: "FontAwesome";
+        font-size: 8px;
+    }
+    &__btn-minus::before {
+        content: "\f068";
+    }
+    &__btn-plus::before {
+        content: "\f067";
+    } 
+}
