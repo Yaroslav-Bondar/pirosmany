@@ -135,9 +135,9 @@ class Header {
                             <button id="user_sign_in" class="header__user-btn btn">
                                 <img class="img" src="img/header/person.svg" alt="person">
                             </button>
-                            <a class="header__basket-btn basket" href="store.html">
+                            <a class="header__basket-btn basket-cart" href="store.html">
                                 <img class="img" src="../../img/shopping_cart/shopping_cart_green.svg" alt="basket">
-                                <span class="header__basket-amount basket__amount">5</span>
+                                <span class="header__basket-amount basket-cart__amount">5</span>
                             </a>
                         </div>
                     </div>

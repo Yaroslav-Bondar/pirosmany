@@ -1,0 +1,155 @@
+@use '../../utils';
+
+.bonus {
+    padding: 27px 29px 38px 29px;
+    background: utils.$var-widget-bg;
+    box-shadow: 0px 0px 27.2043px rgba(0, 0, 0, 0.06);
+    border-radius: 18.1362px;
+    &__descr {
+        display: flex;
+        align-items: center;
+    }
+    &__descr:not(:last-child) {
+        margin: 25px 0;
+    }
+    &__icon {
+        @extend %center-xy-flex;
+        width: 35px;
+        height: 35px;
+        margin-right: 15px;
+        &-item {
+            font-size: 26px;
+            color: utils.$var-btn-bgcolor;
+        }
+    }
+    &__title {
+        @include utils.mix-font(400, 16px, 18px, utils.$var-tab-title-color);
+        & span {
+            font-weight: 500;
+        }
+    }
+    &__range-wrap {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 90%;
+        margin: 50px auto 30px auto;
+    }
+    &__range {
+        width: 100%;
+        -webkit-appearance: none;
+        // &-min {
+        //     position: absolute;
+        //     left: -7%;
+        // }
+        // &-max {
+        //     position: absolute;
+        //     right: -11%;
+        // }
+        // &-min, 
+        // &-max {
+        //     @include utils.mix-font(500, 16px, 18px, tab-title-color);
+        // }
+        &-text1 {
+            position: absolute;
+            top: 23px;
+            @include utils.mix-font(400, 12px, 14px, utils.$var-tab-title-color);
+
+        }
+        &-text2 {
+            position: absolute;
+            top: 40px;
+            @include utils.mix-font(400, 10px, 12px, utils.$var-tab-title-color);
+        }
+        &-text1,
+        &-text2 {
+            width: 100%;
+            text-align: center;
+            & span {
+                font-weight: 500;
+            }
+        }
+        &-fill {
+            position: absolute;
+            width: 0%;
+            height: 3px;
+            background: utils.$var-btn-bgcolor;
+        }
+        &-count {
+            position: absolute;
+            top: -35px;
+            left: 0%;
+            padding: 3px 7px;
+            @include utils.mix-font(500, 16px, 18px, utils.$var-tab-title-color);
+            background: utils.$var-popup-input-bg;
+            border-radius: 2px;
+            box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.1);
+        }
+    }
+    &__range:focus {
+        outline: none;
+    }
+    /* Firefox */
+    &__range::-moz-range-track{
+        background: utils.$var-bonus-range-bg;
+        border-radius: 3px;
+        width: 100%;
+        height: 3px;
+        cursor: pointer;
+    }
+    &__range::-moz-range-thumb {
+        -webkit-appearance: none;
+        width: 12px;
+        height: 12px;
+        background:utils.$var-btn-bgcolor;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+    }
+    /* Chrome & Safari */    
+    &__range::-webkit-slider-runnable-track {
+        background: utils.$var-bonus-range-bg;
+        border-radius: 3px;
+        width: 100%;
+        height: 3px;
+        cursor: pointer;
+    }
+    &__range::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 12px;
+        height: 12px;
+        background: utils.$var-btn-bgcolor;
+        border-radius: 50%;
+        border: none;
+        margin-top: -4px;
+        cursor: pointer;
+    }
+    /* IE */
+    &__range::-ms-track {
+        background: utils.$var-bonus-range-bg;
+        border-radius: 3px;
+        width: 100%;
+        height: 3px;
+        cursor: pointer;
+    }
+    &__range::-ms-thumb {
+        -webkit-appearance: none;
+        width: 12px;
+        height: 12px;
+        background: utils.$var-btn-bgcolor;
+        border-radius: 50%;
+        border: none;
+        margin-top: -7px;
+        cursor: pointer;
+    }
+    // &__label {
+    //     position: absolute;
+    //     top: -24px;
+    //     padding: 3px 7px;
+    //     @include utils.mix-font(500, 14px, 16px, tab-title-color);
+    //     text-align: center;
+    //     background-color: #fff;
+    //     border-radius: 4px;
+    //     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    // }
+}

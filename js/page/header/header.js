@@ -4,7 +4,7 @@ let navigation = document.querySelector('.navigation')
 let headerBurger = document.querySelector('.header__burger')
 
 // contains quantity products in card
-const BASKET_AMOUNT = document.querySelector('.basket__amount') // *
+const BASKET_AMOUNT = document.querySelector('.basket-cart__amount') // *
 BASKET_AMOUNT.style.display = 'none'
 
 // display the quantiti of items in card

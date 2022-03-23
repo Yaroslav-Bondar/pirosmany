@@ -27,7 +27,7 @@ body {
 .img {
     @extend %inner-img;
 }
-.basket {
+.basket-cart {
     @extend %center-xy-flex;
     text-decoration: none;
     background: transparent;
