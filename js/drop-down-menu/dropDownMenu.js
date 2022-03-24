@@ -7,29 +7,23 @@
 // 4 - data-dropdown='menu' - drop-down menu
 // they need to be placed in the appropriate places in the html
 body.addEventListener('click', (e)=> {
-    let tar = e.target;
-    if(!tar.closest('button') && !tar.closest('a')) {
-        return
-    }
-    else if(tar.closest('button')) {
-        tar = tar.closest('button')
-    }
-    else if(tar.closest('a')) {
-        tar = tar.closest('a')
-    }
-    // show / hide drop-down menu
-    if(tar.dataset.dropdown == 'link' || tar.dataset.dropdown == 'btn') {
-        if(tar.parentElement.dataset.dropdown == 'node') {
-            let node = tar.parentElement
-            // on arrow
-            for (const child of node.children) {
-                if(child.dataset.dropdown == 'btn')
-                    child.classList.toggle('mobmenu__btn_active')
-            }
-            // on drop-down menu
-            node.nextElementSibling.classList.toggle('menu__dropdown_active')
+    const targetElement = e.target;
+    const dropDownLink = targetElement.closest('a[data-dropdown=link]'); 
+    const dropDownBtn = targetElement.closest('button[data-dropdown=btn]');           
+    
+    if(!dropDownLink && !dropDownBtn) return
+    
+    const targeBtn = dropDownLink ? dropDownLink : dropDownBtn;
+    if(targeBtn.parentElement.dataset.dropdown == 'node') {
+        const node = targeBtn.parentElement
+        // on arrow
+        for (const child of node.children) {
+            if(child.dataset.dropdown == 'btn')
+                child.classList.toggle('mobmenu__btn_active')
         }
+        // on drop-down menu
+        node.nextElementSibling.classList.toggle('menu__dropdown_active')
     }
-})
+});
 
 // // drop-down menu
