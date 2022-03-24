@@ -18,8 +18,8 @@ class Header {
                     </div>
                     <nav class="navigation header__navigation">
                         <ul class="navigation__list">
-                            <li data-dropdown='node' class="navigation__node" id="menu-node">
-                                <a data-dropdown='link' href="#" class="navigation__link navigation__link_dropdown" id="menu-btn">Меню</a>
+                            <li data-dropdown='node' class="navigation__node">
+                                <a data-dropdown='link' href="#" class="navigation__link navigation__link_dropdown">Меню</a>
                             </li>
                             <ul data-dropdown='menu' class="navigation__dropdown header__dropdown"  id="menu-dropdown">
                                 <li class="navigation__dropdown-node header__dropdown-node">
@@ -111,14 +111,14 @@ class Header {
                                     </a>
                                 </li>
                             </ul>
-                            <li class="navigation__node" id="menu-node">
-                                <a href="#" class="navigation__link" id="menu-btn">Доставка</a>
+                            <li class="navigation__node">
+                                <a href="#" class="navigation__link">Доставка</a>
                             </li>
-                            <li class="navigation__node" id="menu-node">
-                                <a href="#" class="navigation__link" id="menu-btn">Оплата</a>
+                            <li class="navigation__node">
+                                <a href="#" class="navigation__link">Оплата</a>
                             </li>
-                            <li class="navigation__node" id="menu-node">
-                                <a href="#" class="navigation__link table__btn_pop-up" id="menu-btn">Бронь стола</a>
+                            <li class="navigation__node">
+                                <a href="#" class="navigation__link table__btn_pop-up">Бронь стола</a>
                             </li>
                         </ul>
                     </nav>

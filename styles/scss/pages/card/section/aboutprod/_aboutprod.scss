@@ -1,6 +1,8 @@
+@use '../../../../common/utils';
+
 .aboutprod {
     padding: 60px 0 0 0;
-    background: $page-bg;
+    background: utils.$var-page-bg;
     &__unit1 {
         margin-bottom: 60px;
     }
@@ -18,7 +20,7 @@
     &__img {
         width: 63%;
         height: 426px;
-        @media screen and (max-width: $aboutprod-breakpoint-1) {
+        @media screen and (max-width: utils.$var-aboutprod-breakpoint-1) {
             width: 100%;
             margin-bottom: 40px;
         }
@@ -30,18 +32,18 @@
         }
     }
     &__buy {
-        @media screen and (max-width: $aboutprod-breakpoint-1) {
+        @media screen and (max-width: utils.$var-aboutprod-breakpoint-1) {
             width: 100%;
         }
         &-btn {
-            @media screen and (max-width: $aboutprod-buy-breakpoint-1) {
+            @media screen and (max-width: utils.$var-aboutprod-buy-breakpoint-1) {
                 width: 150px;
             }    
         }
     }
     &__tab {
         width: 63%;
-        @media screen and (max-width: $aboutprod-breakpoint-1) {
+        @media screen and (max-width: utils.$var-aboutprod-breakpoint-1) {
             width: 100%;
             margin-bottom: 40px;
         }
@@ -53,8 +55,8 @@
             -webkit-transition: color .2s;
             -o-transition: color .2s;
             transition: color .2s;
-            @include font(500, 28px, 19px, $tab-btn-text-color);
-            @media screen and (max-width: $aboutprod-tab-breakpoint-1) {
+            @include utils.mix-font(500, 28px, 19px, utils.$var-tab-btn-text-color);
+            @media screen and (max-width: utils.$var-aboutprod-tab-breakpoint-1) {
                 padding: 3px;
                 font-size: calc(20px + 28 * ((100vw - 320px) / (997 - 320)));
             }
@@ -63,10 +65,10 @@
             padding-left: 0;
         }
         &-btn.tab__btn_active {
-            color: $btn-bgcolor;
+            color: utils.$var-btn-bgcolor;
         }
         &-btn:not(.tab__btn_active):hover {
-            color: $tab-btn-hover-color;
+            color: utils.$var-tab-btn-hover-color;
         }
     }
     &__btns {
@@ -78,10 +80,10 @@
     &__descr {
         &-title {
             margin-bottom: 22px;
-            @include font(500, 21px, 19px, $tab-title-color);
+            @include utils.mix-font(500, 21px, 19px, utils.$var-tab-title-color);
         }
         &-text {
-            @include font(400, 18px, 19px, $tab-text-color);
+            @include utils.mix-font(400, 18px, 19px, utils.$var-tab-text-color);
         }
         &-text p:not(:last-child) {
             margin-bottom: 25px;
@@ -89,7 +91,7 @@
     }
     &__param ul li {
         list-style: none;
-        @include font(500, 18px, 22px, $tab-text-color);
+        @include utils.mix-font(500, 18px, 22px, utils.$var-tab-text-color);
     }
     &__param ul li:not(:last-child) {
         margin-bottom: 20px;
@@ -97,13 +99,13 @@
     &__reviews {
         &-title {
             margin-bottom: 16px;
-            @include font(500, 21px, 19px, $tab-title-color);
+            @include utils.mix-font(500, 21px, 19px, utils.$var-tab-title-color);
         }
     }
     &__slide {
         padding: 13px 16px;
         border-radius: 11.1818px;
-        background: $tab-slide-bg;
+        background: utils.$var-tab-slide-bg;
     }
     &__ava {
         display: -webkit-box;
@@ -134,7 +136,7 @@
         }
         &-name {
             margin-right: 10px;
-            @include font(500, 14px, 16px, $tab-title-color);
+            @include utils.mix-font(500, 14px, 16px, utils.$var-tab-title-color);
         }
         &-icon {
             width: 20px;
@@ -162,19 +164,19 @@
     }
     &__soc {
         margin-top: 3px;
-        @include font(400, 12px, 14px, $tab-soc-text-color);
+        @include utils.mix-font(400, 12px, 14px, utils.$var-tab-soc-text-color);
     }
     &__review {
         margin-top: 6px;
         & p {
-            @include font(400, 12px, 14px, $tab-title-color);
+            @include utils.mix-font(400, 12px, 14px, utils.$var-tab-title-color);
 
         }
     }
     &__btn-more {
         border: none;
         background: transparent;
-        @include font(500, 11px, 13px, $btn-bgcolor);
+        @include utils.mix-font(500, 11px, 13px, utils.$var-btn-bgcolor);
         text-decoration: underline;
         cursor: pointer;
     }
@@ -190,13 +192,13 @@
     &__btn-next {
         display: inline-block;
         margin-right: 5px;
-        @include font(500, 12px, 14px, $btn-bgcolor);
+        @include utils.mix-font(500, 12px, 14px, utils.$var-btn-bgcolor);
         cursor: pointer;
     }
     &__btn-prev::before,
     &__btn-next::after {
         font-family: 'FontAwesome';
-        color: $btn-bgcolor;
+        color: utils.$var-btn-bgcolor;
         cursor: pointer;
     }
     &__btn-prev::before {
@@ -209,21 +211,21 @@
     }
     &__bonus {
         width: 311.75px;
-        @media screen and (max-width: $aboutprod-breakpoint-1) {
+        @media screen and (max-width: utils.$var-aboutprod-breakpoint-1) {
             width: 100%;
         }
     }
     &__review-btn {
         padding: 12px 17px;
         margin-top: 30px;
-        @include font(500, 14px, 16px, $btn-text-color);
+        @include utils.mix-font(500, 14px, 16px, utils.$var-btn-text-color);
     }
     &__basket-btn {
         height: 39.76px;
         width: 42px;
         // & i {
         //     font-size: 22px;
-        //     color: $btn-text-color;
+        //     color: utils.$var-btn-text-color;
         // }
     }
 }

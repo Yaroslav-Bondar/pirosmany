@@ -1,2 +1,2 @@
-utils.mix-font
+utils.mix-font(
 utils.$var-

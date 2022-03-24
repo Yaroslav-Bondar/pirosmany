@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href= "styles/normalize.css">
-    <link rel="stylesheet" href= "fonts/fonts.css">
-    <link rel="stylesheet" href= "styles/style.css">
+    <link rel="stylesheet" href= "../../styles/css/utils/normalize.css">
+    <link rel="stylesheet" href= "../../fonts/fonts.css">
+    <link rel="stylesheet" href= "../../styles/css/pages/regis/style.css">
     <title>Оформление заказа</title>
 </head>
 <body>
@@ -1679,34 +1679,79 @@
             </div>
         </div>
     </div>
-</section>    
+</section>
+<footer class="footer">
+    <div class="wrapper">
+        <div class="footer__conteiner">
+                <div class="footer__area-1">
+                    <div class="footer__country">
+                        <div class="footer__country-title">Бесплатный звонок по РФ</div>
+                        <a href="tel:+78312826000" class="footer__country-tel">+7 (831) 282-60-00</a>
+                    </div>
+                    <div class="footer__order">
+                        <div class="footer__order-title">Для приема заказов</div>
+                        <a href="tel:+79040664685" class="footer__order-tel">+7 (904) 066-46-85</a>
+                    </div>
+                </div>
+                <div class="footer__social">
+                    <a href="#" class="footer__social-1">мы в вконтакте ></a>
+                    <a href="#" class="footer__social-2">мы в instagram ></a>
+                </div>
+                <div class="footer__user enter">
+                    <button id="user_sign_in" class="enter__btn-in btn">
+                        <span class="enter__img-wrap">
+                            <img class="img" src="../../img/footer/person_white.svg" alt="person">
+                        </span>
+                        <span class="enter__btn-in-text">войти</span>
+                    </button>
+                    <span class="enter__separator">/</span>
+                    <button id="checkin" class="enter__btn-checkin btn">
+                        <span class="enter__btn-checkin-text">регистрация</span>
+                    </button>
+                </div>
+                <div class="footer__work">
+                    График работы по будням с 9:00 до 18:00
+                </div>
+                <a href="mailto:info@.ru" class="footer__email">Email: info@.ru</a>
+                <a href="support.html" class="footer__support">Поддержка</a>
+            <div class="footer__area-2">
+                <div class="footer__copyright">
+                    ©2020. Пиросмани
+                </div>
+                <a href="#" class="footer__terms">Условия и соглашения</a>
+                <a href="#" class="footer__policy">Политика конфиденциальности</a>
+            </div>        
+        </div>
+    </div>
+</footer>
+
 <!-- Add font awesome icons-->
 <script src="https://kit.fontawesome.com/a8ec7c40c4.js" crossorigin="anonymous"></script>    
-<script src="js/libs/jquery/jquery-3.6.0.min.js"></script>
+<script src="../../js/libs/jquery/jquery-3.6.0.min.js"></script>
 
 <!-- Constants & Utils  -->
-<script src="js/constants/catalog.js"></script>
-<script src="js/constants/root.js"></script>
-<!-- <script src="js/page/basket/constants/basketRoot.js"></script> -->
-<script src="js/utils/localStorageUtil.js"></script>
+<script src="../../js/constants/catalog.js"></script>
+<script src="../../js/constants/root.js"></script>
+<!-- <script src="../../js/page/basket/constants/basketRoot.js"></script> -->
+<script src="../../js/utils/localStorageUtil.js"></script>
 
-<script src="js/common.js"></script>
+<script src="../../js/common.js"></script>
 
 <!-- Components -->
 <!-- header and mobile menu -->
-<script src="js/page/header/headerRender.js"></script>
-<script src="js/mob-menu/mobMenu.js"></script>
-<script src="js/page/header/header.js"></script>
+<script src="../../js/page/header/headerRender.js"></script>
+<script src="../../js/mob-menu/mobMenu.js"></script>
+<script src="../../js/page/header/header.js"></script>
 
 <!-- show/hide drop-down menu -->
-<script src="js/drop-down-menu/dropDownMenu.js"></script>
+<script src="../../js/drop-down-menu/dropDownMenu.js"></script>
 
-<script src="js/order/orderConstantsRender.js"></script>
-<script src="js/page/regis/regisRender.js"></script>
-<script src="js/page/regis/regis.js"></script>
-<script src="js/order/orderConstantsCalc.js"></script>
+<script src="../../js/order/orderConstantsRender.js"></script>
+<script src="../../js/page/regis/regisRender.js"></script>
+<script src="../../js/page/regis/regis.js"></script>
+<script src="../../js/order/orderConstantsCalc.js"></script>
 
-<script src="js/page/display.js"></script>
+<script src="../../js/page/display.js"></script>
 
 </body>
 </html>

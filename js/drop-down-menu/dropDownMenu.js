@@ -13,9 +13,9 @@ body.addEventListener('click', (e)=> {
     
     if(!dropDownLink && !dropDownBtn) return
     
-    const targeBtn = dropDownLink ? dropDownLink : dropDownBtn;
-    if(targeBtn.parentElement.dataset.dropdown == 'node') {
-        const node = targeBtn.parentElement
+    const targetBtn = dropDownLink ? dropDownLink : dropDownBtn;
+    if(targetBtn.parentElement.dataset.dropdown == 'node') {
+        const node = targetBtn.parentElement
         // on arrow
         for (const child of node.children) {
             if(child.dataset.dropdown == 'btn')

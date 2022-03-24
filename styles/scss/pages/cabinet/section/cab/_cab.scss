@@ -1,8 +1,10 @@
+@use '../../../../common/utils';
+
 .cab {
     // buttons
     &__btns {
         margin-bottom: 45px;
-        @media screen and(max-width: $cab-form-breakpoint-1) {
+        @media screen and(max-width: utils.$var-cab-form-breakpoint-1) {
             -webkit-box-pack: center;
                 -ms-flex-pack: center;
                     justify-content: center;
@@ -19,10 +21,10 @@
             display: block !important;
             margin: 0 auto 20px auto;
             font-size: 29px;
-            color: $btn-bgcolor;
+            color: utils.$var-btn-bgcolor;
         }
         &-text {
-            @include font(500, 14px, 21px, $btn-bgcolor);
+            @include utils.mix-font(500, 14px, 21px, utils.$var-btn-bgcolor);
         }
         &-icon,
         &-text {
@@ -33,20 +35,17 @@
     }
     &__btn:not(:last-child) {
         margin-right: 100px;
-        @media screen and(max-width: $cab-form-breakpoint-2) {
+        @media screen and(max-width: utils.$var-cab-form-breakpoint-2) {
             margin-right: 15px;
         }
     }
     &__btn.tab__btn_active {
-        background: $btn-bgcolor;
+        background: utils.$var-btn-bgcolor;
     }
     &__btn.tab__btn_active &__btn-icon,
     &__btn.tab__btn_active &__btn-text {
-        color: $btn-text-color;
+        color: utils.$var-btn-text-color;
     }
-    // // buttons
-    
-    // form
     &__info {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -57,7 +56,7 @@
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
         gap: 0 30px;
-        @media screen and(max-width: $cab-form-breakpoint-1) {
+        @media screen and(max-width: utils.$var-cab-form-breakpoint-1) {
             gap: 50px 30px;
             -webkit-box-pack: center;
                 -ms-flex-pack: center;
@@ -66,49 +65,35 @@
     }
     &__person {
         &-label {
-            @include font(400, 19px, 34px, $text-color);
+            @include utils.mix-font(400, 19px, 34px, utils.$var-text-color);
         }
         &-input {
             height: 51.61px;
             padding-left: 24px;
             margin-top: 11px;
-            border: 1.61275px solid $form-border-color;
+            border: 1.61275px solid utils.$var-form-border-color;
             border-radius: 8.06373px;
         }
         &-input::-webkit-input-placeholder {
             vertical-align: middle;
-            @include font(400, 16px, 45px, $placeholder-txt-color);
+            @include utils.mix-font(400, 16px, 45px, utils.$var-placeholder-txt-color);
         }
         &-input::-moz-placeholder {
             vertical-align: middle;
-            @include font(400, 16px, 45px, $placeholder-txt-color);
+            @include utils.mix-font(400, 16px, 45px, utils.$var-placeholder-txt-color);
         }
         &-input:-ms-input-placeholder {
             vertical-align: middle;
-            @include font(400, 16px, 45px, $placeholder-txt-color);
-        }
-        &-input::-ms-input-placeholder {
-            vertical-align: middle;
-            @include font(400, 16px, 45px, $placeholder-txt-color);
+            @include utils.mix-font(400, 16px, 45px, utils.$var-placeholder-txt-color);
         }
         &-input::placeholder {
             vertical-align: middle;
-            @include font(400, 16px, 45px, $placeholder-txt-color);
+            @include utils.mix-font(400, 16px, 45px, utils.$var-placeholder-txt-color);
         }
-        &-input::-moz-placeholder {
-            vertical-align: middle;
-            @include font(400, 16px, 45px, $placeholder-txt-color);
-        }
-        &-input::-webkit-input-placeholder {
-            vertical-align: middle;
-            @include font(400, 16px, 45px, $placeholder-txt-color);
-        }
-        
-        
     }
     &__title {
-        @include font(500, 28px, 25px, $text-color);
-        @media screen and(max-width: $cab-form-breakpoint-1) {
+        @include utils.mix-font(500, 28px, 25px, utils.$var-text-color);
+        @media screen and(max-width: utils.$var-cab-form-breakpoint-1) {
             text-align: center;
         }
         &-person {
@@ -122,7 +107,7 @@
             display: -ms-flexbox;
             display: flex;
             margin-bottom: 19px;
-            @media screen and(max-width: $cab-form-breakpoint-2) {
+            @media screen and(max-width: utils.$var-cab-form-breakpoint-2) {
                 -webkit-box-orient: vertical;
                 -webkit-box-direction: normal;
                     -ms-flex-flow: column;
@@ -132,7 +117,7 @@
         &-input {
             width: 179px;
             margin-right: 48px;
-            @media screen and(max-width: $cab-form-breakpoint-2) {
+            @media screen and(max-width: utils.$var-cab-form-breakpoint-2) {
                 width: auto;
                 margin-right: 0;
                 margin-bottom: 19px;
@@ -142,7 +127,7 @@
     &__surname {
         &-input {
             width: 230px;
-            @media screen and(max-width: $cab-form-breakpoint-2) {
+            @media screen and(max-width: utils.$var-cab-form-breakpoint-2) {
                 width: auto;
             }
         }
@@ -150,42 +135,33 @@
     &__patron { 
         &-input {
             width: 260px;
-            @media screen and(max-width: $cab-form-breakpoint-2) {
+            @media screen and(max-width: utils.$var-cab-form-breakpoint-2) {
                 width: auto;
             }
         }
     }
     &__other {
         &-label {
-            @include font(400, 17px, 30px, $text-color);
+            @include utils.mix-font(400, 17px, 30px, utils.$var-text-color);
             margin-bottom: 10px;
         }
         &-input {
             height: 46px;
             padding-left: 21px;
-            border: 1.43333px solid $form-border-color;
+            border: 1.43333px solid utils.$var-form-border-color;
             border-radius: 7.16667px;
         }
         &-input::-webkit-input-placeholder {
-            @include font(400, 14px, 42px, $placeholder-txt-color);
+            @include utils.mix-font(400, 14px, 42px, utils.$var-placeholder-txt-color);
         }
         &-input::-moz-placeholder {
-            @include font(400, 14px, 42px, $placeholder-txt-color);
+            @include utils.mix-font(400, 14px, 42px, utils.$var-placeholder-txt-color);
         }
         &-input:-ms-input-placeholder {
-            @include font(400, 14px, 42px, $placeholder-txt-color);
-        }
-        &-input::-ms-input-placeholder {
-            @include font(400, 14px, 42px, $placeholder-txt-color);
+            @include utils.mix-font(400, 14px, 42px, utils.$var-placeholder-txt-color);
         }
         &-input::placeholder {
-            @include font(400, 14px, 42px, $placeholder-txt-color);
-        }
-        &-input::-moz-placeholder {
-            @include font(400, 14px, 42px, $placeholder-txt-color);
-        }
-        &-input::-webkit-input-placeholder {
-            @include font(400, 14px, 42px, $placeholder-txt-color);
+            @include utils.mix-font(400, 14px, 42px, utils.$var-placeholder-txt-color);
         }
     }
     &__contact {
@@ -194,14 +170,14 @@
             margin-bottom: 30px;
         }
         &-subtitle {
-            @include font(500, 18px, 20px, $text-color);
+            @include utils.mix-font(500, 18px, 20px, utils.$var-text-color);
         }
     }
     &__phone {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        @media screen and(max-width: $cab-form-breakpoint-2) {
+        @media screen and(max-width: utils.$var-cab-form-breakpoint-2) {
             -webkit-box-orient: vertical;
             -webkit-box-direction: normal;
                 -ms-flex-flow: column;
@@ -210,7 +186,7 @@
         &-input {
             width: 215px;
             margin-right: 29px;
-            @media screen and(max-width: $cab-form-breakpoint-2) {
+            @media screen and(max-width: utils.$var-cab-form-breakpoint-2) {
                 width: auto;
                 margin-right: 0;
                 margin-bottom: 19px;
@@ -218,7 +194,7 @@
         }
         &-add-input {
             width: 215px;
-            @media screen and(max-width: $cab-form-breakpoint-2) {
+            @media screen and(max-width: utils.$var-cab-form-breakpoint-2) {
                 width: auto;
             }
         }
@@ -234,12 +210,12 @@
     &__save {
         padding: 13px 30px;
         margin-top: 36px;
-        @include font(500, 12px, 18px, $btn-text-color);
+        @include utils.mix-font(500, 12px, 18px, utils.$var-btn-text-color);
     }
     // // form
     &__history {
         padding: 24px;
-        background: $widget-bg;
+        background: utils.$var-widget-bg;
         -webkit-box-shadow: 0px 0px 16.2899px rgba(0, 0, 0, 0.07);
                 box-shadow: 0px 0px 16.2899px rgba(0, 0, 0, 0.07);
         border-radius: 13.0319px;
@@ -253,34 +229,31 @@
             -ms-flex-wrap: wrap;
                 flex-wrap: wrap;
             gap: 0 35px;
-            @media screen and(max-width: $cab-history-breakpoint-1) {
+            @media screen and(max-width: utils.$var-cab-history-breakpoint-1) {
                 gap: 35px 35px;
             }
-        }
-        &-info {
-
         }
         &-field:not(:last-child) {
             margin-bottom: 17px;
         }
         &-name {
             margin-right: 8px;
-            @media screen and(max-width: $cab-history-breakpoint-3) {
+            @media screen and(max-width: utils.$var-cab-history-breakpoint-3) {
                 display: block;
             }
         }
         &-name,
         &-item {
-            @include font(500, 19px, 29px, $text-color);
+            @include utils.mix-font(500, 19px, 29px, utils.$var-text-color);
         }
         &-item {
             font-weight: 400;
         }
         &_color {
-            color: $btn-bgcolor;
+            color: utils.$var-btn-bgcolor;
         }
         // &_cancel {
-        //     color: $popup-wrong-message;
+        //     color: utils.$var-popup-wrong-message;
         // }
     }
     &__history:not(:last-child) {
@@ -290,14 +263,14 @@
     &__history.cab__history_cancel &__history-row 
     &__history-info &__history-field:last-child 
     &__history-item{
-        color: $popup-wrong-message;
+        color: utils.$var-popup-wrong-message;
     }
     &__history.cab__history_cancel &__history-row &__list-wrap &__repeat {
         display: none;
     }
     // adding order status canseled. Just add the class .cab__history_cancel to cab__history 
     &__list {
-        @media screen and(max-width: $cab-history-breakpoint-2) {
+        @media screen and(max-width: utils.$var-cab-history-breakpoint-2) {
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
@@ -309,20 +282,20 @@
                 -ms-flex-pack: justify;
                     justify-content: space-between;
         }
-        @media screen and(max-width: $cab-history-breakpoint-4) {
+        @media screen and(max-width: utils.$var-cab-history-breakpoint-4) {
             -webkit-box-pack: center;
                 -ms-flex-pack: center;
                     justify-content: center;
         }
         &-wrap {
-            @media screen and(max-width: $cab-history-breakpoint-1) {
+            @media screen and(max-width: utils.$var-cab-history-breakpoint-1) {
                 -ms-flex-preferred-size: 100%;
                     flex-basis: 100%;
             }
         }
         // padding: 0 10px 0 20px;
         &-node {
-            @media screen and(max-width: $cab-history-breakpoint-2) {
+            @media screen and(max-width: utils.$var-cab-history-breakpoint-2) {
                 -webkit-box-orient: vertical;
                 -webkit-box-direction: normal;
                     -ms-flex-flow: column;
@@ -339,34 +312,34 @@
             width: 79px;
             height: 58px;
             margin-right: 25px;
-            @media screen and(max-width: $cab-history-breakpoint-2) {
+            @media screen and(max-width: utils.$var-cab-history-breakpoint-2) {
                 margin: 0;
             }
         }
         &-name {
-            @media screen and(max-width: $cab-history-breakpoint-2) {
+            @media screen and(max-width: utils.$var-cab-history-breakpoint-2) {
                 margin: 20px 0 20px 0;
             }
             margin-right: 65px;
-            @include font(500, 16px, 15px, $text-color);
+            @include utils.mix-font(500, 16px, 15px, utils.$var-text-color);
         }
     }
     &__display {
         width: 113.78px;
         height: 41.46px;
         margin-right: 45px;
-        background: $display-bg;
-        border: 0.882021px solid $display-border-color;
+        background: utils.$var-display-bg;
+        border: 0.882021px solid utils.$var-display-border-color;
         border-radius: 8.82021px;
-        @media screen and(max-width: $cab-history-breakpoint-2) {
+        @media screen and(max-width: utils.$var-cab-history-breakpoint-2) {
             margin: 0 0 20px 0;
         }
         &-item {
-            @include font(400, 12px, 19px, $text-color);
+            @include utils.mix-font(400, 12px, 19px, utils.$var-text-color);
         }
     }
     &__price {
-        @include font(500, 20px, 17px, $text-color);
+        @include utils.mix-font(500, 20px, 17px, utils.$var-text-color);
     }
     &__repeat {
         display: block;
@@ -375,10 +348,10 @@
         text-decoration: none;
         &-text {
             margin-right: 8px;
-            @include font(500, 16px, 29px, $btn-bgcolor);
+            @include utils.mix-font(500, 16px, 29px, utils.$var-btn-bgcolor);
         }
         &-icon {
-            color: $btn-bgcolor;
+            color: utils.$var-btn-bgcolor;
         }
     }
 }

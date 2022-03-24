@@ -1,0 +1,288 @@
+@use '../../../../common/utils';
+
+.regis {
+    &__conteiner {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 47px;
+        @media screen and(max-width: utils.$var-regis-breakpoint-1) {
+           justify-content: center;
+        }
+    }
+    &__unit1 {
+        @media screen and(max-width: utils.$var-regis-breakpoint-1) {
+            margin-bottom: 40px;
+        }
+        @media screen and(max-width: utils.$var-regis-breakpoint-2) {
+            width: 100%;
+        }
+    }
+    &__title {
+        margin-bottom: 25px;
+        @include utils.mix-font(500, 28px, 50px, utils.$var-title-color);
+    }
+    &__subtitle {
+        margin-bottom: 16px;
+        @include utils.mix-font(500, 26px, 20px, utils.$var-text-color);
+    }
+    &__list {
+        width: min-content;
+        @media screen and(max-width: utils.$var-regis-breakpoint-2) {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            gap: 20px;
+            justify-content: space-between;
+        }  
+        &-node {
+            padding: 15px 0;
+            @media screen and(max-width: utils.$var-regis-breakpoint-2) {
+                position: relative;
+                flex-flow: column;
+                border-top: 1px solid #EBEBEB !important;
+                border-bottom: 1px solid #EBEBEB;
+            }    
+        }
+        &-btn {
+            width: 17px;
+            height: 17px;
+            margin-right: 11px;
+            @media screen and(max-width: utils.$var-regis-breakpoint-2) {
+                position: absolute;
+                top: 3px;
+                right: -9px;
+            }    
+        }
+        &-icon {
+            width: 78px;
+            height: 56px;
+            margin-right: 25px;
+            border-radius: 3.5px;
+            background: utils.$var-btn-bgcolor;
+            @media screen and(max-width: utils.$var-regis-breakpoint-2) {
+                margin: 20px 0 0 0;
+                width: 90px;
+                height: 67px;
+            } 
+        }
+        &-name {
+            margin-right: 64px;
+            @include utils.mix-font(500, 16px, 15px, utils.$var-text-color);
+            @media screen and(max-width: utils.$var-regis-breakpoint-2) {
+                margin: 20px 0 0 0;
+            } 
+        }
+    }
+    &__display {
+        width: 112px;
+        height: 40px;
+        margin-right: 45px;
+        @media screen and(max-width: utils.$var-regis-breakpoint-2) {
+            margin: 20px 0 0 0;
+        }
+        &::before {
+            position: absolute;
+            right: 0;
+            bottom: -15px;
+            content: "Ед. изм.: упаковка";
+            font-weight: 400;
+            font-style: normal;
+            font-size: 9px;
+            text-transform: none;
+            line-height: 13px;
+            color: #C6C6C6;
+        }
+        &-amount,
+        &-units {
+            @include utils.mix-font(400, 12px, 18px, utils.$var-text-color);
+        }
+    }
+    &__price {
+        @media screen and(max-width: utils.$var-regis-breakpoint-2) {
+            margin: 35px 0 0 0;
+        }
+    }
+    &__price {
+        &-item,
+        &-currency {
+            @include utils.mix-font(500, 19px, 17px, utils.$var-text-color);
+        }
+    }
+    &__unit1-wrap2 {
+        margin-top: 60px;
+    }
+    &__btns {
+        margin-bottom: 10px;
+        @media screen and(max-width: utils.$var-regis-breakpoint-1) {
+            justify-content: center;
+        }
+    }
+    &__deliv-btn {
+        margin-right: 20px;
+    }
+    &__deliv-btn,
+    &__pickup-btn {
+        background: transparent;
+        border: none;
+        @include utils.mix-font(500, 14px, 11px, utils.$var-tab-btn-text-color);
+        cursor: pointer;
+    }
+    &__deliv-btn.tab__btn_active,
+    &__pickup-btn.tab__btn_active {
+        padding: 10px 24px;
+        border-radius: 10px;
+        background: utils.$var-btn-bgcolor;
+        @include utils.mix-font(500, 14px, 11px, utils.$var-btn-text-color);
+    }
+    &__scoreboard {
+        display: flex;
+        justify-content: space-between;
+        width: 466px;
+        padding: 34px 30px 40px 30px;
+        background: utils.$var-popup-bg;
+        box-shadow: 0px 0px 28.7827px rgba(0, 0, 0, 0.06);
+        border-radius: 9.59423px;
+        @media screen and(max-width: utils.$var-regis-breakpoint-1) {
+            margin: 0 auto;
+        }
+        @media screen and(max-width: utils.$var-regis-breakpoint-2) {
+            width: 100%;
+        }
+        @media screen and(max-width: utils.$var-regis-breakpoint-3) {
+            flex-flow: column;
+        }  
+    }
+    &__union {
+        display: flex;
+        flex-flow: column;
+        width: 54%;
+        @media screen and(max-width: utils.$var-regis-breakpoint-3) {
+            width: 100%;;
+        }
+    }
+    &__unit2 {
+        display: flex;
+        align-items: flex-end;
+    }
+    &__deliv,
+    &__pickup {
+        margin-top: 16px;
+    }
+    &__total,
+    &__deliv,
+    &__pickup {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__total-name,
+    &__total-sum,
+    &__deliv-name,
+    &__deliv-total,
+    &__pickup-name,
+    &__pickup-total {
+        @include utils.mix-font(500, 13px, 20px, utils.$var-text-color);
+    }
+    &__pickup-total {
+        color: utils.$var-btn-bgcolor;
+    }
+    &__pay {
+        @media screen and(max-width: utils.$var-regis-breakpoint-3) {
+            margin-top: 20px;;
+        } 
+        &-name {
+            @include utils.mix-font(500, 15px, 23px, utils.$var-text-color);
+        }
+        &-total {
+            margin-top: 5px;
+            @include utils.mix-font(500, 19px, 24px, utils.$var-text-color);
+        }
+    }
+    // forms
+    &__delivery {
+        display: flex;
+        flex-flow: column;
+        &-wrap:not(:last-child) {
+            margin-bottom: 15px;
+        }
+        &-wrap:last-child {
+            margin-bottom: 25px;
+        }
+        &-label {
+            margin-bottom: 5px;
+            @include utils.mix-font(400, 15px, 24px, utils.$var-text-color);
+            &_hide {
+                @include utils.mix-font(500, 17px, 24px, utils.$var-btn-bgcolor);
+            }
+            &_show-hide {
+                cursor: pointer;
+            }
+        }
+        &-input {
+            height: 64.02px;
+            padding-left: 30px;
+            border: 1.1194px solid utils.$var-form-border-color;
+            &_hide {
+                display: none;
+            }
+        }
+        &-input::placeholder {
+            color: utils.$var-popup-text-color;
+        }
+        &-btn {
+            margin-top: 11px;
+        }
+    }
+    &__select {
+        padding-left: 30px;
+        @include utils.mix-font(400, 16px, 24px, utils.$var-popup-text-color);
+        &-wrap {
+            position: relative;
+            height: 64.02px;
+            border-radius: 7.11356px;
+            border: 1.1194px solid utils.$var-form-border-color;
+        }
+        &-wrap::before {
+            position: absolute;
+            @extend %center-xy-flex;
+            content: '\f078';
+            width: 27px;
+            height: 27px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-family: 'FontAwesome';
+            color: utils.$var-btn-bgcolor;
+        }
+    }
+    &__order-btn {
+        width: 183.58px;
+        height: 58.21px;
+        border-radius: 5.59701px;
+        @include utils.mix-font(500, 16px, 24px, utils.$var-btn-text-color);
+    }
+    &__pickup {
+        &-form {
+            display: flex;
+            flex-flow: column;
+        }
+        &-wrap {
+            margin-bottom: 15px;
+        }
+        &-label {
+            margin-bottom: 5px;
+            @include utils.mix-font(400, 15px, 24px, utils.$var-text-color);
+        }
+        &-input {
+            padding-left: 30px;
+            height: 64.02px;
+            border-radius: 7.11356px;
+            border: 1.1194px solid utils.$var-form-border-color;
+        }
+        &-input::placeholder {
+            color: utils.$var-popup-text-color;
+        }
+        &-select-wrap {
+            margin-bottom: 25px;
+        }
+    }
+    // // forms
+}
