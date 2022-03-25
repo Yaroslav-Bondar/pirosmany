@@ -136,7 +136,7 @@ body {
         }
     }
 }
-[data-dropdown='menu'] {
+li[data-dropdown='menu'] {
     display: none;
 }
 .menu__dropdown_active {
