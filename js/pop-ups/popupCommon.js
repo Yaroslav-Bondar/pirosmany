@@ -31,3 +31,38 @@ class Popup {
     }
 }
 // // object for render popup
+
+// show a popup window
+body.addEventListener('click', e => {
+    // console.log(e.target);
+    const popupBtn = e.target.closest('[data-modal="btn"]');
+    if(!popupBtn) return;
+    // console.log(target);
+    const id = popupBtn.id;
+    // console.log(id);
+    let html;
+    switch(id) {
+        case 'sign-in-btn': 
+            html = POPUP_SIGNIN_HTML;
+            break;
+        case 'subscribe-btn':
+        case 'subscribe-btn-1':
+        case 'subscribe-btn-2':
+            html = POPUP_SUBSCRIBE_HTML;
+            brake;
+        case :
+            html = POPUP_RESERV_HTML;        
+            break;
+    }
+    // console.log(POPUP_SIGNIN_HTML);
+    console.log(html);
+    body.insertAdjacentHTML('afterbegin', html);
+});
+
+// close a popup window
+body.addEventListener('click', e => {
+    const popupCloseBtn = e.target.closest('[data-modal="close"]');
+    if(!popupCloseBtn) return;
+    const popupWindow = popupCloseBtn.closest('[data-modal="window"]');
+    popupWindow.remove();
+});

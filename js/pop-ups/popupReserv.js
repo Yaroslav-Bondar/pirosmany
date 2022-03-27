@@ -1,6 +1,7 @@
-let popupReservHtml = `
+const POPUP_RESERV_HTML = `
+<div class="reserv popup" data-modal="window">
     <form action="#" class="reserv__form popup__form" method="POST">
-        <button class="reserv__close popup__close">
+        <button class="reserv__close popup__close" data-modal="close">
             <i class="fas fa-times"></i>
         </button>
         <div class="reserv__title popup__title">
@@ -27,11 +28,11 @@ let popupReservHtml = `
             <button class="reserv__btn btn" type="submit">Забронировать</button>
         </div>
     </form>
-`
-let tableBtn = document.querySelectorAll('.table__btn_pop-up')
-for (const el of tableBtn) {
-    el.addEventListener('click', ()=> {
-        let reservPopup = new Popup('reserv popup', popupReservHtml, 'reserv-pop-up') // object prototype from popupCommon.js
-        reservPopup.render()
-    })
-} 
+</div>`
+// let tableBtn = document.querySelectorAll('.table__btn_pop-up')
+// for (const el of tableBtn) {
+//     el.addEventListener('click', ()=> {
+//         let reservPopup = new Popup('reserv popup', popupReservHtml, 'reserv-pop-up') // object prototype from popupCommon.js
+//         reservPopup.render()
+//     })
+// } 

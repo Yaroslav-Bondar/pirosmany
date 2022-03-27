@@ -1,6 +1,7 @@
-let popupSubscribeHtml = `
+const POPUP_SUBSCRIBE_HTML = `
+<div class="subscribe popup" data-modal="window">
     <form action="#" class="subscribe__form popup__form" method="POST">
-        <button class="popup__close">
+        <button class="popup__close" data-modal="close">
             <i class="fas fa-times"></i>
         </button>
         <div class="subscribe__icon popup__icon">
@@ -18,11 +19,12 @@ let popupSubscribeHtml = `
         </div>
         <button class="subscribe__btn btn" type="submit">Отправить</button>
     </form>
-`
-let slider1Btn = document.querySelectorAll('.slider1__btn')
-for (const el of slider1Btn) {
-    el.addEventListener('click', ()=> {
-        let subscribePopup = new Popup('subscribe popup', popupSubscribeHtml, 'subscribe-pop-up') // object prototype from popupCommon.js
-        subscribePopup.render() 
-    })
-}
+</div>`
+
+// let slider1Btn = document.querySelectorAll('.slider1__btn')
+// for (const el of slider1Btn) {
+//     el.addEventListener('click', ()=> {
+//         let subscribePopup = new Popup('subscribe popup', popupSubscribeHtml, 'subscribe-pop-up') // object prototype from popupCommon.js
+//         subscribePopup.render() 
+//     })
+// }
