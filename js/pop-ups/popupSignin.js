@@ -2,10 +2,8 @@ const POPUP_SIGNIN_HTML = `
     <div class="signin popup" data-modal="window">
         <form action="#" class="signin__form popup__form" method="POST">
             <button class="signin__close popup__close" data-modal="close">
-                <i class="fas fa-times"></i>
             </button>
             <div class="signin__icon popup__icon">
-                <i class="far fa-user"></i>
             </div>
             <div class="signin__title popup__title">
                 Войти в личный кабинет

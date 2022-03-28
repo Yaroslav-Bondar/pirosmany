@@ -1,12 +1,8 @@
 const POPUP_SUBSCRIBE_HTML = `
 <div class="subscribe popup" data-modal="window">
     <form action="#" class="subscribe__form popup__form" method="POST">
-        <button class="popup__close" data-modal="close">
-            <i class="fas fa-times"></i>
-        </button>
-        <div class="subscribe__icon popup__icon">
-            <i class="fab fa-mailchimp"></i>
-        </div>
+        <button class="popup__close" data-modal="close"></button>
+        <div class="subscribe__icon popup__icon"></div>
         <div class="subscribe__title popup__title">
             Подпишитесь на нашу рассылку и получите промокод на 500 RUB!
         </div>

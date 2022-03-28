@@ -1,12 +1,8 @@
 const POPUP_CHECKIN_HTML = `
     <div class="checkin popup" data-modal="window">
         <form action="#" class="checkin__form popup__form" method="POST">
-            <button class="checkin__close popup__close" data-modal="close">
-                <i class="fas fa-times"></i>
-            </button>
-            <div class="checkin__icon popup__icon">
-                <i class="far fa-user"></i>
-            </div>
+            <button class="checkin__close popup__close" data-modal="close"></button>
+            <div class="checkin__icon popup__icon"></div>
             <div class="checkin__title popup__title">
                 Зарегистрироваться
             </div>

@@ -1505,53 +1505,284 @@ body {
   height: 13px;
 }
 
-.support {
-  padding: 47px 0 249px 0;
+.aboutprod {
+  padding: 60px 0 0 0;
+  background: rgba(0, 0, 0, 0);
 }
-.support__title {
-  margin-bottom: 45px;
+.aboutprod__unit1 {
+  margin-bottom: 60px;
+}
+.aboutprod__unit1, .aboutprod__unit2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.aboutprod__img {
+  width: 63%;
+  height: 426px;
+}
+@media screen and (max-width: 930px) {
+  .aboutprod__img {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
+.aboutprod__img-item {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+@media screen and (max-width: 930px) {
+  .aboutprod__buy {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 350px) {
+  .aboutprod__buy-btn {
+    width: 150px;
+  }
+}
+.aboutprod__tab {
+  width: 63%;
+}
+@media screen and (max-width: 930px) {
+  .aboutprod__tab {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
+.aboutprod__tab-btn {
+  padding: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: color 0.2s;
+  -o-transition: color 0.2s;
+  transition: color 0.2s;
   font-weight: 500;
   font-style: normal;
   font-size: 28px;
   text-transform: none;
-  line-height: 33px;
+  line-height: 19px;
+  color: #828282;
+}
+@media screen and (max-width: 464px) {
+  .aboutprod__tab-btn {
+    padding: 3px;
+    font-size: calc(20px + 28 * (100vw - 320px) / 677);
+  }
+}
+.aboutprod__tab-btn:first-child {
+  padding-left: 0;
+}
+.aboutprod__tab-btn.tab__btn_active {
+  color: #00AC4E;
+}
+.aboutprod__tab-btn:not(.tab__btn_active):hover {
+  color: #00d64e;
+}
+.aboutprod__btns {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.aboutprod__descr-title {
+  margin-bottom: 22px;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 21px;
+  text-transform: none;
+  line-height: 19px;
   color: #000000;
-  font-family: "TT Hoves";
 }
-.support__text {
-  display: block;
-  resize: none;
-  width: 672px;
-  height: 174px;
-  padding: 19px 20px;
-  background: #F9F9F9;
+.aboutprod__descr-text {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  text-transform: none;
+  line-height: 19px;
+  color: #828282;
+}
+.aboutprod__descr-text p:not(:last-child) {
+  margin-bottom: 25px;
+}
+.aboutprod__param ul li {
+  list-style: none;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18px;
+  text-transform: none;
+  line-height: 22px;
+  color: #828282;
+}
+.aboutprod__param ul li:not(:last-child) {
+  margin-bottom: 20px;
+}
+.aboutprod__reviews-title {
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 21px;
+  text-transform: none;
+  line-height: 19px;
+  color: #000000;
+}
+.aboutprod__slide {
+  padding: 13px 16px;
+  border-radius: 11.1818px;
+  background: #eeeeed;
+}
+.aboutprod__ava {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.aboutprod__ava-wrap {
+  width: 50px;
+  height: 50px;
+  margin-right: 5px;
+  border-radius: 50%;
+  background-color: forestgreen;
+}
+.aboutprod__ava-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.aboutprod__user-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.aboutprod__user-name {
+  margin-right: 10px;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  text-transform: none;
+  line-height: 16px;
+  color: #000000;
+}
+.aboutprod__user-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: forestgreen;
+}
+.aboutprod__rating {
+  margin: 5px 0 0 0;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-orient: initial;
+  -webkit-box-direction: initial;
+  -ms-flex-direction: initial;
+  flex-direction: initial;
+}
+.aboutprod__star-icon {
+  font-size: 11px;
+  color: #ccc;
+}
+.aboutprod__star-icon:not(:last-child) {
+  margin-right: 3px;
+}
+.aboutprod__soc {
+  margin-top: 3px;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  text-transform: none;
+  line-height: 14px;
+  color: #2D9CDB;
+}
+.aboutprod__review {
+  margin-top: 6px;
+}
+.aboutprod__review p {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  text-transform: none;
+  line-height: 14px;
+  color: #000000;
+}
+.aboutprod__btn-more {
   border: none;
-  border-radius: 5px;
+  background: transparent;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 11px;
+  text-transform: none;
+  line-height: 13px;
+  color: #00AC4E;
+  text-decoration: underline;
+  cursor: pointer;
 }
-@media screen and (max-width: 710px) {
-  .support__text {
+.aboutprod__slaider-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+.aboutprod__btn-next {
+  display: inline-block;
+  margin-right: 5px;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 12px;
+  text-transform: none;
+  line-height: 14px;
+  color: #00AC4E;
+  cursor: pointer;
+}
+.aboutprod__btn-prev::before, .aboutprod__btn-next::after {
+  font-family: "FontAwesome";
+  color: #00AC4E;
+  cursor: pointer;
+}
+.aboutprod__btn-prev::before {
+  content: "\f060";
+  margin-right: 40px;
+}
+.aboutprod__btn-next::after {
+  content: "\f061";
+  margin-left: 5px;
+}
+.aboutprod__bonus {
+  width: 311.75px;
+}
+@media screen and (max-width: 930px) {
+  .aboutprod__bonus {
     width: 100%;
   }
 }
-.support__text, .support__text::placeholder, .support__text::-moz-placeholder, .support__text::-webkit-input-placeholder {
-  font-family: "TT Hoves";
-  font-weight: 400;
-  font-style: normal;
-  font-size: 20px;
-  text-transform: none;
-  line-height: 21px;
-  color: #BDBDBD;
-}
-.support__btn {
-  margin-top: 45px;
-  padding: 18px 46px;
-  border-radius: 7.8169px;
+.aboutprod__review-btn {
+  padding: 12px 17px;
+  margin-top: 30px;
   font-weight: 500;
   font-style: normal;
-  font-size: 19px;
+  font-size: 14px;
   text-transform: none;
-  line-height: 24px;
+  line-height: 16px;
   color: #FFFFFF;
+}
+.aboutprod__basket-btn {
+  height: 39.76px;
+  width: 42px;
 }
 
 .footer {

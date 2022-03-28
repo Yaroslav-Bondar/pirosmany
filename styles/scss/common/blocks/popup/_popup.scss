@@ -35,23 +35,15 @@
         right: 20px;
         width: 22.19px;
         height: 22.19px;
-        background: transparent;
+        background: center no-repeat url('../../../../img/icons/plus.svg');
         border: none;
         cursor: pointer;
-        & > i {
-            font-size: 20px;
-            color: utils.$var-btn-bgcolor; 
-        }
     }
     &__icon {
         @extend %center-xy-flex;
         width: 34px;
         height: 34px;
         margin: 0 0 14px 0;
-        & > i {
-            font-size: 22px;
-            color: utils.$var-popup-text-color;
-        }
     }
     &__title {
         @include utils.mix-font(500, 17px, 22px, #000000);
@@ -107,12 +99,7 @@
         color: utils.$var-btn-bgcolor;
     } 
     &__wrap::before {
-        display: block;
-        font-family: "FontAwesome";
-        position: absolute;
-        top: 30%;
-        padding-left: 15px;
-        color: utils.$var-popup-text-color;
+        content: '';
     }
     &__wrap:hover::before {
         color: utils.$var-btn-bgcolor;
@@ -185,11 +172,23 @@
             padding: 40px 25px 20px 25px;
         }
     }
+    &__icon {
+        background: center/cover no-repeat url('../../../../img/icons/person.svg');
+    }
+    &__wrap:last-child::before,
     &__wrap:first-child::before {
-        content: '\f879';
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        width: 13px;
+        height: 13px;
+        transform: translateY(-50%);
+    }
+    &__wrap:first-child::before {
+        background: center/cover no-repeat url('../../../../img/icons/phone.svg');
     }
     &__wrap:last-child::before {
-        content: '\f084';
+        background: center/cover no-repeat url('../../../../img/icons/key.svg');
     }
     &__link {
         text-align: center;
@@ -217,9 +216,8 @@
 
 // subscribe pop-up modal window
 .subscribe {
-    &__icon i {
-        font-size: 25px;
-        color: utils.$var-btn-bgcolor;
+    &__icon {
+        background: center/contain no-repeat url('../../../../img/icons/document_case_green.svg');
     }
     &__form {
         width: 455px;
@@ -233,7 +231,13 @@
         @include utils.mix-font(500, 22px, 28px, #000000);
     }
     &__wrap::before {
-        content: '\f658';
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        width: 17px;
+        height: 14px;
+        transform: translateY(-50%);
+        background: center/contain no-repeat url('../../../../img/icons/document_case_grey.svg');
     }
     &__btn {
         width: 181.76px;
@@ -259,11 +263,21 @@
         margin: 38.36px auto 0 auto;
         @include utils.mix-font(500, 13px, 20px, utils.$var-btn-text-color);
     }
+    &__wrap:first-child::before,
+    &__wrap:not(:first-child)::before {
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        width: 11px;
+        height: 11px;
+        transform: translateY(-50%);
+    }
     &__wrap:first-child::before {
-        content: '\f879';
+        background: center/contain no-repeat url('../../../../img/icons/phone.svg');
+
     }
     &__wrap:not(:first-child)::before {
-        content: '\f084';
+        background: center/contain no-repeat url('../../../../img/icons/key.svg');
     }
 }
 // // checkin pop-up modal window
@@ -332,11 +346,13 @@
     }
     &__wrap:nth-child(4)::before {
         position: absolute;
+        top: 50%;
         right: 15px;
+        width: 15px;
+        height: 15px;
         padding: 0;
-        content: '\f073';
-        font-family: "FontAwesome";
-        color: utils.$var-popup-text-color;
+        transform: translateY(-50%);
+        background: center/contain no-repeat url('../../../../img/icons/calendar.svg');
         z-index: 1;
         transition: color .2s;
     }

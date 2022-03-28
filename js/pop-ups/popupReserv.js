@@ -2,7 +2,6 @@ const POPUP_RESERV_HTML = `
 <div class="reserv popup" data-modal="window">
     <form action="#" class="reserv__form popup__form" method="POST">
         <button class="reserv__close popup__close" data-modal="close">
-            <i class="fas fa-times"></i>
         </button>
         <div class="reserv__title popup__title">
             Бронирование стола
