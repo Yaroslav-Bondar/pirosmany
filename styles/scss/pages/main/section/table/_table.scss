@@ -1,6 +1,10 @@
 @use '../../../../common/utils';
 
 .table {
+    display: none;
+    @media screen and(max-width: utils.$var-table-breakpoint-1){
+        display: block;
+    }
     &__btn {
         height: 17px;
         width: 100%;

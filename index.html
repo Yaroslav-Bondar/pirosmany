@@ -410,6 +410,16 @@
             </div>
         </div>
     </header>
+    <section class="table">
+        <div class="wrapper">
+            <button id="reserv-btn" data-modal="btn" class="table__btn table__btn_pop-up">
+                <span class="table__btn-text">Забронировать стол</span>
+                <div class="table__btn-img">
+                    <img src="img/table/arrow.png" alt="arrow">
+                </div> 
+            </button>
+        </div>
+    </section>
     <section class="slider1">
         <div class="wrapper">
             <!-- Slider main container -->
@@ -549,14 +559,14 @@
                         <a href="#" class="footer__social-2">мы в instagram ></a>
                     </div>
                     <div class="footer__user enter">
-                        <button id="user_sign_in" class="enter__btn-in btn">
+                        <button id="sign-in-btn-2" class="enter__btn-in btn" data-modal="btn">
                             <span class="enter__img-wrap">
                                 <img class="img" src="img/footer/person_white.svg" alt="person">
                             </span>
                             <span class="enter__btn-in-text">войти</span>
                         </button>
                         <span class="enter__separator">/</span>
-                        <button id="checkin" class="enter__btn-checkin btn">
+                        <button id="check-in-btn" class="enter__btn-checkin btn" data-modal="btn">
                             <span class="enter__btn-checkin-text">регистрация</span>
                         </button>
                     </div>
@@ -602,9 +612,6 @@
     <script src="js/page/index/sliders.js"></script>
     <script src="js/page/index/video.js"></script>
     <script src="js/page/display.js"></script>
-
-    <script src="js/table/tableHtml.js"></script>
-    <script src="js/table/tableForIndex.js"></script>
     <!-- simple jQuery pagination plugin https://flaviusmatis.github.io/simplePagination.js -->
     <script src="js/plugins/pagination/jquery.simplePagination.js"></script>
     <script src="js/plugins/pagination/paginationInit.js"></script>
@@ -612,9 +619,9 @@
     <!-- // popup -->
     <script src="js/pop-ups/popupSignin.js"></script>
     <script src="js/pop-ups/popupSubscribe.js"></script>
+    <script src="js/pop-ups/popupReserv.js"></script>
+    <script src="js/pop-ups/popupCheckin.js"></script>
     <script src="js/pop-ups/popupCommon.js"></script>
-    <!-- <script src="js/pop-ups/popupReserv.js"></script> -->
-    <!-- <script src="js/pop-ups/popupCheckin.js"></script> -->
     <!-- // // popup -->
     <!-- Add font awesome icons-->
     <!-- <script src="https://kit.fontawesome.com/a8ec7c40c4.js" crossorigin="anonymous"></script> -->

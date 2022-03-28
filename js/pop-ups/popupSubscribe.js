@@ -20,11 +20,3 @@ const POPUP_SUBSCRIBE_HTML = `
         <button class="subscribe__btn btn" type="submit">Отправить</button>
     </form>
 </div>`
-
-// let slider1Btn = document.querySelectorAll('.slider1__btn')
-// for (const el of slider1Btn) {
-//     el.addEventListener('click', ()=> {
-//         let subscribePopup = new Popup('subscribe popup', popupSubscribeHtml, 'subscribe-pop-up') // object prototype from popupCommon.js
-//         subscribePopup.render() 
-//     })
-// }

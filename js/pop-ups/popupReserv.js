@@ -29,10 +29,3 @@ const POPUP_RESERV_HTML = `
         </div>
     </form>
 </div>`
-// let tableBtn = document.querySelectorAll('.table__btn_pop-up')
-// for (const el of tableBtn) {
-//     el.addEventListener('click', ()=> {
-//         let reservPopup = new Popup('reserv popup', popupReservHtml, 'reserv-pop-up') // object prototype from popupCommon.js
-//         reservPopup.render()
-//     })
-// } 

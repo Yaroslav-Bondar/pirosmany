@@ -1819,6 +1819,14 @@ body {
   transform: translateY(-50%) rotateZ(180deg);
 }
 
+.table {
+  display: none;
+}
+@media screen and (max-width: 900px) {
+  .table {
+    display: block;
+  }
+}
 .table__btn {
   height: 17px;
   width: 100%;
