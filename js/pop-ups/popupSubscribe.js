@@ -1,7 +1,7 @@
 const POPUP_SUBSCRIBE_HTML = `
-<div class="subscribe popup" data-modal="window">
+<div class="subscribe popup" data-modal-window="true">
     <form action="#" class="subscribe__form popup__form" method="POST">
-        <button class="popup__close" data-modal="close"></button>
+        <button class="popup__close" data-modal-close="true"></button>
         <div class="subscribe__icon popup__icon"></div>
         <div class="subscribe__title popup__title">
             Подпишитесь на нашу рассылку и получите промокод на 500 RUB!

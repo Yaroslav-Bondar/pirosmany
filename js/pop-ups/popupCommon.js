@@ -1,6 +1,6 @@
 // show a popup window
 body.addEventListener('click', e => {
-    const popupBtn = e.target.closest('[data-modal="btn"]');
+    const popupBtn = e.target.closest('[data-modal-open="true"]');
     if(!popupBtn) return;
     const id = popupBtn.id;
     let html;
@@ -18,6 +18,7 @@ body.addEventListener('click', e => {
             html = POPUP_RESERV_HTML;        
             break;
         case 'check-in-btn':
+        case 'check-in-btn-1':
             html = POPUP_CHECKIN_HTML;
             break;
     }
@@ -27,11 +28,11 @@ body.addEventListener('click', e => {
 
 // close a popup window
 body.addEventListener('click', e => {
-    const popupCloseBtn = e.target.closest('[data-modal="close"]');
+    const popupCloseBtn = e.target.closest('[data-modal-close="true"]');
     let popupWindow;
-    if(e.target.dataset.modal === 'window') popupWindow = e.target;    
+    if(e.target.dataset.modalWindow === 'true') popupWindow = e.target;    
     if(!popupCloseBtn && !popupWindow) return;
-    if (!popupWindow) popupWindow = popupCloseBtn.closest('[data-modal="window"]');
+    if (!popupWindow) popupWindow = popupCloseBtn.closest('[data-modal-window="true"]');
     popupWindow.remove();
     body.style.overflow = '';
 });

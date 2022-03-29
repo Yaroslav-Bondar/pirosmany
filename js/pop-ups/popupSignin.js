@@ -1,10 +1,8 @@
 const POPUP_SIGNIN_HTML = `
-    <div class="signin popup" data-modal="window">
+    <div class="signin popup" data-modal-window="true">
         <form action="#" class="signin__form popup__form" method="POST">
-            <button class="signin__close popup__close" data-modal="close">
-            </button>
-            <div class="signin__icon popup__icon">
-            </div>
+            <button class="signin__close popup__close" data-modal-close="true"></button>
+            <div class="signin__icon popup__icon"></div>
             <div class="signin__title popup__title">
                 Войти в личный кабинет
             </div>
@@ -24,7 +22,8 @@ const POPUP_SIGNIN_HTML = `
                 <button class="signin__btn btn" type="submit">Войти</button>
             </div>
             <div class="signin__register">
-                <span>Впервые у нас?</span><a href="#">Зарегистрироваться</a>
+                <span>Впервые у нас?</span>
+                <button id="check-in-btn-1" data-modal-close="true" data-modal-open="true" class="signin__checkin-btn">Зарегистрироваться<button>
             </div>
         </form>
     </div>`

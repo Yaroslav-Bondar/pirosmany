@@ -1,7 +1,7 @@
 const POPUP_RESERV_HTML = `
-<div class="reserv popup" data-modal="window">
+<div class="reserv popup" data-modal-window="true">
     <form action="#" class="reserv__form popup__form" method="POST">
-        <button class="reserv__close popup__close" data-modal="close">
+        <button class="reserv__close popup__close" data-modal-close="true">
         </button>
         <div class="reserv__title popup__title">
             Бронирование стола

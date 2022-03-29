@@ -1,7 +1,7 @@
 const POPUP_CHECKIN_HTML = `
-    <div class="checkin popup" data-modal="window">
+    <div class="checkin popup" data-modal-window="true">
         <form action="#" class="checkin__form popup__form" method="POST">
-            <button class="checkin__close popup__close" data-modal="close"></button>
+            <button class="checkin__close popup__close" data-modal-close="true"></button>
             <div class="checkin__icon popup__icon"></div>
             <div class="checkin__title popup__title">
                 Зарегистрироваться

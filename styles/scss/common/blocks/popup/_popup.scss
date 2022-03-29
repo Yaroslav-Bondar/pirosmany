@@ -203,12 +203,12 @@
         @include utils.mix-font(500, 14px, 18px, utils.$var-btn-text-color);
     }
     &__register {
-        @include utils.mix-font(400px, 12px, 18px, #000000);
+        @include utils.mix-font(400, 12px, 18px, utils.$var-black);
         & span {
             margin-right: 5px;
         }
         & a {
-            color: utils.$var-btn-bgcolor;
+            color: utils.$var-green-haze;
         }
     }
 }
