@@ -845,9 +845,6 @@ body {
   z-index: 11;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
 }
-.popup_active {
-  display: flex;
-}
 .popup__form {
   position: relative;
   display: flex;
@@ -1035,15 +1032,22 @@ body {
 .signin__wrap:last-child::before {
   background: center/cover no-repeat url("../../../../img/icons/key.svg");
 }
-.signin__link {
+.signin__password-recovery-btn {
   text-align: center;
   font-weight: 400;
   font-style: normal;
   font-size: 14px;
   text-transform: none;
   line-height: 17px;
-  color: #00AC4E;
+  color: initial;
   margin: 15px 0 12px 0;
+}
+.signin__password-recovery-btn, .signin__checkin-btn {
+  text-decoration: underline;
+  color: #00AC4E;
+  border: none;
+  background: transparent;
+  cursor: pointer;
 }
 .signin__btn {
   width: 143.2px;
@@ -1065,11 +1069,8 @@ body {
   line-height: 18px;
   color: #000000;
 }
-.signin__register span {
+.signin__register-txt {
   margin-right: 5px;
-}
-.signin__register a {
-  color: #00AC4E;
 }
 
 .subscribe__icon {

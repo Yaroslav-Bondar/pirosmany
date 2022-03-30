@@ -11,9 +11,9 @@
     height: 100vh;
     z-index: 11;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
-    &_active {
-        display: flex;
-    }
+    // &_active {
+    //     display: flex;
+    // }
     &__form {
         position: relative;
         display: flex;
@@ -190,10 +190,18 @@
     &__wrap:last-child::before {
         background: center/cover no-repeat url('../../../../img/icons/key.svg');
     }
-    &__link {
+    &__password-recovery-btn {
         text-align: center;
-        @include utils.mix-font(400, 14px, 17px, utils.$var-btn-bgcolor);
+        @include utils.mix-font(400, 14px, 17px);
         margin: 15px 0 12px 0;
+    }
+    &__password-recovery-btn,
+    &__checkin-btn {
+        text-decoration: underline;
+        color: utils.$var-green-haze;
+        border: none;
+        background: transparent;
+        cursor: pointer;
     }
     &__btn {
         width: 143.2px;
@@ -204,11 +212,8 @@
     }
     &__register {
         @include utils.mix-font(400, 12px, 18px, utils.$var-black);
-        & span {
+        &-txt {
             margin-right: 5px;
-        }
-        & a {
-            color: utils.$var-green-haze;
         }
     }
 }
@@ -451,3 +456,7 @@
     }
 }
 // // review pop-up modal window
+
+.password-recovery {
+    
+}

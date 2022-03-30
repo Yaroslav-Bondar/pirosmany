@@ -18,12 +18,12 @@ const POPUP_SIGNIN_HTML = `
                 <div class="signin__wrong-message popup__wrong-message">
                     Не правильный логин или пароль
                 </div>
-                <a href="#" class="signin__link">Забыли пароль?</a>
+                <button id='password-recovery-btn' class="signin__password-recovery-btn" data-modal-close="true" data-modal-open="true">Забыли пароль?</button>
                 <button class="signin__btn btn" type="submit">Войти</button>
             </div>
             <div class="signin__register">
-                <span>Впервые у нас?</span>
-                <button id="check-in-btn-1" data-modal-close="true" data-modal-open="true" class="signin__checkin-btn">Зарегистрироваться<button>
+                <span class="signin__register-txt">Впервые у нас?</span>
+                <button id="check-in-btn-1" data-modal-close="true" data-modal-open="true" class="signin__checkin-btn">Зарегистрироваться</button>
             </div>
         </form>
     </div>`

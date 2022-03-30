@@ -1,8 +1,8 @@
 // show a popup window
 body.addEventListener('click', e => {
-    const popupBtn = e.target.closest('[data-modal-open="true"]');
-    if(!popupBtn) return;
-    const id = popupBtn.id;
+    const popupCloseBtn = e.target.closest('[data-modal-open="true"]');
+    if(!popupCloseBtn) return;
+    const id = popupCloseBtn.id;
     let html;
     switch(id) {
         case 'sign-in-btn':
@@ -21,6 +21,8 @@ body.addEventListener('click', e => {
         case 'check-in-btn-1':
             html = POPUP_CHECKIN_HTML;
             break;
+        case 'password-recovery-btn':
+            html = POPUP_PASSWORD_RECOVERY_HTML;    
     }
     body.insertAdjacentHTML('afterbegin', html);
     body.style.overflow = 'hidden';
@@ -32,7 +34,16 @@ body.addEventListener('click', e => {
     let popupWindow;
     if(e.target.dataset.modalWindow === 'true') popupWindow = e.target;    
     if(!popupCloseBtn && !popupWindow) return;
-    if (!popupWindow) popupWindow = popupCloseBtn.closest('[data-modal-window="true"]');
-    popupWindow.remove();
-    body.style.overflow = '';
+    if(popupCloseBtn) {
+        // if the button does not open another popup
+        if(popupCloseBtn.dataset.modalOpen !== 'true') {
+            body.style.overflow = '';
+        }
+        const popupWindow = popupCloseBtn.closest('[data-modal-window="true"]');
+        popupWindow.remove();
+    }
+    if(popupWindow) {
+        body.style.overflow = '';
+        popupWindow.remove();
+    } 
 });
