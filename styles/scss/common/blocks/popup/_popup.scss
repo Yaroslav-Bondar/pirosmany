@@ -1,16 +1,16 @@
 @use '../../utils';
 
 .popup {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: 11;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // width: 100%;
+    // height: 100vh;
+    // z-index: 11;
+    // background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
     // &_active {
     //     display: flex;
     // }
@@ -19,25 +19,25 @@
         display: flex;
         flex-flow: column;
         align-items: center;
-        background: utils.$var-popup-bg;
+        // background: utils.$var-popup-bg;
         border-radius: 14.7664px;
         width: 358px;
-        box-shadow: 0px 0px 17.7465px rgba(0, 0, 0, 0.12);
+        // box-shadow: 0px 0px 17.7465px rgba(0, 0, 0, 0.12);
         border-radius: 17.4636px;
-        padding: 40px 45px 40px 45px;
+        // padding: 40px 45px 40px 45px;
     }
     &__close {
-        position: absolute;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        // position: absolute;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
         top: 15px;
         right: 20px;
         width: 22.19px;
         height: 22.19px;
-        background: center no-repeat url('../../../../img/icons/plus.svg');
-        border: none;
-        cursor: pointer;
+        // background: center no-repeat url('../../../../img/icons/plus.svg');
+        // border: none;
+        // cursor: pointer;
     }
     &__icon {
         @extend %center-xy-flex;
@@ -46,7 +46,7 @@
         margin: 0 0 14px 0;
     }
     &__title {
-        @include utils.mix-font(500, 17px, 22px, #000000);
+        // @include utils.mix-font(500, 17px, 22px, #000000);
         margin-bottom: 28px;
         text-align: center;
     }
@@ -63,33 +63,33 @@
         position: relative;
     }
     &__wrap input {
-        width: 100%;
-        height: 50.64px;
-        padding-left: 40px;
-        font-family: 'TT Norms Pro';
-        background: utils.$var-popup-input-bg;
-        border: 0.873181px solid utils.$var-popup-border-color;
-        border-radius: 5.91549px;
+        // width: 100%;
+        // height: 50.64px;
+        // padding-left: 40px;
+        // font-family: 'TT Norms Pro';
+        // background: utils.$var-popup-input-bg;
+        // border: 0.873181px solid utils.$var-popup-border-color;
+        // border-radius: 5.91549px;
     }
     &__wrap input {
-        border: 0.873181px solid utils.$var-popup-border-color;
-        border-radius: 5.91549px;
+        // border: 0.873181px solid utils.$var-popup-border-color;
+        // border-radius: 5.91549px;
     }
     &__wrap input[type='number']::-webkit-inner-spin-button {
         -webkit-appearance: none;
     }
-    &__wrap input::placeholder,
-    &__wrap input::-webkit-input-placeholder,
-    &__wrap input::-moz-placeholder,
-    &__wrap input:-ms-input-placeholder {
-        font-family: 'TT Norms Pro';
-        @include utils.mix-font(400, 14px, 17px, utils.$var-popup-text-color);
-    }
-    &__wrap:hover input,
-    &__wrap:hover textarea {
-        box-shadow: 0 0 1.5px 1px utils.$var-btn-bgcolor;
-        transition: box-shadow .2s;
-    }
+    // &__wrap input::placeholder,
+    // &__wrap input::-webkit-input-placeholder,
+    // &__wrap input::-moz-placeholder,
+    // &__wrap input:-ms-input-placeholder {
+    //     // font-family: 'TT Norms Pro';
+    //     // @include utils.mix-font(400, 14px, 17px, utils.$var-popup-text-color);
+    // }
+    // &__wrap:hover input,
+    // &__wrap:hover textarea {
+    //     box-shadow: 0 0 1.5px 1px utils.$var-btn-bgcolor;
+    //     transition: box-shadow .2s;
+    // }
     &__wrap input:focus,
     &__wrap textarea:focus {
         border-color: utils.$var-btn-bgcolor;
@@ -164,6 +164,110 @@
         } 
     }
 }
+
+.password-recovery {
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // width: 100%;
+    // height: 100vh;
+    &__form {
+        padding: 24px 38px 21px 38px;
+        border-radius: 14.7609px;
+    }
+    &__close {
+        position: absolute;
+        top: 13px;
+        right: 13px;
+    }
+    &__icon {
+    }
+    &__title {
+        margin: 12px 0 24px 0;
+    }
+    &__body {
+    }
+    &__inputs {
+    }
+    &__wrap {
+    }
+    &__cansel-btn {
+    }
+    &__submit-btn {
+    }
+}
+.popup {
+    &__container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        z-index: 11;
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    }
+}
+.popup-form {
+    position: relative;
+    background: utils.$var-popup-bg;
+    box-shadow: 0px 0px 17.7465px rgba(0, 0, 0, 0.12);
+}
+.popup-close {
+    // position: absolute;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    &__btn {
+        width: 19px;
+        height: 19px;
+        background: center no-repeat url('../../../../img/icons/plus.svg');
+        cursor: pointer;
+        border: none;
+    }
+}
+.popup-icon {
+    &__item {
+        width: 29px;
+        height: 29px;
+        margin: 0 auto;
+        background: center/cover no-repeat url('../../../../img/icons/person.svg');
+    }
+}
+.popup-title-1 {
+    @include utils.mix-font(500, 15px, 18px, utils.$var-black);
+    text-align: center;
+}
+.form-input {
+    position: relative;
+    &__item {
+        width: 100%;
+        height: 42.81px;
+        padding-left: 40px;
+        font-family: 'TT Norms Pro';
+        background: utils.$var-alabaster;
+        border: 0.873181px solid utils.$var-gallery;
+        border-radius: 5.91549px
+    }
+    &__item:hover {
+        box-shadow: 0 0 1.5px 1px utils.$var-green-haze;
+        transition: box-shadow .2s;
+    }
+    &__item:focus {
+        border-color: utils.$var-btn-bgcolor;
+        outline: none;
+    }
+    &__item::placeholder {
+        font-family: 'TT Norms Pro';
+        @include utils.mix-font(400, 14px, 17px, utils.$var-popup-text-color);
+    }
+    &_phone::before {
+        background: center/cover no-repeat url('../../../../img/icons/phone.svg');
+    }
+}
+
 // signin pop-up modal window
 .signin {
     &__form {
@@ -173,7 +277,7 @@
         }
     }
     &__icon {
-        background: center/cover no-repeat url('../../../../img/icons/person.svg');
+        // background: center/cover no-repeat url('../../../../img/icons/person.svg');
     }
     &__wrap:last-child::before,
     &__wrap:first-child::before {
@@ -184,9 +288,9 @@
         height: 13px;
         transform: translateY(-50%);
     }
-    &__wrap:first-child::before {
-        background: center/cover no-repeat url('../../../../img/icons/phone.svg');
-    }
+    // &__wrap:first-child::before {
+    //     background: center/cover no-repeat url('../../../../img/icons/phone.svg');
+    // }
     &__wrap:last-child::before {
         background: center/cover no-repeat url('../../../../img/icons/key.svg');
     }
@@ -457,6 +561,4 @@
 }
 // // review pop-up modal window
 
-.password-recovery {
-    
-}
+

@@ -29,7 +29,6 @@ body {
 .btn {
   background: #00AC4E;
   border: none;
-  border-radius: 4.52px;
   cursor: pointer;
 }
 
@@ -828,42 +827,20 @@ body {
   cursor: pointer;
 }
 
-.popup {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: 11;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
-}
 .popup__form {
   position: relative;
   display: flex;
   flex-flow: column;
   align-items: center;
-  background: #FFFFFF;
   border-radius: 14.7664px;
   width: 358px;
-  box-shadow: 0px 0px 17.7465px rgba(0, 0, 0, 0.12);
   border-radius: 17.4636px;
-  padding: 40px 45px 40px 45px;
 }
 .popup__close {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   top: 15px;
   right: 20px;
   width: 22.19px;
   height: 22.19px;
-  background: center no-repeat url("../../../../img/icons/plus.svg");
-  border: none;
-  cursor: pointer;
 }
 .popup__icon {
   width: 34px;
@@ -871,12 +848,6 @@ body {
   margin: 0 0 14px 0;
 }
 .popup__title {
-  font-weight: 500;
-  font-style: normal;
-  font-size: 17px;
-  text-transform: none;
-  line-height: 22px;
-  color: #000000;
   margin-bottom: 28px;
   text-align: center;
 }
@@ -892,34 +863,8 @@ body {
 .popup__wrap {
   position: relative;
 }
-.popup__wrap input {
-  width: 100%;
-  height: 50.64px;
-  padding-left: 40px;
-  font-family: "TT Norms Pro";
-  background: #FCFCFC;
-  border: 0.873181px solid #EBEBEB;
-  border-radius: 5.91549px;
-}
-.popup__wrap input {
-  border: 0.873181px solid #EBEBEB;
-  border-radius: 5.91549px;
-}
 .popup__wrap input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
-}
-.popup__wrap input::placeholder, .popup__wrap input::-webkit-input-placeholder, .popup__wrap input::-moz-placeholder, .popup__wrap input:-ms-input-placeholder {
-  font-family: "TT Norms Pro";
-  font-weight: 400;
-  font-style: normal;
-  font-size: 14px;
-  text-transform: none;
-  line-height: 17px;
-  color: #C6C6C6;
-}
-.popup__wrap:hover input, .popup__wrap:hover textarea {
-  box-shadow: 0 0 1.5px 1px #00AC4E;
-  transition: box-shadow 0.2s;
 }
 .popup__wrap input:focus, .popup__wrap textarea:focus {
   border-color: #00AC4E;
@@ -1004,14 +949,97 @@ body {
   color: #00AC4E;
 }
 
+.password-recovery__form {
+  padding: 24px 38px 21px 38px;
+  border-radius: 14.7609px;
+}
+.password-recovery__close {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+}
+.password-recovery__title {
+  margin: 12px 0 24px 0;
+}
+.popup__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  z-index: 11;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+}
+
+.popup-form {
+  position: relative;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 17.7465px rgba(0, 0, 0, 0.12);
+}
+
+.popup-close__btn {
+  width: 19px;
+  height: 19px;
+  background: center no-repeat url("../../../../img/icons/plus.svg");
+  cursor: pointer;
+  border: none;
+}
+
+.popup-icon__item {
+  width: 29px;
+  height: 29px;
+  margin: 0 auto;
+  background: center/cover no-repeat url("../../../../img/icons/person.svg");
+}
+
+.popup-title-1 {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 15px;
+  text-transform: none;
+  line-height: 18px;
+  color: #000000;
+  text-align: center;
+}
+
+.form-input {
+  position: relative;
+}
+.form-input__item {
+  width: 100%;
+  height: 42.81px;
+  padding-left: 40px;
+  font-family: "TT Norms Pro";
+  background: #FCFCFC;
+  border: 0.873181px solid #EBEBEB;
+  border-radius: 5.91549px;
+}
+.form-input__item:hover {
+  box-shadow: 0 0 1.5px 1px #00AC4E;
+  transition: box-shadow 0.2s;
+}
+.form-input__item:focus {
+  border-color: #00AC4E;
+  outline: none;
+}
+.form-input__item::placeholder {
+  font-family: "TT Norms Pro";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  text-transform: none;
+  line-height: 17px;
+  color: #C6C6C6;
+}
+
 @media screen and (max-width: 430px) {
   .signin__form {
     width: 302px;
     padding: 40px 25px 20px 25px;
   }
-}
-.signin__icon {
-  background: center/cover no-repeat url("../../../../img/icons/person.svg");
 }
 .signin__wrap:last-child::before, .signin__wrap:first-child::before {
   position: absolute;

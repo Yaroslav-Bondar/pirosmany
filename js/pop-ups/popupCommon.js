@@ -27,7 +27,6 @@ body.addEventListener('click', e => {
     body.insertAdjacentHTML('afterbegin', html);
     body.style.overflow = 'hidden';
 });
-
 // close a popup window
 body.addEventListener('click', e => {
     const popupCloseBtn = e.target.closest('[data-modal-close="true"]');
