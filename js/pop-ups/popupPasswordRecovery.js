@@ -1,33 +1,4 @@
-// const POPUP_PASSWORD_RECOVERY_HTML = `
-//     <div class="password-recovery popup" data-modal-window="true">
-//         <form action="#" class="password-recovery__form popup__form" method="POST">
-//             <button class="password-recovery__close popup__close" data-modal-close="true"></button>
-//             <div class="password-recovery__icon popup__icon"></div>
-//             <div class="password-recovery__title popup__title">
-//                 Восстановление пароля
-//             </div>
-//             <div class="password-recovery__body popup__body">
-//                 <div class="password-recovery__inputs popup__inputs">
-//                     <div class="password-recovery__wrap popup__wrap">
-//                         <input type="tel" placeholder="Введите телефон" name="phone" required>
-//                     </div>
-//                     <div class="password-recovery__wrap popup__wrap">
-//                         <input type="password" placeholder="Новый пароль (мин. 6 символов)" name="password" required>
-//                     </div>
-//                     <div class="password-recovery__wrap popup__wrap">
-//                         <input type="password" placeholder="Подтвердите пароль" name="password" required>
-//                     </div>  
-//                 </div>
-//                 <button class="password-recovery__btn btn" type="submit">Войти</button>
-//             </div>
-//             <div class="password-recovery__register">
-//                 <span class="password-recovery__register-txt">Впервые у нас?</span>
-//                 <button id="check-in-btn-1" data-modal-close="true" data-modal-open="true" class="password-recovery__checkin-btn">Зарегистрироваться</button>
-//             </div>
-//         </form>
-//     </div>`
-
-    const POPUP_PASSWORD_RECOVERY_HTML = `
+const POPUP_PASSWORD_RECOVERY_HTML = `
     <div class="popup">
         <div class="password-recovery popup__container" data-modal-window="true">
             <form action="#" class="password-recovery__form popup-form" method="POST">
@@ -46,21 +17,40 @@
                 </div>
                 <div class="password-recovery__body">
                     <div class="password-recovery__inputs">
-                        <div class="password-recovery__wrap form-input form-input_phone">
-                            <input class="form-input__item" type="tel" placeholder="Введите телефон" name="phone" required>
+                        <div class="password-recovery__wrap form-input">
+                            <input class="form-input__item" type="tel" value="+34()345" 
+                                    aria-label="phone number"
+                                    pattern="\\+375\\(\\d{2}\\)\\d{3}-\\d{2}-\\d{2}"
+                                    placeholder="Введите телефон" 
+                                    name="phone" required>
+                            <div class="form-input__check"></div>
+                            <div class="form-input__phone"></div>
                         </div>
                         <div class="password-recovery__wrap form-input">
-                            <input class="form-input__item" type="password" placeholder="Новый пароль (мин. 6 символов)" name="password" required>
+                            <input class="form-input__item" type="password" 
+                                    aria-label="password" 
+                                    placeholder="Новый пароль (мин. 6 символов)" 
+                                    name="password" required>
+                            <div class="form-input__key"></div>
                         </div>
                         <div class="password-recovery__wrap form-input">
-                            <input class="form-input__item" type="password" placeholder="Подтвердите пароль" name="password" required>
+                            <input class="form-input__item" type="password" 
+                                    aria-label="confirm password" 
+                                    placeholder="Подтвердите пароль" 
+                                    name="password" required>
+                            <div class="form-input__key"></div>
                         </div>  
                     </div>
                 </div>
-                <div class"password-recovery__container-btn">
-                    <button class="password-recovery__cansel-btn btn" type="reset">Отменить</button>
-                    <button class="password-recovery__submit-btn btn">Обновить пароль</button>
+                <div class="password-recovery__container-btn">
+                    <button class="password-recovery__btn" type="reset">Отменить</button>
+                    <button class="password-recovery__btn password-recovery__btn_active">Обновить пароль</button>
                 </div>
             </form>
         </div>    
-    </div>`
+    </div>`;
+// toggling the state of a button in a popup window 
+body.addEventListener('click', event => {
+    setElementState('password-recovery__btn', 'password-recovery__btn_active', event.target);
+});
+

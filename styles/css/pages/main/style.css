@@ -966,6 +966,36 @@ body {
 .password-recovery__title {
   margin: 12px 0 24px 0;
 }
+.password-recovery__wrap:not(:last-child) {
+  margin-bottom: 21px;
+}
+.password-recovery__container-btn {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.password-recovery__btn {
+  width: 50%;
+  height: 40px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  background: transparent;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 12px;
+  text-transform: none;
+  line-height: 15px;
+  color: initial;
+  color: #00AC4E;
+  transition: 0.2s background, 0.2s color;
+  cursor: pointer;
+}
+.password-recovery__btn_active {
+  background-color: #00AC4E;
+  color: #fff;
+}
+
 .popup__container {
   position: fixed;
   top: 0;
@@ -1018,6 +1048,12 @@ body {
   height: 42.81px;
   padding-left: 40px;
   font-family: "TT Norms Pro";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  text-transform: none;
+  line-height: 15px;
+  color: #4F4F4F;
   background: #FCFCFC;
   border: 0.873181px solid #EBEBEB;
   border-radius: 5.91549px;
@@ -1030,6 +1066,14 @@ body {
   border-color: #00AC4E;
   outline: none;
 }
+.form-input__item[type=tel]:valid + div::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 7px;
+  color: #00AC4E;
+}
 .form-input__item::placeholder {
   font-family: "TT Norms Pro";
   font-weight: 400;
@@ -1038,6 +1082,20 @@ body {
   text-transform: none;
   line-height: 17px;
   color: #C6C6C6;
+}
+.form-input__phone, .form-input__key {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  width: 13px;
+  height: 13px;
+  transform: translateY(-50%);
+}
+.form-input__phone {
+  background: center/cover no-repeat url("../../../../img/icons/phone.svg");
+}
+.form-input__key {
+  background: center/cover no-repeat url("../../../../img/icons/key.svg");
 }
 
 @media screen and (max-width: 430px) {
@@ -1053,12 +1111,6 @@ body {
   width: 13px;
   height: 13px;
   transform: translateY(-50%);
-}
-.signin__wrap:first-child::before {
-  background: center/cover no-repeat url("../../../../img/icons/phone.svg");
-}
-.signin__wrap:last-child::before {
-  background: center/cover no-repeat url("../../../../img/icons/key.svg");
 }
 .signin__password-recovery-btn {
   text-align: center;

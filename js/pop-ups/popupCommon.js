@@ -1,6 +1,6 @@
 // show a popup window
-body.addEventListener('click', e => {
-    const popupCloseBtn = e.target.closest('[data-modal-open="true"]');
+body.addEventListener('click', event => {
+    const popupCloseBtn = event.target.closest('[data-modal-open="true"]');
     if(!popupCloseBtn) return;
     const id = popupCloseBtn.id;
     let html;
@@ -28,10 +28,10 @@ body.addEventListener('click', e => {
     body.style.overflow = 'hidden';
 });
 // close a popup window
-body.addEventListener('click', e => {
-    const popupCloseBtn = e.target.closest('[data-modal-close="true"]');
+body.addEventListener('click', event => {
+    const popupCloseBtn = event.target.closest('[data-modal-close="true"]');
     let popupWindow;
-    if(e.target.dataset.modalWindow === 'true') popupWindow = e.target;    
+    if(event.target.dataset.modalWindow === 'true') popupWindow = event.target;    
     if(!popupCloseBtn && !popupWindow) return;
     if(popupCloseBtn) {
         // if the button does not open another popup

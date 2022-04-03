@@ -166,11 +166,6 @@
 }
 
 .password-recovery {
-    // position: fixed;
-    // top: 0;
-    // left: 0;
-    // width: 100%;
-    // height: 100vh;
     &__form {
         padding: 24px 38px 21px 38px;
         border-radius: 14.7609px;
@@ -189,11 +184,29 @@
     }
     &__inputs {
     }
-    &__wrap {
+    &__wrap:not(:last-child) {
+        margin-bottom: 21px;
     }
-    &__cansel-btn {
+    &__container-btn {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
     }
-    &__submit-btn {
+    &__btn {
+        width: 50%;
+        height: 40px;
+        margin-top: 20px;
+        border: none;
+        border-radius: 5px;
+        background: transparent;
+        @include utils.mix-font(500, 12px, 15px);
+        color: utils.$var-green-haze;
+        transition: .2s background, .2s color;
+        cursor: pointer;
+        &_active {
+            background-color: utils.$var-green-haze;
+            color: utils.$var-white;
+        }
     }
 }
 .popup {
@@ -247,6 +260,7 @@
         height: 42.81px;
         padding-left: 40px;
         font-family: 'TT Norms Pro';
+        @include utils.mix-font(400, 15px, 15px, utils.$var-liver);
         background: utils.$var-alabaster;
         border: 0.873181px solid utils.$var-gallery;
         border-radius: 5.91549px
@@ -259,12 +273,32 @@
         border-color: utils.$var-btn-bgcolor;
         outline: none;
     }
+    &__item[type="tel"]:valid+div::after {
+        content: '✓';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 7px;
+        color: utils.$var-green-haze;
+    }
     &__item::placeholder {
         font-family: 'TT Norms Pro';
         @include utils.mix-font(400, 14px, 17px, utils.$var-popup-text-color);
     }
-    &_phone::before {
+    &__phone,
+    &__key {
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        width: 13px;
+        height: 13px;
+        transform: translateY(-50%);
+    }
+    &__phone {
         background: center/cover no-repeat url('../../../../img/icons/phone.svg');
+    }
+    &__key {
+        background: center/cover no-repeat url('../../../../img/icons/key.svg');
     }
 }
 
@@ -292,7 +326,7 @@
     //     background: center/cover no-repeat url('../../../../img/icons/phone.svg');
     // }
     &__wrap:last-child::before {
-        background: center/cover no-repeat url('../../../../img/icons/key.svg');
+        // background: center/cover no-repeat url('../../../../img/icons/key.svg');
     }
     &__password-recovery-btn {
         text-align: center;

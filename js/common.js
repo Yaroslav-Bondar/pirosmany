@@ -9,10 +9,31 @@ let body = document.querySelector('body')
 // let mobmenuOverlay = document.querySelector('.mobmenu__overlay')
 // let mobmenuNav = document.querySelector('.mobmenu__nav')
 let widthHideNav = 900
-// tabs
+// toggling tabs
+// used in cabinet.js, cardTab.js, regis.js for tab switching 
 let tabBtns = document.querySelector('.tab__btns')
 let tabContent = document.querySelectorAll('.tab__content')
 // // tabs
+
+/**
+ * Toggling the state of elements by settings the appropriate css class
+ * @param {string} elementClassName - The css class name of the element being toggled
+ * @param {string} stateClassName - The state css class name for the element
+ * @param {object} uncheckedElement - Element to be checked for compliance to switch state 
+ * @returns {undefined} - If not fit for state transition
+ * @returns {object} - Element suitable for state transition
+ */
+function setElementState(elementClassName, stateClassName, uncheckedElement) {
+    const targetElement = uncheckedElement.closest(`.${elementClassName}`);
+    if(!targetElement) return;
+    const elements = document.querySelectorAll(`.${elementClassName}`);
+    for (const element of elements) {
+        if(element.classList.contains(`${stateClassName}`)) 
+            element.classList.remove(`${stateClassName}`)
+    }
+    targetElement.classList.add(`${stateClassName}`);
+    return targetElement;
+} 
 
 // setting the selected product Id
 

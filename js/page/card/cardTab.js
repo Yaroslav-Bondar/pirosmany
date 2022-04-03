@@ -15,32 +15,23 @@ tabContent.forEach(item => item.style.display = 'none')
 tabContent[0].style.display = 'block'
 
 tabBtns.addEventListener('click', (e)=> {
-    
-    if(!e.target.classList.contains('tab__btn')) return
-    
-    for (const child of tabBtns.children) {
-        if(child.classList.contains('tab__btn_active')) 
-            child.classList.remove('tab__btn_active')
-    }
-    tabContent.forEach(item => item.style.display = 'none')
-
-    let number = e.target.dataset.number
-    switch(number) {
-        case '0': 
-            tabContent[0].style.display = 'block'
-            e.target.classList.add('tab__btn_active')
-            break
-        case '1': 
-            tabContent[1].style.display = 'block'
-            e.target.classList.add('tab__btn_active')
-            break
-        case '2': 
-            tabContent[2].style.display = 'block'
-            e.target.classList.add('tab__btn_active')
-            break
+    const targetElement = setElementState('tab__btn', 'tab__btn_active', e.target);
+    if(targetElement) {
+        tabContent.forEach(item => item.style.display = 'none')
+        const tabNumber = e.target.dataset.number
+        switch(tabNumber) {
+            case '0': 
+                tabContent[0].style.display = 'block'
+                break
+            case '1': 
+                tabContent[1].style.display = 'block'
+                break
+            case '2': 
+                tabContent[2].style.display = 'block'
+                break
+        }
     }
 })
-
 // read more (uses delegation events)
 let aboutprodSlider = document.querySelector('.aboutprod__slider')
 
