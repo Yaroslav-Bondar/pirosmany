@@ -164,7 +164,6 @@
         } 
     }
 }
-
 .password-recovery {
     &__form {
         padding: 24px 38px 21px 38px;
@@ -229,10 +228,6 @@
     box-shadow: 0px 0px 17.7465px rgba(0, 0, 0, 0.12);
 }
 .popup-close {
-    // position: absolute;
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
     &__btn {
         width: 19px;
         height: 19px;
@@ -273,6 +268,13 @@
         border-color: utils.$var-btn-bgcolor;
         outline: none;
     }
+    &__item[type="tel"]:focus::placeholder {
+        color: utils.$var-liver;
+    }
+    &__item::placeholder {
+        font-family: 'TT Norms Pro';
+        @include utils.mix-font(400, 14px, 17px, utils.$var-popup-text-color);
+    }
     &__item[type="tel"]:valid+div::after {
         content: '✓';
         position: absolute;
@@ -281,9 +283,13 @@
         right: 7px;
         color: utils.$var-green-haze;
     }
-    &__item::placeholder {
-        font-family: 'TT Norms Pro';
-        @include utils.mix-font(400, 14px, 17px, utils.$var-popup-text-color);
+    &__item[type="tel"]:focus:invalid+div::after {
+        content: '✖';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 7px;
+        color: utils.$var-burnt-sienna;
     }
     &__phone,
     &__key {

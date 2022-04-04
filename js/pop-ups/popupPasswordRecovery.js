@@ -1,10 +1,10 @@
 const POPUP_PASSWORD_RECOVERY_HTML = `
     <div class="popup">
         <div class="password-recovery popup__container" data-modal-window="true">
-            <form action="#" class="password-recovery__form popup-form" method="POST">
+            <form onsubmit="return false;" action="#" class="password-recovery__form popup-form" method="POST">
                 <div class="password-recovery__close" data-modal-close="true">
                     <div class="popup-close">
-                        <button class="popup-close__btn" ></button>
+                        <button class="popup-close__btn"></button>
                     </div>
                 </div> 
                 <div class="password-recovery__icon">
@@ -49,6 +49,7 @@ const POPUP_PASSWORD_RECOVERY_HTML = `
             </form>
         </div>    
     </div>`;
+const PASSWORD_RECOVERY_PLACEHOLDER_PHONE_MESSAGE = '+375(**)***-**-**';    
 // toggling the state of a button in a popup window 
 body.addEventListener('click', event => {
     setElementState('password-recovery__btn', 'password-recovery__btn_active', event.target);

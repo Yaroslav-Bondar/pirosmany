@@ -1066,13 +1066,8 @@ body {
   border-color: #00AC4E;
   outline: none;
 }
-.form-input__item[type=tel]:valid + div::after {
-  content: "✓";
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 7px;
-  color: #00AC4E;
+.form-input__item[type=tel]:focus::placeholder {
+  color: #4F4F4F;
 }
 .form-input__item::placeholder {
   font-family: "TT Norms Pro";
@@ -1082,6 +1077,22 @@ body {
   text-transform: none;
   line-height: 17px;
   color: #C6C6C6;
+}
+.form-input__item[type=tel]:valid + div::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 7px;
+  color: #00AC4E;
+}
+.form-input__item[type=tel]:focus:invalid + div::after {
+  content: "✖";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 7px;
+  color: #EB5757;
 }
 .form-input__phone, .form-input__key {
   position: absolute;

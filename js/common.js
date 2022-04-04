@@ -33,6 +33,29 @@ function setElementState(elementClassName, stateClassName, uncheckedElement) {
     }
     targetElement.classList.add(`${stateClassName}`);
     return targetElement;
+}
+/**
+ * toggle default placeholder message when input element gains/loses focus
+ * @param {string} parentClassName - css class name of target element's parent
+ * @param {string} targetElementSelector - css selector of the target element
+ * @param {string} message - message to toggle 
+ * @returns {undefined} 
+ */
+function togglePlaceholderMessage(parentClassName, targetElementSelector, message) {
+    const parentElement = document.querySelector(`.${parentClassName}`);
+    if(!parentElement) return;
+    let defaultPlaceholderMessage; 
+    parentElement.addEventListener('focusin', event => {
+        const targetElement = event.target.closest(`${targetElementSelector}`); 
+        if(!targetElement) return;
+        defaultPlaceholderMessage = targetElement.placeholder;
+        targetElement.placeholder = message;
+    });
+    parentElement.addEventListener('focusout', event => {
+        const targetElement = event.target.closest(`${targetElementSelector}`); 
+        if(!targetElement) return;
+        targetElement.placeholder = defaultPlaceholderMessage;
+    });
 } 
 
 // setting the selected product Id
