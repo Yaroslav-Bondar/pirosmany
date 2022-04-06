@@ -57,7 +57,17 @@ function togglePlaceholderMessage(parentClassName, targetElementSelector, messag
         targetElement.placeholder = defaultPlaceholderMessage;
     });
 } 
-
+function setCustomValidationMessage(targetElementSelector, message) {
+    const targetElement = document.querySelector(`${targetElementSelector}`);
+    if(!targetElement) return; 
+    targetElement.addEventListener('input', () => {
+        if(targetElement.validity.patternMismatch) {
+            targetElement.setCustomValidity(`${message}`);
+        } else {
+            targetElement.setCustomValidity('');
+        } 
+    });
+}
 // setting the selected product Id
 
 // body.addEventListener('click', (e)=> {

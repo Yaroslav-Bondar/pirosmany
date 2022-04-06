@@ -50,6 +50,7 @@ const POPUP_PASSWORD_RECOVERY_HTML = `
         </div>    
     </div>`;
 const PASSWORD_RECOVERY_PLACEHOLDER_PHONE_MESSAGE = '+375(**)***-**-**';    
+const PASSWORD_RECOVERY_VALIDATION_PHONE_MESSAGE = 'please enter phone number in correct format: +375(**)***-**-**';
 // toggling the state of a button in a popup window 
 body.addEventListener('click', event => {
     setElementState('password-recovery__btn', 'password-recovery__btn_active', event.target);
