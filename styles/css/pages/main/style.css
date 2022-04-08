@@ -210,6 +210,9 @@ body {
 .enter__btn-in {
   display: flex;
   align-items: center;
+  border: none;
+  background: transparent;
+  cursor: pointer;
 }
 .enter__img-wrap {
   width: 24px;
@@ -832,15 +835,6 @@ body {
   cursor: pointer;
 }
 
-.popup__form {
-  position: relative;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  border-radius: 14.7664px;
-  width: 358px;
-  border-radius: 17.4636px;
-}
 .popup__close {
   top: 15px;
   right: 20px;
@@ -955,13 +949,14 @@ body {
 }
 
 .password-recovery__form {
+  width: 303px;
   padding: 24px 38px 21px 38px;
   border-radius: 14.7609px;
 }
 .password-recovery__close {
   position: absolute;
-  top: 13px;
-  right: 13px;
+  top: 10px;
+  right: 17px;
 }
 .password-recovery__title {
   margin: 12px 0 24px 0;
@@ -977,7 +972,6 @@ body {
 .password-recovery__btn {
   width: 50%;
   height: 40px;
-  margin-top: 20px;
   border: none;
   border-radius: 5px;
   background: transparent;
@@ -996,10 +990,8 @@ body {
   color: #fff;
 }
 
-.popup__container {
+.popup {
   position: fixed;
-  top: 0;
-  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1008,7 +1000,6 @@ body {
   z-index: 11;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
 }
-
 .popup-form {
   position: relative;
   background: #FFFFFF;
@@ -1030,7 +1021,7 @@ body {
   background: center/cover no-repeat url("../../../../img/icons/person.svg");
 }
 
-.popup-title-1 {
+.popup-title1 {
   font-weight: 500;
   font-style: normal;
   font-size: 15px;
@@ -1109,29 +1100,48 @@ body {
   background: center/cover no-repeat url("../../../../img/icons/key.svg");
 }
 
-@media screen and (max-width: 430px) {
-  .signin__form {
-    width: 302px;
-    padding: 40px 25px 20px 25px;
-  }
+.signin__form {
+  width: 302px;
+  padding: 24px 38px 22px 38px;
+  border-radius: 14px;
 }
-.signin__wrap:last-child::before, .signin__wrap:first-child::before {
+.signin__close {
   position: absolute;
-  top: 50%;
-  left: 15px;
-  width: 13px;
-  height: 13px;
-  transform: translateY(-50%);
+  top: 10px;
+  right: 19px;
 }
-.signin__password-recovery-btn {
+.signin__title {
+  margin-top: 11px;
+  margin-bottom: 24px;
+}
+.signin__wrap:not(:last-child) {
+  margin-bottom: 21px;
+}
+.signin__wrong-message {
+  margin-top: 5px;
   text-align: center;
   font-weight: 400;
   font-style: normal;
-  font-size: 14px;
+  font-size: 10px;
   text-transform: none;
-  line-height: 17px;
+  line-height: 15px;
+  color: #EB5757;
+}
+.signin__btns {
+  margin-top: 7px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.signin__password-recovery-btn {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  text-transform: none;
+  line-height: 14px;
   color: initial;
-  margin: 15px 0 12px 0;
+  margin-bottom: 10px;
 }
 .signin__password-recovery-btn, .signin__checkin-btn {
   text-decoration: underline;
@@ -1140,24 +1150,26 @@ body {
   background: transparent;
   cursor: pointer;
 }
-.signin__btn {
-  width: 143.2px;
-  height: 45.41px;
-  margin: 0 auto 24px auto;
-  border-radius: 5.91549px;
+.signin__enter-btn {
+  width: 121.04px;
+  height: 38.38px;
+  border-radius: 5px;
   font-weight: 500;
-  font-style: normal;
-  font-size: 14px;
-  text-transform: none;
-  line-height: 18px;
-  color: #FFFFFF;
-}
-.signin__register {
-  font-weight: 400;
   font-style: normal;
   font-size: 12px;
   text-transform: none;
-  line-height: 18px;
+  line-height: 15px;
+  color: #fff;
+}
+.signin__register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 10px;
+  text-transform: none;
+  line-height: 15px;
   color: #000000;
 }
 .signin__register-txt {

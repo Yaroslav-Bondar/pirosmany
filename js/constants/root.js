@@ -15,3 +15,8 @@ const STAR_ACTIVE_COLOR = 'rgb(0, 172, 78)'
 const STAR_NO_ACTIVE_COLOR = 'rgb(204, 204, 204)'
 const STAR_HOVER_COLOR = 'rgb(0,214,78)'
 // // colors
+
+// popups constants
+const PLACEHOLDER_PHONE_MESSAGE = '+375(**)***-**-**';    
+const VALIDATION_PHONE_MESSAGE = 'please enter phone number in correct format: +375(**)***-**-**';
+const VALIDATION_PHONE_PATTERN = '\\+375\\(\\d{2}\\)\\d{3}-\\d{2}-\\d{2}';

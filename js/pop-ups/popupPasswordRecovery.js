@@ -1,6 +1,6 @@
 const POPUP_PASSWORD_RECOVERY_HTML = `
-    <div class="popup">
-        <div class="password-recovery popup__container" data-modal-window="true">
+    <div class="popup" data-modal-window="true">
+        <div class="password-recovery popup__container">
             <form onsubmit="return false;" action="#" class="password-recovery__form popup-form" method="POST">
                 <div class="password-recovery__close" data-modal-close="true">
                     <div class="popup-close">
@@ -12,15 +12,15 @@ const POPUP_PASSWORD_RECOVERY_HTML = `
                         <div class="popup-icon__item"></div>
                     </div>
                 </div>
-                <div class="password-recovery__title popup-title-1">
+                <div class="password-recovery__title popup-title1">
                     Восстановление пароля
                 </div>
                 <div class="password-recovery__body">
                     <div class="password-recovery__inputs">
                         <div class="password-recovery__wrap form-input">
-                            <input class="form-input__item" type="tel" value="+34()345" 
+                            <input class="form-input__item" type="tel" 
                                     aria-label="phone number"
-                                    pattern="\\+375\\(\\d{2}\\)\\d{3}-\\d{2}-\\d{2}"
+                                    pattern=${VALIDATION_PHONE_PATTERN}
                                     placeholder="Введите телефон" 
                                     name="phone" required>
                             <div class="form-input__check"></div>
@@ -49,8 +49,6 @@ const POPUP_PASSWORD_RECOVERY_HTML = `
             </form>
         </div>    
     </div>`;
-const PASSWORD_RECOVERY_PLACEHOLDER_PHONE_MESSAGE = '+375(**)***-**-**';    
-const PASSWORD_RECOVERY_VALIDATION_PHONE_MESSAGE = 'please enter phone number in correct format: +375(**)***-**-**';
 // toggling the state of a button in a popup window 
 body.addEventListener('click', event => {
     setElementState('password-recovery__btn', 'password-recovery__btn_active', event.target);

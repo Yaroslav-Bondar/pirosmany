@@ -56,7 +56,13 @@ function togglePlaceholderMessage(parentClassName, targetElementSelector, messag
         if(!targetElement) return;
         targetElement.placeholder = defaultPlaceholderMessage;
     });
-} 
+}
+/**
+ * adding a custom validation message to an element
+ * @param {string} targetElementSelector - element to change the validation message
+ * @param {string} message - custom validation message 
+ * @returns {undefined}
+ */ 
 function setCustomValidationMessage(targetElementSelector, message) {
     const targetElement = document.querySelector(`${targetElementSelector}`);
     if(!targetElement) return; 

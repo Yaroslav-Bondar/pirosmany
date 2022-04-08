@@ -15,15 +15,15 @@
     //     display: flex;
     // }
     &__form {
-        position: relative;
-        display: flex;
-        flex-flow: column;
-        align-items: center;
+        // position: relative;
+        // display: flex;
+        // flex-flow: column;
+        // align-items: center;
         // background: utils.$var-popup-bg;
-        border-radius: 14.7664px;
-        width: 358px;
+        // border-radius: 14.7664px;
+        // width: 358px;
         // box-shadow: 0px 0px 17.7465px rgba(0, 0, 0, 0.12);
-        border-radius: 17.4636px;
+        // border-radius: 17.4636px;
         // padding: 40px 45px 40px 45px;
     }
     &__close {
@@ -166,13 +166,14 @@
 }
 .password-recovery {
     &__form {
+        width: 303px;
         padding: 24px 38px 21px 38px;
         border-radius: 14.7609px;
     }
     &__close {
         position: absolute;
-        top: 13px;
-        right: 13px;
+        top: 10px;
+        right: 17px;
     }
     &__icon {
     }
@@ -194,7 +195,6 @@
     &__btn {
         width: 50%;
         height: 40px;
-        margin-top: 20px;
         border: none;
         border-radius: 5px;
         background: transparent;
@@ -209,17 +209,15 @@
     }
 }
 .popup {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    z-index: 11;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
     &__container {
-        position: fixed;
-        top: 0;
-        left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100vh;
-        z-index: 11;
-        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
     }
 }
 .popup-form {
@@ -244,7 +242,7 @@
         background: center/cover no-repeat url('../../../../img/icons/person.svg');
     }
 }
-.popup-title-1 {
+.popup-title1 {
     @include utils.mix-font(500, 15px, 18px, utils.$var-black);
     text-align: center;
 }
@@ -289,7 +287,7 @@
         top: 50%;
         transform: translateY(-50%);
         right: 7px;
-        color: utils.$var-burnt-sienna;
+        color: utils.$var-color-burnt-sienna;
     }
     &__phone,
     &__key {
@@ -311,33 +309,45 @@
 // signin pop-up modal window
 .signin {
     &__form {
-        @media screen and (max-width: utils.$var-signin-breakpoint-1) {
-            width: 302px;
-            padding: 40px 25px 20px 25px;
-        }
+        width: 302px;
+        // width: 358px;
+        padding: 24px 38px 22px 38px;
+        border-radius: 14px;
+        // @media screen and (max-width: utils.$var-signin-breakpoint-1) {
+        //     width: 302px;
+        //     padding: 40px 25px 20px 25px;
+        // }
+    }
+    &__close {
+        position: absolute;
+        top: 10px;
+        right: 19px;
     }
     &__icon {
-        // background: center/cover no-repeat url('../../../../img/icons/person.svg');
     }
-    &__wrap:last-child::before,
-    &__wrap:first-child::before {
-        position: absolute;
-        top: 50%;
-        left: 15px;
-        width: 13px;
-        height: 13px;
-        transform: translateY(-50%);
+    &__title {
+        margin-top: 11px;
+        margin-bottom: 24px;
     }
-    // &__wrap:first-child::before {
-    //     background: center/cover no-repeat url('../../../../img/icons/phone.svg');
-    // }
-    &__wrap:last-child::before {
-        // background: center/cover no-repeat url('../../../../img/icons/key.svg');
+    &__wrap:not(:last-child) {
+        margin-bottom: 21px;
+    }
+    &__wrong-message {
+        margin-top: 5px;
+        text-align: center;
+        @include utils.mix-font(400, 10px, 15px, utils.$var-color-burnt-sienna);
+    }
+    &__btns {
+        margin-top: 7px;
+        margin-bottom: 15px;
+        display: flex;
+        flex-flow: column;
+        align-items: center
     }
     &__password-recovery-btn {
-        text-align: center;
-        @include utils.mix-font(400, 14px, 17px);
-        margin: 15px 0 12px 0;
+        @include utils.mix-font(400, 12px, 14px);
+        // @include utils.mix-font(400, 14px, 17px);
+        margin-bottom: 10px;
     }
     &__password-recovery-btn,
     &__checkin-btn {
@@ -347,15 +357,21 @@
         background: transparent;
         cursor: pointer;
     }
-    &__btn {
-        width: 143.2px;
-        height: 45.41px;
-        margin: 0 auto 24px auto;
-        border-radius: 5.91549px;
-        @include utils.mix-font(500, 14px, 18px, utils.$var-btn-text-color);
+    &__enter-btn {
+        width: 121.04px;
+        height: 38.38px;
+        // width: 143.2px;
+        // height: 45.41px;
+        border-radius: 5px;
+        @include utils.mix-font(500, 12px, 15px, utils.$var-white);
+        // @include utils.mix-font(500, 14px, 18px, utils.$var-btn-text-color);
     }
     &__register {
-        @include utils.mix-font(400, 12px, 18px, utils.$var-black);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include utils.mix-font(400, 10px, 15px, utils.$var-black);
+        // @include utils.mix-font(400, 12px, 18px, utils.$var-black);
         &-txt {
             margin-right: 5px;
         }

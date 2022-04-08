@@ -25,8 +25,8 @@ body.addEventListener('click', event => {
             html = POPUP_PASSWORD_RECOVERY_HTML;    
     }
     body.insertAdjacentHTML('afterbegin', html);
-    togglePlaceholderMessage('popup-form', '.form-input__item[type="tel"]' ,PASSWORD_RECOVERY_PLACEHOLDER_PHONE_MESSAGE);
-    setCustomValidationMessage('.form-input__item[type="tel"]' ,PASSWORD_RECOVERY_VALIDATION_PHONE_MESSAGE);
+    togglePlaceholderMessage('popup-form', '.form-input__item[type="tel"]', PLACEHOLDER_PHONE_MESSAGE); // defined in common.js
+    setCustomValidationMessage('.form-input__item[type="tel"]', VALIDATION_PHONE_MESSAGE); // defined in common.js
     body.style.overflow = 'hidden';
 });
 // close a popup window
