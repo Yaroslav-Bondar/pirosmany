@@ -1,8 +1,27 @@
+// close a popup window
+body.addEventListener('click', event => {
+    const popupCloseBtn = event.target.closest('[data-modal-close="true"]');
+    let popupWindow;
+    if(event.target.dataset.modalWindow === 'true') popupWindow = event.target;    
+    if(!popupCloseBtn && !popupWindow) return;
+    if(popupCloseBtn) {
+        // if the button does not open another popup
+        if(popupCloseBtn.dataset.modalOpen !== 'true') {
+            body.style.overflow = '';
+        }
+        const popupWindow = popupCloseBtn.closest('[data-modal-window="true"]');
+        popupWindow.remove();
+    }
+    if(popupWindow) {
+        body.style.overflow = '';
+        popupWindow.remove();
+    } 
+});
 // show a popup window
 body.addEventListener('click', event => {
-    const popupCloseBtn = event.target.closest('[data-modal-open="true"]');
-    if(!popupCloseBtn) return;
-    const id = popupCloseBtn.id;
+    const popupOpenBtn = event.target.closest('[data-modal-open="true"]');
+    if(!popupOpenBtn) return;
+    const id = popupOpenBtn.id;
     let html;
     switch(id) {
         case 'sign-in-btn':
@@ -26,25 +45,6 @@ body.addEventListener('click', event => {
     }
     body.insertAdjacentHTML('afterbegin', html);
     togglePlaceholderMessage('popup-form', '.form-input__item[type="tel"]', PLACEHOLDER_PHONE_MESSAGE); // defined in common.js
-    setCustomValidationMessage('.form-input__item[type="tel"]', VALIDATION_PHONE_MESSAGE); // defined in common.js
+    formValidation('signin', popupMessages);
     body.style.overflow = 'hidden';
-});
-// close a popup window
-body.addEventListener('click', event => {
-    const popupCloseBtn = event.target.closest('[data-modal-close="true"]');
-    let popupWindow;
-    if(event.target.dataset.modalWindow === 'true') popupWindow = event.target;    
-    if(!popupCloseBtn && !popupWindow) return;
-    if(popupCloseBtn) {
-        // if the button does not open another popup
-        if(popupCloseBtn.dataset.modalOpen !== 'true') {
-            body.style.overflow = '';
-        }
-        const popupWindow = popupCloseBtn.closest('[data-modal-window="true"]');
-        popupWindow.remove();
-    }
-    if(popupWindow) {
-        body.style.overflow = '';
-        popupWindow.remove();
-    } 
 });

@@ -58,21 +58,41 @@ function togglePlaceholderMessage(parentClassName, targetElementSelector, messag
     });
 }
 /**
- * adding a custom validation message to an element
- * @param {string} targetElementSelector - element to change the validation message
- * @param {string} message - custom validation message 
+ * setting a custom validation message for an element
+ * @param {object} targetElement - element to change the validation message
+ * @param {object} messages - custom validation messages available by key
+ * @param {string} key - key to identify custom validation message 
  * @returns {undefined}
  */ 
-function setCustomValidationMessage(targetElementSelector, message) {
-    const targetElement = document.querySelector(`${targetElementSelector}`);
-    if(!targetElement) return; 
+function setValidationMessage(targetElement, messages, key) {
     targetElement.addEventListener('input', () => {
         if(targetElement.validity.patternMismatch) {
-            targetElement.setCustomValidity(`${message}`);
+            targetElement.setCustomValidity(messages[key].patternMismatch);
+        } else if (targetElement.validity.tooShort) {
+            targetElement.setCustomValidity(messages[key].tooShort);
         } else {
             targetElement.setCustomValidity('');
         } 
     });
+}
+/**
+ * setting validation handlers for form elements
+ * @param {string} formName - form name
+ * @param {object} messages - custom validation messages object 
+ * @returns {undefined}
+ */
+function formValidation(formName, messages) {
+    const form = document.forms[formName];
+    if(!form) return;
+    const formElements = form.elements;
+    for (const element of formElements) {
+        if(element.type == 'tel') {
+            setValidationMessage(element, messages, element.type);
+        }
+        if(element.type == 'password') {
+            setValidationMessage(element, messages, element.type);
+        }
+    }
 }
 // setting the selected product Id
 
