@@ -78,22 +78,24 @@ function setValidationMessage(targetElement, messages, key) {
 /**
  * setting validation handlers for form elements
  * @param {string} formName - form name
+ * @param {function} handler - form element handler 
  * @param {object} messages - custom validation messages object 
  * @returns {undefined}
  */
-function formValidation(formName, messages) {
+function setFormElementHandler(formName, handler, messages) {
     const form = document.forms[formName];
     if(!form) return;
     const formElements = form.elements;
     for (const element of formElements) {
         if(element.type == 'tel') {
-            setValidationMessage(element, messages, element.type);
+            handler(element, messages, element.type);
         }
         if(element.type == 'password') {
-            setValidationMessage(element, messages, element.type);
+            handler(element, messages, element.type);
         }
     }
 }
+// function 
 // setting the selected product Id
 
 // body.addEventListener('click', (e)=> {

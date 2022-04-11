@@ -2,8 +2,8 @@ const POPUP_SIGNIN_HTML = `
     <div class="popup" data-modal-window="true">
         <div class="signin popup__container">
             <form onsubmit="return false;" action="#" 
-                name="signin"
                 class="signin__form popup-form" 
+                name="signin"
                 method="POST">
                 <div class="signin__close" data-modal-close="true">
                     <div class="popup-close">
@@ -41,6 +41,7 @@ const POPUP_SIGNIN_HTML = `
                                 maxlength='25' 
                                 name="password" 
                                 required>
+                            <div class="form-input__check"></div>
                             <div class="form-input__key"></div>
                         </div> 
                     </div>

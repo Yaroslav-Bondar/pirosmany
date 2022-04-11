@@ -31,6 +31,7 @@ const POPUP_PASSWORD_RECOVERY_HTML = `
                                     aria-label="password" 
                                     placeholder="Новый пароль (мин. 6 символов)" 
                                     name="password" required>
+                            <div class="form-input__check"></div>
                             <div class="form-input__key"></div>
                         </div>
                         <div class="password-recovery__wrap form-input">
@@ -38,7 +39,8 @@ const POPUP_PASSWORD_RECOVERY_HTML = `
                                     aria-label="confirm password" 
                                     placeholder="Подтвердите пароль" 
                                     name="password" required>
-                            <div class="form-input__key"></div>
+                                <div class="form-input__check"></div>
+                                <div class="form-input__key"></div>
                         </div>  
                     </div>
                 </div>

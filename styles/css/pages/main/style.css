@@ -953,6 +953,12 @@ body {
   padding: 24px 38px 21px 38px;
   border-radius: 14.7609px;
 }
+@media screen and (max-width: 320px) {
+  .password-recovery__form {
+    width: 280px;
+    padding: 20px 25px 20px 25px;
+  }
+}
 .password-recovery__close {
   position: absolute;
   top: 10px;
@@ -1069,20 +1075,20 @@ body {
   line-height: 17px;
   color: #C6C6C6;
 }
-.form-input__item[type=tel]:valid + div::after {
+.form-input__item[type=tel]:valid + div::after, .form-input__item[type=password]:valid + div::after {
   content: "✓";
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 7px;
+  right: -17px;
   color: #00AC4E;
 }
-.form-input__item[type=tel]:focus:invalid + div::after {
+.form-input__item[type=tel]:focus:invalid + div::after, .form-input__item[type=password]:focus:invalid + div::after {
   content: "✖";
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 7px;
+  right: -17px;
   color: #EB5757;
 }
 .form-input__phone, .form-input__key {
@@ -1104,6 +1110,12 @@ body {
   width: 302px;
   padding: 24px 38px 22px 38px;
   border-radius: 14px;
+}
+@media screen and (max-width: 320px) {
+  .signin__form {
+    width: 260px;
+    padding: 20px 25px 20px 25px;
+  }
 }
 .signin__close {
   position: absolute;

@@ -45,6 +45,6 @@ body.addEventListener('click', event => {
     }
     body.insertAdjacentHTML('afterbegin', html);
     togglePlaceholderMessage('popup-form', '.form-input__item[type="tel"]', PLACEHOLDER_PHONE_MESSAGE); // defined in common.js
-    formValidation('signin', popupMessages);
+    setFormElementHandler('signin', setValidationMessage, popupMessages);
     body.style.overflow = 'hidden';
 });

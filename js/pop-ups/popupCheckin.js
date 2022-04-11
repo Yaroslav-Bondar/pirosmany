@@ -1,24 +1,57 @@
 const POPUP_CHECKIN_HTML = `
-    <div class="checkin popup" data-modal-window="true">
-        <form action="#" class="checkin__form popup__form" method="POST">
-            <button class="checkin__close popup__close" data-modal-close="true"></button>
-            <div class="checkin__icon popup__icon"></div>
-            <div class="checkin__title popup__title">
+<div class="popup" data-modal-window="true">
+    <div class="checkin popup__container">
+        <form onsubmit="return false;" action="#" 
+            class="checkin__form popup-form" 
+            name="checkin"
+            method="POST">
+            <div class="checkin____close" data-modal-close="true">
+                <div class="popup-close">
+                    <button class="popup-close__btn"></button>
+                </div>
+            </div> 
+            <div class="checkin__icon">
+                <div class="popup-icon">
+                    <div class="popup-icon__item"></div>
+                </div>
+            </div>
+            <div class="checkin__title popup-title1">
                 Зарегистрироваться
             </div>
-            <div class="checkin__body popup__body">
-                <div class="checkin__inputs popup__inputs">
-                    <div class="checkin__wrap popup__wrap">
-                        <input type="tel" placeholder="Телефон" name="phone" required>
+            
+            <div class="checkin__body">
+                <div class="checkin__inputs">
+                    <div class="checkin__wrap form-input">
+                        <input class="form-input__item"
+                            type="tel" 
+                            aria-label="phone number"
+                            placeholder="Телефон" 
+                            name="phone" 
+                            required>
+                        <div class="form-input__check"></div>
+                        <div class="form-input__phone"></div>
                     </div>
-                    <div class="checkin__wrap popup__wrap">
-                        <input type="password" placeholder="Пароль" name="password" required>
+                    <div class="checkin__wrap form-input">
+                        <input class="form-input__item" 
+                            type="password"
+                            aria-label="password"
+                            placeholder="Пароль" 
+                            name="password" required>
+                        <div class="form-input__check"></div>
+                        <div class="form-input__key"></div>
                     </div>
-                    <div class="checkin__wrap popup__wrap">
-                        <input type="password" placeholder="Подтвердите пароль" name="password-repeat" required>
+                    <div class="checkin__wrap form-input">
+                        <input class="form-input__item" 
+                            type="password"
+                            aria-label="confirm-password"
+                            placeholder="Подтвердите пароль" 
+                            name="confirm-password" 
+                            required>
+                        <div class="form-input__check"></div>
+                        <div class="form-input__key"></div>
                     </div>  
                 </div>
-                <div class="checkin__wrong-message popup__wrong-message">
+                <div class="checkin__wrong-message">
                     Пользователь с таким номером телефона уже зарегистрирован.
                 </div>
                 <div class="checkin__radio popup__radio">
@@ -43,4 +76,5 @@ const POPUP_CHECKIN_HTML = `
                 <button class="checkin__btn btn" type="submit">Зарегистрироваться</button>
             </div>
         </form>
-    </div>`
+    </div>
+</div>`

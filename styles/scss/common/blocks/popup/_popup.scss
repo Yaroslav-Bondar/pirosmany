@@ -169,6 +169,10 @@
         width: 303px;
         padding: 24px 38px 21px 38px;
         border-radius: 14.7609px;
+        @media screen and (max-width: utils.$var-general-brkpoint-4) {
+            width: 280px;
+            padding: 20px 25px 20px 25px;
+        }
     }
     &__close {
         position: absolute;
@@ -273,20 +277,22 @@
         font-family: 'TT Norms Pro';
         @include utils.mix-font(400, 14px, 17px, utils.$var-popup-text-color);
     }
-    &__item[type="tel"]:valid+div::after {
+    &__item[type="tel"]:valid+div::after,
+    &__item[type="password"]:valid+div::after {
         content: '✓';
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        right: 7px;
+        right: -17px;
         color: utils.$var-green-haze;
     }
-    &__item[type="tel"]:focus:invalid+div::after {
+    &__item[type="tel"]:focus:invalid+div::after,
+    &__item[type="password"]:focus:invalid+div::after {
         content: '✖';
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        right: 7px;
+        right: -17px;
         color: utils.$var-color-burnt-sienna;
     }
     &__phone,
@@ -313,10 +319,10 @@
         // width: 358px;
         padding: 24px 38px 22px 38px;
         border-radius: 14px;
-        // @media screen and (max-width: utils.$var-signin-breakpoint-1) {
-        //     width: 302px;
-        //     padding: 40px 25px 20px 25px;
-        // }
+        @media screen and (max-width: utils.$var-general-brkpoint-4) {
+            width: 260px;
+            padding: 20px 25px 20px 25px;
+        }
     }
     &__close {
         position: absolute;
