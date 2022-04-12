@@ -26,6 +26,11 @@ const VALIDATION_PASSWORD_PATTERN_MESSAGE = 'password pattern is wrong';
 const VALIDATION_PHONE_PATTERN = '\\+375\\(\\d{2}\\)\\d{3}-\\d{2}-\\d{2}';
 // const VALIDATION_PASSWORD_PATTERN = '[\\da-z*#&!^]{1,25}';
 const VALIDATION_PASSWORD_PATTERN = '[a-zA-Z0-9#$&^*]{6,25}'
+
+/**
+ * Custom validation message object. Contains custom validation messages 
+ * based on element type and validation type.
+ */
 const popupMessages = {
     tel: {
         patternMismatch: 'please enter phone number in correct format: +375(**)***-**-**',

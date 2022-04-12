@@ -61,6 +61,22 @@ body {
   background-color: #00AC4E;
 }
 
+.green-checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #EBEBEB;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.green-checkbox:checked {
+  background-color: #00AC4E;
+}
+
 .card {
   width: 205.5px;
 }
@@ -1125,6 +1141,7 @@ body {
   margin-bottom: 21px;
 }
 .signin__wrong-message {
+  visibility: hidden;
   margin-top: 5px;
   text-align: center;
   font-weight: 400;
@@ -1133,6 +1150,9 @@ body {
   text-transform: none;
   line-height: 15px;
   color: #EB5757;
+}
+.signin__wrong-message_hidden {
+  visibility: visible;
 }
 .signin__btns {
   margin-top: 7px;

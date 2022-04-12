@@ -339,9 +339,13 @@
         margin-bottom: 21px;
     }
     &__wrong-message {
+        visibility: hidden;
         margin-top: 5px;
         text-align: center;
         @include utils.mix-font(400, 10px, 15px, utils.$var-color-burnt-sienna);
+    }
+    &__wrong-message_hidden {
+        visibility: visible;
     }
     &__btns {
         margin-top: 7px;

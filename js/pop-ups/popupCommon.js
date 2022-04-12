@@ -45,6 +45,16 @@ body.addEventListener('click', event => {
     }
     body.insertAdjacentHTML('afterbegin', html);
     togglePlaceholderMessage('popup-form', '.form-input__item[type="tel"]', PLACEHOLDER_PHONE_MESSAGE); // defined in common.js
-    setFormElementHandler('signin', setValidationMessage, popupMessages);
+    setFormElementValidMessageHadler('signin', setFormElementValidMessage, popupMessages);
+    // logic for signin form
+    const signinFormButton = document.querySelector('.signin__enter-btn');
+    if(signinFormButton) {
+        signinFormButton.addEventListener('click', ()=> {
+            if(!isFormValid(document.forms.signin)) {
+                showInvalidFormState(document.forms.signin, 'signin-wrong-message', 'signin__wrong-message_hidden');
+                setFormStateHandler('signin','signin-wrong-message', 'signin__wrong-message_hidden', showValidFormState);
+            }
+        });
+    }
     body.style.overflow = 'hidden';
 });

@@ -23,7 +23,7 @@ let tabContent = document.querySelectorAll('.tab__content')
  * @returns {undefined} - If not fit for state transition
  * @returns {object} - Element suitable for state transition
  */
-function setElementState(elementClassName, stateClassName, uncheckedElement) {
+function toggleElementsState(elementClassName, stateClassName, uncheckedElement) {
     const targetElement = uncheckedElement.closest(`.${elementClassName}`);
     if(!targetElement) return;
     const elements = document.querySelectorAll(`.${elementClassName}`);
@@ -58,13 +58,15 @@ function togglePlaceholderMessage(parentClassName, targetElementSelector, messag
     });
 }
 /**
- * setting a custom validation message for an element
+ * Setting a custom validation message for a form element accessed by key.
+ * Depending on the validation type, sets a custom validation message for 
+ * the form element
  * @param {object} targetElement - element to change the validation message
  * @param {object} messages - custom validation messages available by key
  * @param {string} key - key to identify custom validation message 
  * @returns {undefined}
  */ 
-function setValidationMessage(targetElement, messages, key) {
+function setFormElementValidMessage(targetElement, messages, key) {
     targetElement.addEventListener('input', () => {
         if(targetElement.validity.patternMismatch) {
             targetElement.setCustomValidity(messages[key].patternMismatch);
@@ -76,13 +78,16 @@ function setValidationMessage(targetElement, messages, key) {
     });
 }
 /**
- * setting validation handlers for form elements
+ * Sets a handler to set a custom validation message 
+ * for the form element depending on the type
  * @param {string} formName - form name
- * @param {function} handler - form element handler 
- * @param {object} messages - custom validation messages object 
+ * @param {function} handler - handler for setting the custom  validation message  
+ * @param {object} messages - custom validation messages object. 
+ *                            contains custom validation messages 
+ *                            based on element type and validation type. 
  * @returns {undefined}
  */
-function setFormElementHandler(formName, handler, messages) {
+function setFormElementValidMessageHadler(formName, handler, messages) {
     const form = document.forms[formName];
     if(!form) return;
     const formElements = form.elements;
@@ -95,7 +100,39 @@ function setFormElementHandler(formName, handler, messages) {
         }
     }
 }
-// function 
+function isFormValid(form) {
+    for(const element of form) {
+            if(!element.validity.valid) {
+                return false;
+            } 
+        }
+    return true;
+}
+function setFormStateHandler(formName, messageElementId, stateClassName, handler) {
+    const messageElement = document.getElementById(`${messageElementId}`);
+    const form = document.forms[formName];
+    if(!form || !messageElement) {
+        console.log('Wrong message element id or form name');
+        return false;
+    }
+    for(const element of form) {
+        handler(element, form, messageElement, stateClassName);
+    }
+}
+function showValidFormState(checkElement, form, messageElement, stateClassName) {
+    checkElement.addEventListener('input', () => {
+        if(isFormValid(form)) {
+            messageElement.classList.remove(stateClassName);
+        }
+    });
+}
+function showInvalidFormState(form, messageElementId, stateClassName) {
+    const messageElement = document.getElementById(`${messageElementId}`);
+    if(!isFormValid(form)) {
+        messageElement.classList.add(stateClassName);
+    }
+}
+
 // setting the selected product Id
 
 // body.addEventListener('click', (e)=> {

@@ -53,6 +53,6 @@ const POPUP_PASSWORD_RECOVERY_HTML = `
     </div>`;
 // toggling the state of a button in a popup window 
 body.addEventListener('click', event => {
-    setElementState('password-recovery__btn', 'password-recovery__btn_active', event.target);
+    toggleElementsState('password-recovery__btn', 'password-recovery__btn_active', event.target);
 });
 

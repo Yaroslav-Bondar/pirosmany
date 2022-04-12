@@ -54,6 +54,14 @@ const POPUP_CHECKIN_HTML = `
                 <div class="checkin__wrong-message">
                     Пользователь с таким номером телефона уже зарегистрирован.
                 </div>
+                <div class="green-radio">
+                    <input class="green-checkbox" 
+                        type="checkbox"
+                        name="offers"
+                        value="suggestions"
+                    >
+                </div>
+
                 <div class="checkin__radio popup__radio">
                     <label class="popup__radio-label">
                         <input type="radio" class="popup__radio-real" name="offers" checked>

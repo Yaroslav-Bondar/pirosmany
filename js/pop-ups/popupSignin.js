@@ -7,7 +7,7 @@ const POPUP_SIGNIN_HTML = `
                 method="POST">
                 <div class="signin__close" data-modal-close="true">
                     <div class="popup-close">
-                        <button class="popup-close__btn"></button>
+                        <button type="button" class="popup-close__btn"></button>
                     </div>
                 </div> 
                 <div class="signin__icon">
@@ -45,11 +45,11 @@ const POPUP_SIGNIN_HTML = `
                             <div class="form-input__key"></div>
                         </div> 
                     </div>
-                    <div class="signin__wrong-message">
+                    <div id="signin-wrong-message" class="signin__wrong-message">
                         Не правильный логин или пароль
                     </div>
                     <div class="signin__btns">
-                        <button id='password-recovery-btn' 
+                        <button type="button" id='password-recovery-btn' 
                             class="signin__password-recovery-btn" 
                             data-modal-close="true" 
                             data-modal-open="true">
@@ -60,7 +60,7 @@ const POPUP_SIGNIN_HTML = `
                 </div>
                 <div class="signin__register">
                     <span class="signin__register-txt">Впервые у нас?</span>
-                    <button id="check-in-btn-1" data-modal-close="true" 
+                    <button type="button" id="check-in-btn-1" data-modal-close="true" 
                         data-modal-open="true" 
                         class="signin__checkin-btn">
                         Зарегистрироваться
