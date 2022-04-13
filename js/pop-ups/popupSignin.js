@@ -24,7 +24,7 @@ const POPUP_SIGNIN_HTML = `
                             <input class="form-input__item signin__input" 
                                 type="tel" 
                                 aria-label="phone number"
-                                pattern=${VALIDATION_PHONE_PATTERN}
+                                pattern=${FormValidationPattern.tel}
                                 placeholder="Телефон" 
                                 name="phone" 
                                 required>
@@ -35,7 +35,7 @@ const POPUP_SIGNIN_HTML = `
                             <input class="form-input__item signin__input" 
                                 type="password" 
                                 aria-label="password"
-                                pattern="${VALIDATION_PASSWORD_PATTERN}" 
+                                pattern="${FormValidationPattern.password}" 
                                 placeholder="Пароль"
                                 minlength='6'
                                 maxlength='25' 

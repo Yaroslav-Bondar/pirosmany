@@ -1,7 +1,12 @@
 const POPUP_PASSWORD_RECOVERY_HTML = `
     <div class="popup" data-modal-window="true">
         <div class="password-recovery popup__container">
-            <form onsubmit="return false;" action="#" class="password-recovery__form popup-form" method="POST">
+            <form onsubmit="return false;" 
+                action="#"
+                name="password-recovery" 
+                class="password-recovery__form popup-form" 
+                method="POST"
+            >
                 <div class="password-recovery__close" data-modal-close="true">
                     <div class="popup-close">
                         <button class="popup-close__btn"></button>
@@ -20,7 +25,7 @@ const POPUP_PASSWORD_RECOVERY_HTML = `
                         <div class="password-recovery__wrap form-input">
                             <input class="form-input__item" type="tel" 
                                     aria-label="phone number"
-                                    pattern=${VALIDATION_PHONE_PATTERN}
+                                    pattern=${FormValidationPattern.tel}
                                     placeholder="Введите телефон" 
                                     name="phone" required>
                             <div class="form-input__check"></div>
@@ -28,7 +33,8 @@ const POPUP_PASSWORD_RECOVERY_HTML = `
                         </div>
                         <div class="password-recovery__wrap form-input">
                             <input class="form-input__item" type="password" 
-                                    aria-label="password" 
+                                    aria-label="password"
+                                    pattern="${FormValidationPattern.password}" 
                                     placeholder="Новый пароль (мин. 6 символов)" 
                                     name="password" required>
                             <div class="form-input__check"></div>
@@ -36,7 +42,8 @@ const POPUP_PASSWORD_RECOVERY_HTML = `
                         </div>
                         <div class="password-recovery__wrap form-input">
                             <input class="form-input__item" type="password" 
-                                    aria-label="confirm password" 
+                                    aria-label="confirm password"
+                                    pattern="${FormValidationPattern.password}" 
                                     placeholder="Подтвердите пароль" 
                                     name="password" required>
                                 <div class="form-input__check"></div>

@@ -1,218 +1,6 @@
 @use '../../utils';
 
 .popup {
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    // position: fixed;
-    // top: 0;
-    // left: 0;
-    // width: 100%;
-    // height: 100vh;
-    // z-index: 11;
-    // background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
-    // &_active {
-    //     display: flex;
-    // }
-    &__form {
-        // position: relative;
-        // display: flex;
-        // flex-flow: column;
-        // align-items: center;
-        // background: utils.$var-popup-bg;
-        // border-radius: 14.7664px;
-        // width: 358px;
-        // box-shadow: 0px 0px 17.7465px rgba(0, 0, 0, 0.12);
-        // border-radius: 17.4636px;
-        // padding: 40px 45px 40px 45px;
-    }
-    &__close {
-        // position: absolute;
-        // display: flex;
-        // align-items: center;
-        // justify-content: center;
-        top: 15px;
-        right: 20px;
-        width: 22.19px;
-        height: 22.19px;
-        // background: center no-repeat url('../../../../img/icons/plus.svg');
-        // border: none;
-        // cursor: pointer;
-    }
-    &__icon {
-        @extend %center-xy-flex;
-        width: 34px;
-        height: 34px;
-        margin: 0 0 14px 0;
-    }
-    &__title {
-        // @include utils.mix-font(500, 17px, 22px, #000000);
-        margin-bottom: 28px;
-        text-align: center;
-    }
-    &__body {
-        display: flex;
-        flex-flow: column;
-        align-content: center;
-        width: 100%;
-    }
-    &__wrap:not(:last-child) {
-        margin-bottom: 25px;
-    }
-    &__wrap {
-        position: relative;
-    }
-    &__wrap input {
-        // width: 100%;
-        // height: 50.64px;
-        // padding-left: 40px;
-        // font-family: 'TT Norms Pro';
-        // background: utils.$var-popup-input-bg;
-        // border: 0.873181px solid utils.$var-popup-border-color;
-        // border-radius: 5.91549px;
-    }
-    &__wrap input {
-        // border: 0.873181px solid utils.$var-popup-border-color;
-        // border-radius: 5.91549px;
-    }
-    &__wrap input[type='number']::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-    }
-    // &__wrap input::placeholder,
-    // &__wrap input::-webkit-input-placeholder,
-    // &__wrap input::-moz-placeholder,
-    // &__wrap input:-ms-input-placeholder {
-    //     // font-family: 'TT Norms Pro';
-    //     // @include utils.mix-font(400, 14px, 17px, utils.$var-popup-text-color);
-    // }
-    // &__wrap:hover input,
-    // &__wrap:hover textarea {
-    //     box-shadow: 0 0 1.5px 1px utils.$var-btn-bgcolor;
-    //     transition: box-shadow .2s;
-    // }
-    &__wrap input:focus,
-    &__wrap textarea:focus {
-        border-color: utils.$var-btn-bgcolor;
-        outline: none;
-    }
-    &__wrap:focus-within::before {
-        color: utils.$var-btn-bgcolor;
-    } 
-    &__wrap::before {
-        content: '';
-    }
-    &__wrap:hover::before {
-        color: utils.$var-btn-bgcolor;
-        transition: color .2s;
-    }
-    &__wrong-message {
-        margin: 7px 0;
-        text-align: center;
-        @include utils.mix-font(400, 10px, 15px, utils.$var-popup-wrong-message);
-    }
-    &__radio {
-        display: flex;
-        flex-flow: column;
-        &-label {
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-        }
-        &-label:not(:last-child) {
-            margin-bottom: 15px;
-        }
-        &-real {
-            display: none;
-        }
-        &-fake {
-            display: inline-block;
-            position: relative;
-            flex-shrink: 0;
-            width: 14.97px;
-            height: 14.97px;
-            margin-right: 15px;
-            border: 1.87138px solid utils.$var-popup-border-color;
-            border-radius: 50%;
-            background: transparent;
-        }
-        &-fake::before {
-            display: block;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%); 
-            content: '';
-            width: 0%;
-            height: 0%;
-            border-radius: 50%;
-            transition-property: width, height;
-            transition: .3s;
-            background: utils.$var-btn-bgcolor;
-        }
-        &-real:checked + &-fake::before {
-            width: 80%;
-            height: 80%;
-        }
-        &-txt {
-            @include utils.mix-font(400, 10px, 14px, utils.$var-popup-text-color);
-        }
-        &-real:checked ~ &-txt {
-            font-weight: 500;
-        }
-        &-link {
-            color: utils.$var-btn-bgcolor;
-        } 
-    }
-}
-.password-recovery {
-    &__form {
-        width: 303px;
-        padding: 24px 38px 21px 38px;
-        border-radius: 14.7609px;
-        @media screen and (max-width: utils.$var-general-brkpoint-4) {
-            width: 280px;
-            padding: 20px 25px 20px 25px;
-        }
-    }
-    &__close {
-        position: absolute;
-        top: 10px;
-        right: 17px;
-    }
-    &__icon {
-    }
-    &__title {
-        margin: 12px 0 24px 0;
-    }
-    &__body {
-    }
-    &__inputs {
-    }
-    &__wrap:not(:last-child) {
-        margin-bottom: 21px;
-    }
-    &__container-btn {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 30px;
-    }
-    &__btn {
-        width: 50%;
-        height: 40px;
-        border: none;
-        border-radius: 5px;
-        background: transparent;
-        @include utils.mix-font(500, 12px, 15px);
-        color: utils.$var-green-haze;
-        transition: .2s background, .2s color;
-        cursor: pointer;
-        &_active {
-            background-color: utils.$var-green-haze;
-            color: utils.$var-white;
-        }
-    }
-}
-.popup {
     position: fixed;
     display: flex;
     justify-content: center;
@@ -296,7 +84,8 @@
         color: utils.$var-color-burnt-sienna;
     }
     &__phone,
-    &__key {
+    &__key,
+    &__document-case {
         position: absolute;
         top: 50%;
         left: 15px;
@@ -310,8 +99,60 @@
     &__key {
         background: center/cover no-repeat url('../../../../img/icons/key.svg');
     }
+    &__document-case {
+        background: center/contain no-repeat url('../../../../img/icons/document_case_grey.svg');
+    }
+
 }
 
+.password-recovery {
+    &__form {
+        width: 303px;
+        padding: 24px 38px 21px 38px;
+        border-radius: 14.7609px;
+        @media screen and (max-width: utils.$var-general-brkpoint-4) {
+            width: 280px;
+            padding: 20px 25px 20px 25px;
+        }
+    }
+    &__close {
+        position: absolute;
+        top: 10px;
+        right: 17px;
+    }
+    &__icon {
+    }
+    &__title {
+        margin: 12px 0 24px 0;
+    }
+    &__body {
+    }
+    &__inputs {
+    }
+    &__wrap:not(:last-child) {
+        margin-bottom: 21px;
+    }
+    &__container-btn {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+    }
+    &__btn {
+        width: 50%;
+        height: 40px;
+        border: none;
+        border-radius: 5px;
+        background: transparent;
+        @include utils.mix-font(500, 12px, 15px);
+        color: utils.$var-green-haze;
+        transition: .2s background, .2s color;
+        cursor: pointer;
+        &_active {
+            background-color: utils.$var-green-haze;
+            color: utils.$var-white;
+        }
+    }
+}
 // signin pop-up modal window
 .signin {
     &__form {
@@ -392,34 +233,45 @@
 // subscribe pop-up modal window
 .subscribe {
     &__icon {
+        width: 23px;
+        height: 18.82px;
+        margin: 0 auto 12px auto;
         background: center/contain no-repeat url('../../../../img/icons/document_case_green.svg');
     }
     &__form {
-        width: 455px;
-        padding-bottom: 53px;
-        @media screen and (max-width: utils.$var-subscribe-breakpoint-1) {
-            width: 302px;
-            padding: 40px 25px 35px 25px;
+        width: 303px;
+        padding: 34px 31px 35px 31px;
+        border-radius: 14px;
+        text-align: center;
+        // @media screen and (max-width: utils.$var-subscribe-breakpoint-1) {
+        //     width: 302px;
+        //     padding: 40px 25px 35px 25px;
+        // }
+        @media screen and (max-width: utils.$var-general-brkpoint-4) {
+            width: 271px;
         }
     }
-    &__title {
-        @include utils.mix-font(500, 22px, 28px, #000000);
-    }
-    &__wrap::before {
+    &__close {
         position: absolute;
-        top: 50%;
-        left: 15px;
-        width: 17px;
-        height: 14px;
-        transform: translateY(-50%);
-        background: center/contain no-repeat url('../../../../img/icons/document_case_grey.svg');
+        top: 10px;
+        right: 19px;
+    }
+    &__title {
+        margin-bottom: 22px;
+        // @include utils.mix-font(500, 22px, 28px, #000000);
     }
     &__btn {
-        width: 181.76px;
-        height: 57.63px;
-        margin-top: 18px;
-        border-radius: 7.50825px;
-        @include utils.mix-font(500, 18px, 23px, utils.$var-btn-text-color);
+        // width: 181.76px;
+        // height: 57.63px;
+        width: 121.04px;
+        height: 38.38px;
+        // margin-top: 18px;
+        margin-top: 12px;
+        // border-radius: 7.50825px;
+        border-radius: 5px;
+        // @include utils.mix-font(500, 18px, 23px, utils.$var-btn-text-color);
+        @include utils.mix-font(500, 12px, 15px, utils.$var-white);
+
     }
 }
 // // subscribe pop-up modal window
@@ -427,32 +279,63 @@
 // checkin pop-up modal window
 .checkin {
     &__form {
-        @media screen and (max-width: utils.$var-checkin-breakpoint-1) {
-            width: 303px;
-            padding: 40px 25px 20px 25px;
+        width: 303px;
+        height: 445px;
+        padding: 24px 38px 18px 38px;
+        border-radius: 14px;
+        @media screen and (max-width: utils.$var-general-brkpoint-4) {
+            width: 280px;
+            padding: 24px 25px 18px 25px;        
         }
     }
-    &__btn {
-        width: 175.91px;
-        height: 48.66px;
-        margin: 38.36px auto 0 auto;
-        @include utils.mix-font(500, 13px, 20px, utils.$var-btn-text-color);
-    }
-    &__wrap:first-child::before,
-    &__wrap:not(:first-child)::before {
+    &__close {
         position: absolute;
-        top: 50%;
-        left: 15px;
-        width: 11px;
-        height: 11px;
-        transform: translateY(-50%);
+        top: 9px;
+        right: 12px;
     }
-    &__wrap:first-child::before {
-        background: center/contain no-repeat url('../../../../img/icons/phone.svg');
-
+    &__title {
+        margin: 16px 0 22px 0;
     }
-    &__wrap:not(:first-child)::before {
-        background: center/contain no-repeat url('../../../../img/icons/key.svg');
+    &__wrap:not(:last-child) {
+        margin-bottom: 21px;
+    }
+    &__wrong-message {
+        margin: 13px 0 12px 0;
+        @include utils.mix-font(400, 7.3px, 11px, utils.$var-color-burnt-sienna);
+    }
+    &__row {
+        display: flex;
+        align-items: center;
+        align-items: flex-start;
+    }
+    &__row:not(:last-child) {
+        margin-bottom: 12px;
+    }
+    &__checkbox {
+        flex-shrink: 0;
+        margin-right: 12.5px;
+    }
+    &__label {
+        @include utils.mix-font(400, 7.3px, 11px, utils.$var-color-silver);
+    }
+    &__policy {
+        text-decoration: none;
+        color: utils.$var-green-haze;
+    }
+    &__btn {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+    &__submit {
+        // width: 175.91px;
+        // height: 48.66px;
+        width: 138.8px;
+        height: 38.39px;
+        // margin: 38.36px auto 0 auto;
+        border-radius: 5px;
+        @include utils.mix-font(500, 10.3px, 16px, utils.$var-white);
+        // @include utils.mix-font(500, 13px, 20px, utils.$var-btn-text-color);
     }
 }
 // // checkin pop-up modal window

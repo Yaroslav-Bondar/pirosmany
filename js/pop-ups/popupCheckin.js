@@ -5,7 +5,7 @@ const POPUP_CHECKIN_HTML = `
             class="checkin__form popup-form" 
             name="checkin"
             method="POST">
-            <div class="checkin____close" data-modal-close="true">
+            <div class="checkin__close" data-modal-close="true">
                 <div class="popup-close">
                     <button class="popup-close__btn"></button>
                 </div>
@@ -16,7 +16,7 @@ const POPUP_CHECKIN_HTML = `
                 </div>
             </div>
             <div class="checkin__title popup-title1">
-                Зарегистрироваться
+                Регистрация
             </div>
             
             <div class="checkin__body">
@@ -25,6 +25,7 @@ const POPUP_CHECKIN_HTML = `
                         <input class="form-input__item"
                             type="tel" 
                             aria-label="phone number"
+                            pattern=${FormValidationPattern.tel}
                             placeholder="Телефон" 
                             name="phone" 
                             required>
@@ -35,6 +36,7 @@ const POPUP_CHECKIN_HTML = `
                         <input class="form-input__item" 
                             type="password"
                             aria-label="password"
+                            pattern=${FormValidationPattern.password}
                             placeholder="Пароль" 
                             name="password" required>
                         <div class="form-input__check"></div>
@@ -44,6 +46,7 @@ const POPUP_CHECKIN_HTML = `
                         <input class="form-input__item" 
                             type="password"
                             aria-label="confirm-password"
+                            pattern=${FormValidationPattern.password}
                             placeholder="Подтвердите пароль" 
                             name="confirm-password" 
                             required>
@@ -54,34 +57,35 @@ const POPUP_CHECKIN_HTML = `
                 <div class="checkin__wrong-message">
                     Пользователь с таким номером телефона уже зарегистрирован.
                 </div>
-                <div class="green-radio">
-                    <input class="green-checkbox" 
-                        type="checkbox"
-                        name="offers"
-                        value="suggestions"
-                    >
-                </div>
-
-                <div class="checkin__radio popup__radio">
-                    <label class="popup__radio-label">
-                        <input type="radio" class="popup__radio-real" name="offers" checked>
-                        <span class="popup__radio-fake"></span>
-                        <span class="popup__radio-txt">
-                            Хочу получать выгодные предложения от магазина
-                        </span>
-                    </label>
-                    <label class="popup__radio-label">
-                        <input type="radio" class="popup__radio-real" name="offers">
-                        <span class="popup__radio-fake"></span>
-                        <span class="popup__radio-txt">
+                <div class="checkin__column">
+                    <div class="checkin__row">
+                        <input id="offers" 
+                            class="checkin__checkbox green-checkbox" 
+                            type="checkbox"
+                            name="suggestions"
+                            value="offers"
+                            checked
+                        >
+                        <label class="checkin__label" for="offers">Хочу получать выгодные предложения от магазина</label>
+                    </div>
+                    <div class="checkin__row">
+                        <input id="agreement" 
+                            class="checkin__checkbox green-checkbox" 
+                            type="checkbox"
+                            name="privacy-policy"
+                            value="agreement"
+                        >
+                        <label class="checkin__label" for="agreement">
                             Принимаю условия 
-                            <a href="#" class="popup__radio-link">
+                            <a href="#" class="checkin__policy">
                                 Пользовательского соглашения, Политики конфиденциальности
                             </a>
-                        </span>
-                    </label>
+                        </label>
+                    </div>
                 </div>
-                <button class="checkin__btn btn" type="submit">Зарегистрироваться</button>
+                <div class="checkin__btn">
+                    <button class="checkin__submit btn" type="submit">Зарегистрироваться</button>
+                </div>
             </div>
         </form>
     </div>

@@ -44,14 +44,17 @@ body.addEventListener('click', event => {
             html = POPUP_PASSWORD_RECOVERY_HTML;    
     }
     body.insertAdjacentHTML('afterbegin', html);
-    togglePlaceholderMessage('popup-form', '.form-input__item[type="tel"]', PLACEHOLDER_PHONE_MESSAGE); // defined in common.js
-    setFormElementValidMessageHadler('signin', setFormElementValidMessage, popupMessages);
-    // logic for signin form
+    togglePlaceholderMessage('popup-form', '.form-input__item[type="tel"]', FormPlaceholderMessages.tel); // defined in common.js
+    setFormElementValidMessageHadler('signin', setFormElementValidMessage, FormValidationMessages);
+    setFormElementValidMessageHadler('checkin', setFormElementValidMessage, FormValidationMessages);
+    setFormElementValidMessageHadler('password-recovery', setFormElementValidMessage, FormValidationMessages);
+    // logic for displaying the valid state of the signin form
     const signinFormButton = document.querySelector('.signin__enter-btn');
     if(signinFormButton) {
         signinFormButton.addEventListener('click', ()=> {
-            if(!isFormValid(document.forms.signin)) {
-                showInvalidFormState(document.forms.signin, 'signin-wrong-message', 'signin__wrong-message_hidden');
+            const form = document.forms.signin;
+            if(!isFormValid(form)) {
+                showInvalidFormState(form, 'signin-wrong-message', 'signin__wrong-message_hidden');
                 setFormStateHandler('signin','signin-wrong-message', 'signin__wrong-message_hidden', showValidFormState);
             }
         });

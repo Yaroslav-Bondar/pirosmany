@@ -89,7 +89,10 @@ function setFormElementValidMessage(targetElement, messages, key) {
  */
 function setFormElementValidMessageHadler(formName, handler, messages) {
     const form = document.forms[formName];
-    if(!form) return;
+    if(!form) {
+        console.log('Wrong form name !!!');
+        return false;
+    }
     const formElements = form.elements;
     for (const element of formElements) {
         if(element.type == 'tel') {
