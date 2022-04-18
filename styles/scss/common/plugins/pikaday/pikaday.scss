@@ -9,8 +9,8 @@
     z-index: 9999;
     display: block;
     position: relative;
-    color: $btn-bgcolor;
-    background: $popup-bg;
+    color: utils.$var-color-green-haze;
+    background: utils.$var-color-white;
     border: none;
     border-radius: 15px;
     font-family: 'TT Hoves';
@@ -45,7 +45,7 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 .pika-title {
     position: relative;
     text-align: center;
-    @include font(400, 14px, 17px, $btn-bgcolor)
+    @include font(400, 14px, 17px, utils.$var-color-green-haze)
 
 }
 
@@ -94,7 +94,7 @@ http://nicolasgallagher.com/micro-clearfix-hack/
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: $btn-bgcolor;
+    color: utils.$var-color-green-haze;
 }
 .pika-prev::before {
     content: "\f053";
@@ -141,7 +141,7 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 }
 
 .pika-table th {
-    @include font(500, 14px, 17px, $btn-bgcolor);
+    @include font(500, 14px, 17px, utils.$var-color-green-haze);
     text-align: center;
 }
 
@@ -155,7 +155,7 @@ http://nicolasgallagher.com/micro-clearfix-hack/
     margin: 0;
     width: 100%;
     padding: 5px;
-    @include font(400, 14px, 17px, $datepicker-text-color);
+    @include font(400, 14px, 17px, utils.$var-color-mine-shaft);
     text-align: center;
     background: transparent;
     height: initial;
@@ -167,7 +167,7 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 }
 
 .is-today .pika-button {
-    color: $btn-bgcolor;
+    color: utils.$var-color-green-haze;
     font-weight: bold;
 }
 
@@ -175,7 +175,7 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 .has-event .pika-button {
     color: #fff;
     font-weight: bold;
-    background: $btn-bgcolor;
+    background: utils.$var-color-green-haze;
     box-shadow: inset 0 1px 3px #178fe5;
     border-radius: 3px;
 }
@@ -224,7 +224,7 @@ http://nicolasgallagher.com/micro-clearfix-hack/
 .pika-button:hover,
 .pika-row.pick-whole-week:hover .pika-button {
     color: #fff;
-    background: $btn-bgcolor;
+    background: utils.$var-color-green-haze;
     box-shadow: none;
     border-radius: 3px;
 }

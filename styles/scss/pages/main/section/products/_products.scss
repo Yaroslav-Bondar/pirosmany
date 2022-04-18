@@ -4,7 +4,7 @@
 .products {
     margin-top: 30px;
     &__title {
-        @include utils.mix-font(500, 27.1585px, 19px, utils.$var-title-1-color);
+        @include utils.mix-font(500, 27.1585px, 19px, utils.$var-color-black);
         margin-bottom: 39.75px;
     }
     &__row {

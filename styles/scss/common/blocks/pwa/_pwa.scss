@@ -2,7 +2,7 @@
 
 .pwa {
     padding: 5px 27px;
-    background: utils.$var-btn-bgcolor;
+    background: utils.$var-color-green-haze;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.12);
     border-radius: 52px;
     &__row {
@@ -23,20 +23,20 @@
         }
         &-icon {
             font-size: 22px;
-            color: utils.$var-btn-text-color;
+            color: utils.$var-color-white;
             transition: color .2s;
         }
     }
     &__column:hover {
-        background: utils.$var-btn-text-color;
+        background: utils.$var-color-white;
     }
     &__column:hover &__column-icon {
-        color: utils.$var-btn-bgcolor;
+        color: utils.$var-color-green-haze;
     }
     &__column.pwa__column_active {
-        background-color: utils.$var-btn-text-color;
+        background-color: utils.$var-color-white;
     }
     &__column.pwa__column_active &__column-icon {
-        color: utils.$var-btn-bgcolor;
+        color: utils.$var-color-green-haze;
     }
 }

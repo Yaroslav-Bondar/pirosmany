@@ -16,7 +16,7 @@
         width: 40px;
         height: 8px;
         border-radius: 30px;
-        background-color: utils.$var-white;
+        background-color: utils.$var-color-white;
         opacity: 1;
     }
     &__text {
@@ -25,15 +25,15 @@
     }
     &__string1 {
         margin-bottom: 9px;
-        @include utils.mix-font(400, 31.63px, 37.89px, utils.$var-title-color)
+        @include utils.mix-font(400, 31.63px, 37.89px, utils.$var-color-mine-shaft)
     }
     &__string2 {
         margin-bottom: 32px;
-        @include utils.mix-font(400, 19.88px, 23.82px, utils.$var-subtitle-color)
+        @include utils.mix-font(400, 19.88px, 23.82px, utils.$var-color-gray)
     }
     &__btn {
         padding: 10px 30px;
-        @include utils.mix-font(500, 25.3px, 30.31px, utils.$var-btn-text-color);
+        @include utils.mix-font(500, 25.3px, 30.31px, utils.$var-color-white);
     }
     &__img {
         width: 411px;

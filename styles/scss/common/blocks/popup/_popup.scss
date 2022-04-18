@@ -14,17 +14,13 @@
 }
 .popup-form {
     position: relative;
-    background: utils.$var-popup-bg;
+    background: utils.$var-color-white;
     box-shadow: 0px 0px 17.7465px rgba(0, 0, 0, 0.12);
 }
-.popup-close {
-    &__btn {
-        width: 19px;
-        height: 19px;
-        background: center no-repeat url('../../../../img/icons/plus.svg');
-        cursor: pointer;
-        border: none;
-    }
+.close-btn {
+    background: transparent;
+    cursor: pointer;
+    border: none;
 }
 .popup-icon {
     &__item {
@@ -35,35 +31,36 @@
     }
 }
 .popup-title1 {
-    @include utils.mix-font(500, 15px, 18px, utils.$var-black);
+    @include utils.mix-font(500, 15px, 18px, utils.$var-color-black);
     text-align: center;
 }
 .form-input {
     position: relative;
     &__item {
         width: 100%;
-        height: 42.81px;
+        // height: 42.81px;
+        height: 100%;
         padding-left: 40px;
         font-family: 'TT Norms Pro';
-        @include utils.mix-font(400, 15px, 15px, utils.$var-liver);
-        background: utils.$var-alabaster;
-        border: 0.873181px solid utils.$var-gallery;
+        @include utils.mix-font(400, 15px, 15px, utils.$var-color-liver);
+        background: utils.$var-color-alabaster;
+        border: 0.873181px solid utils.$var-color-gallery;
         border-radius: 5.91549px
     }
     &__item:hover {
-        box-shadow: 0 0 1.5px 1px utils.$var-green-haze;
+        box-shadow: 0 0 1.5px 1px utils.$var-color-green-haze;
         transition: box-shadow .2s;
     }
     &__item:focus {
-        border-color: utils.$var-btn-bgcolor;
+        border-color: utils.$var-color-green-haze;
         outline: none;
     }
     &__item[type="tel"]:focus::placeholder {
-        color: utils.$var-liver;
+        color: utils.$var-color-liver;
     }
     &__item::placeholder {
         font-family: 'TT Norms Pro';
-        @include utils.mix-font(400, 14px, 17px, utils.$var-popup-text-color);
+        @include utils.mix-font(400, 14px, 17px, utils.$var-color-silver);
     }
     &__item[type="tel"]:valid+div::after,
     &__item[type="password"]:valid+div::after {
@@ -72,7 +69,7 @@
         top: 50%;
         transform: translateY(-50%);
         right: -17px;
-        color: utils.$var-green-haze;
+        color: utils.$var-color-green-haze;
     }
     &__item[type="tel"]:focus:invalid+div::after,
     &__item[type="password"]:focus:invalid+div::after {
@@ -85,13 +82,18 @@
     }
     &__phone,
     &__key,
-    &__document-case {
+    &__document-case,
+    &__date {
         position: absolute;
         top: 50%;
+        transform: translateY(-50%);
+    }
+    &__phone,
+    &__key,
+    &__document-case {
         left: 15px;
         width: 13px;
         height: 13px;
-        transform: translateY(-50%);
     }
     &__phone {
         background: center/cover no-repeat url('../../../../img/icons/phone.svg');
@@ -102,7 +104,9 @@
     &__document-case {
         background: center/contain no-repeat url('../../../../img/icons/document_case_grey.svg');
     }
-
+    &__date {
+        background: center/cover no-repeat url('../../../../img/icons/date.svg');
+    }
 }
 
 .password-recovery {
@@ -144,12 +148,12 @@
         border-radius: 5px;
         background: transparent;
         @include utils.mix-font(500, 12px, 15px);
-        color: utils.$var-green-haze;
+        color: utils.$var-color-green-haze;
         transition: .2s background, .2s color;
         cursor: pointer;
         &_active {
-            background-color: utils.$var-green-haze;
-            color: utils.$var-white;
+            background-color: utils.$var-color-green-haze;
+            color: utils.$var-color-white;
         }
     }
 }
@@ -167,8 +171,10 @@
     }
     &__close {
         position: absolute;
-        top: 10px;
-        right: 19px;
+        width: 29px;
+        height: 29px;
+        top: 12px;
+        right: 14px;
     }
     &__icon {
     }
@@ -203,7 +209,7 @@
     &__password-recovery-btn,
     &__checkin-btn {
         text-decoration: underline;
-        color: utils.$var-green-haze;
+        color: utils.$var-color-green-haze;
         border: none;
         background: transparent;
         cursor: pointer;
@@ -214,15 +220,15 @@
         // width: 143.2px;
         // height: 45.41px;
         border-radius: 5px;
-        @include utils.mix-font(500, 12px, 15px, utils.$var-white);
-        // @include utils.mix-font(500, 14px, 18px, utils.$var-btn-text-color);
+        @include utils.mix-font(500, 12px, 15px, utils.$var-color-white);
+        // @include utils.mix-font(500, 14px, 18px, utils.$var-color-white);
     }
     &__register {
         display: flex;
         justify-content: center;
         align-items: center;
-        @include utils.mix-font(400, 10px, 15px, utils.$var-black);
-        // @include utils.mix-font(400, 12px, 18px, utils.$var-black);
+        @include utils.mix-font(400, 10px, 15px, utils.$var-color-black);
+        // @include utils.mix-font(400, 12px, 18px, utils.$var-color-black);
         &-txt {
             margin-right: 5px;
         }
@@ -269,8 +275,8 @@
         margin-top: 12px;
         // border-radius: 7.50825px;
         border-radius: 5px;
-        // @include utils.mix-font(500, 18px, 23px, utils.$var-btn-text-color);
-        @include utils.mix-font(500, 12px, 15px, utils.$var-white);
+        // @include utils.mix-font(500, 18px, 23px, utils.$var-color-white);
+        @include utils.mix-font(500, 12px, 15px, utils.$var-color-white);
 
     }
 }
@@ -320,7 +326,7 @@
     }
     &__policy {
         text-decoration: none;
-        color: utils.$var-green-haze;
+        color: utils.$var-color-green-haze;
     }
     &__btn {
         display: flex;
@@ -334,8 +340,8 @@
         height: 38.39px;
         // margin: 38.36px auto 0 auto;
         border-radius: 5px;
-        @include utils.mix-font(500, 10.3px, 16px, utils.$var-white);
-        // @include utils.mix-font(500, 13px, 20px, utils.$var-btn-text-color);
+        @include utils.mix-font(500, 10.3px, 16px, utils.$var-color-white);
+        // @include utils.mix-font(500, 13px, 20px, utils.$var-color-white);
     }
 }
 // // checkin pop-up modal window
@@ -344,95 +350,80 @@
 .reserv {
     &__form {
         width: 654px;
-        margin: 0 15px 0 15px;
-        @media screen and (max-width: utils.$var-reserv-breakpoint-3) {
-            padding: 50px 20px 35px 20px;
-        } 
+        padding: 40px 56px 27px 56px;
+        border-radius: 14.7609px;
+        text-align: center;
+    }
+    &__close {
+        position: absolute;
+        top: 12px;
+        right: 19px;
+        width: 40px;
+        height: 40px;
     }
     &__title {
-        font-size: 24px;
-        line-height: 18px;
+        margin-bottom: 17px;
+        text-align: center;
+        @include utils.mix-font(500, 24px, 18px, utils.$var-color-black); 
     }
-    &__conteiner {
+    &__container {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-gap: 25px 35px;
-        margin-top: 25px;
-        @media screen and (max-width: utils.$var-reserv-breakpoint-1) {
-            grid-column-gap: 20px;
+        grid-template-areas: 'phone amount'
+                                'time date';
+        grid-gap: 14px 33px;
+        margin-top: 11px;
+
+        & .reserv__wrap:nth-child(1) {
+            grid-area: phone;
+        }
+        & .reserv__wrap:nth-child(2) {
+            grid-area: time;
+        }
+        & .reserv__wrap:nth-child(3) {
+            grid-area: amount;
+        }
+        & .reserv__wrap:nth-child(4) {
+            grid-area: date;
         }
     }
-    &__wrap input {
+    &__wrap {
+        height: 48px;
+    }
+    &__input {
         padding-left: 15px;
     }
-    &__wrap:not(:last-child) {
-        margin-bottom: 0px;
+    &__input:focus + div {
+        display: none;
     }
-    &__wrap:nth-child(1) {
-        grid-area: 1/1/2/2;
-        @media screen and (max-width: utils.$var-reserv-breakpoint-2) {
-            grid-area: 1/1/2/3;
-        }
-    }
-    &__wrap:nth-child(2)::before {
-    content: 'Время:';
-    font-family: "TT Norms Pro";
-    color: gray;
-    }
-    &__wrap:nth-child(2) input {
-    padding-left: 80px;
-    }
-    &__wrap:nth-child(2) {
-        grid-area: 2/1/3/2;
-        @media screen and (max-width: utils.$var-reserv-breakpoint-2) {
-            grid-area: 4/1/5/3;
-        }
-    }
-    // amount
-    &__wrap:nth-child(3) {
-        grid-area: 1/2/2/3;
-        @media screen and (max-width: utils.$var-reserv-breakpoint-2) {
-            grid-area: 2/1/3/3;
-        }
-    }
-    // date
-    &__wrap:nth-child(4) {
-        grid-area: 2/2/2/3;
-        @media screen and (max-width: utils.$var-reserv-breakpoint-2) {
-            grid-area: 3/1/4/3;
-        }
-    }
-    &__wrap:nth-child(4)::before {
+    &__name {
         position: absolute;
         top: 50%;
-        right: 15px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include utils.mix-font(400, 14px, 17px, utils.$var-color-silver);
+    }
+    &__date {
         width: 15px;
         height: 15px;
-        padding: 0;
-        transform: translateY(-50%);
-        background: center/contain no-repeat url('../../../../img/icons/calendar.svg');
-        z-index: 1;
-        transition: color .2s;
-    }
-    &__wrap:nth-child(4):hover::before {
-        color: utils.$var-btn-bgcolor;
+        right: 20px;
     }
     &__wrap input[type='date']::-webkit-calendar-picker-indicator,
     &__wrap input[type='time']::-webkit-calendar-picker-indicator {
         display: none;
     }
-    &__wrap input[type='date'] {
-        position: relative;
-    }
-    &__wrap:nth-child(4):focus-within::before {
-        color: utils.$var-btn-bgcolor;
-    }
+    // &__wrap input[type='date'] {
+    //     position: relative;
+    // }
+    // &__wrap:nth-child(4):focus-within::before {
+    //     color: utils.$var-color-green-haze;
+    // }
     &__btn {
         width: 164px;
         height: 52px;
-        margin: 25px auto 0 auto;
+        margin-top: 25px;
         border-radius: 6.77465px;
-        @include utils.mix-font(500, 16px, 21px, utils.$var-btn-text-color);
+        @include utils.mix-font(500, 16px, 21px, utils.$var-color-white);
     }
 }    
 // // reserv pop-up modal window
@@ -459,14 +450,14 @@
         position: absolute;
         top: -14px;
         right: 0;
-        @include utils.mix-font(400, 10px, 9px, utils.$var-popup-text-color);
+        @include utils.mix-font(400, 10px, 9px, utils.$var-color-silver);
         @media screen and (max-width:utils.$var-review-breakpoint-1) {
             top: 13px;
         }
     }
     &__field-name {
         margin-right: 10px;
-        @include utils.mix-font(400, 15px, 19px, utils.$var-card-content-color);
+        @include utils.mix-font(400, 15px, 19px, utils.$var-color-black);
     }
     &__wrap &__label &__field-name {
         @media screen and (max-width:utils.$var-review-breakpoint-1) {
@@ -502,7 +493,7 @@
         width: 175.44px;
         padding: 10px 17px;
         margin: 0 auto 0 31%;
-        @include utils.mix-font(500, 16px, 21px, utils.$var-btn-text-color);
+        @include utils.mix-font(500, 16px, 21px, utils.$var-color-white);
         @media screen and (max-width:utils.$var-review-breakpoint-1) {
             margin: 0 auto;
         }

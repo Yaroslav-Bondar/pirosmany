@@ -26,13 +26,13 @@
         display: flex;
         align-items: center;
         padding-left: 30px;
-        background: utils.$var-widget-bg;
+        background: utils.$var-color-white;
     }
     &__burger {
         width: 20px;
         height: 20px;
         margin-right: 53px;
-        background: utils.$var-btn-bgcolor;
+        background: utils.$var-color-green-haze;
         border: none;
         border-radius: 5px;
         cursor: pointer;
@@ -45,21 +45,21 @@
         }
         &-text {
             font-family: 'TT Hoves';
-            @include utils.mix-font(400, 10px, 12px, utils.$var-mobmenu-dropdown-text-color);
+            @include utils.mix-font(400, 10px, 12px, utils.$var-color-concrete);
         }
         &-img {
             @extend %center-xy-flex;
             & > i {
             display: block;
             font-size: 14px;
-            color: utils.$var-mobmenu-text-color;
+            color: utils.$var-color-white;
             }
         }
     }
     &__nav {
         height: 100vh;
         padding: 30px 21px 0 30px;
-        background: utils.$var-mobmenu-bgcolor;
+        background: utils.$var-color-limed-spruce;
         overflow-y: auto;
     }
     &__list {
@@ -91,7 +91,7 @@
     }
     &__text {
         font-family: 'TT Hoves';
-        @include utils.mix-font(400, 14px, 16px, utils.$var-mobmenu-text-color);
+        @include utils.mix-font(400, 14px, 16px, utils.$var-color-white);
     }
     &__btn {
         width: 7px;

@@ -22,16 +22,16 @@
     }
     // &__btn {
     //     position: relative;
-    //     background-color: utils.$var-btn-bgcolor;
+    //     background-color: utils.$var-color-green-haze;
     //     &-icon {
     //         font-size: 22px;
-    //         color: utils.$var-btn-text-color;
+    //         color: utils.$var-color-white;
     //     }
     // }
     &__title {
         grid-area: title;
         margin-bottom: 13px;
-        @include utils.mix-font(500, 28px, 50px, utils.$var-title-color);
+        @include utils.mix-font(500, 28px, 50px, utils.$var-color-mine-shaft);
         @media screen and(max-width: utils.$var-basket-breakpoint-1) {
             margin: 0;
         }
@@ -54,8 +54,8 @@
         &-node:not(:first-child) {
             border-top: none;
             @media screen and(max-width: utils.$var-basket-breakpoint-4) {
-                border-top: 1px solid utils.$var-basket-list-border-color;
-                border-bottom: 1px solid utils.$var-basket-list-border-color;
+                border-top: 1px solid utils.$var-color-gallery;
+                border-bottom: 1px solid utils.$var-color-gallery;
             }
         }
         &-btn {
@@ -73,7 +73,7 @@
             height: 82px;
             margin-right: 38px;
             border-radius: 5px;
-            background: utils.$var-btn-bgcolor;
+            background: utils.$var-color-green-haze;
             @media screen and(max-width: utils.$var-basket-breakpoint-2) {
                 width: 74px;
                 height: 53px;
@@ -87,7 +87,7 @@
         }
         &-name {
             margin-right: 50px;
-            @include utils.mix-font(400, 18px, 21px, utils.$var-text-color);
+            @include utils.mix-font(400, 18px, 21px, utils.$var-color-black);
             @media screen and(max-width: utils.$var-basket-breakpoint-2) {
                 margin-right: 20px;
             }
@@ -115,7 +115,7 @@
             margin: 0 25px;
         }
         &-amount {
-            @include utils.mix-font(400px, 14px, 21px, utils.$var-text-color);
+            @include utils.mix-font(400px, 14px, 21px, utils.$var-color-black);
         }
     }
     &__price {
@@ -124,7 +124,7 @@
         }
         &-item,
         &-currency {
-            @include utils.mix-font(500, 20px, 24px, utils.$var-text-color);
+            @include utils.mix-font(500, 20px, 24px, utils.$var-color-black);
             @media screen and(max-width: utils.$var-basket-breakpoint-3) {
                 font-size: 15px;
             }
@@ -150,7 +150,7 @@
             width: 100%;
         }
         &-title {
-            @include utils.mix-font(400, 19px, 24px, utils.$var-text-color);
+            @include utils.mix-font(400, 19px, 24px, utils.$var-color-black);
         }
         &-title:first-child {
             margin-bottom: 26px;

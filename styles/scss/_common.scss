@@ -11,7 +11,7 @@ body {
     padding: 0 15px;
 }
 .btn {
-    background: $btn-bgcolor;
+    background: utils.$var-color-green-haze;
     border: none;
     // border-radius: 4.52px;
     cursor: pointer;
@@ -34,17 +34,17 @@ body {
         margin-bottom: 13.58px;
     }
     &__title {
-        @include font(500, 14.4845px, 22px, $title-1-color, $text-transform: capitalize);
+        @include font(500, 14.4845px, 22px, utils.$var-color-black, $text-transform: capitalize);
         margin: 0;
         margin-bottom: 5.39px;
     }
     &__description {
-        @include font(400, 12.674px, 19px, $card-content-color);
+        @include font(400, 12.674px, 19px, utils.$var-color-black);
         margin-bottom: 12.69px;
     }
     &__star {
         font-size: 14px;
-        color: $card-star-color;
+        color: utils.$var-color-gallery;
     }
     &__star:not(:last-child) {
         margin: 0 4px 9.65px 0;
@@ -54,14 +54,14 @@ body {
         &-1 {
             display: flex;
             margin-right: 18.11px;
-            @include font(500, 18.1056px, 23px, $card-price-1-color);
+            @include font(500, 18.1056px, 23px, utils.$var-color-black);
             &-item {
                 margin-right: 5px;
             }
         }
         &-2 {
             display: flex;
-            @include font(400, 12.674px, 23px, $card-price-2-color);
+            @include font(400, 12.674px, 23px, utils.$var-color-gray);
             &-text {
                 margin-right: 3px;
             }
@@ -70,7 +70,7 @@ body {
     &__button {
         width: 140.32px;
         height: 38.02px;
-        @include font(500, 18.1056px, 14px, $btn-text-color);
+        @include font(500, 18.1056px, 14px, utils.$var-color-white);
     }
     &__add {
         display: none;
@@ -82,9 +82,9 @@ body {
     }
     &__basket {
         border-radius: 9.03636px;
-        background-color: $btn-bgcolor;
+        background-color: utils.$var-color-green-haze;
         &-icon {
-            color: $btn-text-color;
+            color: utils.$var-color-white;
             font-size: 22px;
         }
     }
@@ -161,33 +161,33 @@ li[data-dropdown='menu'] {
         cursor:pointer;
     }
     .rating input :checked ~ label {
-        color: $btn-bgcolor;
+        color: utils.$var-color-green-haze;
     }
     & label:hover,
     & label:hover ~ label {
-        color: $rating-star-hover-color;
+        color: utils.$var-color-malachite;
     }
     // &__star_active {
-    //     color: $btn-bgcolor !important;
+    //     color: utils.$var-color-green-haze !important;
     // }
     // to display the rating of a product
     &__star_active-0 :nth-child(-n+0) {
-        color: $btn-bgcolor !important;
+        color: utils.$var-color-green-haze !important;
     }
     &__star_active-1 :nth-child(-n+1) {
-        color: $btn-bgcolor !important;
+        color: utils.$var-color-green-haze !important;
     }
     &__star_active-2 :nth-child(-n+2) {
-        color: $btn-bgcolor !important;
+        color: utils.$var-color-green-haze !important;
     }
     &__star_active-3 :nth-child(-n+3) {
-        color: $btn-bgcolor !important;
+        color: utils.$var-color-green-haze !important;
     }
     &__star_active-4 :nth-child(-n+4) {
-        color: $btn-bgcolor !important;
+        color: utils.$var-color-green-haze !important;
     }
     &__star_active-5 :nth-child(-n+5) {
-        color: $btn-bgcolor !important;
+        color: utils.$var-color-green-haze !important;
     }
     // // to display the rating of a product
     &__set > i {
@@ -206,9 +206,9 @@ li[data-dropdown='menu'] {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border: 0.903636px solid $display-border-color;
+    border: 0.903636px solid utils.$var-color-gallery;
     border-radius: 9.03636px;
-    background: $display-bg;
+    background: utils.$var-color-alabaster;
     &__item {
         @extend %center-xy-flex;
     }
@@ -250,12 +250,12 @@ li[data-dropdown='menu'] {
     padding: 50px 33px 41px 33px;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.06);
     border-radius: 20px;
-    background: $popup-bg;
+    background: utils.$var-color-white;
     &__title {
         margin-bottom: 39px;
         & span 
         {
-            @include font(500, 20px, 25px, $title-1-color);
+            @include font(500, 20px, 25px, utils.$var-color-black);
         }
     }
     &__prod {
@@ -263,28 +263,28 @@ li[data-dropdown='menu'] {
         &-name,
         &-price,
         &-currency {
-            @include font(500, 16px, 24px, $title-1-color);
+            @include font(500, 16px, 24px, utils.$var-color-black);
         }
     }
     &__promo {
         margin-bottom: 45px;
         &-name {
-            @include font(500, 16px, 24px, $title-1-color);
+            @include font(500, 16px, 24px, utils.$var-color-black);
         }
         &-price,
         &-currency {
-            @include font(500, 16px, 24px, $btn-bgcolor);
+            @include font(500, 16px, 24px, utils.$var-color-green-haze);
         }
     }
     &__total {
         &-name {
             display: block;
             margin-bottom: 5px;
-            @include font(500, 16px, 24px, $title-1-color);
+            @include font(500, 16px, 24px, utils.$var-color-black);
         }
         &-price,
         &-currency {
-            @include font(500, 20px, 25px, $title-1-color);
+            @include font(500, 20px, 25px, utils.$var-color-black);
         }
     }
     &__prod,
@@ -295,31 +295,31 @@ li[data-dropdown='menu'] {
     &__btn {
         margin-top: 30px;
         padding: 16px 21px;
-        @include font(500, 16px, 21px, $btn-text-color);
+        @include font(500, 16px, 21px, utils.$var-color-white);
     }
 }
 .promo {
     &__title {
         margin-bottom: 20px;
-        @include font(500, 20px, 24px, $text-color);
+        @include font(500, 20px, 24px, utils.$var-color-black);
     }
     &__input {
         width: 187px;
         height: 47px;
         padding-left: 17px;
-        background: $display-bg;
-        border: 1px solid $display-border-color;
+        background: utils.$var-color-alabaster;
+        border: 1px solid utils.$var-color-gallery;
         border-radius: 5px;
     }
     &__input:hover {
         box-shadow: 0 0 1.5px 1px #00AC4E;
     }
     &__input:focus {
-        border-color: $btn-bgcolor;
+        border-color: utils.$var-color-green-haze;
     }
     &__btn {
         margin-left: 18px;
-        @include font(500, 14px, 21px, $btn-text-color);
+        @include font(500, 14px, 21px, utils.$var-color-white);
         padding: 13px 25px;
     }
 }
@@ -329,8 +329,8 @@ li[data-dropdown='menu'] {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        border-top: 1px solid $basket-list-border-color;
-        border-bottom: 1px solid $basket-list-border-color;
+        border-top: 1px solid utils.$var-color-gallery;
+        border-bottom: 1px solid utils.$var-color-gallery;
     }
     &__node:not(:first-child) {
         border-top: none;
@@ -348,12 +348,12 @@ li[data-dropdown='menu'] {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%) rotateZ(45deg);
-        color: $list-btn-color;
+        color: utils.$var-color-silver;
     }
     &__icon {
         flex-shrink: 0;
         border-radius: 5px;
-        background: $btn-bgcolor;
+        background: utils.$var-color-green-haze;
     }
     &__icon img {
         @extend %inner-img;
@@ -397,8 +397,8 @@ li[data-dropdown='menu'] {
         background-image: none;
         &-wrap {
             width: 100%;
-            background: $form-bg-color;
-            // border-color: $form-border-color;
+            background: utils.$var-color-alabaster;
+            // border-color: utils.$var-color-gallery;
             // border: 1.1194px solid #EBEBEB;
             // box-sizing: border-box;
             // border-radius: 7.11356px;
@@ -406,16 +406,16 @@ li[data-dropdown='menu'] {
         }
     }
     &__input {
-        background: $form-bg-color;
+        background: utils.$var-color-alabaster;
         transition-property: box-shadow border-color;
         transition: 0.2s;
     }
     &__input:hover {
-        box-shadow: 0 0 1.5px 1px $btn-bgcolor;
-        border-color: $btn-bgcolor;
+        box-shadow: 0 0 1.5px 1px utils.$var-color-green-haze;
+        border-color: utils.$var-color-green-haze;
     }
     &__input:focus {
-        border-color: $btn-bgcolor;
+        border-color: utils.$var-color-green-haze;
     }
     &__wrap {
         display: flex;
@@ -424,7 +424,7 @@ li[data-dropdown='menu'] {
 }
 .pwa {
     padding: 5px 27px;
-    background: $btn-bgcolor;
+    background: utils.$var-color-green-haze;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.12);
     border-radius: 52px;
     &__row {
@@ -445,21 +445,21 @@ li[data-dropdown='menu'] {
         }
         &-icon {
             font-size: 22px;
-            color: $btn-text-color;
+            color: utils.$var-color-white;
             transition: color .2s;
         }
     }
     &__column:hover {
-        background: $btn-text-color;
+        background: utils.$var-color-white;
     }
     &__column:hover &__column-icon {
-        color: $btn-bgcolor;
+        color: utils.$var-color-green-haze;
     }
     &__column.pwa__column_active {
-        background-color: $btn-text-color;
+        background-color: utils.$var-color-white;
     }
     &__column.pwa__column_active &__column-icon {
-        color: $btn-bgcolor;
+        color: utils.$var-color-green-haze;
     }
 }
 
@@ -489,6 +489,6 @@ li[data-dropdown='menu'] {
     &__btn-checkin-text,
     &__btn-in-text,
     &__separator {
-        @include font(500, 15.4259px, 32px, $footer-text-color, capitalize);
+        @include font(500, 15.4259px, 32px, utils.$var-color-white, capitalize);
     }
 }

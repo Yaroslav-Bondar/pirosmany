@@ -17,33 +17,33 @@
         cursor:pointer;
     }
     .rating input :checked ~ label {
-        color: utils.$var-btn-bgcolor;
+        color: utils.$var-color-green-haze;
     }
     & label:hover,
     & label:hover ~ label {
-        color: utils.$var-rating-star-hover-color;
+        color: utils.$var-color-malachite;
     }
     // &__star_active {
-    //     color: utils.$var-btn-bgcolor !important;
+    //     color: utils.$var-color-green-haze !important;
     // }
     // to display the rating of a product
     &__star_active-0 :nth-child(-n+0) {
-        color: utils.$var-btn-bgcolor !important;
+        color: utils.$var-color-green-haze !important;
     }
     &__star_active-1 :nth-child(-n+1) {
-        color: utils.$var-btn-bgcolor !important;
+        color: utils.$var-color-green-haze !important;
     }
     &__star_active-2 :nth-child(-n+2) {
-        color: utils.$var-btn-bgcolor !important;
+        color: utils.$var-color-green-haze !important;
     }
     &__star_active-3 :nth-child(-n+3) {
-        color: utils.$var-btn-bgcolor !important;
+        color: utils.$var-color-green-haze !important;
     }
     &__star_active-4 :nth-child(-n+4) {
-        color: utils.$var-btn-bgcolor !important;
+        color: utils.$var-color-green-haze !important;
     }
     &__star_active-5 :nth-child(-n+5) {
-        color: utils.$var-btn-bgcolor !important;
+        color: utils.$var-color-green-haze !important;
     }
     // // to display the rating of a product
     &__set > i {

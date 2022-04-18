@@ -6,7 +6,7 @@
         position: relative;
         display: inline-block;
         font-family: 'TT Hoves';
-        @include utils.mix-font(400, 23.3333px, 36px, utils.$var-slider2-text-color, uppercase);
+        @include utils.mix-font(400, 23.3333px, 36px, utils.$var-color-liver, uppercase);
         text-decoration: none;
         transition: color .2s;
         white-space: nowrap;
@@ -20,13 +20,13 @@
             transform: translate(-50%, -50%);
             padding: 0 16px;
             border-radius: 9.03636px;
-            background-color: utils.$var-btn-bgcolor;
+            background-color: utils.$var-color-green-haze;
             opacity: 0;
             transition: opacity .2s;
             z-index: -1;
         }
         &:hover {
-            color: utils.$var-white;
+            color: utils.$var-color-white;
         }
         &:hover::before,
         &:focus::before {
@@ -44,7 +44,7 @@
         top: 50%;
         transform: translateY(-50%);
         border: none;
-        background: utils.$var-white;
+        background: utils.$var-color-white;
         z-index: 2;
         cursor: pointer;
     }

@@ -5,9 +5,9 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border: 0.903636px solid utils.$var-display-border-color;
+    border: 0.903636px solid utils.$var-color-gallery;
     border-radius: 9.03636px;
-    background: utils.$var-display-bg;
+    background: utils.$var-color-alabaster;
     &__item {
         @extend %center-xy-flex;
     }

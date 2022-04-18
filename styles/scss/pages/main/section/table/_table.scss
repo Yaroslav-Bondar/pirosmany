@@ -12,10 +12,10 @@
         margin-top: 4px;
         border: none;
         border-radius: 5px;
-        background: utils.$var-btn-bgcolor;
+        background: utils.$var-color-green-haze;
         cursor: pointer;
         &-text {
-            @include utils.mix-font(500, 8.55856px, 10px, utils.$var-btn-text-color);
+            @include utils.mix-font(500, 8.55856px, 10px, utils.$var-color-white);
             margin-right: 5px;
         }
         &-img {

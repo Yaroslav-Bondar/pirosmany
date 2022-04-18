@@ -2,7 +2,7 @@
 
 .bonus {
     padding: 27px 29px 38px 29px;
-    background: utils.$var-widget-bg;
+    background: utils.$var-color-white;
     box-shadow: 0px 0px 27.2043px rgba(0, 0, 0, 0.06);
     border-radius: 18.1362px;
     &__descr {
@@ -19,11 +19,11 @@
         margin-right: 15px;
         &-item {
             font-size: 26px;
-            color: utils.$var-btn-bgcolor;
+            color: utils.$var-color-green-haze;
         }
     }
     &__title {
-        @include utils.mix-font(400, 16px, 18px, utils.$var-tab-title-color);
+        @include utils.mix-font(400, 16px, 18px, utils.$var-color-black);
         & span {
             font-weight: 500;
         }
@@ -53,13 +53,13 @@
         &-text1 {
             position: absolute;
             top: 23px;
-            @include utils.mix-font(400, 12px, 14px, utils.$var-tab-title-color);
+            @include utils.mix-font(400, 12px, 14px, utils.$var-color-black);
 
         }
         &-text2 {
             position: absolute;
             top: 40px;
-            @include utils.mix-font(400, 10px, 12px, utils.$var-tab-title-color);
+            @include utils.mix-font(400, 10px, 12px, utils.$var-color-black);
         }
         &-text1,
         &-text2 {
@@ -73,15 +73,15 @@
             position: absolute;
             width: 0%;
             height: 3px;
-            background: utils.$var-btn-bgcolor;
+            background: utils.$var-color-green-haze;
         }
         &-count {
             position: absolute;
             top: -35px;
             left: 0%;
             padding: 3px 7px;
-            @include utils.mix-font(500, 16px, 18px, utils.$var-tab-title-color);
-            background: utils.$var-popup-input-bg;
+            @include utils.mix-font(500, 16px, 18px, utils.$var-color-black);
+            background: utils.$var-color-alabaster;
             border-radius: 2px;
             box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.1);
         }
@@ -91,7 +91,7 @@
     }
     /* Firefox */
     &__range::-moz-range-track{
-        background: utils.$var-bonus-range-bg;
+        background: utils.$var-color-alto;
         border-radius: 3px;
         width: 100%;
         height: 3px;
@@ -101,14 +101,14 @@
         -webkit-appearance: none;
         width: 12px;
         height: 12px;
-        background:utils.$var-btn-bgcolor;
+        background:utils.$var-color-green-haze;
         border-radius: 50%;
         border: none;
         cursor: pointer;
     }
     /* Chrome & Safari */    
     &__range::-webkit-slider-runnable-track {
-        background: utils.$var-bonus-range-bg;
+        background: utils.$var-color-alto;
         border-radius: 3px;
         width: 100%;
         height: 3px;
@@ -118,7 +118,7 @@
         -webkit-appearance: none;
         width: 12px;
         height: 12px;
-        background: utils.$var-btn-bgcolor;
+        background: utils.$var-color-green-haze;
         border-radius: 50%;
         border: none;
         margin-top: -4px;
@@ -126,7 +126,7 @@
     }
     /* IE */
     &__range::-ms-track {
-        background: utils.$var-bonus-range-bg;
+        background: utils.$var-color-alto;
         border-radius: 3px;
         width: 100%;
         height: 3px;
@@ -136,7 +136,7 @@
         -webkit-appearance: none;
         width: 12px;
         height: 12px;
-        background: utils.$var-btn-bgcolor;
+        background: utils.$var-color-green-haze;
         border-radius: 50%;
         border: none;
         margin-top: -7px;

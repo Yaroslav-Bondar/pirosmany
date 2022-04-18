@@ -40,13 +40,13 @@
         display: flex;
         align-items: center;
         padding-left: 30px;
-        background: $widget-bg;
+        background: utils.$var-color-white;
     }
     &__burger {
         width: 20px;
         height: 20px;
         margin-right: 53px;
-        background: $btn-bgcolor;
+        background: utils.$var-color-green-haze;
         border: none;
         border-radius: 5px;
         cursor: pointer;
@@ -144,7 +144,7 @@
             position: absolute;
             height: 2.35px;
             border-radius: 4.5px;
-            background: $header-burger-color;
+            background: utils.$var-color-mine-shaft;
         }
         &-line:first-child {
             top: 0;
@@ -161,7 +161,7 @@
         }
         &_active &-line {
             width: 22.34px;
-            background: $btn-bgcolor;
+            background: utils.$var-color-green-haze;
         }
     }
     &__dropdown {
@@ -171,7 +171,7 @@
         padding: 15px 20px 15px 32.6px;
         border-radius: 12px;
         box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.12);
-        background: $widget-bg;
+        background: utils.$var-color-white;
         z-index: 2;
         &-node {
             margin-bottom: 17.39px;
@@ -220,7 +220,7 @@
             }
             & .fa-user {
                 font-size: 22px;
-                color: $btn-bgcolor;
+                color: utils.$var-color-green-haze;
             }         
         }
     }
@@ -232,7 +232,7 @@
         background: transparent;
         &-icon {
             font-size: 22px;
-            color: $btn-bgcolor;
+            color: utils.$var-color-green-haze;
         }
     }
     &__tel {
@@ -246,7 +246,7 @@
         }
         &-icon {
             &-item {
-                color: $btn-bgcolor;
+                color: utils.$var-color-green-haze;
                 font-size: 20px;
             }
         }
@@ -282,10 +282,10 @@
         margin-top: 4px;
         border: none;
         border-radius: 5px;
-        background: $btn-bgcolor;
+        background: utils.$var-color-green-haze;
         cursor: pointer;
         &-text {
-            @include font(500, 8.55856px, 10px, $btn-text-color);
+            @include font(500, 8.55856px, 10px, utils.$var-color-white);
             margin-right: 5px;
         }
         &-img {
@@ -316,7 +316,7 @@
         width: 40px;
         height: 8px;
         border-radius: 30px;
-        background-color: $white;
+        background-color: utils.$var-color-white;
         opacity: 1;
     }
     &__text {
@@ -325,15 +325,15 @@
     }
     &__string1 {
         margin-bottom: 9px;
-        @include font(400, 31.63px, 37.89px, $title-color)
+        @include font(400, 31.63px, 37.89px, utils.$var-color-mine-shaft)
     }
     &__string2 {
         margin-bottom: 32px;
-        @include font(400, 19.88px, 23.82px, $subtitle-color)
+        @include font(400, 19.88px, 23.82px, utils.$var-color-gray)
     }
     &__btn {
         padding: 10px 30px;
-        @include font(500, 25.3px, 30.31px, $btn-text-color);
+        @include font(500, 25.3px, 30.31px, utils.$var-color-white);
     }
     &__img {
         width: 411px;
@@ -365,13 +365,13 @@
             transform: translate(-50%, -50%);
             padding: 0 16px;
             border-radius: 9.03636px;
-            background-color: $btn-bgcolor;
+            background-color: utils.$var-color-green-haze;
             opacity: 0;
             transition: opacity .2s;
             z-index: -1;
         }
         &:hover {
-            color: $white;
+            color: utils.$var-color-white;
         }
         &:hover::before,
         &:focus::before {
@@ -389,7 +389,7 @@
         top: 50%;
         transform: translateY(-50%);
         border: none;
-        background: $white;
+        background: utils.$var-color-white;
         z-index: 2;
         cursor: pointer;
     }
@@ -425,7 +425,7 @@
 .products {
     margin-top: 30px;
     &__title {
-        @include font(500, 27.1585px, 19px, $title-1-color);
+        @include font(500, 27.1585px, 19px, utils.$var-color-black);
         margin-bottom: 39.75px;
     }
     &__row {
@@ -501,7 +501,7 @@
         width: 53%;
         margin: 0;
         margin-bottom: 34.43px;
-        @include font(400, 31.6273px, 38px, $title-color);
+        @include font(400, 31.6273px, 38px, utils.$var-color-mine-shaft);
         @media screen and (max-width: $delivery-breakpoint-1) {
             width: 100%;
         }
@@ -509,7 +509,7 @@
     &__btn {
         width: 171.25px;
         height: 52.55px;
-        @include font(500, 25.3018px, 30px, $btn-text-color, capitalize);
+        @include font(500, 25.3018px, 30px, utils.$var-color-white, capitalize);
     }
 }
 // .footer {
@@ -540,10 +540,10 @@
 //     &__country {
 //         grid-area: 1/1/2/2;
 //         &-title {
-//             @include font(400, 12.3407px, 32px, $footer-text-color);
+//             @include font(400, 12.3407px, 32px, utils.$var-color-white);
 //         }
 //         &-tel {
-//             @include font(500, 18.511px, 32px, $footer-text-color);
+//             @include font(500, 18.511px, 32px, utils.$var-color-white);
 //         }
 //     }
 //     &__order {
@@ -554,10 +554,10 @@
 //             justify-self: start;
 //         }
 //         &-title {
-//             @include font(400, 12.3407px, 32px, $footer-text-color);
+//             @include font(400, 12.3407px, 32px, utils.$var-color-white);
 //         }
 //         &-tel {
-//             @include font(500, 18.511px, 30px, $footer-text-color);
+//             @include font(500, 18.511px, 30px, utils.$var-color-white);
 //         }    
 //     }
 //     &__social {
@@ -590,7 +590,7 @@
 //         }
 //         &-1,
 //         &-2 {
-//             @include font(500, 15.4259px, 32px, $footer-text-color);
+//             @include font(500, 15.4259px, 32px, utils.$var-color-white);
 //             letter-spacing: 3.08517px;
 //             font-variant: small-caps;
 //             text-decoration: none;
@@ -621,7 +621,7 @@
 //             width: 24px;
 //             height: 24px;
 //             margin-right: 7px;
-//             color: $footer-text-color; 
+//             color: utils.$var-color-white; 
 //         }
 //         & .fa-user::before {
 //             position: absolute;
@@ -636,12 +636,12 @@
 //     &__btn-checkin,
 //     &__btn-in,
 //     &__separator {
-//         @include font(500, 15.4259px, 32px, $footer-text-color, capitalize);
+//         @include font(500, 15.4259px, 32px, utils.$var-color-white, capitalize);
 //     }
 //     &__work {
 //         grid-area: 2/1/3/2;
 //         font-family: 'TT Hoves';
-//         @include font(400, 15.4259px, 23px, $footer-text-color);
+//         @include font(400, 15.4259px, 23px, utils.$var-color-white);
 //         @media screen and (max-width: $footer-breakpoint-2) {
 //             grid-area: 1/2/2/3;
 //         }
@@ -655,7 +655,7 @@
 //     &__email {
 //         grid-area: 3/1/4/2;
 //         font-family: 'TT Hoves';
-//         @include font(400, 18.511px, 59px, $footer-text-color);
+//         @include font(400, 18.511px, 59px, utils.$var-color-white);
 //         @media screen and (max-width: $footer-breakpoint-2) {
 //             grid-area: 1/2/2/3;
 //             align-self: center;
@@ -671,7 +671,7 @@
 //     }
 //     &__support {
 //         grid-area: 4/1/5/2;
-//         @include font(500, 18px, 19px, $footer-text-color);
+//         @include font(500, 18px, 19px, utils.$var-color-white);
 //         @media screen and (max-width: $footer-breakpoint-2) {
 //             grid-area: 1/2/2/3;
 //             margin-top: auto;
@@ -709,7 +709,7 @@
 //     &__terms,
 //     &__policy {
 //         font-family: 'TT Hoves';
-//         @include font(400, 12.3407px, 54px, $footer-text-color);
+//         @include font(400, 12.3407px, 54px, utils.$var-color-white);
 //     }
 //     &__terms,
 //     &__policy {

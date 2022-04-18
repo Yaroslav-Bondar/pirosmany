@@ -21,7 +21,7 @@
             position: absolute;
             height: 2.35px;
             border-radius: 4.5px;
-            background: utils.$var-header-burger-color;
+            background: utils.$var-color-mine-shaft;
         }
         &-line:first-child {
             top: 0;
@@ -38,7 +38,7 @@
         }
         &_active &-line {
             width: 22.34px;
-            background: utils.$var-btn-bgcolor;
+            background: utils.$var-color-green-haze;
         }
     }
     &__dropdown {
@@ -48,7 +48,7 @@
         padding: 15px 20px 15px 32.6px;
         border-radius: 12px;
         box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.12);
-        background: utils.$var-widget-bg;
+        background: utils.$var-color-white;
         z-index: 2;
         &-node {
             margin-bottom: 17.39px;
@@ -97,7 +97,7 @@
             }
             & .fa-user {
                 font-size: 22px;
-                color: utils.$var-btn-bgcolor;
+                color: utils.$var-color-green-haze;
             }         
         }
     }
@@ -108,7 +108,7 @@
         height: 31px;
         &-icon {
             font-size: 22px;
-            color: utils.$var-btn-bgcolor;
+            color: utils.$var-color-green-haze;
         }
     }
     &__tel {
@@ -122,7 +122,7 @@
         }
         &-icon {
             &-item {
-                color: utils.$var-btn-bgcolor;
+                color: utils.$var-color-green-haze;
                 font-size: 20px;
             }
         }

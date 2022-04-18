@@ -3,25 +3,25 @@
 .promo {
     &__title {
         margin-bottom: 20px;
-        @include utils.mix-font(500, 20px, 24px, utils.$var-text-color);
+        @include utils.mix-font(500, 20px, 24px, utils.$var-color-black);
     }
     &__input {
         width: 187px;
         height: 47px;
         padding-left: 17px;
-        background: utils.$var-display-bg;
-        border: 1px solid utils.$var-display-border-color;
+        background: utils.$var-color-alabaster;
+        border: 1px solid utils.$var-color-gallery;
         border-radius: 5px;
     }
     &__input:hover {
         box-shadow: 0 0 1.5px 1px #00AC4E;
     }
     &__input:focus {
-        border-color: utils.$var-btn-bgcolor;
+        border-color: utils.$var-color-green-haze;
     }
     &__btn {
         margin-left: 18px;
-        @include utils.mix-font(500, 14px, 21px, utils.$var-btn-text-color);
+        @include utils.mix-font(500, 14px, 21px, utils.$var-color-white);
         padding: 13px 25px;
     }
 }

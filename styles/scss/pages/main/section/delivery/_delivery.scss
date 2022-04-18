@@ -19,7 +19,7 @@
         width: 53%;
         margin: 0;
         margin-bottom: 34.43px;
-        @include utils.mix-font(400, 31.6273px, 38px, utils.$var-title-color);
+        @include utils.mix-font(400, 31.6273px, 38px, utils.$var-color-mine-shaft);
         @media screen and (max-width: utils.$var-delivery-breakpoint-1) {
             width: 100%;
         }
@@ -27,6 +27,6 @@
     &__btn {
         width: 171.25px;
         height: 52.55px;
-        @include utils.mix-font(500, 25.3018px, 30px, utils.$var-btn-text-color, capitalize);
+        @include utils.mix-font(500, 25.3018px, 30px, utils.$var-color-white, capitalize);
     }
 }

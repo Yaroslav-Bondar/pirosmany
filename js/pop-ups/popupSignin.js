@@ -5,11 +5,9 @@ const POPUP_SIGNIN_HTML = `
                 class="signin__form popup-form" 
                 name="signin"
                 method="POST">
-                <div class="signin__close" data-modal-close="true">
-                    <div class="popup-close">
-                        <button type="button" class="popup-close__btn"></button>
-                    </div>
-                </div> 
+                <button type="button" class="signin__close close-btn" data-modal-close="true">
+                   <img class="img" src="img/icons/plus.svg" alt="close">
+                </button>
                 <div class="signin__icon">
                     <div class="popup-icon">
                         <div class="popup-icon__item"></div>
@@ -21,7 +19,7 @@ const POPUP_SIGNIN_HTML = `
                 <div class="signin__body">
                     <div class="signin__inputs">
                         <div class="signin__wrap form-input">
-                            <input class="form-input__item signin__input" 
+                            <input class="form-input__item" 
                                 type="tel" 
                                 aria-label="phone number"
                                 pattern=${FormValidationPattern.tel}
@@ -32,7 +30,7 @@ const POPUP_SIGNIN_HTML = `
                             <div class="form-input__phone"></div>
                         </div>
                         <div class="signin__wrap form-input">
-                            <input class="form-input__item signin__input" 
+                            <input class="form-input__item" 
                                 type="password" 
                                 aria-label="password"
                                 pattern="${FormValidationPattern.password}" 

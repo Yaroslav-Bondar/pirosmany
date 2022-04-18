@@ -1,69 +1,86 @@
-$white: #fff;
-$black: #000000;
-$green-haze: #00AC4E;
-$alabaster: #FCFCFC;
-$gallery: #EBEBEB;
-$liver: #4F4F4F;
+$color-white: #fff;
+$color-black: #000000;
+$color-green-haze: #00AC4E;
+$color-alabaster: #FCFCFC;
+$color-gallery: #EBEBEB;
+$color-liver: #4F4F4F;
 $color-burnt-sienna: #EB5757;
 $color-silver:#C6C6C6;
+$color-malachite: #00d64e;
+$color-alic: #F9F9F9;
+$color-silena: #BDBDBD;
+$color-gray: #828282;
+$color-mine-shaft: #333333;
+$color-limed-spruce: #343E48;
+$color-concrete: #F2F2F2;
+$color-desert-storm: #eeeeed;
+$color-curious-blue: #2D9CDB;
+$color-alto: #dbdbdb;
+$color-bigli: rgba(0, 0, 0, -0.2);
 
-$page-bg: rgba(0, 0, 0, -0.2);
-$widget-bg: #FFFFFF;
-$block-bg: #F9F9F9;
-$gray-4: #BDBDBD;
-$title-1-color:  #000000;
-$text-color: #000000;
-$btn-bgcolor: #00AC4E;
-$btn-text-color:#FFFFFF;
-$rating-star-hover-color: #00d64e;
-$placeholder-txt-color: #C6C6C6;
+    // pop-up windows
+    // $popup-bg: #FFFFFF;
+    // $popup-border-color:#EBEBEB;
+    // $popup-input-bg: #FCFCFC;
+    // $popup-wrong-message: #EB5757;
 
-$subtitle-color:#828282;
-$title-color:#333333;
+// $display-bg: #FCFCFC;
+// $display-border-color: #EBEBEB;
+// $form-border-color: #EBEBEB;
+// $form-bg-color: #FCFCFC;
 
-$header-burger-color: #333333;
 
-$mobmenu-bgcolor: #343E48;
-$mobmenu-text-color: #FFFFFF;
-$mobmenu-dropdown-text-color: #F2F2F2;
+// $tab-title-color: #000000;
+// $tab-slide-bg: #F2F2F2;
+// $tab-slide-bg: #eeeeed;
+// $tab-soc-text-color: #2D9CDB;
 
-$slider2-text-color: #4F4F4F;
+// $bonus-range-bg: #dbdbdb;
+
+// $basket-list-border-color:#EBEBEB;
+
+
+
+// $card-content-color: #000000;
+// $card-star-color: #EBEBEB;
+// $card-star-active-color: #00AC4E;
+// $card-price-1-color: #000000;
+
+// $pagination-text-color: #000000;
+
+// $footer-bg: #00AC4E;
+// $footer-text-color: #FFFFFF;
+// $block-bg: #F9F9F9;
+// $gray-4: #BDBDBD;
+// $title-1-color:  #000000;
+// $text-color: #000000;
+// utils.$var-color-green-haze: #00AC4E;
+// $btn-text-color:#FFFFFF;
+// $rating-star-hover-color: #00d64e;
+// $placeholder-txt-color: #C6C6C6;
+
+// $subtitle-color:#828282;
+// $card-price-2-color: #828282;
+// $tab-btn-text-color: #828282;
+// $tab-text-color: #828282;
+// $title-color:#333333;
+
+// $datepicker-text-color: #333333;
+// $header-burger-color: #333333;
+
+// $mobmenu-bgcolor: #343E48;
+// $mobmenu-text-color: #FFFFFF;
+// $mobmenu-dropdown-text-color: #F2F2F2;
+
+// $slider2-text-color: #4F4F4F;
 
 // $products-title-color: #000000;
 
 // $card-title-color: #000000;
-$card-content-color: #000000;
-$card-star-color: #EBEBEB;
-$card-star-active-color: #00AC4E;
-$card-price-1-color: #000000;
-$card-price-2-color: #828282;
 
-$pagination-text-color: #000000;
+// utils.$var-color-silver-2: #000000;
 
-$footer-bg: #00AC4E;
-$footer-text-color: #FFFFFF;
 
-$buy-text-color: #C6C6C6;
-$buy-text-color-2: #000000;
-
-$display-bg: #FCFCFC;
-$display-border-color: #EBEBEB;
-$form-border-color: #EBEBEB;
-$form-bg-color: #FCFCFC;
-
-$list-btn-color: #C6C6C6;
-
-$tab-btn-text-color: #828282;
-$tab-btn-hover-color: #00d64e;
-$tab-title-color: #000000;
-$tab-text-color: #828282;
-// $tab-slide-bg: #F2F2F2;
-$tab-slide-bg: #eeeeed;
-$tab-soc-text-color: #2D9CDB;
-
-$bonus-range-bg: #dbdbdb;
-
-$basket-list-border-color:#EBEBEB;
 
 // breakpoints
 // general breakpoints
@@ -107,14 +124,6 @@ $cab-history-breakpoint-3: 400px;
 $cab-history-breakpoint-4: 325px;
 
 $support-breakpoint-1: 710px;
-
-    // pop-up windows
-$popup-text-color: #C6C6C6;
-$popup-bg: #FFFFFF;
-$popup-border-color:#EBEBEB;
-$popup-input-bg: #FCFCFC;
-$popup-wrong-message: #EB5757;
-$datepicker-text-color: #333333;
 
 $signin-breakpoint-1: 430px;
 $subscribe-breakpoint-1: 530px;

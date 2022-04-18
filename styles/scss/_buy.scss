@@ -1,11 +1,11 @@
 .buy {
     width: 311.75px;
     padding: 31px 29px;
-    background: $widget-bg;
+    background: utils.$var-color-white;
     box-shadow: 0px 0px 27.1091px rgba(0, 0, 0, 0.06);
     border-radius: 15px;
     &__title {
-        @include font(500, 18px, 23px, $title-1-color);
+        @include font(500, 18px, 23px, utils.$var-color-black);
     }
     &__rating {
         margin: 9px 0 0 0;
@@ -23,32 +23,32 @@
         margin-top: 13px;
         &-text,
         &-amount {
-            @include font(400, 12px, 19px, $buy-text-color);
+            @include font(400, 12px, 19px, utils.$var-color-silver);
         }
     }
     &__price {
         margin-top: 30px;
         &-text {
-            @include font(400, 12px, 19px, $buy-text-color);
+            @include font(400, 12px, 19px, utils.$var-color-silver);
         }
         &-cost,
         &-currency {
-            @include font(500, 18px, 23px, $buy-text-color-2)
+            @include font(500, 18px, 23px, utils.$var-color-silver-2)
         }
     }
     &__joke {
         margin-top: 25px;
         &-text {
-            @include font(400, 12px, 19px, $buy-text-color);
+            @include font(400, 12px, 19px, utils.$var-color-silver);
         }
         &-amount {
-            @include font(500, 18px, 23px, $buy-text-color-2)
+            @include font(500, 18px, 23px, utils.$var-color-silver-2)
         }
     }
     &__amount {
         margin-top: 22px;
         &-text {
-            @include font(400, 12px, 19px, $buy-text-color);
+            @include font(400, 12px, 19px, utils.$var-color-silver);
         }
     }
     &__display {
@@ -58,7 +58,7 @@
         // }
         &-amount,
         &-units {
-            @include font(400, 12px, 19px, $buy-text-color-2);
+            @include font(400, 12px, 19px, utils.$var-color-silver-2);
         }
     }
     &__display::before {
@@ -66,7 +66,7 @@
         right: 0;
         bottom: -18px;
         content: 'Ед. изм.: упаковка';
-        @include font(400, 9px, 14px, $buy-text-color);
+        @include font(400, 9px, 14px, utils.$var-color-silver);
     }
     // &__btn-minus,
     // &__btn-plus {
@@ -95,11 +95,11 @@
     &__total {
         margin-top: 30px;
         &-text {
-            @include font(500, 14px, 22px, $buy-text-color-2);
+            @include font(500, 14px, 22px, utils.$var-color-silver-2);
         }
         &-amount,
         &-currency {
-            @include font(500, 18px, 23px, $btn-bgcolor);
+            @include font(500, 18px, 23px, utils.$var-color-green-haze);
         }
     }
     &__amount, 
@@ -117,7 +117,7 @@
     &__btn {
         width: 194.28px;
         height: 39.76px;
-        @include font(500, 18px, 23px, $btn-text-color);
+        @include font(500, 18px, 23px, utils.$var-color-white);
     }
     
 }

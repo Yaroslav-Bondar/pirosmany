@@ -60,7 +60,7 @@ const POPUP_CHECKIN_HTML = `
                 <div class="checkin__column">
                     <div class="checkin__row">
                         <input id="offers" 
-                            class="checkin__checkbox green-checkbox" 
+                            class="checkin__checkbox choice" 
                             type="checkbox"
                             name="suggestions"
                             value="offers"
@@ -70,7 +70,7 @@ const POPUP_CHECKIN_HTML = `
                     </div>
                     <div class="checkin__row">
                         <input id="agreement" 
-                            class="checkin__checkbox green-checkbox" 
+                            class="checkin__checkbox choice" 
                             type="checkbox"
                             name="privacy-policy"
                             value="agreement"

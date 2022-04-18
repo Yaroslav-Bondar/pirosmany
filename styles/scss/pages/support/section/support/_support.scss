@@ -4,7 +4,7 @@
     padding: 47px 0 249px 0;
     &__title {
         margin-bottom: 45px;
-        @include utils.mix-font(500, 28px, 33px, utils.$var-text-color);
+        @include utils.mix-font(500, 28px, 33px, utils.$var-color-black);
         font-family: 'TT Hoves';
     }
     &__text {
@@ -13,7 +13,7 @@
         width: 672px;
         height: 174px;
         padding: 19px 20px;
-        background: utils.$var-block-bg;
+        background: utils.$var-color-alic;
         border: none;
         border-radius: 5px;
         @media screen and(max-width: utils.$var-support-breakpoint-1) {
@@ -25,12 +25,12 @@
     &__text::-moz-placeholder,
     &__text::-webkit-input-placeholder {
         font-family: 'TT Hoves';
-        @include utils.mix-font(400, 20px, 21px, utils.$var-gray-4);
+        @include utils.mix-font(400, 20px, 21px, utils.$var-color-silena);
     }
     &__btn {
         margin-top: 45px;
         padding: 18px 46px;
         border-radius: 7.8169px;
-        @include utils.mix-font(500, 19px, 24px, utils.$var-btn-text-color);
+        @include utils.mix-font(500, 19px, 24px, utils.$var-color-white);
     }
 }

@@ -5,12 +5,12 @@
     padding: 50px 33px 41px 33px;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.06);
     border-radius: 20px;
-    background: utils.$var-popup-bg;
+    background: utils.$var-color-white;
     &__title {
         margin-bottom: 39px;
         & span 
         {
-            @include utils.mix-font(500, 20px, 25px, utils.$var-title-1-color);
+            @include utils.mix-font(500, 20px, 25px, utils.$var-color-black);
         }
     }
     &__prod {
@@ -18,28 +18,28 @@
         &-name,
         &-price,
         &-currency {
-            @include utils.mix-font(500, 16px, 24px, utils.$var-title-1-color);
+            @include utils.mix-font(500, 16px, 24px, utils.$var-color-black);
         }
     }
     &__promo {
         margin-bottom: 45px;
         &-name {
-            @include utils.mix-font(500, 16px, 24px, utils.$var-title-1-color);
+            @include utils.mix-font(500, 16px, 24px, utils.$var-color-black);
         }
         &-price,
         &-currency {
-            @include utils.mix-font(500, 16px, 24px, utils.$var-btn-bgcolor);
+            @include utils.mix-font(500, 16px, 24px, utils.$var-color-green-haze);
         }
     }
     &__total {
         &-name {
             display: block;
             margin-bottom: 5px;
-            @include utils.mix-font(500, 16px, 24px, utils.$var-title-1-color);
+            @include utils.mix-font(500, 16px, 24px, utils.$var-color-black);
         }
         &-price,
         &-currency {
-            @include utils.mix-font(500, 20px, 25px, utils.$var-title-1-color);
+            @include utils.mix-font(500, 20px, 25px, utils.$var-color-black);
         }
     }
     &__prod,
@@ -50,6 +50,6 @@
     &__btn {
         margin-top: 30px;
         padding: 16px 21px;
-        @include utils.mix-font(500, 16px, 21px, utils.$var-btn-text-color);
+        @include utils.mix-font(500, 16px, 21px, utils.$var-color-white);
     }
 }

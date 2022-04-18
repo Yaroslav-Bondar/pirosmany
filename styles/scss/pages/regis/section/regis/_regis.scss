@@ -19,11 +19,11 @@
     }
     &__title {
         margin-bottom: 25px;
-        @include utils.mix-font(500, 28px, 50px, utils.$var-title-color);
+        @include utils.mix-font(500, 28px, 50px, utils.$var-color-mine-shaft);
     }
     &__subtitle {
         margin-bottom: 16px;
-        @include utils.mix-font(500, 26px, 20px, utils.$var-text-color);
+        @include utils.mix-font(500, 26px, 20px, utils.$var-color-black);
     }
     &__list {
         width: min-content;
@@ -58,7 +58,7 @@
             height: 56px;
             margin-right: 25px;
             border-radius: 3.5px;
-            background: utils.$var-btn-bgcolor;
+            background: utils.$var-color-green-haze;
             @media screen and(max-width: utils.$var-regis-breakpoint-2) {
                 margin: 20px 0 0 0;
                 width: 90px;
@@ -67,7 +67,7 @@
         }
         &-name {
             margin-right: 64px;
-            @include utils.mix-font(500, 16px, 15px, utils.$var-text-color);
+            @include utils.mix-font(500, 16px, 15px, utils.$var-color-black);
             @media screen and(max-width: utils.$var-regis-breakpoint-2) {
                 margin: 20px 0 0 0;
             } 
@@ -94,7 +94,7 @@
         }
         &-amount,
         &-units {
-            @include utils.mix-font(400, 12px, 18px, utils.$var-text-color);
+            @include utils.mix-font(400, 12px, 18px, utils.$var-color-black);
         }
     }
     &__price {
@@ -105,7 +105,7 @@
     &__price {
         &-item,
         &-currency {
-            @include utils.mix-font(500, 19px, 17px, utils.$var-text-color);
+            @include utils.mix-font(500, 19px, 17px, utils.$var-color-black);
         }
     }
     &__unit1-wrap2 {
@@ -124,22 +124,22 @@
     &__pickup-btn {
         background: transparent;
         border: none;
-        @include utils.mix-font(500, 14px, 11px, utils.$var-tab-btn-text-color);
+        @include utils.mix-font(500, 14px, 11px, utils.$var-color-gray);
         cursor: pointer;
     }
     &__deliv-btn.tab__btn_active,
     &__pickup-btn.tab__btn_active {
         padding: 10px 24px;
         border-radius: 10px;
-        background: utils.$var-btn-bgcolor;
-        @include utils.mix-font(500, 14px, 11px, utils.$var-btn-text-color);
+        background: utils.$var-color-green-haze;
+        @include utils.mix-font(500, 14px, 11px, utils.$var-color-white);
     }
     &__scoreboard {
         display: flex;
         justify-content: space-between;
         width: 466px;
         padding: 34px 30px 40px 30px;
-        background: utils.$var-popup-bg;
+        background: utils.$var-color-white;
         box-shadow: 0px 0px 28.7827px rgba(0, 0, 0, 0.06);
         border-radius: 9.59423px;
         @media screen and(max-width: utils.$var-regis-breakpoint-1) {
@@ -180,21 +180,21 @@
     &__deliv-total,
     &__pickup-name,
     &__pickup-total {
-        @include utils.mix-font(500, 13px, 20px, utils.$var-text-color);
+        @include utils.mix-font(500, 13px, 20px, utils.$var-color-black);
     }
     &__pickup-total {
-        color: utils.$var-btn-bgcolor;
+        color: utils.$var-color-green-haze;
     }
     &__pay {
         @media screen and(max-width: utils.$var-regis-breakpoint-3) {
             margin-top: 20px;;
         } 
         &-name {
-            @include utils.mix-font(500, 15px, 23px, utils.$var-text-color);
+            @include utils.mix-font(500, 15px, 23px, utils.$var-color-black);
         }
         &-total {
             margin-top: 5px;
-            @include utils.mix-font(500, 19px, 24px, utils.$var-text-color);
+            @include utils.mix-font(500, 19px, 24px, utils.$var-color-black);
         }
     }
     // forms
@@ -209,9 +209,9 @@
         }
         &-label {
             margin-bottom: 5px;
-            @include utils.mix-font(400, 15px, 24px, utils.$var-text-color);
+            @include utils.mix-font(400, 15px, 24px, utils.$var-color-black);
             &_hide {
-                @include utils.mix-font(500, 17px, 24px, utils.$var-btn-bgcolor);
+                @include utils.mix-font(500, 17px, 24px, utils.$var-color-green-haze);
             }
             &_show-hide {
                 cursor: pointer;
@@ -220,13 +220,13 @@
         &-input {
             height: 64.02px;
             padding-left: 30px;
-            border: 1.1194px solid utils.$var-form-border-color;
+            border: 1.1194px solid utils.$var-color-gallery;
             &_hide {
                 display: none;
             }
         }
         &-input::placeholder {
-            color: utils.$var-popup-text-color;
+            color: utils.$var-color-silver;
         }
         &-btn {
             margin-top: 11px;
@@ -234,12 +234,12 @@
     }
     &__select {
         padding-left: 30px;
-        @include utils.mix-font(400, 16px, 24px, utils.$var-popup-text-color);
+        @include utils.mix-font(400, 16px, 24px, utils.$var-color-silver);
         &-wrap {
             position: relative;
             height: 64.02px;
             border-radius: 7.11356px;
-            border: 1.1194px solid utils.$var-form-border-color;
+            border: 1.1194px solid utils.$var-color-gallery;
         }
         &-wrap::before {
             position: absolute;
@@ -250,14 +250,14 @@
             top: 50%;
             transform: translateY(-50%);
             font-family: 'FontAwesome';
-            color: utils.$var-btn-bgcolor;
+            color: utils.$var-color-green-haze;
         }
     }
     &__order-btn {
         width: 183.58px;
         height: 58.21px;
         border-radius: 5.59701px;
-        @include utils.mix-font(500, 16px, 24px, utils.$var-btn-text-color);
+        @include utils.mix-font(500, 16px, 24px, utils.$var-color-white);
     }
     &__pickup {
         &-form {
@@ -269,16 +269,16 @@
         }
         &-label {
             margin-bottom: 5px;
-            @include utils.mix-font(400, 15px, 24px, utils.$var-text-color);
+            @include utils.mix-font(400, 15px, 24px, utils.$var-color-black);
         }
         &-input {
             padding-left: 30px;
             height: 64.02px;
             border-radius: 7.11356px;
-            border: 1.1194px solid utils.$var-form-border-color;
+            border: 1.1194px solid utils.$var-color-gallery;
         }
         &-input::placeholder {
-            color: utils.$var-popup-text-color;
+            color: utils.$var-color-silver;
         }
         &-select-wrap {
             margin-bottom: 25px;
