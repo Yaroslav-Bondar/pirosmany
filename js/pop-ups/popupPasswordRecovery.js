@@ -7,11 +7,9 @@ const POPUP_PASSWORD_RECOVERY_HTML = `
                 class="password-recovery__form popup-form" 
                 method="POST"
             >
-                <div class="password-recovery__close" data-modal-close="true">
-                    <div class="popup-close">
-                        <button class="popup-close__btn"></button>
-                    </div>
-                </div> 
+                <button type="button" class="password-recovery__close close-btn" data-modal-close="true">
+                    <img class="img" src="img/icons/plus.svg" alt="close">
+                </button>
                 <div class="password-recovery__icon">
                     <div class="popup-icon">
                         <div class="popup-icon__item"></div>

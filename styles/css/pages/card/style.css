@@ -923,7 +923,7 @@ body {
   line-height: 17px;
   color: #C6C6C6;
 }
-.form-input__item[type=tel]:valid + div::after, .form-input__item[type=password]:valid + div::after {
+.form-input__item[type=tel]:valid + div::after, .form-input__item[type=password]:valid + div::after, .form-input__item[type=text]:valid + div::after {
   content: "✓";
   position: absolute;
   top: 50%;
@@ -931,7 +931,7 @@ body {
   right: -17px;
   color: #00AC4E;
 }
-.form-input__item[type=tel]:focus:invalid + div::after, .form-input__item[type=password]:focus:invalid + div::after {
+.form-input__item[type=tel]:focus:invalid + div::after, .form-input__item[type=password]:focus:invalid + div::after, .form-input__item[type=text]:focus:invalid + div::after {
   content: "✖";
   position: absolute;
   top: 50%;
@@ -975,11 +975,16 @@ body {
 }
 .password-recovery__close {
   position: absolute;
+  width: 29px;
+  height: 29px;
   top: 10px;
-  right: 17px;
+  right: 14px;
 }
 .password-recovery__title {
   margin: 12px 0 24px 0;
+}
+.password-recovery__wrap {
+  height: 42px;
 }
 .password-recovery__wrap:not(:last-child) {
   margin-bottom: 21px;
@@ -1031,6 +1036,9 @@ body {
 .signin__title {
   margin-top: 11px;
   margin-bottom: 24px;
+}
+.signin__wrap {
+  height: 42px;
 }
 .signin__wrap:not(:last-child) {
   margin-bottom: 21px;
@@ -1150,11 +1158,16 @@ body {
 }
 .checkin__close {
   position: absolute;
-  top: 9px;
-  right: 12px;
+  width: 29px;
+  height: 29px;
+  top: 7px;
+  right: 6px;
 }
 .checkin__title {
-  margin: 16px 0 22px 0;
+  margin: 11px 0 25px 0;
+}
+.checkin__wrap {
+  height: 42.82px;
 }
 .checkin__wrap:not(:last-child) {
   margin-bottom: 21px;
@@ -1215,12 +1228,26 @@ body {
   border-radius: 14.7609px;
   text-align: center;
 }
+@media screen and (max-width: 733px) {
+  .reserv__form {
+    width: 303px;
+    padding: 42px 37px 26px 37px;
+  }
+}
 .reserv__close {
   position: absolute;
   top: 12px;
   right: 19px;
   width: 40px;
   height: 40px;
+}
+@media screen and (max-width: 733px) {
+  .reserv__close {
+    width: 25px;
+    height: 25px;
+    top: 15px;
+    right: 14px;
+  }
 }
 .reserv__title {
   margin-bottom: 17px;
@@ -1231,6 +1258,12 @@ body {
   text-transform: none;
   line-height: 18px;
   color: #000000;
+}
+@media screen and (max-width: 733px) {
+  .reserv__title {
+    font-size: 15px;
+    margin-bottom: 25px;
+  }
 }
 .reserv__container {
   display: grid;
@@ -1251,13 +1284,26 @@ body {
 .reserv__container .reserv__wrap:nth-child(4) {
   grid-area: date;
 }
+@media screen and (max-width: 733px) {
+  .reserv__container {
+    grid-template-columns: 1fr;
+    grid-template-areas: "phone" "amount" "date" "time";
+    grid-gap: 22px 0;
+    margin-top: 22px;
+  }
+}
 .reserv__wrap {
   height: 48px;
+}
+@media screen and (max-width: 733px) {
+  .reserv__wrap {
+    height: 42px;
+  }
 }
 .reserv__input {
   padding-left: 15px;
 }
-.reserv__input:focus + div {
+.reserv__input:focus ~ .reserv__name {
   display: none;
 }
 .reserv__name {
@@ -1271,6 +1317,15 @@ body {
   text-transform: none;
   line-height: 17px;
   color: #C6C6C6;
+}
+@media screen and (max-width: 733px) {
+  .reserv__name {
+    left: 15px;
+    transform: translateY(-50%);
+  }
+}
+.reserv__name_active {
+  display: none;
 }
 .reserv__date {
   width: 15px;
@@ -1291,6 +1346,16 @@ body {
   text-transform: none;
   line-height: 21px;
   color: #fff;
+}
+@media screen and (max-width: 733px) {
+  .reserv__btn {
+    width: 121.04px;
+    height: 38.38px;
+    margin-top: 23px;
+    border-radius: 5px;
+    font-size: 12px;
+    line-height: 15px;
+  }
 }
 
 .review__form {

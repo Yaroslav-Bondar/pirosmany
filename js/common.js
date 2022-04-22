@@ -72,6 +72,8 @@ function setFormElementValidMessage(targetElement, messages, key) {
             targetElement.setCustomValidity(messages[key].patternMismatch);
         } else if (targetElement.validity.tooShort) {
             targetElement.setCustomValidity(messages[key].tooShort);
+        } else if (targetElement.validity.tooLong) {
+            targetElement.setCustomValidity(messages[key].tooLong);
         } else {
             targetElement.setCustomValidity('');
         } 
@@ -99,6 +101,9 @@ function setFormElementValidMessageHadler(formName, handler, messages) {
             handler(element, messages, element.type);
         }
         if(element.type == 'password') {
+            handler(element, messages, element.type);
+        }
+        if(element.type == 'text') {
             handler(element, messages, element.type);
         }
     }
@@ -135,7 +140,30 @@ function showInvalidFormState(form, messageElementId, stateClassName) {
         messageElement.classList.add(stateClassName);
     }
 }
-
+/**
+ * toggles the state of the specified element based on the input element's 
+ * value (input.value) when the input element is focused or unfocused
+ * @param {string} inputId - id the input element
+ * @param {string} toggleElementClassName - the class name of the element whose state is toggled
+ * @param {string} toggleClassName - toggle state class name
+ * @returns {undefined}
+ */
+function toglleStateInputElement(inputId, toggleElementClassName, toggleClassName) {
+    const input = document.querySelector(`#${inputId}`);
+    const toggleElement = document.querySelector(`.${toggleElementClassName}`);
+    if(!input || !toggleElement) {
+        console.log(`Wrong class name or id as argument in function ${name} !!!`);
+        return false;
+    } 
+    input.addEventListener('focus', (event)=> {
+        if(!event.target.value)
+            toggleElement.classList.toggle(`${toggleClassName}`);
+    });
+    input.addEventListener('blur', event => {
+        if(!event.target.value)
+            toggleElement.classList.toggle(`${toggleClassName}`);
+    });
+}
 // setting the selected product Id
 
 // body.addEventListener('click', (e)=> {

@@ -5,6 +5,7 @@ const POPUP_RESERV_HTML = `
             action="#"
             class="reserv__form popup-form" 
             method="POST"
+            name="reserv"
         >
             <button type="button" class="reserv__close close-btn" data-modal-close="true">
                 <img class="img" src="img/icons/plus.svg" alt="close">
@@ -16,10 +17,15 @@ const POPUP_RESERV_HTML = `
                 <div class="reserv__wrap form-input">
                     <input type="text"
                         aria-label="name"
+                        id="reserv-input-name"
                         class="reserv__input form-input__item" 
-                        name="name" 
+                        name="name"
+                        pattern="${reservValidationPattern.text}"
+                        minlength="3"
+                        maxlength="10" 
                         required
                     >
+                    <div class="form-input__check"></div>
                     <div class="reserv__name">Имя</div>
                 </div>
                 <div class="reserv__container">
@@ -30,7 +36,8 @@ const POPUP_RESERV_HTML = `
                             placeholder="Телефон" 
                             name="phone" 
                             required
-                    >
+                        >
+                        <div class="form-input__check"></div>
                     </div>
                     <div class="reserv__wrap form-input">
                         <input id="myTime"

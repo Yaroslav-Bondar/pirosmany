@@ -34,6 +34,7 @@ body.addEventListener('click', event => {
             html = POPUP_SUBSCRIBE_HTML;
             break;
         case 'reserv-btn':
+        case 'reserv-btn-1':
             html = POPUP_RESERV_HTML;        
             break;
         case 'check-in-btn':
@@ -48,6 +49,8 @@ body.addEventListener('click', event => {
     setFormElementValidMessageHadler('signin', setFormElementValidMessage, FormValidationMessages);
     setFormElementValidMessageHadler('checkin', setFormElementValidMessage, FormValidationMessages);
     setFormElementValidMessageHadler('password-recovery', setFormElementValidMessage, FormValidationMessages);
+    setFormElementValidMessageHadler('reserv', setFormElementValidMessage, reservValidationMessages);
+    toglleStateInputElement('reserv-input-name', 'reserv__name', 'reserv__name_active');
     // logic for displaying the valid state of the signin form
     const signinFormButton = document.querySelector('.signin__enter-btn');
     if(signinFormButton) {

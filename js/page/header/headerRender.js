@@ -118,7 +118,7 @@ class Header {
                                 <a href="#" class="navigation__link">Оплата</a>
                             </li>
                             <li class="navigation__node">
-                                <a href="#" class="navigation__link table__btn_pop-up">Бронь стола</a>
+                                <a href="#" class="navigation__link">Бронь стола</a>
                             </li>
                         </ul>
                     </nav>

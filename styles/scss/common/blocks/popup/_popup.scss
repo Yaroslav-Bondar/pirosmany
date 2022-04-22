@@ -63,7 +63,8 @@
         @include utils.mix-font(400, 14px, 17px, utils.$var-color-silver);
     }
     &__item[type="tel"]:valid+div::after,
-    &__item[type="password"]:valid+div::after {
+    &__item[type="password"]:valid+div::after,
+    &__item[type="text"]:valid+div::after {
         content: '✓';
         position: absolute;
         top: 50%;
@@ -72,7 +73,8 @@
         color: utils.$var-color-green-haze;
     }
     &__item[type="tel"]:focus:invalid+div::after,
-    &__item[type="password"]:focus:invalid+div::after {
+    &__item[type="password"]:focus:invalid+div::after,
+    &__item[type="text"]:focus:invalid+div::after {
         content: '✖';
         position: absolute;
         top: 50%;
@@ -121,8 +123,10 @@
     }
     &__close {
         position: absolute;
+        width: 29px;
+        height: 29px;
         top: 10px;
-        right: 17px;
+        right: 14px;
     }
     &__icon {
     }
@@ -132,6 +136,9 @@
     &__body {
     }
     &__inputs {
+    }
+    &__wrap {
+        height: 42px;    
     }
     &__wrap:not(:last-child) {
         margin-bottom: 21px;
@@ -181,6 +188,9 @@
     &__title {
         margin-top: 11px;
         margin-bottom: 24px;
+    }
+    &__wrap {
+        height: 42px;    
     }
     &__wrap:not(:last-child) {
         margin-bottom: 21px;
@@ -296,11 +306,16 @@
     }
     &__close {
         position: absolute;
-        top: 9px;
-        right: 12px;
+        width: 29px;
+        height: 29px;
+        top: 7px;
+        right: 6px;
     }
     &__title {
-        margin: 16px 0 22px 0;
+        margin: 11px 0 25px 0;
+    }
+    &__wrap {
+        height: 42.82px;
     }
     &__wrap:not(:last-child) {
         margin-bottom: 21px;
@@ -353,6 +368,10 @@
         padding: 40px 56px 27px 56px;
         border-radius: 14.7609px;
         text-align: center;
+        @media screen and(max-width: utils.$var-reserv-brkpoint-1) {
+            width: 303px;
+            padding: 42px 37px 26px 37px;
+        }
     }
     &__close {
         position: absolute;
@@ -360,11 +379,21 @@
         right: 19px;
         width: 40px;
         height: 40px;
+        @media screen and(max-width: utils.$var-reserv-brkpoint-1) {
+            width: 25px;
+            height: 25px;
+            top: 15px;
+            right: 14px;
+        }
     }
     &__title {
         margin-bottom: 17px;
         text-align: center;
         @include utils.mix-font(500, 24px, 18px, utils.$var-color-black); 
+        @media screen and(max-width: utils.$var-reserv-brkpoint-1) {
+            font-size: 15px;
+            margin-bottom: 25px;
+        }
     }
     &__container {
         display: grid;
@@ -386,14 +415,23 @@
         & .reserv__wrap:nth-child(4) {
             grid-area: date;
         }
+        @media screen and(max-width: utils.$var-reserv-brkpoint-1) {
+            grid-template-columns: 1fr;
+            grid-template-areas: 'phone' 'amount' 'date' 'time';
+            grid-gap: 22px 0;
+            margin-top: 22px;
+        }
     }
     &__wrap {
         height: 48px;
+        @media screen and(max-width: utils.$var-reserv-brkpoint-1) {
+            height: 42px;
+        }
     }
     &__input {
         padding-left: 15px;
     }
-    &__input:focus + div {
+    &__input:focus ~ .reserv__name {
         display: none;
     }
     &__name {
@@ -402,6 +440,13 @@
         left: 50%;
         transform: translate(-50%, -50%);
         @include utils.mix-font(400, 14px, 17px, utils.$var-color-silver);
+        @media screen and(max-width: utils.$var-reserv-brkpoint-1) {
+            left: 15px;
+            transform: translateY(-50%);
+        }
+        &_active {
+            display: none;
+        }
     }
     &__date {
         width: 15px;
@@ -424,6 +469,14 @@
         margin-top: 25px;
         border-radius: 6.77465px;
         @include utils.mix-font(500, 16px, 21px, utils.$var-color-white);
+        @media screen and(max-width: utils.$var-reserv-brkpoint-1) {
+            width: 121.04px;
+            height: 38.38px;
+            margin-top: 23px;
+            border-radius: 5px;
+            font-size: 12px;
+            line-height: 15px;
+        }
     }
 }    
 // // reserv pop-up modal window

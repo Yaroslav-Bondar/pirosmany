@@ -23,6 +23,12 @@ const FormValidationPattern = {
     tel: '\\+375\\(\\d{2}\\)\\d{3}-\\d{2}-\\d{2}',
     password: '[^()_=^+{}]{6,25}',
 }
+const reservValidationPattern = {
+    text: '[^\\W]+',
+    tel: '\\+375\\(\\d{2}\\)\\d{3}-\\d{2}-\\d{2}',
+    password: '[^()_=^+{}]{6,25}',
+}
+
 /**
  * Placeholder messages object. Contains placeholder messages 
  * for a particular form and input element type.
@@ -35,6 +41,23 @@ const FormPlaceholderMessages = {
  * based on element type and validation type.
  */
 const FormValidationMessages = {
+    tel: {
+        patternMismatch: 'please enter phone number in correct format: +375(**)***-**-**',
+    },
+    password: {
+        patternMismatch: 'Please enter the password in the correct format:' +
+                         'valid string from 6 to 25, which contains no characters: ()_=^+{}', 
+        tooShort: 'password is short, must be at least 6 characters',
+    }
+}
+
+const reservValidationMessages = {
+    text: {
+            patternMismatch: 'please enter the name in the correct format: ' + 
+                                'valid characters from the range a-z, 0-1, and the character _',
+            tooShort: 'name is too short, length must be between 3 and 10',
+            tooLong: 'too long', 
+        },
     tel: {
         patternMismatch: 'please enter phone number in correct format: +375(**)***-**-**',
     },

@@ -5,11 +5,9 @@ const POPUP_CHECKIN_HTML = `
             class="checkin__form popup-form" 
             name="checkin"
             method="POST">
-            <div class="checkin__close" data-modal-close="true">
-                <div class="popup-close">
-                    <button class="popup-close__btn"></button>
-                </div>
-            </div> 
+            <button type="button" class="checkin__close close-btn" data-modal-close="true">
+                <img class="img" src="img/icons/plus.svg" alt="close">
+            </button>
             <div class="checkin__icon">
                 <div class="popup-icon">
                     <div class="popup-icon__item"></div>
@@ -18,7 +16,6 @@ const POPUP_CHECKIN_HTML = `
             <div class="checkin__title popup-title1">
                 Регистрация
             </div>
-            
             <div class="checkin__body">
                 <div class="checkin__inputs">
                     <div class="checkin__wrap form-input">
