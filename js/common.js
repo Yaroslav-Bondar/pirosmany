@@ -66,14 +66,14 @@ function togglePlaceholderMessage(parentClassName, targetElementSelector, messag
  * @param {string} key - key to identify custom validation message 
  * @returns {undefined}
  */ 
-function setFormElementValidMessage(targetElement, messages, key) {
+function setFormElementValidMessage(targetElement, messages, key, name) {
     targetElement.addEventListener('input', () => {
         if(targetElement.validity.patternMismatch) {
-            targetElement.setCustomValidity(messages[key].patternMismatch);
+            targetElement.setCustomValidity(messages[key][name].patternMismatch);
         } else if (targetElement.validity.tooShort) {
-            targetElement.setCustomValidity(messages[key].tooShort);
+            targetElement.setCustomValidity(messages[key][name].tooShort);
         } else if (targetElement.validity.tooLong) {
-            targetElement.setCustomValidity(messages[key].tooLong);
+            targetElement.setCustomValidity(messages[key][name].tooLong);
         } else {
             targetElement.setCustomValidity('');
         } 
@@ -98,13 +98,13 @@ function setFormElementValidMessageHadler(formName, handler, messages) {
     const formElements = form.elements;
     for (const element of formElements) {
         if(element.type == 'tel') {
-            handler(element, messages, element.type);
+            handler(element, messages, element.type, element.name);
         }
         if(element.type == 'password') {
-            handler(element, messages, element.type);
+            handler(element, messages, element.type, element.name);
         }
         if(element.type == 'text') {
-            handler(element, messages, element.type);
+            handler(element, messages, element.type, element.name);
         }
     }
 }
@@ -152,7 +152,7 @@ function toglleStateInputElement(inputId, toggleElementClassName, toggleClassNam
     const input = document.querySelector(`#${inputId}`);
     const toggleElement = document.querySelector(`.${toggleElementClassName}`);
     if(!input || !toggleElement) {
-        console.log(`Wrong class name or id as argument in function ${name} !!!`);
+        console.log(`Wrong class name or id !!!`);
         return false;
     } 
     input.addEventListener('focus', (event)=> {

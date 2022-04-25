@@ -43,7 +43,7 @@ const POPUP_PASSWORD_RECOVERY_HTML = `
                                     aria-label="confirm password"
                                     pattern="${FormValidationPattern.password}" 
                                     placeholder="Подтвердите пароль" 
-                                    name="password" required>
+                                    name="confirm-password" required>
                                 <div class="form-input__check"></div>
                                 <div class="form-input__key"></div>
                         </div>  

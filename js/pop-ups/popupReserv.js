@@ -25,8 +25,8 @@ const POPUP_RESERV_HTML = `
                         maxlength="10" 
                         required
                     >
-                    <div class="form-input__check"></div>
                     <div class="reserv__name">Имя</div>
+                    <div class="form-input__check"></div>
                 </div>
                 <div class="reserv__container">
                     <div class="reserv__wrap form-input">
@@ -49,12 +49,14 @@ const POPUP_RESERV_HTML = `
                             required
                         >
                     </div>
-                    <div class="reserv__wrap form-input">
+                    <div class="reserv__wrap input-wrap">
                         <input type="number"
-                            class="reserv__input form-input__item"
+                            class="reserv__input form-input"
                             aria-label="amount" 
                             placeholder="Количество человек" 
-                            name="amount" 
+                            name="amount"
+                            min="1"
+                            value="0"
                             required
                         >
                     </div>

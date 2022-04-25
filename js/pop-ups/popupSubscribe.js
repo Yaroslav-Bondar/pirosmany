@@ -7,11 +7,9 @@ const POPUP_SUBSCRIBE_HTML = `
             name="subscribe" 
             method="POST"
         >
-        <div class="subscribe__close" data-modal-close="true">
-            <div class="popup-close">
-                <button type="button" class="popup-close__btn"></button>
-            </div>
-        </div> 
+            <button type="button" class="subscribe__close close-btn" data-modal-close="true">
+                <img class="img" src="img/icons/plus.svg" alt="close">
+            </button> 
             <div class="subscribe__icon"></div>
             <div class="subscribe__title popup-title1">
                 Подпишитесь на нашу рассылку и получите промокод на 500 RUB!

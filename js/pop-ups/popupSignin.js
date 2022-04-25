@@ -18,19 +18,19 @@ const POPUP_SIGNIN_HTML = `
                 </div>
                 <div class="signin__body">
                     <div class="signin__inputs">
-                        <div class="signin__wrap form-input">
-                            <input class="form-input__item" 
+                        <div class="signin__wrap input-wrap">
+                            <input class="signin__input form-input" 
                                 type="tel" 
                                 aria-label="phone number"
                                 pattern=${FormValidationPattern.tel}
                                 placeholder="Телефон" 
                                 name="phone" 
                                 required>
-                            <div class="form-input__check"></div>
-                            <div class="form-input__phone"></div>
+                            <div class="signin__check input-check"></div>
+                            <div class="signin__phone input-phone"></div>
                         </div>
-                        <div class="signin__wrap form-input">
-                            <input class="form-input__item" 
+                        <div class="signin__wrap input-wrap">
+                            <input class="signin__input form-input" 
                                 type="password" 
                                 aria-label="password"
                                 pattern="${FormValidationPattern.password}" 
@@ -39,8 +39,8 @@ const POPUP_SIGNIN_HTML = `
                                 maxlength='25' 
                                 name="password" 
                                 required>
-                            <div class="form-input__check"></div>
-                            <div class="form-input__key"></div>
+                            <div class="signin__check input-check"></div>
+                            <div class="signin__key input-key"></div>
                         </div> 
                     </div>
                     <div id="signin-wrong-message" class="signin__wrong-message">

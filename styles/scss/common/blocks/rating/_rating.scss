@@ -2,56 +2,21 @@
 
 .rating {
     display: flex;
-    // flex-direction: row-reverse;
-    font-size: 1.2em;
-    justify-content: space-around;
-    margin-left: 9px;
-    text-align: center;
-    & input {
-        display: none;
+    flex-direction: row-reverse;
+    &__item {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background: center/contain no-repeat url(../../../../img/icons/star/star_not_active.svg);
+        cursor: pointer;
     }
-    & label {
-        @extend %center-xy-flex;
-        margin-right: 5px;
-        color:#ccc;
-        cursor:pointer;
+    &__item:checked {
+        background: center/contain no-repeat url(../../../../img/icons/star/star_active.svg);
     }
-    .rating input :checked ~ label {
-        color: utils.$var-color-green-haze;
+    &__item:checked ~ .rating__item {
+        background: center/contain no-repeat url(../../../../img/icons/star/star_active.svg);
     }
-    & label:hover,
-    & label:hover ~ label {
-        color: utils.$var-color-malachite;
-    }
-    // &__star_active {
-    //     color: utils.$var-color-green-haze !important;
-    // }
-    // to display the rating of a product
-    &__star_active-0 :nth-child(-n+0) {
-        color: utils.$var-color-green-haze !important;
-    }
-    &__star_active-1 :nth-child(-n+1) {
-        color: utils.$var-color-green-haze !important;
-    }
-    &__star_active-2 :nth-child(-n+2) {
-        color: utils.$var-color-green-haze !important;
-    }
-    &__star_active-3 :nth-child(-n+3) {
-        color: utils.$var-color-green-haze !important;
-    }
-    &__star_active-4 :nth-child(-n+4) {
-        color: utils.$var-color-green-haze !important;
-    }
-    &__star_active-5 :nth-child(-n+5) {
-        color: utils.$var-color-green-haze !important;
-    }
-    // // to display the rating of a product
-    &__set > i {
-        color: #ccc;
-        font-style: 18px;
-        transition: color .2s;
-    }
-    &__set > i:not(:last-child) {
-        margin-right: 5px;
+    &__item:hover {
+        background: center/contain no-repeat url(../../../../img/icons/star/star_active.svg);
     }
 }

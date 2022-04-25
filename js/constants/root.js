@@ -40,24 +40,70 @@ const FormPlaceholderMessages = {
  * Custom validation message object. Contains custom validation messages 
  * based on element type and validation type.
  */
-const FormValidationMessages = {
+const signinValidationMessages = {
     tel: {
-        patternMismatch: 'please enter phone number in correct format: +375(**)***-**-**',
+        phone: {
+            patternMismatch: 'please enter phone number in correct format: +375(**)***-**-**',
+        }
     },
     password: {
-        patternMismatch: 'Please enter the password in the correct format:' +
-                         'valid string from 6 to 25, which contains no characters: ()_=^+{}', 
-        tooShort: 'password is short, must be at least 6 characters',
-    }
+        password: {
+            patternMismatch: 'Please enter the password in the correct format:' +
+                             'valid string from 6 to 25, which contains no characters: ()_=^+{}', 
+            tooShort: 'password is short, must be at least 6 characters',
+        }
+    }, 
+}
+
+const passwordRecoveryValidationMessages = {
+    tel: {
+        phone: {
+            patternMismatch: 'please enter phone number in correct format: +375(**)***-**-**',
+        }
+    },
+    password: {
+        password: {
+            patternMismatch: 'Please enter the password in the correct format:' +
+                             'valid string from 6 to 25, which contains no characters: ()_=^+{}', 
+            tooShort: 'password is short, must be at least 6 characters',
+        },
+        ['confirm-password']: {
+            patternMismatch: 'Please enter the password in the correct format:' +
+                             'valid string from 6 to 25, which contains no characters: ()_=^+{}', 
+            tooShort: 'password is short, must be at least 6 characters',
+        }
+    }, 
+}
+
+const checkinValidationMessages = {
+    tel: {
+        phone: {
+            patternMismatch: 'please enter phone number in correct format: +375(**)***-**-**',
+        }
+    },
+    password: {
+        password: {
+            patternMismatch: 'Please enter the password in the correct format:' +
+                             'valid string from 6 to 25, which contains no characters: ()_=^+{}', 
+            tooShort: 'password is short, must be at least 6 characters',
+        },
+        ['confirm-password']: {
+            patternMismatch: 'Please enter the password in the correct format:' +
+                             'valid string from 6 to 25, which contains no characters: ()_=^+{}', 
+            tooShort: 'password is short, must be at least 6 characters',
+        }
+    }, 
 }
 
 const reservValidationMessages = {
-    text: {
+    text: { 
+        name: {
             patternMismatch: 'please enter the name in the correct format: ' + 
-                                'valid characters from the range a-z, 0-1, and the character _',
+                             'valid characters from the range a-z, 0-1, and the character _',
             tooShort: 'name is too short, length must be between 3 and 10',
-            tooLong: 'too long', 
-        },
+            tooLong: 'too long',
+        }
+    },
     tel: {
         patternMismatch: 'please enter phone number in correct format: +375(**)***-**-**',
     },

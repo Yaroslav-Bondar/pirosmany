@@ -45,10 +45,12 @@ body.addEventListener('click', event => {
             html = POPUP_PASSWORD_RECOVERY_HTML;    
     }
     body.insertAdjacentHTML('afterbegin', html);
+    body.insertAdjacentHTML('afterbegin', popupAboutProdReviewHtml);
+
     togglePlaceholderMessage('popup-form', '.form-input__item[type="tel"]', FormPlaceholderMessages.tel); // defined in common.js
-    setFormElementValidMessageHadler('signin', setFormElementValidMessage, FormValidationMessages);
-    setFormElementValidMessageHadler('checkin', setFormElementValidMessage, FormValidationMessages);
-    setFormElementValidMessageHadler('password-recovery', setFormElementValidMessage, FormValidationMessages);
+    setFormElementValidMessageHadler('signin', setFormElementValidMessage, signinValidationMessages);
+    setFormElementValidMessageHadler('checkin', setFormElementValidMessage, checkinValidationMessages);
+    setFormElementValidMessageHadler('password-recovery', setFormElementValidMessage, passwordRecoveryValidationMessages);
     setFormElementValidMessageHadler('reserv', setFormElementValidMessage, reservValidationMessages);
     toglleStateInputElement('reserv-input-name', 'reserv__name', 'reserv__name_active');
     // logic for displaying the valid state of the signin form
