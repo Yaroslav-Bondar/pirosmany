@@ -559,8 +559,13 @@
     display: flex;
     // display: none;
     &__form {
-        width: 418px;
-        padding: 40px 30px 40px 30px;
+        width: 318px;
+        padding: 23px 40px 13px 40px;
+        border-radius: 8.7px;
+        @media screen and (max-width:utils.$var-general-brkpoint-3) {
+            width: 286px;
+            padding: 23px 25px 13px 25px;
+        }
         // @media screen and (max-width:utils.$var-review-breakpoint-1) {
         //     width: 361px;
         // }
@@ -568,83 +573,85 @@
         //     width: 310px;
         // }
     }
-    &__rating {
-        &-item {
-            width: 20px;
-            height: 20px;
-        }
-        // display: flex;
-        // align-items: center;
-        // cursor: pointer;
+    &__close {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        right: 11px;
+        top: 9px;
     }
-    &__input {
-        width: 100%;
+    &__title {
+        margin-bottom: 12.63px;
+        @include utils.mix-font(400, 15px, 22px, utils.$var-color-black);
+    }
+    &__signature {
+        @include utils.mix-font(400, 9px, 9px, utils.$var-color-black);
+    }
+    &__rating {
+        justify-content: start;
+    }
+    &__like {
+        width: 15px;
+        height: 15px;
+        margin-right: 2px;
+    }
+    &__name {
+        width: 135px;
         height: 25.27px;
         padding-left: 12.2px;
         border-width: 1px;
         font-size: 12px;
     }
-    &__input::placeholder {
+    &__name::placeholder {
         font-weight: 400;
         font-size: 12px;
         line-height: 12px;
     }
     &__check {
         top: 50%;
+        right: 15px;
+        font-size: 12px;
         transform: translateY(-50%);
     }
-
-    &__wrap:nth-child(3)   {
+    &__row {
+        display: grid;
+        grid-template-columns: 0.35fr 1fr;
+        grid-column-gap: 10px;
+        &_align_vertical-center {
+            align-items: center;
+        }
+        &:not(:last-child) {
+            margin-bottom: 13.5px;
+        }
+    }
+    &__row:nth-child(3)::before {
+        position: absolute;
+        top: -10px;
+        right: 0;
+        content: '0 / 500';
+        @include utils.mix-font(400, 6.7px, 7px, utils.$var-color-silver);
+    }
+    &__row:nth-child(3)   {
         position: relative;
     }
-    &__wrap:nth-child(3)::before {
-        content: '0 / 500';
-        position: absolute;
-        top: -14px;
-        right: 0;
-        @include utils.mix-font(400, 10px, 9px, utils.$var-color-silver);
-        @media screen and (max-width:utils.$var-review-breakpoint-1) {
-            top: 13px;
-        }
-    }
-
-    &__field-name {
-        margin-right: 10px;
-        @include utils.mix-font(400, 15px, 19px, utils.$var-color-black);
-    }
-    &__wrap &__label &__field-name {
-        @media screen and (max-width:utils.$var-review-breakpoint-1) {
-            margin: 0 0 5px 0;
-        }
-    }
-    &__label {
-        display: flex;
-        justify-content: space-between;
-        @media screen and (max-width:utils.$var-review-breakpoint-1) {
-            flex-flow: column;
-        }
-        & input,
-        & textarea {
-            width: 69%;
-            @media screen and (max-width:utils.$var-review-breakpoint-1) {
-                width: 100%;
-            }
-        }
-        & textarea {
-            resize: none;
-        }
-        & input {
-            padding-left: 10px;
-        }
+    &__text-area {
+        height: 74.93px;
+        border-width: 1px;
+        font-size: 12px;
+        resize:none;
     }
     &__btn {
-        width: 175.44px;
-        padding: 10px 17px;
-        margin: 0 auto 0 31%;
-        @include utils.mix-font(500, 16px, 21px, utils.$var-color-white);
-        @media screen and (max-width:utils.$var-review-breakpoint-1) {
-            margin: 0 auto;
-        }
+        grid-area: 1/2/2/3;
+        width: 71.44px;
+        height: 22.65px;
+        border-radius: 5px;
+        // width: 175.44px;
+        // padding: 10px 17px;
+        // margin: 0 auto 0 31%;
+        @include utils.mix-font(500, 6px, 9px, utils.$var-color-white);
+        // @media screen and (max-width:utils.$var-review-breakpoint-1) {
+        //     margin: 0 auto;
+        // }
     }
 }
 // // review pop-up modal window

@@ -13,10 +13,16 @@ body {
     padding: 0 15px;
 }
 .btn {
-    background: utils.$var-color-green-haze;
+    // background: utils.$var-color-green-haze;
     border: none;
     // border-radius: 4.52px;
     cursor: pointer;
+}
+.btn_theme_transparent {
+    background: transparent;
+}
+.btn_theme_green {
+    background-color: utils.$var-color-green-haze;
 }
 [data-dropdown='menu'] {
     display: none;
@@ -61,6 +67,26 @@ body {
 }
 .choice:checked {
     background-color: utils.$var-color-green-haze;
+}
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.rating-item {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: center/contain no-repeat url(../../../../img/icons/star/star_not_active.svg);
+    cursor: pointer;
+}
+.rating-item:checked {
+    background: center/contain no-repeat url(../../../../img/icons/star/star_active.svg);
+}
+.rating-item:checked ~ .rating-item {
+    background: center/contain no-repeat url(../../../../img/icons/star/star_active.svg);
+}
+.rating-item:hover {
+    background: center/contain no-repeat url(../../../../img/icons/star/star_active.svg);
 } 
 
 
