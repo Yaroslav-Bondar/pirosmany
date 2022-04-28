@@ -7,41 +7,41 @@ const POPUP_RESERV_HTML = `
             method="POST"
             name="reserv"
         >
-            <button type="button" class="reserv__close close-btn" data-modal-close="true">
+            <button type="button" class="reserv__close btn btn_theme_transparent" data-modal-close="true">
                 <img class="img" src="img/icons/plus.svg" alt="close">
             </button>
             <div class="reserv__title">
                 Бронирование стола
             </div>
             <div class="reserv__body">
-                <div class="reserv__wrap form-input">
+                <div class="reserv__wrap input-wrap">
                     <input type="text"
                         aria-label="name"
                         id="reserv-input-name"
-                        class="reserv__input form-input__item" 
+                        class="reserv__name form-input" 
                         name="name"
                         pattern="${reservValidationPattern.text}"
                         minlength="3"
                         maxlength="10" 
                         required
                     >
-                    <div class="reserv__name">Имя</div>
-                    <div class="form-input__check"></div>
+                    <div class="reserv__placeholder">Имя</div>
+                    <div class="reserv__check input-check"></div>
                 </div>
                 <div class="reserv__container">
-                    <div class="reserv__wrap form-input">
+                    <div class="reserv__wrap input-wrap">
                         <input type="tel"
                             aria-label="phone"   
-                            class="reserv__input form-input__item" 
+                            class="reserv__phone form-input" 
                             placeholder="Телефон" 
                             name="phone" 
                             required
                         >
-                        <div class="form-input__check"></div>
+                        <div class="reserv__check input-check"></div>
                     </div>
-                    <div class="reserv__wrap form-input">
+                    <div class="reserv__wrap input-wrap">
                         <input id="myTime"
-                            class="reserv__input form-input__item" 
+                            class="reserv__time form-input" 
                             aria-label="time"
                             type="time" 
                             value="13:30" 
@@ -51,7 +51,7 @@ const POPUP_RESERV_HTML = `
                     </div>
                     <div class="reserv__wrap input-wrap">
                         <input type="number"
-                            class="reserv__input form-input"
+                            class="reserv__amount form-input"
                             aria-label="amount" 
                             placeholder="Количество человек" 
                             name="amount"
@@ -60,18 +60,18 @@ const POPUP_RESERV_HTML = `
                             required
                         >
                     </div>
-                    <div class="reserv__wrap form-input">
+                    <div class="reserv__wrap input-wrap">
                         <input type="date"
                             aria-label="date"
-                            class="reserv__input form-input__item" 
+                            class="reserv__date form-input" 
                             name="date" 
                             id="datepicker" 
                             required
                         >
-                        <div class="reserv__date form-input__date"></div>
+                        <div class="reserv__calendar input-calendar"></div>
                     </div>
                 </div>
-                <button class="reserv__btn btn" type="submit">Забронировать</button>
+                <button class="reserv__btn btn btn_theme_green" type="submit">Забронировать</button>
             </div>
         </form>
     </div>

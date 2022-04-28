@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.regis__select-wrap::before, .header__user-btn, .header__basket-btn, .bonus__icon, .pwa__column, .mobmenu__dropdown-img, .display__item, .basket-cart, .basket-cart__amount {
+.regis__select-wrap::before, .header__user-btn, .header__basket-btn, .confirm-phone__digit, .bonus__icon, .pwa__column, .mobmenu__dropdown-img, .display__item, .basket-cart, .basket-cart__amount {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -253,9 +253,6 @@ body {
 .enter__btn-in {
   display: flex;
   align-items: center;
-  border: none;
-  background: transparent;
-  cursor: pointer;
 }
 .enter__img-wrap {
   width: 24px;
@@ -846,12 +843,6 @@ body {
   box-shadow: 0px 0px 17.7465px rgba(0, 0, 0, 0.12);
 }
 
-.close-btn {
-  background: transparent;
-  cursor: pointer;
-  border: none;
-}
-
 .popup-icon__item {
   width: 29px;
   height: 29px;
@@ -875,7 +866,9 @@ body {
 
 .input-check,
 .input-phone,
-.input-key {
+.input-key,
+.input-case,
+.input-calendar {
   position: absolute;
 }
 
@@ -887,19 +880,24 @@ body {
   background: center/cover no-repeat url("../../../../img/icons/key.svg");
 }
 
+.input-case {
+  background: center/contain no-repeat url("../../../../img/icons/document_case_grey.svg");
+}
+
+.input-calendar {
+  background: center/cover no-repeat url("../../../../img/icons/date.svg");
+}
+
 .form-input {
-  font-family: "TT Norms Pro";
-  font-style: normal;
-  color: #C6C6C6;
   background-color: #FCFCFC;
   border-color: #EBEBEB;
   border-style: solid;
 }
-.form-input[type=tel]:focus:invalid ~ .input-check::after, .form-input[type=password]:focus:invalid ~ .input-check::after, .form-input[type=text]:focus:invalid ~ .input-check::after {
+.form-input[type=tel]:focus:invalid ~ .input-check::after, .form-input[type=password]:focus:invalid ~ .input-check::after, .form-input[type=text]:focus:invalid ~ .input-check::after, .form-input[type=email]:focus:invalid ~ .input-check::after {
   content: "✖";
   color: #EB5757;
 }
-.form-input[type=tel]:focus:valid ~ .input-check::after, .form-input[type=password]:focus:valid ~ .input-check::after, .form-input[type=text]:focus:valid ~ .input-check::after {
+.form-input[type=tel]:focus:valid ~ .input-check::after, .form-input[type=password]:focus:valid ~ .input-check::after, .form-input[type=text]:focus:valid ~ .input-check::after, .form-input[type=email]:focus:valid ~ .input-check::after {
   content: "✓";
   color: #00AC4E;
 }
@@ -916,14 +914,15 @@ body {
   font-style: normal;
   color: #C6C6C6;
 }
-.form-input__item[type=tel]:focus::placeholder {
-  color: #4F4F4F;
+.form-input_theme_silver {
+  font-family: "TT Norms Pro";
+  font-style: normal;
+  color: #C6C6C6;
 }
-.form-input__document-case {
-  background: center/contain no-repeat url("../../../../img/icons/document_case_grey.svg");
-}
-.form-input__date {
-  background: center/cover no-repeat url("../../../../img/icons/date.svg");
+.form-input_theme_black {
+  font-weight: 500;
+  font-style: normal;
+  color: #000000;
 }
 
 .password-recovery__form {
@@ -947,11 +946,29 @@ body {
 .password-recovery__title {
   margin: 12px 0 24px 0;
 }
-.password-recovery__wrap {
+.password-recovery__input {
+  width: 100%;
   height: 42px;
+  padding-left: 41px;
+  font-size: 12px;
+  line-height: 15px;
+  border-width: 1px;
+  border-radius: 5px;
 }
 .password-recovery__wrap:not(:last-child) {
   margin-bottom: 21px;
+}
+.password-recovery__check, .password-recovery__phone, .password-recovery__key {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.password-recovery__check {
+  right: -18px;
+}
+.password-recovery__phone, .password-recovery__key {
+  width: 10px;
+  height: 10px;
+  left: 15px;
 }
 .password-recovery__container-btn {
   display: flex;
@@ -961,9 +978,7 @@ body {
 .password-recovery__btn {
   width: 50%;
   height: 40px;
-  border: none;
   border-radius: 5px;
-  background: transparent;
   font-weight: 500;
   font-style: normal;
   font-size: 12px;
@@ -972,7 +987,6 @@ body {
   color: initial;
   color: #00AC4E;
   transition: 0.2s background, 0.2s color;
-  cursor: pointer;
 }
 .password-recovery__btn_active {
   background-color: #00AC4E;
@@ -1119,8 +1133,25 @@ body {
 .subscribe__title {
   margin-bottom: 22px;
 }
-.subscribe__wrap {
-  height: 42.82px;
+.subscribe__input {
+  width: 100%;
+  height: 42.81px;
+  padding-left: 41.33px;
+  border-radius: 5px;
+  border-width: 1px;
+  font-size: 14px;
+}
+.subscribe__case {
+  left: 15px;
+  width: 11px;
+  height: 9px;
+}
+.subscribe__check, .subscribe__case {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.subscribe__check {
+  right: -18px;
 }
 .subscribe__btn {
   width: 121.04px;
@@ -1157,8 +1188,25 @@ body {
 .checkin__title {
   margin: 11px 0 25px 0;
 }
-.checkin__wrap {
-  height: 42.82px;
+.checkin__input {
+  width: 100%;
+  height: 42.81px;
+  padding-left: 41.33px;
+  border-radius: 5px;
+  border-width: 1px;
+  font-size: 14px;
+}
+.checkin__check, .checkin__phone, .checkin__key {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.checkin__check {
+  right: -18px;
+}
+.checkin__phone, .checkin__key {
+  width: 10px;
+  height: 10px;
+  left: 15px;
 }
 .checkin__wrap:not(:last-child) {
   margin-bottom: 21px;
@@ -1225,6 +1273,12 @@ body {
     padding: 42px 37px 26px 37px;
   }
 }
+@media screen and (max-width: 320px) {
+  .reserv__form {
+    width: 276px;
+    padding: 36px 25px 20px 25px;
+  }
+}
 .reserv__close {
   position: absolute;
   top: 12px;
@@ -1277,27 +1331,39 @@ body {
 }
 @media screen and (max-width: 733px) {
   .reserv__container {
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     grid-template-areas: "phone" "amount" "date" "time";
     grid-gap: 22px 0;
     margin-top: 22px;
   }
 }
-.reserv__wrap {
-  height: 48px;
+.reserv__phone, .reserv__time, .reserv__amount, .reserv__date {
+  width: 100%;
+  height: 47.66px;
+  padding-left: 17px;
+  border-radius: 5.5647px;
+  border-width: 1px;
 }
 @media screen and (max-width: 733px) {
-  .reserv__wrap {
+  .reserv__phone, .reserv__time, .reserv__amount, .reserv__date {
     height: 42px;
   }
 }
-.reserv__input {
-  padding-left: 15px;
+.reserv__name {
+  width: 100%;
+  height: 48px;
+  border-radius: 5.5647px;
+  border-width: 1px;
 }
-.reserv__input:focus ~ .reserv__name {
+@media screen and (max-width: 733px) {
+  .reserv__name {
+    height: 42px;
+  }
+}
+.reserv__name:focus ~ .reserv__placeholder {
   display: none;
 }
-.reserv__name {
+.reserv__placeholder {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1310,15 +1376,22 @@ body {
   color: #C6C6C6;
 }
 @media screen and (max-width: 733px) {
-  .reserv__name {
+  .reserv__placeholder {
     left: 15px;
     transform: translateY(-50%);
   }
 }
-.reserv__name_active {
+.reserv__placeholder_active {
   display: none;
 }
-.reserv__date {
+.reserv__check, .reserv__calendar {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.reserv__check {
+  right: -18px;
+}
+.reserv__calendar {
   width: 15px;
   height: 15px;
   right: 20px;
@@ -1349,9 +1422,6 @@ body {
   }
 }
 
-.review {
-  display: flex;
-}
 .review__form {
   width: 318px;
   padding: 23px 40px 13px 40px;
@@ -1458,6 +1528,14 @@ body {
   color: #fff;
 }
 
+.confirm-phone__digit {
+  width: 33px;
+  height: 47px;
+  font-size: 24px;
+  line-height: 16px;
+  border-width: 1px;
+  border-radius: 5px;
+}
 .header {
   padding: 30px 0 30px 0;
   background: #FFFFFF;

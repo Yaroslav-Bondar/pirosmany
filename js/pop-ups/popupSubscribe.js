@@ -7,7 +7,7 @@ const POPUP_SUBSCRIBE_HTML = `
             name="subscribe" 
             method="POST"
         >
-            <button type="button" class="subscribe__close close-btn" data-modal-close="true">
+            <button type="button" class="subscribe__close btn btn_theme_transparent" data-modal-close="true">
                 <img class="img" src="img/icons/plus.svg" alt="close">
             </button> 
             <div class="subscribe__icon"></div>
@@ -16,8 +16,8 @@ const POPUP_SUBSCRIBE_HTML = `
             </div>
             <div class="subscribe__body">
                 <div class="subscribe__inputs">
-                    <div class="subscribe__wrap form-input">
-                        <input class="form-input__item subscribe__input" 
+                    <div class="subscribe__wrap input-wrap">
+                        <input class="subscribe__input form-input" 
                             type="email" 
                             aria-label="phone number"
                             pattern=${FormValidationPattern.tel}
@@ -25,11 +25,11 @@ const POPUP_SUBSCRIBE_HTML = `
                             name="e-mail" 
                             required
                         >
-                        <div class="form-input__check"></div>
-                        <div class="form-input__document-case"></div>
+                        <div class="subscribe__check input-check"></div>
+                        <div class="subscribe__case input-case"></div>
                     </div>
                 </div>
             </div>
-            <button class="subscribe__btn btn" type="submit">Отправить</button>
+            <button class="subscribe__btn btn btn_theme_green" type="submit">Отправить</button>
         </form>
 </div>`

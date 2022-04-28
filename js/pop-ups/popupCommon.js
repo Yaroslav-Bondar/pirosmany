@@ -42,17 +42,19 @@ body.addEventListener('click', event => {
             html = POPUP_CHECKIN_HTML;
             break;
         case 'password-recovery-btn':
-            html = POPUP_PASSWORD_RECOVERY_HTML;    
+            html = POPUP_PASSWORD_RECOVERY_HTML;
+        case 'confirm-phone':
+            html = POPUP_CONFIRM_PHONE_HTML;        
     }
     body.insertAdjacentHTML('afterbegin', html);
-    body.insertAdjacentHTML('afterbegin', popupAboutProdReviewHtml);
+    // body.insertAdjacentHTML('afterbegin', popupAboutProdReviewHtml);
 
-    togglePlaceholderMessage('popup-form', '.form-input__item[type="tel"]', FormPlaceholderMessages.tel); // defined in common.js
+    // togglePlaceholderMessage('popup-form', '.form-input__item[type="tel"]', FormPlaceholderMessages.tel); // defined in common.js
     setFormElementValidMessageHadler('signin', setFormElementValidMessage, signinValidationMessages);
     setFormElementValidMessageHadler('checkin', setFormElementValidMessage, checkinValidationMessages);
     setFormElementValidMessageHadler('password-recovery', setFormElementValidMessage, passwordRecoveryValidationMessages);
     setFormElementValidMessageHadler('reserv', setFormElementValidMessage, reservValidationMessages);
-    toglleStateInputElement('reserv-input-name', 'reserv__name', 'reserv__name_active');
+    toglleStateInputElement('reserv-input-name', 'reserv__placeholder', 'reserv__placeholder_active');
     // logic for displaying the valid state of the signin form
     const signinFormButton = document.querySelector('.signin__enter-btn');
     if(signinFormButton) {

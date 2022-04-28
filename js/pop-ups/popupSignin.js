@@ -5,7 +5,7 @@ const POPUP_SIGNIN_HTML = `
                 class="signin__form popup-form" 
                 name="signin"
                 method="POST">
-                <button type="button" class="signin__close close-btn" data-modal-close="true">
+                <button type="button" class="signin__close btn btn_theme_transparent" data-modal-close="true">
                    <img class="img" src="img/icons/plus.svg" alt="close">
                 </button>
                 <div class="signin__icon">
@@ -53,7 +53,15 @@ const POPUP_SIGNIN_HTML = `
                             data-modal-open="true">
                             Забыли пароль?
                         </button>
-                        <button class="signin__enter-btn btn" type="submit">Войти</button>
+                        <button 
+                            id="confirm-phone" 
+                            class="signin__enter-btn btn btn_theme_green" 
+                            type="submit"
+                            data-modal-open="true"
+                            data-modal-close="true"
+                        >
+                                Войти
+                        </button>
                     </div>
                 </div>
                 <div class="signin__register">

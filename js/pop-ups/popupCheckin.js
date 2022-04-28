@@ -5,7 +5,7 @@ const POPUP_CHECKIN_HTML = `
             class="checkin__form popup-form" 
             name="checkin"
             method="POST">
-            <button type="button" class="checkin__close close-btn" data-modal-close="true">
+            <button type="button" class="checkin__close btn btn_theme_transparent" data-modal-close="true">
                 <img class="img" src="img/icons/plus.svg" alt="close">
             </button>
             <div class="checkin__icon">
@@ -18,37 +18,37 @@ const POPUP_CHECKIN_HTML = `
             </div>
             <div class="checkin__body">
                 <div class="checkin__inputs">
-                    <div class="checkin__wrap form-input">
-                        <input class="form-input__item"
+                    <div class="checkin__wrap input-wrap">
+                        <input class="checkin__input form-input"
                             type="tel" 
                             aria-label="phone number"
                             pattern=${FormValidationPattern.tel}
                             placeholder="Телефон" 
                             name="phone" 
                             required>
-                        <div class="form-input__check"></div>
-                        <div class="form-input__phone"></div>
+                        <div class="checkin__check input-check"></div>
+                        <div class="checkin__phone input-phone"></div>
                     </div>
-                    <div class="checkin__wrap form-input">
-                        <input class="form-input__item" 
+                    <div class="checkin__wrap input-wrap">
+                        <input class="checkin__input form-input" 
                             type="password"
                             aria-label="password"
                             pattern=${FormValidationPattern.password}
                             placeholder="Пароль" 
                             name="password" required>
-                        <div class="form-input__check"></div>
-                        <div class="form-input__key"></div>
+                        <div class="checkin__check input-check"></div>
+                        <div class="checkin__key input-key"></div>
                     </div>
-                    <div class="checkin__wrap form-input">
-                        <input class="form-input__item" 
+                    <div class="checkin__wrap input-wrap">
+                        <input class="checkin__input form-input" 
                             type="password"
                             aria-label="confirm-password"
                             pattern=${FormValidationPattern.password}
                             placeholder="Подтвердите пароль" 
                             name="confirm-password" 
                             required>
-                        <div class="form-input__check"></div>
-                        <div class="form-input__key"></div>
+                        <div class="checkin__check input-check"></div>
+                        <div class="checkin__key input-key"></div>
                     </div>  
                 </div>
                 <div class="checkin__wrong-message">
@@ -81,7 +81,7 @@ const POPUP_CHECKIN_HTML = `
                     </div>
                 </div>
                 <div class="checkin__btn">
-                    <button class="checkin__submit btn" type="submit">Зарегистрироваться</button>
+                    <button class="checkin__submit btn btn_theme_green" type="submit">Зарегистрироваться</button>
                 </div>
             </div>
         </form>

@@ -17,11 +17,6 @@
     background: utils.$var-color-white;
     box-shadow: 0px 0px 17.7465px rgba(0, 0, 0, 0.12);
 }
-.close-btn {
-    background: transparent;
-    cursor: pointer;
-    border: none;
-}
 .popup-icon {
     &__item {
         width: 29px;
@@ -39,7 +34,9 @@
 }
 .input-check,
 .input-phone,
-.input-key {
+.input-key,
+.input-case,
+.input-calendar {
     position: absolute;
 }
 .input-phone {
@@ -48,23 +45,28 @@
 .input-key {
     background: center/cover no-repeat url('../../../../img/icons/key.svg');
 }
+.input-case {
+    background: center/contain no-repeat url('../../../../img/icons/document_case_grey.svg');
+}
+.input-calendar {
+    background: center/cover no-repeat url('../../../../img/icons/date.svg');
+}
 .form-input {
-    font-family: 'TT Norms Pro';
-    font-style: normal;
-    color: utils.$var-color-silver;
     background-color: utils.$var-color-alabaster;
     border-color: utils.$var-color-gallery;
     border-style: solid;
 
     &[type="tel"]:focus:invalid ~ .input-check::after,
     &[type="password"]:focus:invalid ~ .input-check::after,
-    &[type="text"]:focus:invalid ~ .input-check::after {
+    &[type="text"]:focus:invalid ~ .input-check::after,
+    &[type="email"]:focus:invalid ~ .input-check::after {
         content: '✖';
         color: utils.$var-color-burnt-sienna;
     }
     &[type="tel"]:focus:valid ~ .input-check::after,
     &[type="password"]:focus:valid ~ .input-check::after,
-    &[type="text"]:focus:valid ~ .input-check::after {
+    &[type="text"]:focus:valid ~ .input-check::after,
+    &[type="email"]:focus:valid ~ .input-check::after {
         content: '✓';
         color: utils.$var-color-green-haze;
     }
@@ -82,84 +84,19 @@
         color: utils.$var-color-silver;
         // @include utils.mix-font(400, 14px, 17px, utils.$var-color-silver);
     }
-    // position: relative;
-
-    &__item {
-        // width: 100%;
-        // height: 100%;
-        // padding-left: 40px;
-        // font-family: 'TT Norms Pro';
-        // @include utils.mix-font(400, 15px, 15px, utils.$var-color-liver);
-        // background: utils.$var-color-alabaster;
-        // border: 0.873181px solid utils.$var-color-gallery;
-        // border-radius: 5.91549px;
-        // &_theme_square {
-        //     background-color: utils.$var-color-alabaster;
-        //     border: 0.435616px solid utils.$var-color-gallery;
-        // }
+    &_theme_silver {
+        font-family: 'TT Norms Pro';
+        font-style: normal;
+        color: utils.$var-color-silver;
     }
-    // &__item:hover {
-    //     box-shadow: 0 0 1.5px 1px utils.$var-color-green-haze;
-    //     transition: box-shadow .2s;
+    &_theme_black {
+        font-weight: 500;
+        font-style: normal;
+        color: utils.$var-color-black;
+    }
+    // &__item[type="tel"]:focus::placeholder {
+    //     color: utils.$var-color-liver;
     // }
-    // &__item:focus {
-    //     border-color: utils.$var-color-green-haze;
-    //     outline: none;
-    // }
-    &__item[type="tel"]:focus::placeholder {
-        color: utils.$var-color-liver;
-    }
-    &__item::placeholder {
-        // font-family: 'TT Norms Pro';
-        // @include utils.mix-font(400, 14px, 17px, utils.$var-color-silver);
-    }
-    &__item[type="tel"]:valid ~ .form-input__check::after,
-    &__item[type="password"]:valid ~ .form-input__check::after,
-    &__item[type="text"]:valid ~ .form-input__check::after {
-        // content: '✓';
-        // position: absolute;
-        // top: 50%;
-        // transform: translateY(-50%);
-        // right: -17px;
-        // color: utils.$var-color-green-haze;
-    }
-    &__item[type="tel"]:focus:invalid ~ .form-input__check::after,
-    &__item[type="password"]:focus:invalid ~ .form-input__check::after,
-    &__item[type="text"]:focus:invalid ~ .form-input__check::after {
-        // content: '✖';
-        // position: absolute;
-        // top: 50%;
-        // transform: translateY(-50%);
-        // right: -17px;
-        // color: utils.$var-color-burnt-sienna;
-    }
-    &__phone,
-    &__key,
-    &__document-case,
-    &__date {
-        // position: absolute;
-        // top: 50%;
-        // transform: translateY(-50%);
-    }
-    &__phone,
-    &__key,
-    &__document-case {
-        // left: 15px;
-        // width: 13px;
-        // height: 13px;
-    }
-    &__phone {
-        // background: center/cover no-repeat url('../../../../img/icons/phone.svg');
-    }
-    &__key {
-        // background: center/cover no-repeat url('../../../../img/icons/key.svg');
-    }
-    &__document-case {
-        background: center/contain no-repeat url('../../../../img/icons/document_case_grey.svg');
-    }
-    &__date {
-        background: center/cover no-repeat url('../../../../img/icons/date.svg');
-    }
 }
 
 .password-recovery {
@@ -189,10 +126,33 @@
     &__inputs {
     }
     &__wrap {
-        height: 42px;    
+    }
+    &__input {
+        width: 100%;
+        height: 42px;
+        padding-left: 41px;
+        font-size: 12px;
+        line-height: 15px;
+        border-width: 1px;
+        border-radius: 5px;    
     }
     &__wrap:not(:last-child) {
         margin-bottom: 21px;
+    }
+    &__check,
+    &__phone,
+    &__key {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    &__check {
+        right: -18px;
+    }
+    &__phone,
+    &__key {
+        width: 10px;
+        height: 10px;
+        left: 15px;
     }
     &__container-btn {
         display: flex;
@@ -202,13 +162,10 @@
     &__btn {
         width: 50%;
         height: 40px;
-        border: none;
         border-radius: 5px;
-        background: transparent;
         @include utils.mix-font(500, 12px, 15px);
         color: utils.$var-color-green-haze;
         transition: .2s background, .2s color;
-        cursor: pointer;
         &_active {
             background-color: utils.$var-color-green-haze;
             color: utils.$var-color-white;
@@ -353,7 +310,27 @@
         margin-bottom: 22px;
     }
     &__wrap {
-        height: 42.82px;
+    }
+    &__input {
+        width: 100%;
+        height: 42.81px;
+        padding-left: 41.33px;
+        border-radius: 5px;
+        border-width: 1px;
+        font-size: 14px;    
+    }
+    &__case {
+        left: 15px;
+        width: 11px;
+        height: 9px;
+    }
+    &__check,
+    &__case {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    &__check {
+        right: -18px;
     }
     &__btn {
         // width: 181.76px;
@@ -394,7 +371,29 @@
         margin: 11px 0 25px 0;
     }
     &__wrap {
-        height: 42.82px;
+    }
+    &__input {
+        width: 100%;
+        height: 42.81px;
+        padding-left: 41.33px;
+        border-radius: 5px;
+        border-width: 1px;
+        font-size: 14px;
+    }
+    &__check,
+    &__phone,
+    &__key {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    &__check {
+        right: -18px;
+    }
+    &__phone,
+    &__key {
+        width: 10px;
+        height: 10px;
+        left: 15px;
     }
     &__wrap:not(:last-child) {
         margin-bottom: 21px;
@@ -451,6 +450,10 @@
             width: 303px;
             padding: 42px 37px 26px 37px;
         }
+        @media screen and (max-width: utils.$var-general-brkpoint-4) {
+            width: 276px;
+            padding: 36px 25px 20px 25px;
+        }
     }
     &__close {
         position: absolute;
@@ -495,25 +498,40 @@
             grid-area: date;
         }
         @media screen and(max-width: utils.$var-reserv-brkpoint-1) {
-            grid-template-columns: 1fr;
+            grid-template-columns: 100%;
             grid-template-areas: 'phone' 'amount' 'date' 'time';
             grid-gap: 22px 0;
             margin-top: 22px;
         }
     }
     &__wrap {
-        height: 48px;
+    }
+    &__phone,
+    &__time,
+    &__amount,
+    &__date {
+        width: 100%;
+        height: 47.66px;
+        padding-left: 17px;
+        border-radius: 5.5647px;
+        border-width: 1px;
         @media screen and(max-width: utils.$var-reserv-brkpoint-1) {
             height: 42px;
         }
     }
-    &__input {
-        padding-left: 15px;
+    &__name {
+        width: 100%;
+        height: 48px;
+        border-radius: 5.5647px;
+        border-width: 1px;
+        @media screen and(max-width: utils.$var-reserv-brkpoint-1) {
+            height: 42px;
+        }
     }
-    &__input:focus ~ .reserv__name {
+    &__name:focus ~ .reserv__placeholder {
         display: none;
     }
-    &__name {
+    &__placeholder {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -527,7 +545,15 @@
             display: none;
         }
     }
-    &__date {
+    &__check,
+    &__calendar {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    &__check {
+        right: -18px;
+    }
+    &__calendar {
         width: 15px;
         height: 15px;
         right: 20px;
@@ -556,8 +582,6 @@
 
 // review pop-up modal window
 .review {
-    display: flex;
-    // display: none;
     &__form {
         width: 318px;
         padding: 23px 40px 13px 40px;
@@ -655,5 +679,32 @@
     }
 }
 // // review pop-up modal window
+
+.confirm-phone {
+    &__form {
+    }
+    &__close {
+    }
+    &__icon {
+    }
+    &__title {
+    }
+    &__row {
+    }
+    &__digit {
+        width: 33px;
+        height: 47px;
+        font-size: 24px;
+        line-height: 16px;
+        border-width: 1px;
+        border-radius: 5px;
+    }
+    &__dush {
+    }
+    &__check {
+    }
+}
+
+
 
 
