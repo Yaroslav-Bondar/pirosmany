@@ -18,18 +18,52 @@ const POPUP_CONFIRM_PHONE_HTML = `
                     Подтвердите номер телефона
                 </div>
                 <div class="confirm-phone__row">
-                    <div class=class="confirm-phone__digit">
-                        <input class="confirm-phone__digit form-input form-input_theme_black" 
+                    <div class="confirm-phone__digit">
+                        <input class="confirm-phone__input form-input form-input_theme_black" 
                             type="text" 
                             aria-label="digit"
                             pattern="\\d"
                             placeholder="" 
                             name="digit" 
-                            required>
-                        <div class="confirm-phone__check input-check"></div>
+                            required
+                        >
                     </div>
-                    <div class=class="confirm-phone__dush"></div>
+                    <div class="confirm-phone__dush"></div>
+                    <div class="confirm-phone__digit">
+                        <input class="confirm-phone__input form-input form-input_theme_black" 
+                            type="text" 
+                            aria-label="digit"
+                            pattern="\\d"
+                            placeholder="" 
+                            name="digit" 
+                            required
+                        >
+                    </div>
+                    <div class="confirm-phone__dush"></div>
+                    <div class="confirm-phone__digit">
+                        <input class="confirm-phone__input form-input form-input_theme_black" 
+                            type="text" 
+                            aria-label="digit"
+                            pattern="\\d"
+                            placeholder="" 
+                            name="digit" 
+                            required
+                        >
+                    </div>
+                    <div class="confirm-phone__dush"></div>
+                    <div class="confirm-phone__digit">
+                        <input class="confirm-phone__input form-input form-input_theme_black" 
+                            type="text" 
+                            aria-label="digit"
+                            pattern="\\d"
+                            placeholder="" 
+                            name="digit" 
+                            required
+                        >
+                    </div>
                 </div>
+                <button class="confirm-phone__repeat btn btn_theme_transparent" type="button">Отправить повторно</button>
+                <button class="confirm-phone__submit btn btn_theme_green" type="submit">Далее</button>
             </form>
         </div>
     </div>    

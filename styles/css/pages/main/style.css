@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.table__btn, .products__card-basket, .header__user-btn, .header__basket-btn, .confirm-phone__digit, .bonus__icon, .pwa__column, .mobmenu__dropdown-img, .display__item, .basket-cart, .basket-cart__amount {
+.table__btn, .products__card-basket, .header__user-btn, .header__basket-btn, .confirm-phone__dush, .bonus__icon, .pwa__column, .mobmenu__dropdown-img, .display__item, .basket-cart, .basket-cart__amount {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1533,14 +1533,82 @@ body {
   color: #fff;
 }
 
-.confirm-phone__digit {
+.confirm-phone__form {
+  width: 303px;
+  padding: 24px 54px 29px 54px;
+  border-radius: 14.7664px;
+}
+@media screen and (max-width: 320px) {
+  .confirm-phone__form {
+    width: 274px;
+    padding: 24px 37px 29px 37px;
+  }
+}
+.confirm-phone__close {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  right: 9px;
+  top: 8px;
+}
+.confirm-phone__title {
+  margin: 11px 0 25px 0;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 12px;
+  text-transform: none;
+  line-height: 18px;
+  color: #000000;
+  text-align: center;
+}
+.confirm-phone__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.confirm-phone__input {
   width: 33px;
   height: 47px;
   font-size: 24px;
   line-height: 16px;
   border-width: 1px;
   border-radius: 5px;
+  text-align: center;
 }
+.confirm-phone__dush {
+  width: 20px;
+}
+.confirm-phone__dush::after {
+  content: "";
+  width: 7px;
+  height: 1px;
+  background-color: #343E48;
+}
+.confirm-phone__repeat {
+  display: block;
+  margin: 20px auto 30px auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 12px;
+  text-transform: none;
+  line-height: 18px;
+  color: #00AC4E;
+  text-decoration: underline;
+}
+.confirm-phone__submit {
+  display: block;
+  width: 115px;
+  height: 38px;
+  border-radius: 5px;
+  margin: 0 auto 0 auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 11px;
+  text-transform: none;
+  line-height: 16px;
+  color: #fff;
+}
+
 .header {
   padding: 30px 0 30px 0;
   background: #FFFFFF;

@@ -682,26 +682,65 @@
 
 .confirm-phone {
     &__form {
+        width: 303px;
+        padding: 24px 54px 29px 54px;
+        border-radius: 14.7664px;
+        @media screen and (max-width: utils.$var-general-brkpoint-4) {
+            width: 274px;
+            padding: 24px 37px 29px 37px;
+        }
     }
     &__close {
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        right: 9px;
+        top: 8px;
     }
     &__icon {
     }
     &__title {
+        margin: 11px 0 25px 0;
+        @include utils.mix-font(500, 12px, 18px, utils.$var-color-black);
+        text-align: center;
     }
     &__row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
-    &__digit {
+    &__input {
         width: 33px;
         height: 47px;
         font-size: 24px;
         line-height: 16px;
         border-width: 1px;
         border-radius: 5px;
+        text-align: center;
     }
     &__dush {
+        @extend %center-xy-flex;
+        width: 20px;
     }
-    &__check {
+    &__dush::after {
+        content: '';
+        width: 7px;
+        height: 1px;
+        background-color: utils.$var-color-limed-spruce;
+    }
+    &__repeat {
+        display: block;
+        margin: 20px auto 30px auto;
+        @include utils.mix-font(500, 12px, 18px, utils.$var-color-green-haze);
+        text-decoration: underline;
+    }
+    &__submit {
+        display: block;
+        width: 115px;
+        height: 38px;
+        border-radius: 5px;
+        margin: 0 auto 0 auto;
+        @include utils.mix-font(500, 11px, 16px, utils.$var-color-white);
     }
 }
 
