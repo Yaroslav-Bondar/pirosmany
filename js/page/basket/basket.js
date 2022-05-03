@@ -19,7 +19,7 @@ class Basket {
                     price = productsStore[i].amount * productsStore[i].price
                     html += `
                         <li class="list__node basket__list-node ${CONTAIN_PRODUCT_ID} ${ORDER_CLASS_ID}" data-product-id='${prod.id}'>
-                            <button class="list__btn basket__list-btn"></button>
+                            <button class="list__btn btn basket__list-btn"></button>
                             <div class="list__icon basket__list-icon">
                                 <img src="" alt="product">
                             </div>
@@ -27,13 +27,11 @@ class Basket {
                                 ${prod.name}
                             </div>
                             <div class="display basket__display">
-                                <button data-display="btn-minus" class="display__btn-minus basket__btn-minus">
-                                </button>
+                                <button data-display="btn-minus" class="display__btn-minus btn btn_theme_transparent basket__btn-minus"></button>
                                 <div class="display__item basket__display-item">
                                     <span data-display="amount" class="display__amount basket__display-amount">${productsStore[i].amount}</span>
                                 </div>
-                                <button data-display="btn-plus" class="display__btn-plus basket__btn-plus">
-                                </button>
+                                <button data-display="btn-plus" class="display__btn-plus btn btn_theme_transparent basket__btn-plus"></button>
                             </div>
                             <div class="list__price basket__price">
                                 <span class="list__price-item basket__price-item sum_product_price">

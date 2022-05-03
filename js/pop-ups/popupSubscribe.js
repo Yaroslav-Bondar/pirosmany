@@ -7,7 +7,7 @@ const POPUP_SUBSCRIBE_HTML = `
             name="subscribe" 
             method="POST"
         >
-            <button type="button" class="subscribe__close btn btn_theme_transparent" data-modal-close="true">
+            <button type="button" class="subscribe__close close-btn btn" data-modal-close="true">
                 <img class="img" src="img/icons/plus.svg" alt="close">
             </button> 
             <div class="subscribe__icon"></div>

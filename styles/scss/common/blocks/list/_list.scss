@@ -13,19 +13,7 @@
         border-top: none;
     }
     &__btn {
-        position: relative;
-        border: none;
-        background: transparent;
-        cursor: pointer;
-    }
-    &__btn::before {
-        content: '\f067';
-        font-family: 'FontAwesome';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) rotateZ(45deg);
-        color: utils.$var-color-silver;
+        background: center/cover no-repeat url("../../../../img/icons/plus_grey.svg");
     }
     &__icon {
         flex-shrink: 0;

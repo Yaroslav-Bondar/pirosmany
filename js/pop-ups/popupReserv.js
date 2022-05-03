@@ -7,7 +7,7 @@ const POPUP_RESERV_HTML = `
             method="POST"
             name="reserv"
         >
-            <button type="button" class="reserv__close btn btn_theme_transparent" data-modal-close="true">
+            <button type="button" class="reserv__close close-btn btn" data-modal-close="true">
                 <img class="img" src="img/icons/plus.svg" alt="close">
             </button>
             <div class="reserv__title">

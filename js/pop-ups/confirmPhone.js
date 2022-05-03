@@ -6,9 +6,7 @@ const POPUP_CONFIRM_PHONE_HTML = `
                 name="confirm-phone"
                 method="POST"
             >
-                <button type="button" class="confirm-phone__close btn btn_theme_transparent" data-modal-close="true">
-                    <img class="img" src="img/icons/plus.svg" alt="close">
-                </button>
+                <button type="button" class="confirm-phone__close close-btn btn" data-modal-close="true"></button>
                 <div class="confirm-phone__icon">
                     <div class="popup-icon">
                         <div class="popup-icon__item"></div>
@@ -19,7 +17,7 @@ const POPUP_CONFIRM_PHONE_HTML = `
                 </div>
                 <div class="confirm-phone__row">
                     <div class="confirm-phone__digit">
-                        <input class="confirm-phone__input form-input form-input_theme_black" 
+                        <input class="confirm-phone__input form-input form-input_hover form-input_theme_black" 
                             type="text" 
                             aria-label="digit"
                             pattern="\\d"
@@ -30,7 +28,7 @@ const POPUP_CONFIRM_PHONE_HTML = `
                     </div>
                     <div class="confirm-phone__dush"></div>
                     <div class="confirm-phone__digit">
-                        <input class="confirm-phone__input form-input form-input_theme_black" 
+                        <input class="confirm-phone__input form-input form-input_hover form-input_theme_black" 
                             type="text" 
                             aria-label="digit"
                             pattern="\\d"
@@ -41,7 +39,7 @@ const POPUP_CONFIRM_PHONE_HTML = `
                     </div>
                     <div class="confirm-phone__dush"></div>
                     <div class="confirm-phone__digit">
-                        <input class="confirm-phone__input form-input form-input_theme_black" 
+                        <input class="confirm-phone__input form-input form-input_hover form-input_theme_black" 
                             type="text" 
                             aria-label="digit"
                             pattern="\\d"
@@ -52,7 +50,7 @@ const POPUP_CONFIRM_PHONE_HTML = `
                     </div>
                     <div class="confirm-phone__dush"></div>
                     <div class="confirm-phone__digit">
-                        <input class="confirm-phone__input form-input form-input_theme_black" 
+                        <input class="confirm-phone__input form-input form-input_hover form-input_theme_black" 
                             type="text" 
                             aria-label="digit"
                             pattern="\\d"
@@ -62,7 +60,13 @@ const POPUP_CONFIRM_PHONE_HTML = `
                         >
                     </div>
                 </div>
-                <button class="confirm-phone__repeat btn btn_theme_transparent" type="button">Отправить повторно</button>
+                <div class="confirm-phone__repeat">
+                    <button class="confirm-phone__repeat-btn btn btn_color_green btn_theme_transparent" type="button">Отправить повторно</button>
+                    <div class="confirm-phone__timer">
+                        <span class="confirm-phone__minutes"></span>
+                        <span class="confirm-phone__seconds"></span>
+                    </div>
+                </div>
                 <button class="confirm-phone__submit btn btn_theme_green" type="submit">Далее</button>
             </form>
         </div>

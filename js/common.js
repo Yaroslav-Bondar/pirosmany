@@ -34,6 +34,10 @@ function toggleElementsState(elementClassName, stateClassName, uncheckedElement)
     targetElement.classList.add(`${stateClassName}`);
     return targetElement;
 }
+function replaceElementState(targetElement, addClassName, removeClassName) {
+    targetElement.classList.remove(`${removeClassName}`);
+    targetElement.classList.add(`${addClassName}`);
+}
 /**
  * toggle default placeholder message when input element gains/loses focus
  * @param {string} parentClassName - css class name of target element's parent

@@ -6,13 +6,10 @@ const popupAboutProdReviewHtml = `
                 method="POST"
                 onsubmit="return false;"
             >
-                <button type="button" class="review__close btn btn_theme_transparent" data-modal-close="true">
-                    <img class="img" src="img/icons/plus.svg" alt="close">
-                </button>
+                <button type="button" class="review__close close-btn btn" data-modal-close="true"></button>
                 <div class="review__title">
                     Добавить отзыв
                 </div>
-
                 <div class="review__column">
                     <div class="review__row review__row_align_vertical-center">
                         <div class="review__signature">Ваша оценка:</div>

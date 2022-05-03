@@ -43,8 +43,10 @@ body.addEventListener('click', event => {
             break;
         case 'password-recovery-btn':
             html = POPUP_PASSWORD_RECOVERY_HTML;
+            break;
         case 'confirm-phone':
-            html = POPUP_CONFIRM_PHONE_HTML;        
+            html = POPUP_CONFIRM_PHONE_HTML;
+            break;        
     }
     body.insertAdjacentHTML('afterbegin', html);
     // body.insertAdjacentHTML('afterbegin', popupAboutProdReviewHtml);
@@ -64,6 +66,59 @@ body.addEventListener('click', event => {
                 showInvalidFormState(form, 'signin-wrong-message', 'signin__wrong-message_hidden');
                 setFormStateHandler('signin','signin-wrong-message', 'signin__wrong-message_hidden', showValidFormState);
             }
+        });
+    }
+    // logic for confirm-phone popup
+    if(html === POPUP_CONFIRM_PHONE_HTML) {
+        const confirmBtn = document.querySelector('.confirm-phone__repeat-btn');
+        const confirmMin = document.querySelector('.confirm-phone__minutes');
+        const confirmSec = document.querySelector('.confirm-phone__seconds');
+        const confirmSubmit = document.querySelector('.confirm-phone__submit');
+        const confirmInputs = document.getElementsByClassName('confirm-phone__input');
+        confirmBtn.addEventListener('click', (e)=> {
+            if(e.target.classList.contains('btn_color_grey')) return;
+            replaceElementState(confirmBtn, 'btn_color_grey', 'btn_color_green');
+            replaceElementState(confirmSubmit, 'btn_bg_grey', 'btn_bg_green');
+            for(const input of confirmInputs) {
+                input.classList.remove('form-input_hover');
+                input.disabled = !input.disabled;
+                input.value = '';
+            }
+            const minutesDisplay = 1; // total minutes for the timer
+            const secondsDisplay = '00'; 
+            const secondsInit = 60;
+
+            let minutesTmp = minutesDisplay;
+            let secondsTmp = secondsInit;
+            // init display    
+            confirmMin.textContent = minutesDisplay;
+            confirmSec.textContent = secondsDisplay;
+
+            const timerId = setInterval(()=>{
+                // count time
+                secondsTmp--;
+                if(secondsTmp === secondsInit - 1) {
+                    minutesTmp = --minutesTmp;
+                }
+                // stop timer
+                if(minutesTmp === 0 && secondsTmp === 0) {
+                    clearInterval(timerId);
+                    replaceElementState(confirmBtn, 'btn_color_green', 'btn_color_grey');
+                    replaceElementState(confirmSubmit, 'btn_bg_green', 'btn_bg_grey');
+                    for(const input of confirmInputs) {
+                        input.classList.add('form-input_hover');
+                        input.disabled = !input.disabled;
+                    }
+                }
+                // display time
+                confirmMin.textContent = minutesTmp;
+                if(secondsTmp < 10) confirmSec.textContent = '0' + secondsTmp;
+                else confirmSec.textContent = secondsTmp;
+                // reset seconds
+                if(secondsTmp === 0) {
+                    secondsTmp = secondsInit;
+                }
+            }, 1000);
         });
     }
     body.style.overflow = 'hidden';

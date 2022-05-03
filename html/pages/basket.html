@@ -388,7 +388,7 @@
                         </a>
                     </div>
                     <div class="header__user">
-                        <button id="user_sign_in" class="header__user-btn btn">
+                        <button id="sign-in-btn" data-modal-open="true" class="header__user-btn btn btn_theme_transparent">
                             <img class="img" src="../../img/header/person.svg" alt="person">
                         </button>
                         <a class="header__basket-btn basket-cart" href="store.html">
@@ -472,13 +472,13 @@
                             <span class="order__total-currency">₽</span>
                         </div>
                     </div>
-                    <button class="order__btn btn">Оформить заказ</button>
+                    <button class="order__btn btn btn_theme_green">Оформить заказ</button>
                 </div>
                 <div class="basket__promo promo">
                     <div class="basket__promo-title promo__title">Промокод</div>
                     <form action="#" method="POST" class="basket__promo-form promo__form">
                         <input class="basket__promo-input promo__input" type="text" placeholder="Введите промокод" name="promo-code">
-                        <input type="button" class="basket__promo-btn promo__btn btn" value="Подтвердить">
+                        <input type="button" class="basket__promo-btn promo__btn btn btn_theme_green" value="Подтвердить">
                     </form>
                 </div>
             </div>
@@ -576,6 +576,9 @@
     <script src="../../js/pop-ups/popupSignin.js"></script>
     <script src="../../js/pop-ups/popupReserv.js"></script>
     <script src="../../js/pop-ups/popupCheckin.js"></script>
+    <script src="../../js/pop-ups/popupPasswordRecovery.js"></script>
+    <script src="../../js/pop-ups/confirmPhone.js"></script>
+
     <!-- // // popup -->
     <!-- pwa -->
     <!-- <script src="js/pwa/pwaHtml.js"></script>

@@ -5,9 +5,7 @@ const POPUP_CHECKIN_HTML = `
             class="checkin__form popup-form" 
             name="checkin"
             method="POST">
-            <button type="button" class="checkin__close btn btn_theme_transparent" data-modal-close="true">
-                <img class="img" src="img/icons/plus.svg" alt="close">
-            </button>
+            <button type="button" class="checkin__close close-btn btn" data-modal-close="true"></button>
             <div class="checkin__icon">
                 <div class="popup-icon">
                     <div class="popup-icon__item"></div>

@@ -70,7 +70,7 @@
         content: '✓';
         color: utils.$var-color-green-haze;
     }
-    &:hover {
+    &:hover.form-input_hover {
         box-shadow: 0 0 1.5px 1px utils.$var-color-green-haze;
         transition: box-shadow .2s;
     }
@@ -729,9 +729,17 @@
         background-color: utils.$var-color-limed-spruce;
     }
     &__repeat {
-        display: block;
+        display: flex;
+        align-items: center;
         margin: 20px auto 30px auto;
-        @include utils.mix-font(500, 12px, 18px, utils.$var-color-green-haze);
+    }
+    &__repeat-btn {
+        display: block;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 12px;
+        text-transform: none;
+        line-height: 18px;
         text-decoration: underline;
     }
     &__submit {

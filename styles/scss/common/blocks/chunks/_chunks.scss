@@ -18,10 +18,22 @@ body {
     // border-radius: 4.52px;
     cursor: pointer;
 }
+.btn_color_grey {
+    color: utils.$var-color-alto;
+}
+.btn_color_green {
+    color: utils.$var-color-green-haze;
+}
 .btn_theme_transparent {
-    background: transparent;
+    background-color: transparent;
 }
 .btn_theme_green {
+    background-color: utils.$var-color-green-haze;
+}
+.btn_bg_grey {
+    background-color: utils.$var-color-alto;
+}
+.btn_bg_green {
     background-color: utils.$var-color-green-haze;
 }
 [data-dropdown='menu'] {
@@ -88,5 +100,8 @@ body {
 .rating-item:hover {
     background: center/contain no-repeat url(../../../../img/icons/star/star_active.svg);
 } 
+.close-btn {
+    background: center/cover no-repeat url("../../../../img/icons/plus.svg");
+}
 
 

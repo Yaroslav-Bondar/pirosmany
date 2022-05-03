@@ -5,9 +5,7 @@ const POPUP_SIGNIN_HTML = `
                 class="signin__form popup-form" 
                 name="signin"
                 method="POST">
-                <button type="button" class="signin__close btn btn_theme_transparent" data-modal-close="true">
-                   <img class="img" src="img/icons/plus.svg" alt="close">
-                </button>
+                <button type="button" class="signin__close close-btn btn" data-modal-close="true"></button>
                 <div class="signin__icon">
                     <div class="popup-icon">
                         <div class="popup-icon__item"></div>

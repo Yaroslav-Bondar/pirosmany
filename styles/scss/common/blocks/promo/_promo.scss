@@ -19,6 +19,9 @@
     &__input:focus {
         border-color: utils.$var-color-green-haze;
     }
+    &__input:focus-visible {
+        outline: none;
+    }
     &__btn {
         margin-left: 18px;
         @include utils.mix-font(500, 14px, 21px, utils.$var-color-white);
