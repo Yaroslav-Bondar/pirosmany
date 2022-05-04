@@ -729,18 +729,27 @@
         background-color: utils.$var-color-limed-spruce;
     }
     &__repeat {
-        display: flex;
-        align-items: center;
+        // display: flex;
+        // align-items: center;
+        @extend %center-xy-flex;
         margin: 20px auto 30px auto;
     }
     &__repeat-btn {
         display: block;
+        margin-right: 10px;
         font-weight: 500;
         font-style: normal;
         font-size: 12px;
         text-transform: none;
         line-height: 18px;
         text-decoration: underline;
+    }
+    &__timer {
+        display: none;
+        @include utils.mix-font(500, 12px, 18px, utils.$var-color-black);
+    }
+    &__timer_active {
+        display: block;
     }
     &__submit {
         display: block;

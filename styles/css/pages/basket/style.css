@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.header__user-btn, .header__basket-btn, .confirm-phone__dush, .bonus__icon, .pwa__column, .mobmenu__dropdown-img, .display__item, .display__btn-minus, .display__btn-plus, .basket-cart, .basket-cart__amount {
+.header__user-btn, .header__basket-btn, .confirm-phone__dush, .confirm-phone__repeat, .bonus__icon, .pwa__column, .mobmenu__dropdown-img, .display__item, .display__btn-minus, .display__btn-plus, .basket-cart, .basket-cart__amount {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1586,18 +1586,29 @@ body {
   background-color: #343E48;
 }
 .confirm-phone__repeat {
-  display: flex;
-  align-items: center;
   margin: 20px auto 30px auto;
 }
 .confirm-phone__repeat-btn {
   display: block;
+  margin-right: 10px;
   font-weight: 500;
   font-style: normal;
   font-size: 12px;
   text-transform: none;
   line-height: 18px;
   text-decoration: underline;
+}
+.confirm-phone__timer {
+  display: none;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 12px;
+  text-transform: none;
+  line-height: 18px;
+  color: #000000;
+}
+.confirm-phone__timer_active {
+  display: block;
 }
 .confirm-phone__submit {
   display: block;

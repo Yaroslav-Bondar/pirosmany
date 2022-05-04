@@ -70,16 +70,16 @@ class Product {
                         </div>
                     </div>
                     <div class="card__btns">
-                        <button class="products__card-btn card__button btn ${inactiveClass}" onclick='productPage.handlerSwitchSetBasket(this, event, "${id}")'>В корзину</button>
+                        <button class="products__card-btn card__button btn btn_theme_green ${inactiveClass}" onclick='productPage.handlerSwitchSetBasket(this, event, "${id}")'>В корзину</button>
                         <div class='products__card-add card__add ${activeClass}'>
                             <div class="card__display display">
-                                <button data-display="btn-minus" class="display__btn-minus card__btn-minus">
+                                <button data-display="btn-minus" class="display__btn-minus card__btn-minus btn btn_theme_transparent">
                                 </button>
                                 <div class="display__item card__display-item">
                                     <span data-display="amount" class="display__amount card__display-amount">${elementAmount}</span>
                                     <span class="display__units card__display-units">шт</span>
                                 </div>
-                                <button data-display="btn-plus" class="display__btn-plus card__btn-plus">
+                                <button data-display="btn-plus" class="display__btn-plus card__btn-plus btn btn_theme_transparent">
                                 </button>
                             </div>
                             <a href="basket.html" class="shopping-cart products__card-basket">

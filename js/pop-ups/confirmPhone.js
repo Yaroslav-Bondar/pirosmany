@@ -22,7 +22,8 @@ const POPUP_CONFIRM_PHONE_HTML = `
                             aria-label="digit"
                             pattern="\\d"
                             placeholder="" 
-                            name="digit" 
+                            name="digit"
+                            maxlength="1" 
                             required
                         >
                     </div>
@@ -33,7 +34,8 @@ const POPUP_CONFIRM_PHONE_HTML = `
                             aria-label="digit"
                             pattern="\\d"
                             placeholder="" 
-                            name="digit" 
+                            name="digit"
+                            maxlength="1" 
                             required
                         >
                     </div>
@@ -44,7 +46,8 @@ const POPUP_CONFIRM_PHONE_HTML = `
                             aria-label="digit"
                             pattern="\\d"
                             placeholder="" 
-                            name="digit" 
+                            name="digit"
+                            maxlength="1" 
                             required
                         >
                     </div>
@@ -55,7 +58,8 @@ const POPUP_CONFIRM_PHONE_HTML = `
                             aria-label="digit"
                             pattern="\\d"
                             placeholder="" 
-                            name="digit" 
+                            name="digit"
+                            maxlength="1" 
                             required
                         >
                     </div>
@@ -64,6 +68,7 @@ const POPUP_CONFIRM_PHONE_HTML = `
                     <button class="confirm-phone__repeat-btn btn btn_color_green btn_theme_transparent" type="button">Отправить повторно</button>
                     <div class="confirm-phone__timer">
                         <span class="confirm-phone__minutes"></span>
+                        <span class="confirm-phone__separator">:</span>
                         <span class="confirm-phone__seconds"></span>
                     </div>
                 </div>

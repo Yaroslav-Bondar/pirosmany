@@ -70,21 +70,28 @@ body.addEventListener('click', event => {
     }
     // logic for confirm-phone popup
     if(html === POPUP_CONFIRM_PHONE_HTML) {
+        const confirmTimer = document.querySelector('.confirm-phone__timer');
         const confirmBtn = document.querySelector('.confirm-phone__repeat-btn');
         const confirmMin = document.querySelector('.confirm-phone__minutes');
         const confirmSec = document.querySelector('.confirm-phone__seconds');
         const confirmSubmit = document.querySelector('.confirm-phone__submit');
         const confirmInputs = document.getElementsByClassName('confirm-phone__input');
+        console.log()
+        confirmInputs[0].addEventListener('input', (e)=> {
+            console.log(e.target);
+        });
         confirmBtn.addEventListener('click', (e)=> {
             if(e.target.classList.contains('btn_color_grey')) return;
+            // start tasks
             replaceElementState(confirmBtn, 'btn_color_grey', 'btn_color_green');
             replaceElementState(confirmSubmit, 'btn_bg_grey', 'btn_bg_green');
+            confirmTimer.classList.add('confirm-phone__timer_active');
             for(const input of confirmInputs) {
                 input.classList.remove('form-input_hover');
                 input.disabled = !input.disabled;
                 input.value = '';
             }
-            const minutesDisplay = 1; // total minutes for the timer
+            const minutesDisplay = 2; // total minutes for the timer
             const secondsDisplay = '00'; 
             const secondsInit = 60;
 
@@ -95,23 +102,28 @@ body.addEventListener('click', event => {
             confirmSec.textContent = secondsDisplay;
 
             const timerId = setInterval(()=>{
-                // count time
+                // count seconds
                 secondsTmp--;
                 if(secondsTmp === secondsInit - 1) {
+                    // count minutes
                     minutesTmp = --minutesTmp;
+                    // display minutes
+                    confirmMin.textContent = minutesTmp;
                 }
                 // stop timer
                 if(minutesTmp === 0 && secondsTmp === 0) {
+                    // stop tasks
                     clearInterval(timerId);
                     replaceElementState(confirmBtn, 'btn_color_green', 'btn_color_grey');
                     replaceElementState(confirmSubmit, 'btn_bg_green', 'btn_bg_grey');
+                    confirmTimer.classList.remove('confirm-phone__timer_active');
                     for(const input of confirmInputs) {
                         input.classList.add('form-input_hover');
                         input.disabled = !input.disabled;
                     }
                 }
-                // display time
-                confirmMin.textContent = minutesTmp;
+                // display seconds
+                // confirmMin.textContent = minutesTmp;
                 if(secondsTmp < 10) confirmSec.textContent = '0' + secondsTmp;
                 else confirmSec.textContent = secondsTmp;
                 // reset seconds
