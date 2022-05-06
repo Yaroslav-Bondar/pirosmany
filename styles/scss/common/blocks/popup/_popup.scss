@@ -729,8 +729,6 @@
         background-color: utils.$var-color-limed-spruce;
     }
     &__repeat {
-        // display: flex;
-        // align-items: center;
         @extend %center-xy-flex;
         margin: 20px auto 30px auto;
     }

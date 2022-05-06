@@ -76,10 +76,32 @@ body.addEventListener('click', event => {
         const confirmSec = document.querySelector('.confirm-phone__seconds');
         const confirmSubmit = document.querySelector('.confirm-phone__submit');
         const confirmInputs = document.getElementsByClassName('confirm-phone__input');
-        console.log()
-        confirmInputs[0].addEventListener('input', (e)=> {
-            console.log(e.target);
-        });
+        const confirmInputsElement = [...confirmInputs];
+        // entering values for confirmation
+        confirmInputsElement.forEach((ele,index)=> {
+            ele.addEventListener('keydown',(e)=>{
+                // if the keycode is backspace & the current field is empty
+                // focus the input before the current. Then the event happens
+                // which will clear the "before" input box.
+                if(e.keyCode === 8 && e.target.value==='') confirmInputsElement[Math.max(0,index-1)].focus()
+            })
+            ele.addEventListener('input',(e)=>{
+                // take the first character of the input
+                // this actually breaks if you input an emoji like 👨‍👩‍👧‍👦....
+                // but I'm willing to overlook insane security code practices.
+                const [first,...rest] = e.target.value
+                e.target.value = first ?? '' // first will be undefined when backspace was entered, so set the input to ""
+                const lastInputBox = index===confirmInputsElement.length-1
+                const insertedContent = first!==undefined
+                if(insertedContent && !lastInputBox) {
+                // continue to input the rest of the string
+                confirmInputsElement[index+1].focus()
+                confirmInputsElement[index+1].value = rest.join('')
+                confirmInputsElement[index+1].dispatchEvent(new Event('input'))
+                }
+            })
+        })    
+        // resend timer 
         confirmBtn.addEventListener('click', (e)=> {
             if(e.target.classList.contains('btn_color_grey')) return;
             // start tasks
