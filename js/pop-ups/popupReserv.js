@@ -8,7 +8,6 @@ const POPUP_RESERV_HTML = `
             name="reserv"
         >
             <button type="button" class="reserv__close close-btn btn" data-modal-close="true">
-                <img class="img" src="img/icons/plus.svg" alt="close">
             </button>
             <div class="reserv__title">
                 Бронирование стола

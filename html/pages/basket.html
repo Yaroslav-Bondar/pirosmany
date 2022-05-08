@@ -18,10 +18,10 @@
             </button>
             <div class="logo">
                 <div class="logo__text">
-                    <img src="../../img/logo/logo_text.png" alt="logo_text" class="logo__text-item">
+                    <img src="../../img/logo/logo_text.svg" alt="logo_text" class="logo__text-item">
                 </div>
                 <div class="logo__img">
-                    <img src="../../img/logo/logo_img.png" alt="logo_img" class="logo__img-item">
+                    <img src="../../img/logo/logo_img.svg" alt="logo_img" class="logo__img-item">
                 </div>
             </div>
         </div>
@@ -374,7 +374,7 @@
                             <a href="#" class="navigation__link" id="menu-btn">Оплата</a>
                         </li>
                         <li class="navigation__node" id="menu-node">
-                            <a href="#" class="navigation__link" id="menu-btn">Бронь стола</a>
+                            <a data-modal-open="true" href="#" class="navigation__link" id="reserv-btn-1">Бронь стола</a>
                         </li>
                     </ul>
                 </nav>
@@ -391,7 +391,7 @@
                         <button id="sign-in-btn" data-modal-open="true" class="header__user-btn btn btn_theme_transparent">
                             <img class="img" src="../../img/header/person.svg" alt="person">
                         </button>
-                        <a class="header__basket-btn basket-cart" href="store.html">
+                        <a class="header__basket-btn basket-cart" href="basket.html">
                             <img class="img" src="../../img/shopping_cart/shopping_cart_green.svg" alt="basket">
                             <span class="header__basket-amount basket-cart__amount">5</span>
                         </a>
@@ -519,14 +519,14 @@
                         <a href="#" class="footer__social-2">мы в instagram ></a>
                     </div>
                     <div class="footer__user enter">
-                        <button id="user_sign_in" class="enter__btn-in btn btn_theme_transparent">
+                        <button id="sign-in-btn-2" class="enter__btn-in btn btn_theme_transparent" data-modal-open="true">
                             <span class="enter__img-wrap">
                                 <img class="img" src="../../img/footer/person_white.svg" alt="person">
                             </span>
                             <span class="enter__btn-in-text">войти</span>
                         </button>
                         <span class="enter__separator">/</span>
-                        <button id="checkin" class="enter__btn-checkin btn btn_theme_transparent">
+                        <button id="check-in-btn" class="enter__btn-checkin btn btn_theme_transparent" data-modal-open="true">
                             <span class="enter__btn-checkin-text">регистрация</span>
                         </button>
                     </div>
@@ -545,21 +545,18 @@
             </div>
         </div>
     </footer>
-    <!-- <script type="text/javascript" src="js/libs/jquery/jquery-3.6.0.min.js"></script> -->
     <!-- <script type="module" src="./js/basket.mjs"></script>  -->
-
     <!-- Constants & Utils  -->
     <script src="../../js/constants/catalog.js"></script>
     <script src="../../js/constants/root.js"></script>
     <!-- <script src="js/page/basket/constants/basketRoot.js"></script> -->
     <script src="../../js/utils/localStorageUtil.js"></script>
     <script src="../../js/common.js"></script>
-
     <!-- Components -->
     <!-- <script src="../../js/page/header/headerRender.js"></script> -->
     <script src="../../js/mob-menu/mobMenu.js"></script>
     <script src="../../js/page/header/header.js"></script>
-    
+  
     <!-- show/hide drop-down menu -->
     <script src="../../js/drop-down-menu/dropDownMenu.js"></script>
 
@@ -572,21 +569,19 @@
     <script src="../../js/page/bonus.js"></script>
 
     <!-- // popup -->
-    <script src="../../js/pop-ups/popupCommon.js"></script>
     <script src="../../js/pop-ups/popupSignin.js"></script>
+    <script src="../../js/pop-ups/popupSubscribe.js"></script>
     <script src="../../js/pop-ups/popupReserv.js"></script>
     <script src="../../js/pop-ups/popupCheckin.js"></script>
     <script src="../../js/pop-ups/popupPasswordRecovery.js"></script>
     <script src="../../js/pop-ups/confirmPhone.js"></script>
-
+    <script src="../../js/pop-ups/popupCommon.js"></script>
+    
     <!-- // // popup -->
     <!-- pwa -->
     <!-- <script src="js/pwa/pwaHtml.js"></script>
     <script src="js/pwa/pwaForBasket.js"></script>
     <script src="js/pwa/pwa.js"></script> -->
-
     <!-- // pwa -->
-    <!-- Add font awesome icons -->
-    <!-- <script src="https://kit.fontawesome.com/a8ec7c40c4.js" crossorigin="anonymous"></script> -->
 </body>
 </html>
