@@ -2,6 +2,9 @@
 
 .cab {
     padding: 60px;
+    @media screen and(max-width: utils.$var-cab-form-breakpoint-2) {
+        padding: 50px 25px;
+    }
     // buttons
     &__btns {
         margin-bottom: 45px;
@@ -10,6 +13,13 @@
                 -ms-flex-pack: center;
                     justify-content: center;
         }
+    }
+    &__wrap {
+        display: flex;
+        flex-flow: column     ;
+    }
+    &__fieldset {
+        display: contents;
     }
     &__btn {
         border-radius: 16px;
@@ -65,7 +75,7 @@
             height: 51.61px;
             padding-left: 24px;
             margin-top: 11px;
-            border: 1.61275px solid utils.$var-color-gallery;
+            border-width: 1.6px;
             border-radius: 8.06373px;
         }
         &-input::-webkit-input-placeholder {
@@ -142,7 +152,7 @@
         &-input {
             height: 46px;
             padding-left: 21px;
-            border: 1.43333px solid utils.$var-color-gallery;
+            border-width: 1.43px;
             border-radius: 7.16667px;
         }
         &-input::-webkit-input-placeholder {

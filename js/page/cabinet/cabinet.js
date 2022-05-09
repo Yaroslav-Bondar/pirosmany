@@ -3,20 +3,14 @@
 
 // tabBtns.firstElementChild.classList.add('tab__btn_active')
 
-tabContent.forEach(item => item.style.display = 'none')
-tabContent[0].style.display = 'flex'
+tabContent.forEach(item => item.style.display = 'none');
+tabContent[0].style.display = 'flex';
 
 tabBtns.addEventListener('click', (e)=> {
     const targetElement = e.target.closest('.cab__btn');
-    // console.log(targetElement);
-    // const targetElement = toggleElementsState('cab__btn', 'btn_theme_green', e.target);
     if(targetElement) {
-        // toggleElementsState('cab__btn', 'btn_theme_green', e.target);
-        // replaceElementState(targetElement, 'btn_theme_green', 'btn_theme_transparent');
         toggleElementsDoubleState('cab__btn', 'btn_theme_green', 'btn_theme_transparent', e.target);
         toggleElementsDoubleState('cab__btn', 'btn_color_white', 'btn_color_green', e.target);
-
-        // replaceElementState(targetElement, 'btn_theme_transparent', 'btn_theme_green');
         tabContent.forEach(item => item.style.display = 'none')
         const tabNumber = targetElement.dataset.number
         switch(tabNumber) {
