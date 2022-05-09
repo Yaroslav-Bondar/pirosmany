@@ -26,12 +26,30 @@ let tabContent = document.querySelectorAll('.tab__content')
 function toggleElementsState(elementClassName, stateClassName, uncheckedElement) {
     const targetElement = uncheckedElement.closest(`.${elementClassName}`);
     if(!targetElement) return;
+    // if not need to switch state
+    if(targetElement.classList.contains(`${stateClassName}`)) return;
     const elements = document.querySelectorAll(`.${elementClassName}`);
     for (const element of elements) {
         if(element.classList.contains(`${stateClassName}`)) 
             element.classList.remove(`${stateClassName}`)
     }
     targetElement.classList.add(`${stateClassName}`);
+    return targetElement;
+}
+function toggleElementsDoubleState(elementClassName, stateClassName, removeClassName, uncheckedElement) {
+    const targetElement = uncheckedElement.closest(`.${elementClassName}`);
+    if(!targetElement) return;
+    // if not need to switch state
+    if(targetElement.classList.contains(`${stateClassName}`)) return;
+    const elements = document.querySelectorAll(`.${elementClassName}`);
+    for (const element of elements) {
+        if(element.classList.contains(`${stateClassName}`)) {
+            element.classList.remove(`${stateClassName}`)
+            element.classList.add(`${removeClassName}`)
+        } 
+    }
+    targetElement.classList.add(`${stateClassName}`);
+    targetElement.classList.remove(`${removeClassName}`);
     return targetElement;
 }
 function replaceElementState(targetElement, addClassName, removeClassName) {

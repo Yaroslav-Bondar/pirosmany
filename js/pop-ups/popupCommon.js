@@ -26,7 +26,7 @@ body.addEventListener('click', event => {
     switch(id) {
         case 'sign-in-btn':
         case 'sign-in-btn-2':     
-            html = POPUP_SIGNIN_HTML;
+            html = POPUP_SIGNIN_HTML;   
             break;
         case 'subscribe-btn':
         case 'subscribe-btn-1':

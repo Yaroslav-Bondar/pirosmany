@@ -39,6 +39,10 @@ body {
   color: #00AC4E;
 }
 
+.btn_color_white {
+  color: #fff;
+}
+
 .btn_theme_transparent {
   background-color: transparent;
 }
@@ -1781,6 +1785,9 @@ body {
   height: 13px;
 }
 
+.cab {
+  padding: 60px;
+}
 .cab__btns {
   margin-bottom: 45px;
 }
@@ -1794,29 +1801,25 @@ body {
 .cab__btn {
   border-radius: 16px;
   padding: 15px;
-  background: transparent;
   -webkit-transition: background 0.2s;
   -o-transition: background 0.2s;
   transition: background 0.2s;
 }
-.cab__btn-icon {
-  display: block !important;
-  margin: 0 auto 20px auto;
-  font-size: 29px;
-  color: #00AC4E;
-}
 .cab__btn-text {
   font-weight: 500;
-  font-style: normal;
   font-size: 14px;
-  text-transform: none;
   line-height: 21px;
-  color: #00AC4E;
 }
-.cab__btn-icon, .cab__btn-text {
+.cab__btn-text {
   -webkit-transition: color 0.2s;
   -o-transition: color 0.2s;
   transition: color 0.2s;
+}
+.cab__icon {
+  display: flex;
+  flex-flow: column;
+  margin-bottom: 17px;
+  font-size: 37px;
 }
 .cab__btn:not(:last-child) {
   margin-right: 100px;
@@ -1825,12 +1828,6 @@ body {
   .cab__btn:not(:last-child) {
     margin-right: 15px;
   }
-}
-.cab__btn.tab__btn_active {
-  background: #00AC4E;
-}
-.cab__btn.tab__btn_active .cab__btn-icon, .cab__btn.tab__btn_active .cab__btn-text {
-  color: #fff;
 }
 .cab__info {
   display: -webkit-box;

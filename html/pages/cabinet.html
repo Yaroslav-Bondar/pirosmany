@@ -128,7 +128,7 @@
                         <a href="#" class="navigation__link" id="menu-btn">Оплата</a>
                     </li>
                     <li class="navigation__node" id="menu-node">
-                        <a href="#" class="navigation__link" id="menu-btn">Бронь стола</a>
+                        <a href="#" class="navigation__link" id="reserv-btn-1" data-modal-open="true">Бронь стола</a>
                     </li>
                 </ul>
             </nav>
@@ -145,7 +145,7 @@
                     <button id="sign-in-btn" data-modal-open="true" class="header__user-btn btn btn_theme_transparent">
                         <img class="img" alt="person" src="../../img/header/person.svg">
                     </button>
-                    <a class="header__basket-btn basket-cart" href="store.html">
+                    <a class="header__basket-btn basket-cart" href="basket.html">
                         <img class="img" src="../../img/shopping_cart/shopping_cart_green.svg" alt="basket">
                         <span class="header__basket-amount basket-cart__amount">5</span>
                     </a>
@@ -162,10 +162,10 @@
         </button>
         <div class="logo">
             <div class="logo__text">
-                <img src="../../img/logo/logo_text.png" alt="logo_text" class="logo__text-item">
+                <img src="../../img/logo/logo_text.svg" alt="logo_text" class="logo__text-item">
             </div>
             <div class="logo__img">
-                <img src="../../img/logo/logo_img.png" alt="logo_img" class="logo__img-item">
+                <img src="../../img/logo/logo_img.svg" alt="logo_img" class="logo__img-item">
             </div>
         </div>
     </div>
@@ -403,12 +403,12 @@
 <section class="cab">
     <div class="wrapper">
         <div class="cab__btns tab__btns">
-            <button data-number='0' class="tab__btn btn cab__btn">
-                <i class="cab__btn-icon fas fa-database"></i>
+            <button data-number='0' class="tab__btn btn btn_theme_green btn_color_white cab__btn">
+                <span class="cab__icon">&#127947;</span>
                 <span class="cab__btn-text">Личные данные</span>
             </button>
-            <button data-number='1' class="tab__btn btn cab__btn">
-                <i class="cab__btn-icon fas fa-history"></i>                <!-- </div> -->
+            <button data-number='1' class="tab__btn btn btn_theme_transparent btn_color_green cab__btn">
+                <span class="cab__icon">&#9202;</span>
                 <span class="cab__btn-text">История заказов</span>
             </button>
         </div>
@@ -475,7 +475,7 @@
                         <input class="form__input cab__other-input cab__pasw-confirm-input" type="password" placeholder="Подтверждение" name="cab_pasw-confirm" id="cab-pasw-confirm">
                     </div>
                 </div>
-                <button class="cab__save btn">
+                <button class="cab__save btn btn_theme_green">
                     Сохранить изменения
                 </button>
             </div>
@@ -791,14 +791,14 @@
                     <a href="#" class="footer__social-2">мы в instagram ></a>
                 </div>
                 <div class="footer__user enter">
-                    <button id="user_sign_in" class="enter__btn-in btn">
+                    <button id="sign-in-btn-2" class="enter__btn-in btn btn_theme_transparent" data-modal-open="true">
                         <span class="enter__img-wrap">
                             <img class="img" src="../../img/footer/person_white.svg" alt="person">
                         </span>
                         <span class="enter__btn-in-text">войти</span>
                     </button>
                     <span class="enter__separator">/</span>
-                    <button id="checkin" class="enter__btn-checkin btn">
+                    <button id="check-in-btn" class="enter__btn-checkin btn btn_theme_transparent" data-modal-open="true">
                         <span class="enter__btn-checkin-text">регистрация</span>
                     </button>
                 </div>
@@ -827,7 +827,6 @@
 
 <!-- Components -->
 <!-- header and mobile menu -->
-<script src="../../js/page/header/headerRender.js"></script>
 <script src="../../js/mob-menu/mobMenu.js"></script>
 <script src="../../js/page/header/header.js"></script>
 

@@ -1,6 +1,7 @@
 @use '../../../../common/utils';
 
 .cab {
+    padding: 60px;
     // buttons
     &__btns {
         margin-bottom: 45px;
@@ -13,38 +14,31 @@
     &__btn {
         border-radius: 16px;
         padding: 15px;
-        background: transparent;
         -webkit-transition: background .2s;
         -o-transition: background .2s;
         transition: background .2s;
-        &-icon {
-            display: block !important;
-            margin: 0 auto 20px auto;
-            font-size: 29px;
-            color: utils.$var-color-green-haze;
+          &-text {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 21px;
         }
-        &-text {
-            @include utils.mix-font(500, 14px, 21px, utils.$var-color-green-haze);
-        }
-        &-icon,
         &-text {
             -webkit-transition: color .2s;
             -o-transition: color .2s;
             transition: color .2s;
         }
     }
+    &__icon {
+        display: flex;
+        flex-flow: column;
+        margin-bottom: 17px;
+        font-size: 37px;
+    } 
     &__btn:not(:last-child) {
         margin-right: 100px;
         @media screen and(max-width: utils.$var-cab-form-breakpoint-2) {
             margin-right: 15px;
         }
-    }
-    &__btn.tab__btn_active {
-        background: utils.$var-color-green-haze;
-    }
-    &__btn.tab__btn_active &__btn-icon,
-    &__btn.tab__btn_active &__btn-text {
-        color: utils.$var-color-white;
     }
     &__info {
         display: -webkit-box;

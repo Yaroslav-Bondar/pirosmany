@@ -39,6 +39,10 @@ body {
   color: #00AC4E;
 }
 
+.btn_color_white {
+  color: #fff;
+}
+
 .btn_theme_transparent {
   background-color: transparent;
 }
