@@ -20,12 +20,37 @@ class Card {
                     <div class="buy__title">
                         ${item.name}
                     </div>
-                    <div class="rating buy__rating ${RATING_STAR_ACTIVE}${this.rating}">
-                        <i class="fas fa-star buy__star-icon"></i>
-                        <i class="fas fa-star buy__star-icon"></i>
-                        <i class="fas fa-star buy__star-icon"></i>
-                        <i class="fas fa-star buy__star-icon"></i>
-                        <i class="fas fa-star buy__star-icon"></i>
+                    <div class="buy__rating rating">
+                        <input class="buy__like rating-item" 
+                            type="radio" 
+                            name="rating" 
+                            value="star_5"
+                            disabled
+                        >
+                        <input class="buy__like rating-item" 
+                            type="radio" 
+                            name="rating" 
+                            value="star_4"
+                            checked
+                        >
+                        <input class="buy__like rating-item" 
+                            type="radio" 
+                            name="rating" 
+                            value="star_3"
+                            disabled
+                        >
+                        <input class="buy__like rating-item" 
+                            type="radio" 
+                            name="rating" 
+                            value="star_2"
+                            disabled
+                        >
+                        <input class="buy__like rating-item" 
+                            type="radio" 
+                            name="rating" 
+                            value="star_1"
+                            disabled
+                        >
                     </div>
                     <div class="buy__reviews">
                         <span class="buy__reviews-text">Кол-во отзывов:</span>
@@ -45,13 +70,15 @@ class Card {
                     <div class="buy__amount">
                         <span class="buy__amount-text">Количество</span>
                         <div class="display buy__display">
-                            <button data-display="btn-minus" class="display__btn-minus buy__btn-minus">
+                            <button data-display="btn-minus" 
+                                class="display__btn-minus buy__btn-minus btn btn_theme_transparent">
                             </button>
                             <div class="display__item buy__display-item">
                                 <span data-display="amount" class="display__amount buy__display-amount">${amount}</span>
                                 <span class="display__units buy__display-units">шт</span>
                             </div>
-                            <button data-display="btn-plus" class="display__btn-plus buy__btn-plus">
+                            <button data-display="btn-plus" 
+                                class="display__btn-plus buy__btn-plus btn btn_theme_transparent">
                             </button>
                         </div>
                     </div>
@@ -70,11 +97,11 @@ class Card {
                         
                     </div>
                     <div class="buy__btns">
-                        <button class="buy__btn aboutprod__buy-btn btn">
+                        <button class="buy__btn btn btn_theme_green">
                             Купить
                         </button>
                         <a class="basket__btn card__basket aboutprod__basket-btn" href="basket.html">
-                            <i class="card__basket-icon basket__btn-icon fas fa-cart-arrow-down"></i>
+                            <span class="cart-img buy__cart-btn"></span>
                         </a>
                     </div>
                 `

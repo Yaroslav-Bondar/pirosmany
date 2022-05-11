@@ -100,9 +100,18 @@ body {
 .rating-item:checked ~ .rating-item {
     background: center/contain no-repeat url(../../../../img/icons/star/star_active.svg);
 }
+.rating-item:checked ~ .rating-item:hover {
+    background: center/contain no-repeat url(../../../../img/icons/star/star_active.svg);
+}
 .rating-item:hover {
     background: center/contain no-repeat url(../../../../img/icons/star/star_active.svg);
-} 
+}
+.rating-item:disabled:checked:hover {
+    background: center/contain no-repeat url(../../../../img/icons/star/star_active.svg);
+}
+.rating-item:disabled:hover {
+    background: center/contain no-repeat url(../../../../img/icons/star/star_not_active.svg);
+}  
 .close-btn {
     background: center/cover no-repeat url("../../../../img/icons/plus.svg");
 }
@@ -203,5 +212,9 @@ body {
     // &__item[type="tel"]:focus::placeholder {
     //     color: utils.$var-color-liver;
     // }
+}
+
+.cart-img {
+    background: center/cover no-repeat url('../../../../img/icons/shopping-cart.svg');
 }
 

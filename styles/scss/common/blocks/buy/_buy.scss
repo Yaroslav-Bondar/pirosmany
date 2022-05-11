@@ -7,50 +7,46 @@
     box-shadow: 0px 0px 27.1091px rgba(0, 0, 0, 0.06);
     border-radius: 15px;
     &__title {
-        @include font(500, 18px, 23px, utils.$var-color-black);
+        @include utils.mix-font(500, 18px, 23px, utils.$var-color-black);
     }
     &__rating {
         margin: 9px 0 0 0;
-        flex-direction: initial;
-        justify-content: flex-start;
+        justify-content: start;
     }
-    &__star-icon {
-        font-size: 11px;
-        color:#ccc;
-        &:not(:last-child) {
-            margin-right: 5px;
-        }
+    &__like {
+        width: 14px;
+        height: 14px;
     }
     &__reviews {
         margin-top: 13px;
         &-text,
         &-amount {
-            @include font(400, 12px, 19px, utils.$var-color-silver);
+            @include utils.mix-font(400, 12px, 19px, utils.$var-color-silver);
         }
     }
     &__price {
         margin-top: 30px;
         &-text {
-            @include font(400, 12px, 19px, utils.$var-color-silver);
+            @include utils.mix-font(400, 12px, 19px, utils.$var-color-silver);
         }
         &-cost,
         &-currency {
-            @include font(500, 18px, 23px, utils.$var-color-silver-2)
+            @include utils.mix-font(500, 18px, 23px, utils.$var-color-black)
         }
     }
     &__joke {
         margin-top: 25px;
         &-text {
-            @include font(400, 12px, 19px, utils.$var-color-silver);
+            @include utils.mix-font(400, 12px, 19px, utils.$var-color-silver);
         }
         &-amount {
-            @include font(500, 18px, 23px, utils.$var-color-silver-2)
+            @include utils.mix-font(500, 18px, 23px, utils.$var-color-black)
         }
     }
     &__amount {
         margin-top: 22px;
         &-text {
-            @include font(400, 12px, 19px, utils.$var-color-silver);
+            @include utils.mix-font(400, 12px, 19px, utils.$var-color-silver);
         }
     }
     &__display {
@@ -60,7 +56,7 @@
         // }
         &-amount,
         &-units {
-            @include font(400, 12px, 19px, utils.$var-color-silver-2);
+            @include utils.mix-font(400, 12px, 19px, utils.$var-color-black);
         }
     }
     &__display::before {
@@ -68,40 +64,20 @@
         right: 0;
         bottom: -18px;
         content: 'Ед. изм.: упаковка';
-        @include font(400, 9px, 14px, utils.$var-color-silver);
+        @include utils.mix-font(400, 9px, 14px, utils.$var-color-silver);
     }
-    // &__btn-minus,
-    // &__btn-plus {
-    //     position: relative;
-    //     width: 15px;
-    //     height: 15px;
-    //     border: none;
-    //     background: transparent;
-    //     cursor: pointer;
-    // }
-    // &__btn-minus::before,
-    // &__btn-plus::before {
-    //     position: absolute;
-    //     top: 50%;
-    //     left: 50%;
-    //     transform: translate(-50%, -50%);
-    //     font-family: "FontAwesome";
-    //     font-size: 8px;
-    // }
-    // &__btn-minus::before {
-    //     content: "\f068";
-    // }
-    // &__btn-plus::before {
-    //     content: "\f067";
-    // }
-    &__total {
+    &__cart-btn {
+        width: 25px;
+        height: 25px;
+    }
+     &__total {
         margin-top: 30px;
         &-text {
-            @include font(500, 14px, 22px, utils.$var-color-silver-2);
+            @include utils.mix-font(500, 14px, 22px, utils.$var-color-black);
         }
         &-amount,
         &-currency {
-            @include font(500, 18px, 23px, utils.$var-color-green-haze);
+            @include utils.mix-font(500, 18px, 23px, utils.$var-color-green-haze);
         }
     }
     &__amount, 
@@ -119,6 +95,10 @@
     &__btn {
         width: 194.28px;
         height: 39.76px;
-        @include font(500, 18px, 23px, utils.$var-color-white);
+        border-radius: 4.51818px;
+        @include utils.mix-font(500, 18px, 23px, utils.$var-color-white);
+        @media screen and (max-width: 400px) {
+            margin-right: 20px;
+        }
     }
 }

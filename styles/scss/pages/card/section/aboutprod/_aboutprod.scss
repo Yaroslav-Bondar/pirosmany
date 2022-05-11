@@ -49,9 +49,6 @@
         }
         &-btn {
             padding: 10px;
-            background: transparent;
-            border: none;
-            cursor: pointer;
             -webkit-transition: color .2s;
             -o-transition: color .2s;
             transition: color .2s;
@@ -119,11 +116,12 @@
             height: 50px;
             margin-right: 5px;
             border-radius: 50%;
-            background-color: forestgreen;
         }
         &-img {
-            width: 100%;
+            display: block;
+            width: 102%;
             height: 100%;
+            border-radius: 50%;
             -o-object-fit: cover;
                object-fit: cover;
         }
@@ -142,24 +140,17 @@
             width: 20px;
             height: 20px;
             border-radius: 50%;
-            background: forestgreen;
         }
     }
     &__rating {
         margin: 5px 0 0 0;
         -webkit-box-pack: start;
             -ms-flex-pack: start;
-                justify-content: flex-start;
-        -webkit-box-orient: initial;
-        -webkit-box-direction: initial;
-            -ms-flex-direction: initial;
-                flex-direction: initial;
+                justify-content: start;
     }
-    &__star-icon {
-        font-size: 11px;
-        color: #ccc;
-    }
-    &__star-icon:not(:last-child) {
+    &__like {
+        width: 10px;
+        height: 10px;
         margin-right: 3px;
     }
     &__soc {
@@ -197,7 +188,6 @@
     }
     &__btn-prev::before,
     &__btn-next::after {
-        font-family: 'FontAwesome';
         color: utils.$var-color-green-haze;
         cursor: pointer;
     }
@@ -206,7 +196,7 @@
         margin-right: 40px;
     }
     &__btn-next::after {
-        content: '\f061';
+        content: '\2192';
         margin-left: 5px;
     }
     &__bonus {
@@ -221,11 +211,9 @@
         @include utils.mix-font(500, 14px, 16px, utils.$var-color-white);
     }
     &__basket-btn {
+        @extend %center-xy-flex;
         height: 39.76px;
         width: 42px;
-        // & i {
-        //     font-size: 22px;
-        //     color: utils.$var-color-white;
-        // }
+        
     }
 }

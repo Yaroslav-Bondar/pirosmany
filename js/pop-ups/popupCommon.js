@@ -46,7 +46,9 @@ body.addEventListener('click', event => {
             break;
         case 'confirm-phone':
             html = POPUP_CONFIRM_PHONE_HTML;
-            break;        
+            break;
+        case 'review-btn': 
+            html = POPUP_PRODUCT_REVIEW_HTML;
     }
     body.insertAdjacentHTML('afterbegin', html);
     // body.insertAdjacentHTML('afterbegin', popupAboutProdReviewHtml);

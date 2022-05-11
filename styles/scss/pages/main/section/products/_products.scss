@@ -28,8 +28,9 @@
         @extend %center-xy-flex;
         height: 38px;
         width: 45px;
-        &-img {
-            height: 70%;
-        }
+    }
+    &__basket-img {
+       height: 26px;
+       width: 26px; 
     }    
 }

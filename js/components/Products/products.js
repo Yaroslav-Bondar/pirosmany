@@ -83,13 +83,13 @@ class Product {
                                 </button>
                             </div>
                             <a href="basket.html" class="shopping-cart products__card-basket">
-                                <img class="products__card-basket-img" src="../../img/shopping_cart/shopping_cart_white.svg" alt="shopping-cart">
+                                <span class="cart-img products__basket-img"></span>
                             </a>        
                         </div>
                     </div>
                 </div>
             `
-        })
+        });
         ROOT_PRODUCTS.innerHTML = html
     }
 }

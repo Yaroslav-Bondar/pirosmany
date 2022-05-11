@@ -1,4 +1,4 @@
-const popupAboutProdReviewHtml = `
+const POPUP_PRODUCT_REVIEW_HTML = `
     <div class="popup" data-modal-window="true">
         <div class="review popup__container">
             <form action="#" 

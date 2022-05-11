@@ -15,7 +15,7 @@ tabContent.forEach(item => item.style.display = 'none')
 tabContent[0].style.display = 'block'
 
 tabBtns.addEventListener('click', (e)=> {
-    const targetElement = setElementState('tab__btn', 'tab__btn_active', e.target);
+    const targetElement = toggleElementsState('tab__btn', 'tab__btn_active', e.target);
     if(targetElement) {
         tabContent.forEach(item => item.style.display = 'none')
         const tabNumber = e.target.dataset.number
