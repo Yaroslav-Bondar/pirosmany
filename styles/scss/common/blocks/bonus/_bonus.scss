@@ -17,10 +17,6 @@
         width: 35px;
         height: 35px;
         margin-right: 15px;
-        &-item {
-            font-size: 26px;
-            color: utils.$var-color-green-haze;
-        }
     }
     &__title {
         @include utils.mix-font(400, 16px, 18px, utils.$var-color-black);

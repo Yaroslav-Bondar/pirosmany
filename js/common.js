@@ -14,7 +14,11 @@ let widthHideNav = 900
 let tabBtns = document.querySelector('.tab__btns')
 let tabContent = document.querySelectorAll('.tab__content')
 // // tabs
-
+function getMaxHeight(elements) {
+    let heights = new Array()
+    elements.forEach(item => heights.push(item.offsetHeight))
+    return Math.max(...heights)
+}
 /**
  * Toggling the state of elements by settings the appropriate css class
  * @param {string} elementClassName - The css class name of the element being toggled

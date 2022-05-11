@@ -48,6 +48,12 @@ body {
 .img {
     @extend %inner-img;
 }
+.img_fit_cover {
+    object-fit: cover
+}
+.img_fit_contain {
+    object-fit: contain;
+}
 .basket-cart {
     @extend %center-xy-flex;
     text-decoration: none;
@@ -98,6 +104,9 @@ body {
     background: center/contain no-repeat url(../../../../img/icons/star/star_active.svg);
 }
 .rating-item:checked ~ .rating-item {
+    background: center/contain no-repeat url(../../../../img/icons/star/star_active.svg);
+}
+.rating-item:checked ~ .rating-item:disabled {
     background: center/contain no-repeat url(../../../../img/icons/star/star_active.svg);
 }
 .rating-item:checked ~ .rating-item:hover {

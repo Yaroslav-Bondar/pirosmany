@@ -9,7 +9,7 @@
                              'list  promo'
                              'bonus .    ';
         justify-content: space-between;
-        grid-column-gap: 20px;
+        grid-column-gap: 50px;
         @media screen and(max-width: utils.$var-basket-breakpoint-1) {
             grid-template-areas: 'title'
                                  'list'
