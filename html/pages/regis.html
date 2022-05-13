@@ -10,1748 +10,758 @@
     <title>Оформление заказа</title>
 </head>
 <body>
-<div class="header" id="header"></div>
-<div class="mobmenu__overlay"></div>
-<section class="mobmenu">
-    <div class="mobmenu__header">
-        <button class="mobmenu__burger">
-            <img src="img/mobmenu/arrow.png" alt="arrow" class="mobmenu__burger-img">
-        </button>
-        <div class="logo">
-            <div class="logo__text">
-                <img src="img/logo/logo_text.png" alt="logo_text" class="logo__text-item">
-            </div>
-            <div class="logo__img">
-                <img src="img/logo/logo_img.png" alt="logo_img" class="logo__img-item">
+    <div class="mobmenu__overlay"></div>
+    <section class="mobmenu">
+        <div class="mobmenu__header">
+            <button class="mobmenu__burger">
+                <img src="../../img/icons/arrow_prev.svg" alt="arrow" class="img img_fit_contain">
+            </button>
+            <div class="logo">
+                <div class="logo__text">
+                    <img src="../../img/logo/logo_text.svg" alt="logo_text" class="logo__text-item">
+                </div>
+                <div class="logo__img">
+                    <img src="../../img/logo/logo_img.svg" alt="logo_img" class="logo__img-item">
+                </div>
             </div>
         </div>
-    </div>
-    <nav class="mobmenu__nav">
-        <ul class="mobmenu__list">
-            <li data-dropdown='node' class="mobmenu__node">
-                <a data-dropdown='link' href="#" class="mobmenu__link">
-                    <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                        <i class="fas fa-utensils mobmenu__icon-item"></i>
-                    </div>
-                    <div class="mobmenu__text">Меню</div>
-                </a>
-                <button data-dropdown='btn' class="mobmenu__btn">
-                    <img src="img/mobmenu/arrow.png" alt="arrow" class="mobmenu__btn-icon">
-                </button>
-            </li>
-            <ul data-dropdown='menu' class="navigation__dropdown mobmenu__dropdown">
-                <li data-dropdown='node' class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a data-dropdown='link' href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- -- <img src="img/header/drop-down-menu/01.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Cупы</div>
-                    </a>
-                </li>
-                <ul data-dropdown='menu' class="navigation__dropdown mobmenu__dropdown">
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- mobmenu__icon-item -->
-                                <!-- <img src="img/header/drop-down-menu/01.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Cупы</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/02.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Хачапури</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/03.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Холодные закуски</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/04.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Хинкали</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/05.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Шашлык</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/06.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Соусы</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/07.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Салаты</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/08.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Горячие блюда</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/09.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Гарнир</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/10.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Десерты</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/11.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Напитки</div>
-                        </a>
-                    </li>
-                </ul>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/02.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Хачапури</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/03.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Холодные закуски</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/04.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Хинкали</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/05.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Шашлык</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/06.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Соусы</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/07.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Салаты</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/08.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Горячие блюда</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/09.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Гарнир</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/10.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Десерты</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/11.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Напитки</div>
-                    </a>
-                </li>
-            </ul>
-            <li data-dropdown='node' class="mobmenu__node">
-                <a data-dropdown='link' href="#" class="mobmenu__link">
-                    <div class="mobmenu__icon">
-                        <img src="img/mobmenu/02.png" alt="dish" class="mobmenu__icon-item">
-                    </div>
-                    <div class="mobmenu__text">Доставка</div>
-                </a>
-                <button data-dropdown='btn' class="mobmenu__btn">
-                    <img src="img/mobmenu/arrow.png" alt="arrow" class="mobmenu__btn-icon">
-                </button>
-            </li>
-            <ul data-dropdown='menu' class="navigation__dropdown mobmenu__dropdown">
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/01.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Cупы</div>
-                    </a>
-                </li>
-                <ul class="navigation__dropdown mobmenu__dropdown">
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/01.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Cупы</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/02.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Хачапури</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/03.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Холодные закуски</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/04.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Хинкали</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/05.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Шашлык</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/06.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Соусы</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/07.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Салаты</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/08.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Горячие блюда</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/09.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Гарнир</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/10.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Десерты</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/11.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Напитки</div>
-                        </a>
-                    </li>
-                </ul>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/02.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Хачапури</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/03.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Холодные закуски</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/04.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Хинкали</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/05.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Шашлык</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/06.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Соусы</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/07.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Салаты</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/08.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Горячие блюда</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/09.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Гарнир</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/10.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Десерты</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/11.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Напитки</div>
-                    </a>
-                </li>
-            </ul>
-            <li class="mobmenu__node">
-                <a href="#" class="mobmenu__link">
-                    <div class="mobmenu__icon">
-                        <img src="img/mobmenu/03.png" alt="dish" class="mobmenu__icon-item">
-                    </div>
-                    <div class="mobmenu__text">Оплата</div>
-                </a>
-                <button class="mobmenu__btn">
-                    <img src="img/mobmenu/arrow.png" alt="arrow" class="mobmenu__btn-icon">
-                </button>
-            </li>
-            <li class="mobmenu__node">
-                <a href="#" class="mobmenu__link">
-                    <div class="mobmenu__icon">
-                        <img src="img/mobmenu/04.png" alt="dish" class="mobmenu__icon-item">
-                    </div>
-                    <div class="mobmenu__text">Вакансии</div>
-                </a>
-                <button class="mobmenu__btn">
-                    <img src="img/mobmenu/arrow.png" alt="arrow" class="mobmenu__btn-icon">
-                </button>
-            </li>
-            <li class="mobmenu__node">
-                <a href="#" class="mobmenu__link">
-                    <div class="mobmenu__icon">
-                        <img src="img/mobmenu/05.png" alt="dish" class="mobmenu__icon-item">
-                    </div>
-                    <div class="mobmenu__text">Поддержка</div>
-                </a>
-                <button class="mobmenu__btn">
-                    <img src="img/mobmenu/arrow.png" alt="arrow" class="mobmenu__btn-icon">
-                </button>
-            </li>
-        </ul>
-        <ul class="mobmenu__list">
-            <li class="mobmenu__node">
-                <a href="#" class="mobmenu__link">
-                    <div class="mobmenu__icon">
-                        <!-- <i class="fas fa-utensils mobmenu__icon-item"></i> -->
-                        <img src="img/mobmenu/01.png" alt="dish" class="mobmenu__icon-item">
-                    </div>
-                    <div class="mobmenu__text">Меню</div>
-                </a>
-                <button class="mobmenu__btn">
-                    <img src="img/mobmenu/arrow.png" alt="arrow" class="mobmenu__btn-icon">
-                </button>
-            </li>
-            <ul class="navigation__dropdown mobmenu__dropdown">
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- mobmenu__icon-item -->
-                            <!-- <img src="img/header/drop-down-menu/01.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Cупы</div>
-                    </a>
-                </li>
-                <ul class="navigation__dropdown mobmenu__dropdown">
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- mobmenu__icon-item -->
-                                <!-- <img src="img/header/drop-down-menu/01.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Cупы</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/02.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Хачапури</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/03.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Холодные закуски</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/04.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Хинкали</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/05.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Шашлык</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/06.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Соусы</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/07.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Салаты</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/08.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Горячие блюда</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/09.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Гарнир</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/10.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Десерты</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/11.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Напитки</div>
-                        </a>
-                    </li>
-                </ul>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/02.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Хачапури</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/03.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Холодные закуски</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/04.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Хинкали</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/05.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Шашлык</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/06.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Соусы</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/07.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Салаты</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/08.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Горячие блюда</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/09.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Гарнир</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/10.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Десерты</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/11.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Напитки</div>
-                    </a>
-                </li>
-            </ul>
-            <li class="mobmenu__node">
-                <a href="#" class="mobmenu__link">
-                    <div class="mobmenu__icon">
-                        <img src="img/mobmenu/02.png" alt="dish" class="mobmenu__icon-item">
-                    </div>
-                    <div class="mobmenu__text">Доставка</div>
-                </a>
-                <button class="mobmenu__btn">
-                    <img src="img/mobmenu/arrow.png" alt="arrow" class="mobmenu__btn-icon">
-                </button>
-            </li>
-            <ul class="navigation__dropdown mobmenu__dropdown">
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/01.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Cупы</div>
-                    </a>
-                </li>
-                <ul class="navigation__dropdown mobmenu__dropdown">
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/01.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Cупы</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/02.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Хачапури</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/03.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Холодные закуски</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/04.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Хинкали</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/05.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Шашлык</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/06.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Соусы</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/07.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Салаты</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/08.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Горячие блюда</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/09.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Гарнир</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/10.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Десерты</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/11.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Напитки</div>
-                        </a>
-                    </li>
-                </ul>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/02.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Хачапури</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/03.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Холодные закуски</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/04.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Хинкали</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/05.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Шашлык</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/06.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Соусы</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/07.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Салаты</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/08.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Горячие блюда</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/09.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Гарнир</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/10.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Десерты</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/11.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Напитки</div>
-                    </a>
-                </li>
-            </ul>
-            <li class="mobmenu__node">
-                <a href="#" class="mobmenu__link">
-                    <div class="mobmenu__icon">
-                        <img src="img/mobmenu/03.png" alt="dish" class="mobmenu__icon-item">
-                    </div>
-                    <div class="mobmenu__text">Оплата</div>
-                </a>
-                <button class="mobmenu__btn">
-                    <img src="img/mobmenu/arrow.png" alt="arrow" class="mobmenu__btn-icon">
-                </button>
-            </li>
-            <li class="mobmenu__node">
-                <a href="#" class="mobmenu__link">
-                    <div class="mobmenu__icon">
-                        <img src="img/mobmenu/04.png" alt="dish" class="mobmenu__icon-item">
-                    </div>
-                    <div class="mobmenu__text">Вакансии</div>
-                </a>
-                <button class="mobmenu__btn">
-                    <img src="img/mobmenu/arrow.png" alt="arrow" class="mobmenu__btn-icon">
-                </button>
-            </li>
-            <li class="mobmenu__node">
-                <a href="#" class="mobmenu__link">
-                    <div class="mobmenu__icon">
-                        <img src="img/mobmenu/05.png" alt="dish" class="mobmenu__icon-item">
-                    </div>
-                    <div class="mobmenu__text">Поддержка</div>
-                </a>
-                <button class="mobmenu__btn">
-                    <img src="img/mobmenu/arrow.png" alt="arrow" class="mobmenu__btn-icon">
-                </button>
-            </li>
-        </ul>
-        <ul class="mobmenu__list">
-            <li class="mobmenu__node">
-                <a href="#" class="mobmenu__link">
-                    <div class="mobmenu__icon">
-                        <!-- <i class="fas fa-utensils mobmenu__icon-item"></i> -->
-                        <img src="img/mobmenu/01.png" alt="dish" class="mobmenu__icon-item">
-                    </div>
-                    <div class="mobmenu__text">Меню</div>
-                </a>
-                <button class="mobmenu__btn">
-                    <img src="img/mobmenu/arrow.png" alt="arrow" class="mobmenu__btn-icon">
-                </button>
-            </li>
-            <ul class="navigation__dropdown mobmenu__dropdown">
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- mobmenu__icon-item -->
-                            <!-- <img src="img/header/drop-down-menu/01.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Cупы</div>
-                    </a>
-                </li>
-                <ul class="navigation__dropdown mobmenu__dropdown">
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- mobmenu__icon-item -->
-                                <!-- <img src="img/header/drop-down-menu/01.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Cупы</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/02.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Хачапури</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/03.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Холодные закуски</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/04.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Хинкали</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/05.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Шашлык</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/06.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Соусы</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/07.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Салаты</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/08.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Горячие блюда</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/09.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Гарнир</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/10.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Десерты</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/11.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Напитки</div>
-                        </a>
-                    </li>
-                </ul>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/02.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Хачапури</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/03.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Холодные закуски</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/04.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Хинкали</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/05.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Шашлык</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/06.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Соусы</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/07.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Салаты</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/08.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Горячие блюда</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/09.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Гарнир</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/10.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Десерты</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/11.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Напитки</div>
-                    </a>
-                </li>
-            </ul>
-            <li class="mobmenu__node">
-                <a href="#" class="mobmenu__link">
-                    <div class="mobmenu__icon">
-                        <img src="img/mobmenu/02.png" alt="dish" class="mobmenu__icon-item">
-                    </div>
-                    <div class="mobmenu__text">Доставка</div>
-                </a>
-                <button class="mobmenu__btn">
-                    <img src="img/mobmenu/arrow.png" alt="arrow" class="mobmenu__btn-icon">
-                </button>
-            </li>
-            <ul class="navigation__dropdown mobmenu__dropdown">
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/01.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Cупы</div>
-                    </a>
-                </li>
-                <ul class="navigation__dropdown mobmenu__dropdown">
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/01.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Cупы</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/02.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Хачапури</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/03.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Холодные закуски</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/04.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Хинкали</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/05.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Шашлык</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/06.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Соусы</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/07.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Салаты</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/08.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Горячие блюда</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/09.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Гарнир</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/10.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Десерты</div>
-                        </a>
-                    </li>
-                    <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                        <a href="#" class="navigation__dropdown-link">
-                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                                <i class="fas fa-utensils"></i>
-                                <!-- <img src="img/header/drop-down-menu/11.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                            </div>
-                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Напитки</div>
-                        </a>
-                    </li>
-                </ul>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/02.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Хачапури</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/03.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Холодные закуски</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/04.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Хинкали</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/05.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Шашлык</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/06.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Соусы</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/07.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Салаты</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/08.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Горячие блюда</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/09.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Гарнир</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/10.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Десерты</div>
-                    </a>
-                </li>
-                <li class="navigation__dropdown-node mobmenu__dropdown-node">
-                    <a href="#" class="navigation__dropdown-link">
-                        <div class="navigation__dropdown-img mobmenu__dropdown-img">
-                            <i class="fas fa-utensils"></i>
-                            <!-- <img src="img/header/drop-down-menu/11.png" alt="menu_icon" class="navigation__dropdown-icon"> -->
-                        </div>
-                        <div class="navigation__dropdown-text mobmenu__dropdown-text">Напитки</div>
-                    </a>
-                </li>
-            </ul>
-            <li class="mobmenu__node">
-                <a href="#" class="mobmenu__link">
-                    <div class="mobmenu__icon">
-                        <img src="img/mobmenu/03.png" alt="dish" class="mobmenu__icon-item">
-                    </div>
-                    <div class="mobmenu__text">Оплата</div>
-                </a>
-                <button class="mobmenu__btn">
-                    <img src="img/mobmenu/arrow.png" alt="arrow" class="mobmenu__btn-icon">
-                </button>
-            </li>
-            <li class="mobmenu__node">
-                <a href="#" class="mobmenu__link">
-                    <div class="mobmenu__icon">
-                        <img src="img/mobmenu/04.png" alt="dish" class="mobmenu__icon-item">
-                    </div>
-                    <div class="mobmenu__text">Вакансии</div>
-                </a>
-                <button class="mobmenu__btn">
-                    <img src="img/mobmenu/arrow.png" alt="arrow" class="mobmenu__btn-icon">
-                </button>
-            </li>
-            <li class="mobmenu__node">
-                <a href="#" class="mobmenu__link">
-                    <div class="mobmenu__icon">
-                        <img src="img/mobmenu/05.png" alt="dish" class="mobmenu__icon-item">
-                    </div>
-                    <div class="mobmenu__text">Поддержка</div>
-                </a>
-                <button class="mobmenu__btn">
-                    <img src="img/mobmenu/arrow.png" alt="arrow" class="mobmenu__btn-icon">
-                </button>
-            </li>
-        </ul>
-    </nav>
-</section>
-<section class="regis">
-    <div class="wrapper">
-        <div class="regis__conteiner">
-            <div class="regis__unit1">
-                <div class="regis__unit1-wrap1">
-                    <div class="regis__title">
-                        Оформление заказа
-                    </div>
-                    <div class="regis__subtitle">
-                        Вы заказали:
-                    </div>
-                    <ul class="list regis__list" id="basket-products-list">
-                        <!-- <li class="list__node regis__list-node">
-                            <button class="list__btn regis__list-btn"></button>
-                            <div class="list__icon regis__list-icon">
-                                <img src="" alt="product">
-                            </div>
-                            <div class="list__name regis__list-name">
-                                Хачапури
-                            </div>
-                            <div class="display regis__display">
-                                <button data-display="btn-minus" class="display__btn-minus regis__btn-minus">
-                                </button>
-                                <div class="display__item regis__display-item">
-                                    <span data-display="amount" class="display__amount regis__display-amount">1</span>
-                                    <span class="display__units regis__display-units">шт</span>
-                                </div>
-                                <button data-display="btn-plus" class="display__btn-plus regis__btn-plus">
-                                </button>
-                            </div>
-                            <div class="list__price regis__price">
-                                <span class="list__price-item regis__price-item">
-                                    350
-                                </span>
-                                <span class="list__price-currency regis__price-currency">
-                                    ₽
-                                </span>
-                            </div>
-                        </li>
-                        <li class="list__node regis__list-node">
-                            <button class="list__btn regis__list-btn"></button>
-                            <div class="list__icon regis__list-icon">
-                                <img src="" alt="product">
-                            </div>
-                            <div class="list__name regis__list-name">
-                                Хачапури
-                            </div>
-                            <div class="display regis__display">
-                                <button data-display="btn-minus" class="display__btn-minus regis__btn-minus">
-                                </button>
-                                <div class="display__item regis__display-item">
-                                    <span data-display="amount" class="display__amount regis__display-amount">1</span>
-                                    <span class="display__units regis__display-units">шт</span>
-                                </div>
-                                <button data-display="btn-plus" class="display__btn-plus regis__btn-plus">
-                                </button>
-                            </div>
-                            <div class="list__price regis__price">
-                                <span class="list__price-item regis__price-item">
-                                    350
-                                </span>
-                                <span class="list__price-currency regis__price-currency">
-                                    ₽
-                                </span>
-                            </div>
-                        </li>
-                        <li class="list__node regis__list-node">
-                            <button class="list__btn regis__list-btn"></button>
-                            <div class="list__icon regis__list-icon">
-                                <img src="" alt="product">
-                            </div>
-                            <div class="list__name regis__list-name">
-                                Хачапури
-                            </div>
-                            <div class="display regis__display">
-                                <button data-display="btn-minus" class="display__btn-minus regis__btn-minus">
-                                </button>
-                                <div class="display__item regis__display-item">
-                                    <span data-display="amount" class="display__amount regis__display-amount">1</span>
-                                    <span class="display__units regis__display-units">шт</span>
-                                </div>
-                                <button data-display="btn-plus" class="display__btn-plus regis__btn-plus">
-                                </button>
-                            </div>
-                            <div class="list__price regis__price">
-                                <span class="list__price-item regis__price-item">
-                                    350
-                                </span>
-                                <span class="list__price-currency regis__price-currency">
-                                    ₽
-                                </span>
-                            </div>
-                        </li>
-                        <li class="list__node regis__list-node">
-                            <button class="list__btn regis__list-btn"></button>
-                            <div class="list__icon regis__list-icon">
-                                <img src="" alt="product">
-                            </div>
-                            <div class="list__name regis__list-name">
-                                Хачапури
-                            </div>
-                            <div class="display regis__display">
-                                <button data-display="btn-minus" class="display__btn-minus regis__btn-minus">
-                                </button>
-                                <div class="display__item regis__display-item">
-                                    <span data-display="amount" class="display__amount regis__display-amount">1</span>
-                                    <span class="display__units regis__display-units">шт</span>
-                                </div>
-                                <button data-display="btn-plus" class="display__btn-plus regis__btn-plus">
-                                </button>
-                            </div>
-                            <div class="list__price regis__price">
-                                <span class="list__price-item regis__price-item">
-                                    350
-                                </span>
-                                <span class="list__price-currency regis__price-currency">
-                                    ₽
-                                </span>
-                            </div>
-                        </li>
-                        <li class="list__node regis__list-node">
-                            <button class="list__btn regis__list-btn"></button>
-                            <div class="list__icon regis__list-icon">
-                                <img src="" alt="product">
-                            </div>
-                            <div class="list__name regis__list-name">
-                                Хачапури
-                            </div>
-                            <div class="display regis__display">
-                                <button data-display="btn-minus" class="display__btn-minus regis__btn-minus">
-                                </button>
-                                <div class="display__item regis__display-item">
-                                    <span data-display="amount" class="display__amount regis__display-amount">1</span>
-                                    <span class="display__units regis__display-units">шт</span>
-                                </div>
-                                <button data-display="btn-plus" class="display__btn-plus regis__btn-plus">
-                                </button>
-                            </div>
-                            <div class="list__price regis__price">
-                                <span class="list__price-item regis__price-item">
-                                    350
-                                </span>
-                                <span class="list__price-currency regis__price-currency">
-                                    ₽
-                                </span>
-                            </div>
-                        </li> -->
-                    </ul>
-                </div>
-                <div class="regis__unit1-wrap2">
-                    <div class="regis__btns tab__btns">
-                        <button data-number='0' class="tab__btn regis__deliv-btn">Доставка</button>
-                        <button data-number='1' class="tab__btn regis__pickup-btn">Самовывоз (- 20%)</button>
-                    </div>
-                    <div class="regis__scoreboard">
-                        <!-- <div class="tab__content regis__deliv"> -->
-                            <div class="regis__union">
-                                <div class="regis__total">
-                                    <span class="regis__total-name">Итого</span>
-                                    <div class="regis__total-sum">
-                                        <span class="regis__total-price" id="total-price-basket">700</span>
-                                        <span class="regis__total-currency">₽</span>
-                                    </div>
-                                </div>
-                                <!-- tab__content  -->
-                                <div data-tab-content='deliv' class="tab__content regis__deliv">
-                                    <span class="regis__deliv-name">Доставка</span>
-                                    <div class="regis__deliv-total">
-                                        <span class="regis__deliv-price">0</span>
-                                        <span class="regis__deliv-currency">₽</span>
-                                    </div>
-                                </div>
-                                <!-- tab__content  -->
-                                <div data-tab-content='pickup' class="tab__content regis__pickup">
-                                    <span class="regis__pickup-name">Самовывоз</span>
-                                    <div class="regis__pickup-total">
-                                        <span class="regis__pickup-price">-140</span>
-                                        <span class="regis__pickup-currency">₽</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="regis__pay">
-                                <div class="regis__pay-name">Итого к оплате</div>
-                                <div class="regis__pay-total">
-                                    <span id="total-pay" class="regis__pay-price">700</span>
-                                    <span class="regis__pay-currency">₽</span>
-                                </div>
-                            </div>
-                    </div>
-                </div>
-            </div>
-            <div class="regis__unit2">
-                <form data-tab-content='deliv' class="tab__content form regis__delivery" action='#'  name='delivery' method="GET">
-                    <div class="form__wrap regis__delivery-wrap">
-                        <label class="form__label regis__delivery-label" for="deliv-area">Район доставки</label>
-                        <div class="form__select-wrap regis__select-wrap">
-                            <select class="form__select regis__select" required name="delivery-district" id="deliv-area">
-                                <option selected disabled>Выбрать</option>
-                                <option value="Arbat">Арбат</option>
-                                <option value="Basmanny">Басманный</option>
-                                <option value="Khamovniki">Хамовники</option>
-                                <option value="Krasnoselsky">Красносельский</option>
-                                <option value="Meshchansky">Мещанский</option>
-                                <option value="Presnensky">Пресненский</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form__wrap regis__delivery-wrap">                        
-                        <label class="form__label regis__delivery-label" for="deliv-name">ФИО</label>
-                        <input class="form__input regis__delivery-input" type="text" placeholder="Введите Ваше полное имя" name="delivery-name" id="deliv-name">
-                    </div>
-                    <div class="form__wrap regis__delivery-wrap">
-                        <label class="form__label regis__delivery-label" for="deliv-phone">
-                            Телефон
-                        </label>
-                        <input class="form__input regis__delivery-input" type="tel" placeholder="+380" name="delivery-phone" id="deliv-phone">
-                    </div>
-                    <div class="form__wrap regis__delivery-wrap">
-                        <label class="form__label regis__delivery-label" for="deliv-address">Адрес доставки</label>
-                        <input class="form__input regis__delivery-input" type="text" placeholder="Адрес доставки" name="delivery-address" id="deliv-address">
-                    </div>
-                    <div class="form__wrap regis__delivery-wrap">
-                        <label class="form__label regis__delivery-label" for="deliv-pay">Способ оплаты</label>
-                        <div class="form__select-wrap regis__select-wrap">
-                            <select class="form__select regis__select" required name="delivery-pay" id="deliv-pay">
-                                <option value="cash" selected>Наличные</option>
-                                <option value="card">Банковская карта</option>
-                                <option value="pay-pal">Pay-Pal</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form__wrap regis__delivery-wrap">
-                        <label class="form__label regis__delivery-label regis__delivery-label_show-hide regis__delivery-label_hide" for="deliv-comments">Добавить комментарий</label>
-                        <input class="form__input regis__delivery-input regis__delivery-input_hide" type="text" placeholder="Введите ваш комментарий..." name="delivery-comments" id="deliv-comments">
-                    </div>
-                    <button class="regis__delivery-btn regis__order-btn btn" type="submit">Оформить заказ</button>
-                </form>
-                <form data-tab-content='pickup' class="tab__content form regis__pickup-form" action='#'  name='delivery' action="#" method="GET">
-                    <div class="form__wrap regis__pickup-wrap">                        
-                        <label class="form__label regis__pickup-label" for="pickup-name">ФИО</label>
-                        <input class="form__input regis__pickup-input" type="text" placeholder="Введите Ваше полное имя" name="pickup_name" id="pickup-name">
-                    </div>
-                    <div class="form__wrap regis__pickup-wrap">
-                        <label class="form__label regis__pickup-label" for="pickup-phone">
-                            Телефон
-                        </label>
-                        <input class="form__input regis__pickup-input" type="tel" placeholder="+380" name="pickup_phone" id="pickup-phone">
-                    </div>
-                    <div class="form__select-wrap regis__select-wrap regis__pickup-select-wrap">
-                        <select class="form__select regis__select" required name="pickup_time" id="pickup_time">
-                            <option value="soon" selected>В ближайшее время</option>
-                            <option value="fast">Скоро</option>
-                            <option value="long time">Через некоторое время</option>
-                        </select>
-                    </div>
-                    <button class="regis__pickup-form-btn regis__order-btn btn" type="submit">Оформить заказ</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
-<footer class="footer">
-    <div class="wrapper">
-        <div class="footer__conteiner">
-                <div class="footer__area-1">
-                    <div class="footer__country">
-                        <div class="footer__country-title">Бесплатный звонок по РФ</div>
-                        <a href="tel:+78312826000" class="footer__country-tel">+7 (831) 282-60-00</a>
-                    </div>
-                    <div class="footer__order">
-                        <div class="footer__order-title">Для приема заказов</div>
-                        <a href="tel:+79040664685" class="footer__order-tel">+7 (904) 066-46-85</a>
-                    </div>
-                </div>
-                <div class="footer__social">
-                    <a href="#" class="footer__social-1">мы в вконтакте ></a>
-                    <a href="#" class="footer__social-2">мы в instagram ></a>
-                </div>
-                <div class="footer__user enter">
-                    <button id="user_sign_in" class="enter__btn-in btn">
-                        <span class="enter__img-wrap">
-                            <img class="img" src="../../img/footer/person_white.svg" alt="person">
-                        </span>
-                        <span class="enter__btn-in-text">войти</span>
-                    </button>
-                    <span class="enter__separator">/</span>
-                    <button id="checkin" class="enter__btn-checkin btn">
-                        <span class="enter__btn-checkin-text">регистрация</span>
+        <nav class="mobmenu__nav">
+            <div class="mobmenu__list">
+                <div data-dropdown='node' class="mobmenu__node">
+                    <a data-dropdown='link' href="#" class="mobmenu__link">
+                        <div class="mobmenu__icon">
+                            <img src="../../img/mobmenu/01.png" alt="dish" class="img img_fit_contain">
+                        </div>
+                        <div class="mobmenu__text">Меню</div>
+                    </a>
+                    <button data-dropdown='btn' class="mobmenu__btn">
+                        <img src="../../img/mobmenu/arrow.png" alt="arrow" class="img img_fit_contain">
                     </button>
                 </div>
-                <div class="footer__work">
-                    График работы по будням с 9:00 до 18:00
+                <div data-dropdown='menu' class="navigation__dropdown mobmenu__dropdown">
+                    <div data-dropdown="node" class="navigation__dropdown-node mobmenu__dropdown-node">
+                        <a data-dropdown='link' href="#" class="navigation__dropdown-link">
+                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
+                                <img src="../../img/icons/food/white/01.svg" alt="food" class="img img_fit_contain">
+                            </div>
+                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Cупы</div>
+                        </a>
+                    </div>
+                    <div data-dropdown='menu' class="navigation__dropdown mobmenu__dropdown">
+                        <div class="navigation__dropdown-node mobmenu__dropdown-node">
+                            <a href="#" class="navigation__dropdown-link">
+                                <div class="navigation__dropdown-img mobmenu__dropdown-img">
+                                    <img src="../../img/icons/food/white/01.svg" alt="food" class="img img_fit_contain">
+                                </div>
+                                <div class="navigation__dropdown-text mobmenu__dropdown-text">Cупы</div>
+                            </a>
+                        </div>
+                        <div class="navigation__dropdown-node mobmenu__dropdown-node">
+                            <a href="#" class="navigation__dropdown-link">
+                                <div class="navigation__dropdown-img mobmenu__dropdown-img">
+                                    <img src="../../img/icons/food/white/02.svg" alt="food" class="img img_fit_contain">
+                                </div>                                
+                                <div class="navigation__dropdown-text mobmenu__dropdown-text">Хачапури</div>
+                            </a>
+                        </div>
+                        <div class="navigation__dropdown-node mobmenu__dropdown-node">
+                            <a href="#" class="navigation__dropdown-link">
+                                <div class="navigation__dropdown-img mobmenu__dropdown-img">
+                                    <img src="../../img/icons/food/white/03.svg" alt="food" class="img img_fit_contain">
+                                </div>                                
+                                <div class="navigation__dropdown-text mobmenu__dropdown-text">Холодные закуски</div>
+                            </a>
+                        </div>
+                        <div class="navigation__dropdown-node mobmenu__dropdown-node">
+                            <a href="#" class="navigation__dropdown-link">
+                                <div class="navigation__dropdown-img mobmenu__dropdown-img">
+                                    <img src="../../img/icons/food/white/04.svg" alt="food" class="img img_fit_contain">
+                                </div>                                
+                                <div class="navigation__dropdown-text mobmenu__dropdown-text">Хинкали</div>
+                            </a>
+                        </div>
+                        <div class="navigation__dropdown-node mobmenu__dropdown-node">
+                            <a href="#" class="navigation__dropdown-link">
+                                <div class="navigation__dropdown-img mobmenu__dropdown-img">
+                                    <img src="../../img/icons/food/white/05.svg" alt="food" class="img img_fit_contain">
+                                </div>                                
+                                <div class="navigation__dropdown-text mobmenu__dropdown-text">Шашлык</div>
+                            </a>
+                        </div>
+                        <div class="navigation__dropdown-node mobmenu__dropdown-node">
+                            <a href="#" class="navigation__dropdown-link">
+                                <div class="navigation__dropdown-img mobmenu__dropdown-img">
+                                    <img src="../../img/icons/food/white/06.svg" alt="food" class="img img_fit_contain">
+                                </div>                                
+                                <div class="navigation__dropdown-text mobmenu__dropdown-text">Соусы</div>
+                            </a>
+                        </div>
+                        <div class="navigation__dropdown-node mobmenu__dropdown-node">
+                            <a href="#" class="navigation__dropdown-link">
+                                <div class="navigation__dropdown-img mobmenu__dropdown-img">
+                                    <img src="../../img/icons/food/white/07.svg" alt="food" class="img img_fit_contain">
+                                </div>                                
+                                <div class="navigation__dropdown-text mobmenu__dropdown-text">Салаты</div>
+                            </a>
+                        </div>
+                        <div class="navigation__dropdown-node mobmenu__dropdown-node">
+                            <a href="#" class="navigation__dropdown-link">
+                                <div class="navigation__dropdown-img mobmenu__dropdown-img">
+                                    <img src="../../img/icons/food/white/08.svg" alt="food" class="img img_fit_contain">
+                                </div>                                
+                                <div class="navigation__dropdown-text mobmenu__dropdown-text">Горячие блюда</div>
+                            </a>
+                        </div>
+                        <div class="navigation__dropdown-node mobmenu__dropdown-node">
+                            <a href="#" class="navigation__dropdown-link">
+                                <div class="navigation__dropdown-img mobmenu__dropdown-img">
+                                    <img src="../../img/icons/food/white/09.svg" alt="food" class="img img_fit_contain">
+                                </div>                                
+                                <div class="navigation__dropdown-text mobmenu__dropdown-text">Гарнир</div>
+                            </a>
+                        </div>
+                        <div class="navigation__dropdown-node mobmenu__dropdown-node">
+                            <a href="#" class="navigation__dropdown-link">
+                                <div class="navigation__dropdown-img mobmenu__dropdown-img">
+                                    <img src="../../img/icons/food/white/10.svg" alt="food" class="img img_fit_contain">
+                                </div>                                
+                                <div class="navigation__dropdown-text mobmenu__dropdown-text">Десерты</div>
+                            </a>
+                        </div>
+                        <div class="navigation__dropdown-node mobmenu__dropdown-node">
+                            <a href="#" class="navigation__dropdown-link">
+                                <div class="navigation__dropdown-img mobmenu__dropdown-img">
+                                    <img src="../../img/icons/food/white/11.svg" alt="food" class="img img_fit_contain">
+                                </div>                                
+                                <div class="navigation__dropdown-text mobmenu__dropdown-text">Напитки</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="navigation__dropdown-node mobmenu__dropdown-node">
+                        <a href="#" class="navigation__dropdown-link">
+                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
+                                <img src="../../img/icons/food/white/02.svg" alt="food" class="img img_fit_contain">
+                            </div>
+                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Хачапури</div>
+                        </a>
+                    </div>
+                    <div class="navigation__dropdown-node mobmenu__dropdown-node">
+                        <a href="#" class="navigation__dropdown-link">
+                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
+                                <img src="../../img/icons/food/white/03.svg" alt="food" class="img img_fit_contain">
+                            </div>
+                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Холодные закуски</div>
+                        </a>
+                    </div>
+                    <div class="navigation__dropdown-node mobmenu__dropdown-node">
+                        <a href="#" class="navigation__dropdown-link">
+                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
+                                <img src="../../img/icons/food/white/04.svg" alt="food" class="img img_fit_contain">
+                            </div>
+                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Хинкали</div>
+                        </a>
+                    </div>
+                    <div class="navigation__dropdown-node mobmenu__dropdown-node">
+                        <a href="#" class="navigation__dropdown-link">
+                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
+                                <img src="../../img/icons/food/white/05.svg" alt="food" class="img img_fit_contain">
+                            </div>
+                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Шашлык</div>
+                        </a>
+                    </div>
+                    <div class="navigation__dropdown-node mobmenu__dropdown-node">
+                        <a href="#" class="navigation__dropdown-link">
+                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
+                                <img src="../../img/icons/food/white/06.svg" alt="food" class="img img_fit_contain">
+                            </div>
+                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Соусы</div>
+                        </a>
+                    </div>
+                    <div class="navigation__dropdown-node mobmenu__dropdown-node">
+                        <a href="#" class="navigation__dropdown-link">
+                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
+                                <img src="../../img/icons/food/white/07.svg" alt="food" class="img img_fit_contain">
+                            </div>
+                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Салаты</div>
+                        </a>
+                    </div>
+                    <div class="navigation__dropdown-node mobmenu__dropdown-node">
+                        <a href="#" class="navigation__dropdown-link">
+                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
+                                <img src="../../img/icons/food/white/08.svg" alt="food" class="img img_fit_contain">
+                            </div>
+                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Горячие блюда</div>
+                        </a>
+                    </div>
+                    <div class="navigation__dropdown-node mobmenu__dropdown-node">
+                        <a href="#" class="navigation__dropdown-link">
+                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
+                                <img src="../../img/icons/food/white/09.svg" alt="food" class="img img_fit_contain">
+                            </div>
+                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Гарнир</div>
+                        </a>
+                    </div>
+                    <div class="navigation__dropdown-node mobmenu__dropdown-node">
+                        <a href="#" class="navigation__dropdown-link">
+                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
+                                <img src="../../img/icons/food/white/10.svg" alt="food" class="img img_fit_contain">
+                            </div>
+                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Десерты</div>
+                        </a>
+                    </div>
+                    <div class="navigation__dropdown-node mobmenu__dropdown-node">
+                        <a href="#" class="navigation__dropdown-link">
+                            <div class="navigation__dropdown-img mobmenu__dropdown-img">
+                                <img src="../../img/icons/food/white/11.svg" alt="food" class="img img_fit_contain">
+                            </div>
+                            <div class="navigation__dropdown-text mobmenu__dropdown-text">Напитки</div>
+                        </a>
+                    </div>
                 </div>
-                <a href="mailto:info@.ru" class="footer__email">Email: info@.ru</a>
-                <a href="support.html" class="footer__support">Поддержка</a>
-            <div class="footer__area-2">
-                <div class="footer__copyright">
-                    ©2020. Пиросмани
+                <div class="mobmenu__node">
+                    <a href="#" class="mobmenu__link">
+                        <div class="mobmenu__icon">
+                            <img src="../../img/mobmenu/02.png" alt="dish" class="img img_fit_contain">
+                        </div>
+                        <div class="mobmenu__text">Доставка</div>
+                    </a>
+                    <button class="mobmenu__btn">
+                        <img src="../../img/mobmenu/arrow.png" alt="arrow" class="img img_fit_contain">
+                    </button>
                 </div>
-                <a href="#" class="footer__terms">Условия и соглашения</a>
-                <a href="#" class="footer__policy">Политика конфиденциальности</a>
-            </div>        
+                <div class="mobmenu__node">
+                    <a href="#" class="mobmenu__link">
+                        <div class="mobmenu__icon">
+                            <img src="../../img/mobmenu/03.png" alt="dish" class="img img_fit_contain">
+                        </div>
+                        <div class="mobmenu__text">Оплата</div>
+                    </a>
+                    <button class="mobmenu__btn">
+                        <img src="../../img/mobmenu/arrow.png" alt="arrow" class="img img_fit_contain">
+                    </button>
+                </div>
+                <div class="mobmenu__node">
+                    <a href="#" class="mobmenu__link">
+                        <div class="mobmenu__icon">
+                            <img src="../../img/mobmenu/04.png" alt="dish" class="img img_fit_contain">
+                        </div>
+                        <div class="mobmenu__text">Вакансии</div>
+                    </a>
+                    <button class="mobmenu__btn">
+                        <img src="../../img/mobmenu/arrow.png" alt="arrow" class="img img_fit_contain">
+                    </button>
+                </div>
+                <div class="mobmenu__node">
+                    <a href="#" class="mobmenu__link">
+                        <div class="mobmenu__icon">
+                            <img src="../../img/mobmenu/05.png" alt="dish" class="img img_fit_contain">
+                        </div>
+                        <div class="mobmenu__text">Поддержка</div>
+                    </a>
+                    <button class="mobmenu__btn">
+                        <img src="../../img/mobmenu/arrow.png" alt="arrow" class="img img_fit_contain">
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </section>        
+    <header class="header" id="header">
+        <div class="wrapper">
+            <div class="header__wrap">
+                <div class="header__burger">
+                    <div class="header__burger-line"></div>
+                    <div class="header__burger-line"></div>
+                    <div class="header__burger-line"></div>
+                </div>
+                <div class="logo">
+                    <div class="logo__text">
+                        <img src="../../img/logo/logo_text.svg" alt="logo_text" class="img logo__text-item">
+                    </div>
+                    <div class="logo__img">
+                        <img src="../../img/logo/logo_img.svg" alt="logo_img" class="img logo__img-item">
+                    </div>
+                </div>
+                <nav class="navigation header__navigation">
+                    <div class="navigation__list">
+                        <div data-dropdown='node' class="navigation__node">
+                            <a data-dropdown='link' href="#" class="navigation__link navigation__link_dropdown">Меню</a>
+                        </div>
+                        <div data-dropdown='menu' class="navigation__dropdown header__dropdown" >
+                            <div class="navigation__dropdown-node header__dropdown-node">
+                                <a href="#" class="navigation__dropdown-link">
+                                    <div class="navigation__dropdown-img">
+                                        <img src="../../img/header/drop-down-menu/01.png" alt="menu_icon" class="navigation__dropdown-icon">
+                                    </div>
+                                    <div class="navigation__dropdown-text header__dropdown-text">Cупы</div>
+                                </a>
+                            </div>
+                            <div class="navigation__dropdown-node header__dropdown-node">
+                                <a href="#" class="navigation__dropdown-link">
+                                    <div class="navigation__dropdown-img">
+                                        <img src="../../img/header/drop-down-menu/02.png" alt="menu_icon" class="navigation__dropdown-icon">
+                                    </div>
+                                    <div class="navigation__dropdown-text header__dropdown-text">Хачапури</div>
+                                </a>
+                            </div>
+                            <div class="navigation__dropdown-node header__dropdown-node">
+                                <a href="#" class="navigation__dropdown-link">
+                                    <div class="navigation__dropdown-img">
+                                        <img src="../../img/header/drop-down-menu/03.png" alt="menu_icon" class="navigation__dropdown-icon">
+                                    </div>
+                                    <div class="navigation__dropdown-text header__dropdown-text">Холодные закуски</div>
+                                </a>
+                            </div>
+                            <div class="navigation__dropdown-node header__dropdown-node">
+                                <a href="#" class="navigation__dropdown-link">
+                                    <div class="navigation__dropdown-img">
+                                        <img src="../../img/header/drop-down-menu/04.png" alt="menu_icon" class="navigation__dropdown-icon">
+                                    </div>
+                                    <div class="navigation__dropdown-text header__dropdown-text">Хинкали</div>
+                                </a>
+                            </div>
+                            <div class="navigation__dropdown-node header__dropdown-node">
+                                <a href="#" class="navigation__dropdown-link">
+                                    <div class="navigation__dropdown-img">
+                                        <img src="../../img/header/drop-down-menu/05.png" alt="menu_icon" class="navigation__dropdown-icon">
+                                    </div>
+                                    <div class="navigation__dropdown-text header__dropdown-text">Шашлык</div>
+                                </a>
+                            </div>
+                            <div class="navigation__dropdown-node header__dropdown-node">
+                                <a href="#" class="navigation__dropdown-link">
+                                    <div class="navigation__dropdown-img">
+                                        <img src="../../img/header/drop-down-menu/06.png" alt="menu_icon" class="navigation__dropdown-icon">
+                                    </div>
+                                    <div class="navigation__dropdown-text header__dropdown-text">Соусы</div>
+                                </a>
+                            </div>
+                            <div class="navigation__dropdown-node header__dropdown-node">
+                                <a href="#" class="navigation__dropdown-link">
+                                    <div class="navigation__dropdown-img">
+                                        <img src="../../img/header/drop-down-menu/07.png" alt="menu_icon" class="navigation__dropdown-icon">
+                                    </div>
+                                    <div class="navigation__dropdown-text header__dropdown-text">Салаты</div>
+                                </a>
+                            </div>
+                            <div class="navigation__dropdown-node header__dropdown-node">
+                                <a href="#" class="navigation__dropdown-link">
+                                    <div class="navigation__dropdown-img">
+                                        <img src="../../img/header/drop-down-menu/08.png" alt="menu_icon" class="navigation__dropdown-icon">
+                                    </div>
+                                    <div class="navigation__dropdown-text header__dropdown-text">Горячие блюда</div>
+                                </a>
+                            </div>
+                            <div class="navigation__dropdown-node header__dropdown-node">
+                                <a href="#" class="navigation__dropdown-link">
+                                    <div class="navigation__dropdown-img">
+                                        <img src="../../img/header/drop-down-menu/09.png" alt="menu_icon" class="navigation__dropdown-icon">
+                                    </div>
+                                    <div class="navigation__dropdown-text header__dropdown-text">Гарнир</div>
+                                </a>
+                            </div>
+                            <div class="navigation__dropdown-node header__dropdown-node">
+                                <a href="#" class="navigation__dropdown-link">
+                                    <div class="navigation__dropdown-img">
+                                        <img src="../../img/header/drop-down-menu/10.png" alt="menu_icon" class="navigation__dropdown-icon">
+                                    </div>
+                                    <div class="navigation__dropdown-text header__dropdown-text">Десерты</div>
+                                </a>
+                            </div>
+                            <div class="navigation__dropdown-node header__dropdown-node">
+                                <a href="#" class="navigation__dropdown-link">
+                                    <div class="navigation__dropdown-img">
+                                        <img src="../../img/header/drop-down-menu/11.png" alt="menu_icon" class="navigation__dropdown-icon">
+                                    </div>
+                                    <div class="navigation__dropdown-text header__dropdown-text">Напитки</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="navigation__node">
+                            <a href="#" class="navigation__link">Доставка</a>
+                        </div>
+                        <div class="navigation__node">
+                            <a href="#" class="navigation__link">Оплата</a>
+                        </div>
+                        <div class="navigation__node">
+                            <a id="reserv-btn-1" href="#" class="navigation__link" data-modal-open="true">Бронь стола</a>
+                        </div>
+                    </div>
+                </nav>
+                <div class="header__buttons">
+                    <div class="header__tel">
+                        <a href="tel:+78312826000" class="header__tel-link">
+                            <div class="header__tel-icon">
+                                <img class="img" src="../../img/header/phone.svg" alt="phone">
+                            </div>
+                            <span class="header__tel-number">+7 (831) 282-60-00</span>
+                        </a>
+                    </div>
+                    <div class="header__user">
+                        <button id="sign-in-btn" data-modal-open="true" class="header__user-btn btn btn_theme_transparent">
+                            <img class="img" src="../../img/header/person.svg" alt="person">
+                        </button>
+                        <a class="header__basket-btn basket-cart" href="basket.html">
+                            <img class="img" src="../../img/shopping_cart/shopping_cart_green.svg" alt="basket">
+                            <span class="header__basket-amount basket-cart__amount">5</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</footer>
+    </header>
+    <section class="regis">
+        <div class="wrapper">
+            <div class="regis__conteiner">
+                <div class="regis__unit1">
+                    <div class="regis__unit1-wrap1">
+                        <div class="regis__title">
+                            Оформление заказа
+                        </div>
+                        <div class="regis__subtitle">
+                            Вы заказали:
+                        </div>
+                        <ul class="list regis__list" id="basket-products-list">
+                            <!-- <li class="list__node regis__list-node">
+                                <button class="list__btn regis__list-btn"></button>
+                                <div class="list__icon regis__list-icon">
+                                    <img src="" alt="product">
+                                </div>
+                                <div class="list__name regis__list-name">
+                                    Хачапури
+                                </div>
+                                <div class="display regis__display">
+                                    <button data-display="btn-minus" class="display__btn-minus regis__btn-minus">
+                                    </button>
+                                    <div class="display__item regis__display-item">
+                                        <span data-display="amount" class="display__amount regis__display-amount">1</span>
+                                        <span class="display__units regis__display-units">шт</span>
+                                    </div>
+                                    <button data-display="btn-plus" class="display__btn-plus regis__btn-plus">
+                                    </button>
+                                </div>
+                                <div class="list__price regis__price">
+                                    <span class="list__price-item regis__price-item">
+                                        350
+                                    </span>
+                                    <span class="list__price-currency regis__price-currency">
+                                        ₽
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="list__node regis__list-node">
+                                <button class="list__btn regis__list-btn"></button>
+                                <div class="list__icon regis__list-icon">
+                                    <img src="" alt="product">
+                                </div>
+                                <div class="list__name regis__list-name">
+                                    Хачапури
+                                </div>
+                                <div class="display regis__display">
+                                    <button data-display="btn-minus" class="display__btn-minus regis__btn-minus">
+                                    </button>
+                                    <div class="display__item regis__display-item">
+                                        <span data-display="amount" class="display__amount regis__display-amount">1</span>
+                                        <span class="display__units regis__display-units">шт</span>
+                                    </div>
+                                    <button data-display="btn-plus" class="display__btn-plus regis__btn-plus">
+                                    </button>
+                                </div>
+                                <div class="list__price regis__price">
+                                    <span class="list__price-item regis__price-item">
+                                        350
+                                    </span>
+                                    <span class="list__price-currency regis__price-currency">
+                                        ₽
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="list__node regis__list-node">
+                                <button class="list__btn regis__list-btn"></button>
+                                <div class="list__icon regis__list-icon">
+                                    <img src="" alt="product">
+                                </div>
+                                <div class="list__name regis__list-name">
+                                    Хачапури
+                                </div>
+                                <div class="display regis__display">
+                                    <button data-display="btn-minus" class="display__btn-minus regis__btn-minus">
+                                    </button>
+                                    <div class="display__item regis__display-item">
+                                        <span data-display="amount" class="display__amount regis__display-amount">1</span>
+                                        <span class="display__units regis__display-units">шт</span>
+                                    </div>
+                                    <button data-display="btn-plus" class="display__btn-plus regis__btn-plus">
+                                    </button>
+                                </div>
+                                <div class="list__price regis__price">
+                                    <span class="list__price-item regis__price-item">
+                                        350
+                                    </span>
+                                    <span class="list__price-currency regis__price-currency">
+                                        ₽
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="list__node regis__list-node">
+                                <button class="list__btn regis__list-btn"></button>
+                                <div class="list__icon regis__list-icon">
+                                    <img src="" alt="product">
+                                </div>
+                                <div class="list__name regis__list-name">
+                                    Хачапури
+                                </div>
+                                <div class="display regis__display">
+                                    <button data-display="btn-minus" class="display__btn-minus regis__btn-minus">
+                                    </button>
+                                    <div class="display__item regis__display-item">
+                                        <span data-display="amount" class="display__amount regis__display-amount">1</span>
+                                        <span class="display__units regis__display-units">шт</span>
+                                    </div>
+                                    <button data-display="btn-plus" class="display__btn-plus regis__btn-plus">
+                                    </button>
+                                </div>
+                                <div class="list__price regis__price">
+                                    <span class="list__price-item regis__price-item">
+                                        350
+                                    </span>
+                                    <span class="list__price-currency regis__price-currency">
+                                        ₽
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="list__node regis__list-node">
+                                <button class="list__btn regis__list-btn"></button>
+                                <div class="list__icon regis__list-icon">
+                                    <img src="" alt="product">
+                                </div>
+                                <div class="list__name regis__list-name">
+                                    Хачапури
+                                </div>
+                                <div class="display regis__display">
+                                    <button data-display="btn-minus" class="display__btn-minus regis__btn-minus">
+                                    </button>
+                                    <div class="display__item regis__display-item">
+                                        <span data-display="amount" class="display__amount regis__display-amount">1</span>
+                                        <span class="display__units regis__display-units">шт</span>
+                                    </div>
+                                    <button data-display="btn-plus" class="display__btn-plus regis__btn-plus">
+                                    </button>
+                                </div>
+                                <div class="list__price regis__price">
+                                    <span class="list__price-item regis__price-item">
+                                        350
+                                    </span>
+                                    <span class="list__price-currency regis__price-currency">
+                                        ₽
+                                    </span>
+                                </div>
+                            </li> -->
+                        </ul>
+                    </div>
+                    <div class="regis__unit1-wrap2">
+                        <div class="regis__btns tab__btns">
+                            <button data-number='0' class="tab__btn regis__deliv-btn">Доставка</button>
+                            <button data-number='1' class="tab__btn regis__pickup-btn">Самовывоз (- 20%)</button>
+                        </div>
+                        <div class="regis__scoreboard">
+                            <!-- <div class="tab__content regis__deliv"> -->
+                                <div class="regis__union">
+                                    <div class="regis__total">
+                                        <span class="regis__total-name">Итого</span>
+                                        <div class="regis__total-sum">
+                                            <span class="regis__total-price" id="total-price-basket">700</span>
+                                            <span class="regis__total-currency">₽</span>
+                                        </div>
+                                    </div>
+                                    <!-- tab__content  -->
+                                    <div data-tab-content='deliv' class="tab__content regis__deliv">
+                                        <span class="regis__deliv-name">Доставка</span>
+                                        <div class="regis__deliv-total">
+                                            <span class="regis__deliv-price">0</span>
+                                            <span class="regis__deliv-currency">₽</span>
+                                        </div>
+                                    </div>
+                                    <!-- tab__content  -->
+                                    <div data-tab-content='pickup' class="tab__content regis__pickup">
+                                        <span class="regis__pickup-name">Самовывоз</span>
+                                        <div class="regis__pickup-total">
+                                            <span class="regis__pickup-price">-140</span>
+                                            <span class="regis__pickup-currency">₽</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="regis__pay">
+                                    <div class="regis__pay-name">Итого к оплате</div>
+                                    <div class="regis__pay-total">
+                                        <span id="total-pay" class="regis__pay-price">700</span>
+                                        <span class="regis__pay-currency">₽</span>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="regis__unit2">
+                    <form data-tab-content='deliv' class="tab__content form regis__delivery" action='#'  name='delivery' method="GET">
+                        <div class="regis__delivery-wrap">
+                            <label class=" regis__delivery-label" for="deliv-area">Район доставки</label>
+                            <div class="input-wrap">
+                                <select class="regis__input regis__input_ghost form-input" required name="delivery-district" id="deliv-area">
+                                    <option selected disabled>Выбрать</option>
+                                    <option value="Arbat">Арбат</option>
+                                    <option value="Basmanny">Басманный</option>
+                                    <option value="Khamovniki">Хамовники</option>
+                                    <option value="Krasnoselsky">Красносельский</option>
+                                    <option value="Meshchansky">Мещанский</option>
+                                    <option value="Presnensky">Пресненский</option>
+                                </select>
+                                <div class="regis__arrow-down input-arrow-down"></div>
+                            </div>
+                        </div>
+                        <div class="regis__delivery-wrap">
+                            <label class="regis__delivery-label" for="deliv-name">ФИО</label>
+                            <div class="input-wrap">                        
+                                <input class="regis__input form-input" type="text" placeholder="Введите Ваше полное имя" name="delivery-name" id="deliv-name">
+                            </div>
+                        </div>
+                        <div class="regis__delivery-wrap">
+                            <label class="regis__delivery-label" for="deliv-phone">
+                                Телефон
+                            </label>
+                            <div class="input-wrap">
+                                <input class="regis__input form-input" type="tel" placeholder="+380" name="delivery-phone" id="deliv-phone">
+                            </div>
+                        </div>
+                        <div class="regis__delivery-wrap">
+                            <label class="regis__delivery-label" for="deliv-address">Адрес доставки</label>
+                            <div class="input-wrap">
+                                <input class="regis__input form-input" type="text" placeholder="Адрес доставки" name="delivery-address" id="deliv-address">
+                            </div>
+                        </div>
+                        <div class="regis__delivery-wrap">
+                            <label class="regis__delivery-label" for="deliv-pay">Способ оплаты</label>
+                            <div class="input-wrap">
+                                <select class="regis__input regis__input_ghost form-input" required name="delivery-pay" id="deliv-pay">
+                                    <option value="cash" selected>Наличные</option>
+                                    <option value="card">Банковская карта</option>
+                                    <option value="pay-pal">Pay-Pal</option>
+                                </select>
+                                <div class="regis__arrow-down input-arrow-down"></div>
+                            </div>
+                        </div>
+                        <div class="regis__delivery-wrap">
+                            <label class="regis__delivery-label regis__delivery-label_show-hide regis__delivery-label_hide" for="deliv-comments">Добавить комментарий</label>
+                            <div class="input-wrap">
+                                <input class="regis__input form-input regis__input_hide" type="text" placeholder="Введите ваш комментарий..." name="delivery-comments" id="deliv-comments">
+                            </div>
+                        </div>
+                        <button class="regis__order-btn btn btn_theme_green" type="submit">Оформить заказ</button>
+                    </form>
+                    <form data-tab-content='pickup' class="tab__content form regis__pickup-form" action='#'  name='delivery' action="#" method="GET">
+                        <div class="regis__delivery-wrap">
+                            <label class=" regis__pickup-label" for="pickup-name">ФИО</label>
+                            <div class="input-wrap regis__pickup-wrap">                        
+                                <input class="form__input regis__pickup-input" type="text" placeholder="Введите Ваше полное имя" name="pickup_name" id="pickup-name">
+                            </div>
+                        
+                        </div>
+                        <div class="input-wrap regis__pickup-wrap">
+                            <label class=" regis__pickup-label" for="pickup-phone">
+                                Телефон
+                            </label>
+                            <input class="form__input regis__pickup-input" type="tel" placeholder="+380" name="pickup_phone" id="pickup-phone">
+                        </div>
+                        <div class="form__select-wrap regis__select-wrap regis__pickup-select-wrap">
+                            <select class="form__select regis__select" required name="pickup_time" id="pickup_time">
+                                <option value="soon" selected>В ближайшее время</option>
+                                <option value="fast">Скоро</option>
+                                <option value="long time">Через некоторое время</option>
+                            </select>
+                        </div>
+                        <button class="regis__pickup-form-btn regis__order-btn btn" type="submit">Оформить заказ</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer__conteiner">
+                    <div class="footer__area-1">
+                        <div class="footer__country">
+                            <div class="footer__country-title">Бесплатный звонок по РФ</div>
+                            <a href="tel:+78312826000" class="footer__country-tel">+7 (831) 282-60-00</a>
+                        </div>
+                        <div class="footer__order">
+                            <div class="footer__order-title">Для приема заказов</div>
+                            <a href="tel:+79040664685" class="footer__order-tel">+7 (904) 066-46-85</a>
+                        </div>
+                    </div>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-1">мы в вконтакте ></a>
+                        <a href="#" class="footer__social-2">мы в instagram ></a>
+                    </div>
+                    <div class="footer__user enter">
+                        <button id="sign-in-btn-2" class="enter__btn-in btn btn_theme_transparent" data-modal-open="true">
+                            <span class="enter__img-wrap">
+                                <img class="img" src="../../img/footer/person_white.svg" alt="person">
+                            </span>
+                            <span class="enter__btn-in-text">войти</span>
+                        </button>
+                        <span class="enter__separator">/</span>
+                        <button id="check-in-btn" class="enter__btn-checkin btn btn_theme_transparent" data-modal-open="true">
+                            <span class="enter__btn-checkin-text">регистрация</span>
+                        </button>
+                    </div>
+                    <div class="footer__work">
+                        График работы по будням с 9:00 до 18:00
+                    </div>
+                    <a href="mailto:info@.ru" class="footer__email">Email: info@.ru</a>
+                    <a href="support.html" class="footer__support">Поддержка</a>
+                <div class="footer__area-2">
+                    <div class="footer__copyright">
+                        ©2020. Пиросмани
+                    </div>
+                    <a href="#" class="footer__terms">Условия и соглашения</a>
+                    <a href="#" class="footer__policy">Политика конфиденциальности</a>
+                </div>        
+            </div>
+        </div>
+    </footer>
 
-<!-- Add font awesome icons-->
-<script src="https://kit.fontawesome.com/a8ec7c40c4.js" crossorigin="anonymous"></script>    
-<script src="../../js/libs/jquery/jquery-3.6.0.min.js"></script>
+    <!-- Add font awesome icons-->
+    <!-- <script src="https://kit.fontawesome.com/a8ec7c40c4.js" crossorigin="anonymous"></script>     -->
+    <!-- <script src="../../js/libs/jquery/jquery-3.6.0.min.js"></script> -->
 
-<!-- Constants & Utils  -->
-<script src="../../js/constants/catalog.js"></script>
-<script src="../../js/constants/root.js"></script>
-<!-- <script src="../../js/page/basket/constants/basketRoot.js"></script> -->
-<script src="../../js/utils/localStorageUtil.js"></script>
+    <!-- Constants & Utils  -->
+    <script src="../../js/constants/catalog.js"></script>
+    <script src="../../js/constants/root.js"></script>
+    <!-- <script src="../../js/page/basket/constants/basketRoot.js"></script> -->
+    <script src="../../js/utils/localStorageUtil.js"></script>
 
-<script src="../../js/common.js"></script>
+    <script src="../../js/common.js"></script>
 
-<!-- Components -->
-<!-- header and mobile menu -->
-<script src="../../js/page/header/headerRender.js"></script>
-<script src="../../js/mob-menu/mobMenu.js"></script>
-<script src="../../js/page/header/header.js"></script>
+    <!-- Components -->
+    <!-- header and mobile menu -->
+    <!-- <script src="../../js/page/header/headerRender.js"></script> -->
+    <script src="../../js/mob-menu/mobMenu.js"></script>
+    <script src="../../js/page/header/header.js"></script>
 
-<!-- show/hide drop-down menu -->
-<script src="../../js/drop-down-menu/dropDownMenu.js"></script>
+    <!-- show/hide drop-down menu -->
+    <script src="../../js/drop-down-menu/dropDownMenu.js"></script>
 
-<script src="../../js/order/orderConstantsRender.js"></script>
-<script src="../../js/page/regis/regisRender.js"></script>
-<script src="../../js/page/regis/regis.js"></script>
-<script src="../../js/order/orderConstantsCalc.js"></script>
+    <script src="../../js/order/orderConstantsRender.js"></script>
+    <script src="../../js/page/regis/regisRender.js"></script>
+    <script src="../../js/page/regis/regis.js"></script>
+    <script src="../../js/order/orderConstantsCalc.js"></script>
+    <script src="../../js/page/display.js"></script>
 
-<script src="../../js/page/display.js"></script>
+        <!-- // popup -->
+    <script src="../../js/pop-ups/popupSignin.js"></script>
+    <script src="../../js/pop-ups/popupReserv.js"></script>
+    <script src="../../js/pop-ups/popupCheckin.js"></script>
+    <script src="../../js/pop-ups/popupPasswordRecovery.js"></script>
+    <script src="../../js/pop-ups/confirmPhone.js"></script>
+    <script src="../../js/pop-ups/popupCommon.js"></script>
 
 </body>
 </html>

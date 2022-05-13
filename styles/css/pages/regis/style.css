@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.regis__select-wrap::before, .header__user-btn, .header__basket-btn, .confirm-phone__dush, .confirm-phone__repeat, .bonus__icon, .pwa__column, .mobmenu__dropdown-img, .display__item, .display__btn-minus, .display__btn-plus, .basket-cart, .basket-cart__amount {
+.header__user-btn, .header__basket-btn, .confirm-phone__dush, .confirm-phone__repeat, .bonus__icon, .pwa__column, .mobmenu__dropdown-img, .display__item, .display__btn-minus, .display__btn-plus, .basket-cart, .basket-cart__amount {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -136,15 +136,11 @@ body {
   background: center/contain no-repeat url(../../../../img/icons/star/star_active.svg);
 }
 
-.rating-item:checked ~ .rating-item:hover {
+.rating-item:checked ~ .rating-item:disabled:hover {
   background: center/contain no-repeat url(../../../../img/icons/star/star_active.svg);
 }
 
 .rating-item:hover {
-  background: center/contain no-repeat url(../../../../img/icons/star/star_active.svg);
-}
-
-.rating-item:disabled:checked:hover {
   background: center/contain no-repeat url(../../../../img/icons/star/star_active.svg);
 }
 
@@ -215,6 +211,10 @@ body {
 
 .input-calendar {
   background: center/cover no-repeat url("../../../../img/icons/date.svg");
+}
+
+.input-arrow-down {
+  background: center/cover no-repeat url("../../../../img/icons/arrow_down.svg");
 }
 
 .form-input {
@@ -2199,22 +2199,12 @@ body {
 .regis__delivery-label_show-hide {
   cursor: pointer;
 }
-.regis__delivery-input {
+.regis__input {
   height: 64.02px;
+  width: 100%;
   padding-left: 30px;
-  border: 1.1194px solid #EBEBEB;
-}
-.regis__delivery-input_hide {
-  display: none;
-}
-.regis__delivery-input::placeholder {
-  color: #C6C6C6;
-}
-.regis__delivery-btn {
-  margin-top: 11px;
-}
-.regis__select {
-  padding-left: 30px;
+  border-radius: 7.11356px;
+  border-width: 1.1194px;
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
@@ -2222,21 +2212,19 @@ body {
   line-height: 24px;
   color: #C6C6C6;
 }
-.regis__select-wrap {
-  position: relative;
-  height: 64.02px;
-  border-radius: 7.11356px;
-  border: 1.1194px solid #EBEBEB;
+.regis__input_ghost {
+  appearance: none;
 }
-.regis__select-wrap::before {
+.regis__input_hide {
+  visibility: hidden;
+}
+.regis__arrow-down {
   position: absolute;
-  content: "\f078";
-  width: 27px;
-  height: 27px;
   top: 50%;
+  right: 20px;
   transform: translateY(-50%);
-  font-family: "FontAwesome";
-  color: #00AC4E;
+  height: 26px;
+  width: 26px;
 }
 .regis__order-btn {
   width: 183.58px;

@@ -9,7 +9,7 @@ class Regis {
                     price = productsStore[i].amount * productsStore[i].price
                     html += `
                         <li class="list__node regis__list-node ${CONTAIN_PRODUCT_ID} ${ORDER_CLASS_ID}" data-product-id='${prod.id}'>
-                            <button class="list__btn regis__list-btn"></button>
+                            <button class="list__btn regis__list-btn btn btn_theme_transparent"></button>
                             <div class="list__icon regis__list-icon">
                                 <img src="" alt="product">
                             </div>
@@ -17,13 +17,13 @@ class Regis {
                                 ${prod.name}
                             </div>
                             <div class="display regis__display">
-                                <button data-display="btn-minus" class="display__btn-minus regis__btn-minus">
+                                <button data-display="btn-minus" class="display__btn-minus regis__btn-minus btn btn_theme_transparent">
                                 </button>
                                 <div class="display__item regis__display-item">
                                     <span data-display="amount" class="display__amount regis__display-amount">${productsStore[i].amount}</span>
                                     <span class="display__units regis__display-units">шт</span>
                                 </div>
-                                <button data-display="btn-plus" class="display__btn-plus regis__btn-plus">
+                                <button data-display="btn-plus" class="display__btn-plus regis__btn-plus btn btn_theme_transparent">
                                 </button>
                             </div>
                             <div class="list__price regis__price">

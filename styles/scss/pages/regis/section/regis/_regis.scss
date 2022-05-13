@@ -217,40 +217,52 @@
                 cursor: pointer;
             }
         }
-        &-input {
-            height: 64.02px;
-            padding-left: 30px;
-            border: 1.1194px solid utils.$var-color-gallery;
-            &_hide {
-                display: none;
-            }
+        // &-input {
+        //     height: 64.02px;
+        //     padding-left: 30px;
+        //     border: 1.1194px solid utils.$var-color-gallery;
+        //     &_hide {
+        //         display: none;
+        //     }
+        // }
+        // &-input::placeholder {
+        //     color: utils.$var-color-silver;
+        // }
+        // &-btn {
+        //     margin-top: 11px;
+        // }
+    }
+    &__input {
+        height: 64.02px;
+        width: 100%;
+        padding-left: 30px;
+        border-radius: 7.11356px;
+        border-width: 1.1194px;
+        @include utils.mix-font(400, 16px, 24px, utils.$var-color-silver);
+        &_ghost {
+            appearance: none;
         }
-        &-input::placeholder {
-            color: utils.$var-color-silver;
-        }
-        &-btn {
-            margin-top: 11px;
+        &_hide {
+            visibility: hidden;
+            // display: none;
         }
     }
+    &__arrow-down {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        height: 26px;
+        width: 26px;
+    }
     &__select {
-        padding-left: 30px;
-        @include utils.mix-font(400, 16px, 24px, utils.$var-color-silver);
+        // width: 100%;
+        // padding-left: 30px;
+        // @include utils.mix-font(400, 16px, 24px, utils.$var-color-silver);
         &-wrap {
-            position: relative;
-            height: 64.02px;
-            border-radius: 7.11356px;
-            border: 1.1194px solid utils.$var-color-gallery;
-        }
-        &-wrap::before {
-            position: absolute;
-            @extend %center-xy-flex;
-            content: '\f078';
-            width: 27px;
-            height: 27px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-family: 'FontAwesome';
-            color: utils.$var-color-green-haze;
+            // height: 64.02px;
+            // border-radius: 7.11356px;
+            // border: 1.1194px solid utils.$var-color-gallery;
         }
     }
     &__order-btn {

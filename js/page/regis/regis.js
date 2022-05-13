@@ -1,5 +1,6 @@
 // hidden element
-let regisDelivery = document.querySelector('.regis__delivery')
+const regisDelivery = document.querySelector('.regis__delivery')
+const delivComments = document.getElementById('deliv-comments');
 regisDelivery.addEventListener('click', (e)=> {
     let tar = e.target
     if(!tar.classList.contains('regis__delivery-label_show-hide')) return
@@ -10,7 +11,7 @@ regisDelivery.addEventListener('click', (e)=> {
     else {
         tar.innerHTML = 'Добавить комментарий'
     }
-    tar.nextElementSibling.classList.toggle('regis__delivery-input_hide')
+    delivComments.classList.toggle('regis__input_hide')
 })
 // // hidden element
 
@@ -46,7 +47,7 @@ tabContent.forEach((item) => {
 
 // click on the tab button
 tabBtns.addEventListener('click', (e)=> {
-    const targetElement = setElementState('tab__btn', 'tab__btn_active', e.target);
+    const targetElement = toggleElementsState('tab__btn', 'tab__btn_active', e.target);
     if(targetElement) {
         const tabNumber = targetElement.dataset.number;
         switch(tabNumber) {
