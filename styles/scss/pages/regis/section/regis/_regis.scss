@@ -1,6 +1,7 @@
 @use '../../../../common/utils';
 
 .regis {
+    padding: 40px 0 60px 0;
     &__conteiner {
         display: flex;
         flex-wrap: wrap;
@@ -33,6 +34,9 @@
             width: 100%;
             gap: 20px;
             justify-content: space-between;
+        }
+        @media screen and(max-width: utils.$var-general-brkpoint-4) {
+            justify-content: center;
         }  
         &-node {
             padding: 15px 0;
@@ -163,6 +167,7 @@
     &__unit2 {
         display: flex;
         align-items: flex-end;
+        flex-grow: 1;
     }
     &__deliv,
     &__pickup {
@@ -201,6 +206,7 @@
     &__delivery {
         display: flex;
         flex-flow: column;
+        flex-grow: 1;
         &-wrap:not(:last-child) {
             margin-bottom: 15px;
         }
@@ -217,20 +223,6 @@
                 cursor: pointer;
             }
         }
-        // &-input {
-        //     height: 64.02px;
-        //     padding-left: 30px;
-        //     border: 1.1194px solid utils.$var-color-gallery;
-        //     &_hide {
-        //         display: none;
-        //     }
-        // }
-        // &-input::placeholder {
-        //     color: utils.$var-color-silver;
-        // }
-        // &-btn {
-        //     margin-top: 11px;
-        // }
     }
     &__input {
         height: 64.02px;
@@ -244,7 +236,6 @@
         }
         &_hide {
             visibility: hidden;
-            // display: none;
         }
     }
     &__arrow-down {
@@ -254,16 +245,6 @@
         transform: translateY(-50%);
         height: 26px;
         width: 26px;
-    }
-    &__select {
-        // width: 100%;
-        // padding-left: 30px;
-        // @include utils.mix-font(400, 16px, 24px, utils.$var-color-silver);
-        &-wrap {
-            // height: 64.02px;
-            // border-radius: 7.11356px;
-            // border: 1.1194px solid utils.$var-color-gallery;
-        }
     }
     &__order-btn {
         width: 183.58px;
@@ -275,6 +256,7 @@
         &-form {
             display: flex;
             flex-flow: column;
+            flex-grow: 1;
         }
         &-wrap {
             margin-bottom: 15px;
@@ -284,13 +266,15 @@
             @include utils.mix-font(400, 15px, 24px, utils.$var-color-black);
         }
         &-input {
-            padding-left: 30px;
+            width: 100%;
             height: 64.02px;
+            padding-left: 30px;
+            border-width: 1.5px;
             border-radius: 7.11356px;
-            border: 1.1194px solid utils.$var-color-gallery;
-        }
-        &-input::placeholder {
-            color: utils.$var-color-silver;
+            @include utils.mix-font(400, 16px, 24px, utils.$var-color-silver);
+            &_ghost {
+                appearance: none;
+            }
         }
         &-select-wrap {
             margin-bottom: 25px;

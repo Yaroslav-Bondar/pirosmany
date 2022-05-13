@@ -601,7 +601,7 @@
                     </div>
                 </div>
                 <div class="regis__unit2">
-                    <form data-tab-content='deliv' class="tab__content form regis__delivery" action='#'  name='delivery' method="GET">
+                    <form data-tab-content='deliv' class="tab__content regis__delivery" action='#'  name='delivery' method="GET">
                         <div class="regis__delivery-wrap">
                             <label class=" regis__delivery-label" for="deliv-area">Район доставки</label>
                             <div class="input-wrap">
@@ -656,28 +656,35 @@
                         </div>
                         <button class="regis__order-btn btn btn_theme_green" type="submit">Оформить заказ</button>
                     </form>
-                    <form data-tab-content='pickup' class="tab__content form regis__pickup-form" action='#'  name='delivery' action="#" method="GET">
-                        <div class="regis__delivery-wrap">
-                            <label class=" regis__pickup-label" for="pickup-name">ФИО</label>
-                            <div class="input-wrap regis__pickup-wrap">                        
-                                <input class="form__input regis__pickup-input" type="text" placeholder="Введите Ваше полное имя" name="pickup_name" id="pickup-name">
+                    <form data-tab-content='pickup' class="tab__content regis__pickup-form" action='#'  name='delivery' action="#" method="GET">
+                        <div class="regis__pickup-wrap">
+                            <label class="regis__pickup-label" for="pickup-name">ФИО</label>
+                            <div class="input-wrap">                        
+                                <input class="form-input regis__pickup-input" type="text" placeholder="Введите Ваше полное имя" name="pickup_name" id="pickup-name">
                             </div>
-                        
                         </div>
-                        <div class="input-wrap regis__pickup-wrap">
-                            <label class=" regis__pickup-label" for="pickup-phone">
+                        <div class="regis__pickup-wrap">
+                            <label class="regis__pickup-label" for="pickup-phone">
                                 Телефон
                             </label>
-                            <input class="form__input regis__pickup-input" type="tel" placeholder="+380" name="pickup_phone" id="pickup-phone">
+                            <div class="input-wrap">                        
+                                <input class="form-input regis__pickup-input" type="tel" placeholder="+380" name="pickup_phone" id="pickup-phone">
+                            </div>
                         </div>
-                        <div class="form__select-wrap regis__select-wrap regis__pickup-select-wrap">
-                            <select class="form__select regis__select" required name="pickup_time" id="pickup_time">
-                                <option value="soon" selected>В ближайшее время</option>
-                                <option value="fast">Скоро</option>
-                                <option value="long time">Через некоторое время</option>
-                            </select>
+                        <div class="regis__pickup-select-wrap">
+                            <label class="regis__pickup-label" for="pickup_time">
+                                Когда заберете?                       
+                            </label> 
+                            <div class="input-wrap">
+                                <select class="form-input regis__pickup-input regis__pickup-input_ghost" required name="pickup_time" id="pickup_time">
+                                    <option value="soon" selected>В ближайшее время</option>
+                                    <option value="fast">Скоро</option>
+                                    <option value="long time">Через некоторое время</option>
+                                </select>
+                                <div class="regis__arrow-down input-arrow-down"></div>
+                            </div>
                         </div>
-                        <button class="regis__pickup-form-btn regis__order-btn btn" type="submit">Оформить заказ</button>
+                        <button class="regis__order-btn btn btn_theme_green" type="submit">Оформить заказ</button>
                     </form>
                 </div>
             </div>
