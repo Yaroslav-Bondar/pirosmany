@@ -1956,53 +1956,53 @@ body {
   height: 13px;
 }
 
-.support {
-  padding: 47px 0 249px 0;
+.supply {
+  padding: 45px 0 60px 0;
 }
-.support__title {
-  margin-bottom: 45px;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 28px;
-  text-transform: none;
-  line-height: 33px;
-  color: #000000;
-  font-family: "TT Hoves";
-}
-.support__text {
-  display: block;
-  resize: none;
-  width: 672px;
-  height: 174px;
-  padding: 19px 20px;
-  background: #F9F9F9;
-  border: none;
-  border-radius: 5px;
-}
-@media screen and (max-width: 710px) {
-  .support__text {
-    width: 100%;
+@media screen and (max-width: 480px) {
+  .supply__title {
+    font-size: 16px;
+    line-height: 19px;
   }
 }
-.support__text, .support__text::placeholder, .support__text::-moz-placeholder, .support__text::-webkit-input-placeholder {
-  font-family: "TT Hoves";
-  font-weight: 400;
-  font-style: normal;
-  font-size: 20px;
-  text-transform: none;
-  line-height: 21px;
-  color: #BDBDBD;
+.supply__container {
+  margin-top: 25px;
 }
-.support__btn {
+@media screen and (max-width: 480px) {
+  .supply__text {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+.supply__text:not(:last-child) {
+  margin-bottom: 25px;
+}
+.supply__btns {
   margin-top: 45px;
-  padding: 18px 46px;
-  border-radius: 7.8169px;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 19px;
-  text-transform: none;
-  line-height: 24px;
-  color: #fff;
+}
+.supply__catalog-btn {
+  padding: 16px 38px;
+  border-radius: 6.90493px;
+  margin-right: 60px;
+  text-decoration: none;
+}
+@media screen and (max-width: 480px) {
+  .supply__catalog-btn {
+    font-size: 12px;
+    line-height: 15px;
+    padding: 12px 33px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .supply__link span {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .supply__link :first-child {
+    margin-right: 5px;
+  }
 }
 
 .footer {

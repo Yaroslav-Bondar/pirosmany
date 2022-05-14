@@ -24,10 +24,55 @@ body {
   overflow: hidden;
 }
 
+.title {
+  font-family: "TT Hoves";
+  font-weight: 500;
+  font-style: normal;
+  font-size: 28px;
+  text-transform: none;
+  line-height: 33px;
+  color: #000000;
+}
+
+.text {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  text-transform: none;
+  line-height: 26px;
+  color: #828282;
+}
+
+.link {
+  color: #00AC4E;
+  text-decoration: none;
+}
+.link__text {
+  margin-right: 10px;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  text-transform: none;
+  line-height: 29px;
+  color: inherit;
+}
+.link__next {
+  font-size: 20px;
+}
+
 .wrapper {
   max-width: 1024px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.btn-text {
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+  text-transform: none;
+  line-height: 21px;
+  color: #fff;
 }
 
 .btn {

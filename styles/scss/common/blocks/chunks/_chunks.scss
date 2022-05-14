@@ -6,11 +6,32 @@ body {
 .body_lock {
     overflow: hidden;
 }
+.title {
+    font-family: 'TT Hoves'; 
+    @include utils.mix-font(500, 28px, 33px, utils.$var-color-black);
+}
+.text {
+    @include utils.mix-font(400, 22px, 26px, utils.$var-color-gray);
+}
+.link {
+    color: utils.$var-color-green-haze;
+    text-decoration: none;
+    &__text {
+        margin-right: 10px;
+        @include utils.mix-font(400, 22px, 29px, inherit);
+    }
+    &__next {
+        font-size: 20px;
+    }
+}
 .wrapper {
     // original width: 994px;
     max-width: 1024px; // with paddings (2 * 15px)
     margin: 0 auto;
     padding: 0 15px;
+}
+.btn-text {
+    @include utils.mix-font(500, 20px, 21px, utils.$var-color-white);
 }
 .btn {
     // background: utils.$var-color-green-haze;
