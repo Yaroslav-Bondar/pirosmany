@@ -1,0 +1,12 @@
+// blocks
+@use '../../common/blocks/mobmenu';
+@use '../../common/blocks/logo';
+@use '../../common/blocks/navigation';
+
+@use '../../common/sections/header';
+
+// internal styles
+@use 'section/job';
+
+// common styles
+@use '../../common/sections/footer';

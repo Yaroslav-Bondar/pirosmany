@@ -2,8 +2,20 @@
 
 .pay {
     padding: 45px 0 60px 0;
+    &__title {
+        @media screen and(max-width: utils.$var-general-brkpoint-3) {
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }
     &__container {
         margin-top: 25px;
+    }
+    &__text {
+        @media screen and(max-width: utils.$var-general-brkpoint-3) {
+            font-size: 12px;
+            line-height: 14px;
+        }
     }
     &__text:not(:last-child) {
         margin-bottom: 25px;
@@ -16,5 +28,21 @@
         border-radius: 6.90493px;
         margin-right: 60px;
         text-decoration: none;
+        @media screen and(max-width: utils.$var-general-brkpoint-3) {
+            font-size: 12px;
+            line-height: 15px;
+            padding: 12px 33px;
+        }
+    }
+    &__link span {
+        @media screen and(max-width: utils.$var-general-brkpoint-3) {
+            font-size: 12px;
+            line-height: 15px;
+        }
+    }
+    &__link :first-child {
+        @media screen and(max-width: utils.$var-general-brkpoint-3) {
+            margin-right: 5px;
+        }
     }
 }

@@ -411,7 +411,7 @@ li[data-dropdown='menu'] {
         transition: 0.2s;
     }
     &__input:hover {
-        box-shadow: 0 0 1.5px 1px utils.$var-color-green-haze;
+        box-shadow: utils.$var-box-shadow-input;
         border-color: utils.$var-color-green-haze;
     }
     &__input:focus {

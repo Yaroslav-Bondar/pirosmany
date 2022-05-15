@@ -38,6 +38,30 @@ body {
   color: #828282;
 }
 
+.vacancy__title {
+  margin-bottom: 25px;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+  text-transform: none;
+  line-height: 29px;
+  color: #000000;
+}
+.vacancy__description {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  text-transform: none;
+  line-height: 22px;
+  color: #828282;
+}
+.vacancy__description:not(:last-child) {
+  margin-bottom: 30px;
+}
+.vacancy__subtitle {
+  color: #333333;
+}
+
 .link {
   color: #00AC4E;
   text-decoration: none;
@@ -275,7 +299,7 @@ body {
   content: "✓";
   color: #00AC4E;
 }
-.form-input:hover.form-input_hover {
+.form-input:hover {
   box-shadow: 0 0 1.5px 1px #00AC4E;
   transition: box-shadow 0.2s;
 }
@@ -596,7 +620,7 @@ body {
   transition: transform 0.2s;
 }
 .mobmenu__btn_active {
-  transform: rotateZ(-90deg);
+  transform: rotateZ(90deg);
 }
 
 .navigation__list {
@@ -1959,8 +1983,20 @@ body {
 .pay {
   padding: 45px 0 60px 0;
 }
+@media screen and (max-width: 480px) {
+  .pay__title {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
 .pay__container {
   margin-top: 25px;
+}
+@media screen and (max-width: 480px) {
+  .pay__text {
+    font-size: 12px;
+    line-height: 14px;
+  }
 }
 .pay__text:not(:last-child) {
   margin-bottom: 25px;
@@ -1973,6 +2009,24 @@ body {
   border-radius: 6.90493px;
   margin-right: 60px;
   text-decoration: none;
+}
+@media screen and (max-width: 480px) {
+  .pay__catalog-btn {
+    font-size: 12px;
+    line-height: 15px;
+    padding: 12px 33px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .pay__link span {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .pay__link :first-child {
+    margin-right: 5px;
+  }
 }
 
 .footer {

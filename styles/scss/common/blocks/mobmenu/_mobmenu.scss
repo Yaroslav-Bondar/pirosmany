@@ -93,7 +93,7 @@
         cursor: pointer;
         transition: transform .2s;
         &_active {
-            transform: rotateZ(-90deg);
+            transform: rotateZ(90deg);
         }
     }
 }

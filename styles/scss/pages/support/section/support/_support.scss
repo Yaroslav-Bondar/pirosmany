@@ -4,8 +4,6 @@
     padding: 47px 0 249px 0;
     &__title {
         margin-bottom: 45px;
-        @include utils.mix-font(500, 28px, 33px, utils.$var-color-black);
-        font-family: 'TT Hoves';
     }
     &__text {
         display: block;
@@ -14,10 +12,18 @@
         height: 174px;
         padding: 19px 20px;
         background: utils.$var-color-alic;
-        border: none;
+        border: 1px solid transparent;
         border-radius: 5px;
+        outline: none;
         @media screen and(max-width: utils.$var-support-breakpoint-1) {
             width: 100%;            
+        }
+        &:focus {
+            border: solid 1px utils.$var-color-green-haze;
+        }
+        &:hover {
+            box-shadow: utils.$var-box-shadow-input;
+            transition: box-shadow .2s;
         }
     }
     &__text,

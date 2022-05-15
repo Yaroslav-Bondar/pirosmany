@@ -43,6 +43,30 @@ body {
   color: #828282;
 }
 
+.vacancy__title {
+  margin-bottom: 25px;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+  text-transform: none;
+  line-height: 29px;
+  color: #000000;
+}
+.vacancy__description {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  text-transform: none;
+  line-height: 22px;
+  color: #828282;
+}
+.vacancy__description:not(:last-child) {
+  margin-bottom: 30px;
+}
+.vacancy__subtitle {
+  color: #333333;
+}
+
 .link {
   color: #00AC4E;
   text-decoration: none;
@@ -280,7 +304,7 @@ body {
   content: "✓";
   color: #00AC4E;
 }
-.form-input:hover.form-input_hover {
+.form-input:hover {
   box-shadow: 0 0 1.5px 1px #00AC4E;
   transition: box-shadow 0.2s;
 }
@@ -601,7 +625,7 @@ body {
   transition: transform 0.2s;
 }
 .mobmenu__btn_active {
-  transform: rotateZ(-90deg);
+  transform: rotateZ(90deg);
 }
 
 .navigation__list {
