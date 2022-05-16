@@ -11,6 +11,9 @@
         justify-content: space-between;
         min-height: 253.71px;
         background-image: linear-gradient(#F1F1FB, #EBEBF5);
+        @media screen and (max-width: 946px) {
+            justify-content: center;
+        }
     }
     &__pagination-bullet-active {
         width: 40px;
