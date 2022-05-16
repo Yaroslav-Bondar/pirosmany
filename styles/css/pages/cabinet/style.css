@@ -1981,11 +1981,11 @@ body {
 }
 
 .cab {
-  padding: 60px;
+  padding: 60px 0;
 }
 @media screen and (max-width: 500px) {
   .cab {
-    padding: 50px 25px;
+    padding: 50px 0;
   }
 }
 .cab__btns {
@@ -2275,6 +2275,34 @@ body {
   line-height: 18px;
   color: #fff;
 }
+.cab__order-wrap_active {
+  display: none;
+}
+.cab__order-btn {
+  display: flex;
+  align-items: center;
+}
+.cab__order-next, .cab__order-prev {
+  color: #00AC4E;
+  display: none;
+}
+.cab__order-next {
+  margin-left: 5px;
+}
+@media screen and (max-width: 480px) {
+  .cab__order-next {
+    display: inline-block;
+  }
+}
+.cab__order-next_active {
+  display: none;
+}
+.cab__order-prev {
+  margin-right: 5px;
+}
+.cab__order-prev_active {
+  display: block;
+}
 .cab__history {
   padding: 24px;
   background: #fff;
@@ -2293,9 +2321,14 @@ body {
   flex-wrap: wrap;
   gap: 0 35px;
 }
-@media screen and (max-width: 879px) {
+@media screen and (max-width: 989px) {
   .cab__history-row {
     gap: 35px 35px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .cab__history-row {
+    row-gap: 10px;
   }
 }
 .cab__history-field:not(:last-child) {
@@ -2308,6 +2341,9 @@ body {
   .cab__history-name {
     display: block;
   }
+}
+.cab__history-name_active {
+  display: none;
 }
 .cab__history-name, .cab__history-item {
   font-weight: 500;
@@ -2326,7 +2362,7 @@ body {
 .cab__history:not(:last-child) {
   margin-bottom: 40px;
 }
-.cab__history.cab__history_cancel .cab__history-row .cab__history-info .cab__history-field:last-child .cab__history-item {
+.cab__history-item_state_canseled {
   color: #EB5757;
 }
 .cab__history.cab__history_cancel .cab__history-row .cab__list-wrap .cab__repeat {
@@ -2353,11 +2389,19 @@ body {
     justify-content: center;
   }
 }
-@media screen and (max-width: 879px) {
+@media screen and (max-width: 989px) {
   .cab__list-wrap {
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
   }
+}
+@media screen and (max-width: 480px) {
+  .cab__list-wrap {
+    display: none;
+  }
+}
+.cab__list-wrap_active {
+  display: block;
 }
 .cab__list-node {
   padding: 15px 0;
@@ -2429,10 +2473,15 @@ body {
   color: #000000;
 }
 .cab__repeat {
-  display: block;
-  margin: 10px 0 0 0;
+  display: flex;
+  align-items: center;
   text-align: end;
-  text-decoration: none;
+  margin-left: auto;
+}
+.cab__repeat-wrap {
+  flex-grow: 1;
+  flex-basis: 100%;
+  margin: 10px 0 0 0;
 }
 .cab__repeat-text {
   margin-right: 8px;
@@ -2444,7 +2493,8 @@ body {
   color: #00AC4E;
 }
 .cab__repeat-icon {
-  color: #00AC4E;
+  height: 16px;
+  width: 16px;
 }
 
 .footer {

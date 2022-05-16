@@ -1,9 +1,9 @@
 @use '../../../../common/utils';
 
 .cab {
-    padding: 60px;
+    padding: 60px 0;
     @media screen and(max-width: utils.$var-cab-form-breakpoint-2) {
-        padding: 50px 25px;
+        padding: 50px 0;
     }
     // buttons
     &__btns {
@@ -217,6 +217,37 @@
         @include utils.mix-font(500, 12px, 18px, utils.$var-color-white);
     }
     // // form
+    &__order {
+        &-wrap {
+            &_active {
+                display: none;
+            }
+        }
+        &-btn {
+            display: flex;
+            align-items: center;
+        }
+        &-next,
+        &-prev {
+            color: utils.$var-color-green-haze;
+            display: none;    
+        }
+        &-next {
+            margin-left: 5px;
+            @media screen and(max-width: utils.$var-general-brkpoint-3) {
+                display: inline-block;    
+            }
+            &_active {
+                display: none;
+            }
+        }
+        &-prev {
+            margin-right: 5px;
+            &_active {
+                display: block;
+            }
+        }
+    }
     &__history {
         padding: 24px;
         background: utils.$var-color-white;
@@ -236,6 +267,9 @@
             @media screen and(max-width: utils.$var-cab-history-breakpoint-1) {
                 gap: 35px 35px;
             }
+            @media screen and(max-width: utils.$var-general-brkpoint-3) {
+                row-gap: 10px;
+            }
         }
         &-field:not(:last-child) {
             margin-bottom: 17px;
@@ -244,6 +278,9 @@
             margin-right: 8px;
             @media screen and(max-width: utils.$var-cab-history-breakpoint-3) {
                 display: block;
+            }
+            &_active {
+                display: none;
             }
         }
         &-name,
@@ -256,17 +293,11 @@
         &_color {
             color: utils.$var-color-green-haze;
         }
-        // &_cancel {
-        //     color: utils.$var-color-burnt-sienna;
-        // }
     }
     &__history:not(:last-child) {
         margin-bottom: 40px;
     }
-    // adding order status canseled. Just add the class .cab__history_cancel to cab__history 
-    &__history.cab__history_cancel &__history-row 
-    &__history-info &__history-field:last-child 
-    &__history-item{
+    &__history-item_state_canseled {
         color: utils.$var-color-burnt-sienna;
     }
     &__history.cab__history_cancel &__history-row &__list-wrap &__repeat {
@@ -295,6 +326,12 @@
             @media screen and(max-width: utils.$var-cab-history-breakpoint-1) {
                 -ms-flex-preferred-size: 100%;
                     flex-basis: 100%;
+            }
+            @media screen and(max-width: utils.$var-general-brkpoint-3) {
+                display: none;
+            }
+            &_active {
+                display: block;
             }
         }
         // padding: 0 10px 0 20px;
@@ -346,16 +383,22 @@
         @include utils.mix-font(500, 20px, 17px, utils.$var-color-black);
     }
     &__repeat {
-        display: block;
-        margin: 10px 0 0 0;
+        &-wrap {
+            flex-grow: 1;
+            flex-basis: 100%;
+            margin: 10px 0 0 0;
+        }
+        display: flex;
+        align-items: center;
         text-align: end;
-        text-decoration: none;
+        margin-left: auto;
         &-text {
             margin-right: 8px;
             @include utils.mix-font(500, 16px, 29px, utils.$var-color-green-haze);
         }
         &-icon {
-            color: utils.$var-color-green-haze;
+            height: 16px;
+            width: 16px;
         }
     }
 }

@@ -496,32 +496,38 @@
                 </button>
             </div>
         </form>
-        <div class="tab__content cab__history-wrap">
-            <div class="cab__history">
+        <div id="orders" class="tab__content cab__history-wrap">
+            <div class="cab__history" data-order-item="order">
                 <div class="cab__history-row">
                     <div class="cab__history-info">
                         <div class="cab__history-field">
-                            <span class="cab__history-name">Номер заказа:</span>
-                            <span class="cab__history-item cab__history_color">Заказ №2334678954</span>
+                            <span class="cab__history-name" data-order-item="title" >Номер заказа:</span>
+                            <button class="cab__order-btn btn btn_theme_transparent" data-order-item="btn">
+                                <span class="cab__order-prev" data-order-item="prev">&#8592;</span>
+                                <span class="cab__history-item cab__history_color">Заказ №2334678954</span>
+                                <span class="cab__order-next" data-order-item="next">&#8594;</span>
+                            </button>
                         </div>
-                        <div class="cab__history-field">
-                            <span class="cab__history-name">Способ оплаты:</span>
-                            <span class="cab__history-item">Банковская карта</span>
-                        </div>
-                        <div class="cab__history-field">
-                            <span class="cab__history-name">Дата заказа:</span>
-                            <span class="cab__history-item">19.05.2020</span>
-                        </div>
-                        <div class="cab__history-field">
-                            <span class="cab__history-name">Дата доставки:</span>
-                            <span class="cab__history-item">23.05.2020</span>
-                        </div>
-                        <div class="cab__history-field">
-                            <span class="cab__history-name">Статус заказа:</span>
-                            <span class="cab__history-item cab__history_color">Доставлен</span>
+                        <div class="cab__order-wrap" data-order-item="info">
+                            <div class="cab__history-field">
+                                <span class="cab__history-name">Способ оплаты:</span>
+                                <span class="cab__history-item">Банковская карта</span>
+                            </div>
+                            <div class="cab__history-field">
+                                <span class="cab__history-name">Дата заказа:</span>
+                                <span class="cab__history-item">19.05.2020</span>
+                            </div>
+                            <div class="cab__history-field">
+                                <span class="cab__history-name">Дата доставки:</span>
+                                <span class="cab__history-item">23.05.2020</span>
+                            </div>
+                            <div class="cab__history-field">
+                                <span class="cab__history-name">Статус заказа:</span>
+                                <span class="cab__history-item cab__history_color">Доставлен</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="cab__list-wrap">
+                    <div class="cab__list-wrap" data-order-item="list">
                         <ul class="list cab__list">
                             <li class="list__node cab__list-node">
                                 <div class="list__icon cab__list-icon">
@@ -634,39 +640,47 @@
                                 </div>
                             </li>
                         </ul>
-                        <a href="" class="cab__repeat">
+                    </div>
+                    <div class="cab__repeat-wrap">
+                        <button class="cab__repeat btn btn_theme_transparent">
                             <span class="cab__repeat-text">Повторить заказ</span>
-                            <i class="cab__repeat-icon fas fa-redo"></i>
-                        </a>
+                            <img src="../../img/icons/repeat.svg" class="cab__repeat-icon img img_fit_contain" alt="repeat">
+                        </button>
                     </div>
                 </div>
             </div>
-            <!-- adding order status canseled. Just add the class .cab__history_cancel to cab__history -->
-            <div class="cab__history cab__history_cancel">
+            <!-- adding order status canseled. Just add the data-order-status="cansel" -->
+            <div class="cab__history cab__history_cancel" data-order-item="order" data-order-state="canseled">
                 <div class="cab__history-row">
                     <div class="cab__history-info">
                         <div class="cab__history-field">
-                            <span class="cab__history-name">Номер заказа:</span>
-                            <span class="cab__history-item cab__history_color">Заказ №2334678954</span>
+                            <span class="cab__history-name" data-order-item="title" >Номер заказа:</span>
+                            <button class="cab__order-btn btn btn_theme_transparent" data-order-item="btn">
+                                <span class="cab__order-prev" data-order-item="prev">&#8592;</span>
+                                <span class="cab__history-item cab__history_color">Заказ №2334678954</span>
+                                <span class="cab__order-next" data-order-item="next">&#8594;</span>
+                            </button>
                         </div>
-                        <div class="cab__history-field">
-                            <span class="cab__history-name">Способ оплаты:</span>
-                            <span class="cab__history-item">Банковская карта</span>
-                        </div>
-                        <div class="cab__history-field">
-                            <span class="cab__history-name">Дата заказа:</span>
-                            <span class="cab__history-item">19.05.2020</span>
-                        </div>
-                        <div class="cab__history-field">
-                            <span class="cab__history-name">Дата доставки:</span>
-                            <span class="cab__history-item">23.05.2020</span>
-                        </div>
-                        <div class="cab__history-field">
-                            <span class="cab__history-name">Статус заказа:</span>
-                            <span class="cab__history-item">Отменен</span>
+                        <div class="cab__order-wrap" data-order-item="info">
+                            <div class="cab__history-field">
+                                <span class="cab__history-name">Способ оплаты:</span>
+                                <span class="cab__history-item">Банковская карта</span>
+                            </div>
+                            <div class="cab__history-field">
+                                <span class="cab__history-name">Дата заказа:</span>
+                                <span class="cab__history-item">19.05.2020</span>
+                            </div>
+                            <div class="cab__history-field">
+                                <span class="cab__history-name">Дата доставки:</span>
+                                <span class="cab__history-item">23.05.2020</span>
+                            </div>
+                            <div class="cab__history-field">
+                                <span class="cab__history-name">Статус заказа:</span>
+                                <span class="cab__history-item cab__history_color" data-order-item="canseled">Доставлен</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="cab__list-wrap">
+                    <div class="cab__list-wrap" data-order-item="list">
                         <ul class="list cab__list">
                             <li class="list__node cab__list-node">
                                 <div class="list__icon cab__list-icon">
@@ -779,10 +793,12 @@
                                 </div>
                             </li>
                         </ul>
-                         <a href="" class="cab__repeat">
+                    </div>
+                    <div class="cab__repeat-wrap">
+                        <button class="cab__repeat btn btn_theme_transparent">
                             <span class="cab__repeat-text">Повторить заказ</span>
-                            <i class="cab__repeat-icon fas fa-redo"></i>
-                        </a>
+                            <img src="../../img/icons/repeat.svg" class="cab__repeat-icon img img_fit_contain" alt="repeat">
+                        </button>
                     </div>
                 </div>
             </div>
